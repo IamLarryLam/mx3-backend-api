@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\apiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +16,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+
+//REST API Routing//begin
+Route::prefix('api')->group(function () {
+
+    //GET
+
+    Route::get('yo', [apiController::class, 'test']);
 });

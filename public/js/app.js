@@ -1,6 +1,11134 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./node_modules/@azure/cognitiveservices-face/esm/faceClient.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@azure/cognitiveservices-face/esm/faceClient.js ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "FaceClient": () => (/* binding */ FaceClient),
+/* harmony export */   "FaceClientContext": () => (/* reexport safe */ _faceClientContext__WEBPACK_IMPORTED_MODULE_9__.FaceClientContext),
+/* harmony export */   "FaceModels": () => (/* reexport module object */ _models__WEBPACK_IMPORTED_MODULE_10__),
+/* harmony export */   "FaceMappers": () => (/* reexport module object */ _models_mappers__WEBPACK_IMPORTED_MODULE_11__),
+/* harmony export */   "Face": () => (/* reexport safe */ _operations__WEBPACK_IMPORTED_MODULE_12__.Face),
+/* harmony export */   "FaceListOperations": () => (/* reexport safe */ _operations__WEBPACK_IMPORTED_MODULE_12__.FaceListOperations),
+/* harmony export */   "LargeFaceListOperations": () => (/* reexport safe */ _operations__WEBPACK_IMPORTED_MODULE_12__.LargeFaceListOperations),
+/* harmony export */   "LargePersonGroupOperations": () => (/* reexport safe */ _operations__WEBPACK_IMPORTED_MODULE_12__.LargePersonGroupOperations),
+/* harmony export */   "LargePersonGroupPerson": () => (/* reexport safe */ _operations__WEBPACK_IMPORTED_MODULE_12__.LargePersonGroupPerson),
+/* harmony export */   "PersonGroupOperations": () => (/* reexport safe */ _operations__WEBPACK_IMPORTED_MODULE_12__.PersonGroupOperations),
+/* harmony export */   "PersonGroupPerson": () => (/* reexport safe */ _operations__WEBPACK_IMPORTED_MODULE_12__.PersonGroupPerson),
+/* harmony export */   "SnapshotOperations": () => (/* reexport safe */ _operations__WEBPACK_IMPORTED_MODULE_12__.SnapshotOperations)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/@azure/cognitiveservices-face/node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _models__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./models */ "./node_modules/@azure/cognitiveservices-face/esm/models/index.js");
+/* harmony import */ var _models__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_models__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _models_mappers__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./models/mappers */ "./node_modules/@azure/cognitiveservices-face/esm/models/mappers.js");
+/* harmony import */ var _operations__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./operations */ "./node_modules/@azure/cognitiveservices-face/esm/operations/face.js");
+/* harmony import */ var _operations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./operations */ "./node_modules/@azure/cognitiveservices-face/esm/operations/personGroupPerson.js");
+/* harmony import */ var _operations__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./operations */ "./node_modules/@azure/cognitiveservices-face/esm/operations/personGroupOperations.js");
+/* harmony import */ var _operations__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./operations */ "./node_modules/@azure/cognitiveservices-face/esm/operations/faceListOperations.js");
+/* harmony import */ var _operations__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./operations */ "./node_modules/@azure/cognitiveservices-face/esm/operations/largePersonGroupPerson.js");
+/* harmony import */ var _operations__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./operations */ "./node_modules/@azure/cognitiveservices-face/esm/operations/largePersonGroupOperations.js");
+/* harmony import */ var _operations__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./operations */ "./node_modules/@azure/cognitiveservices-face/esm/operations/largeFaceListOperations.js");
+/* harmony import */ var _operations__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./operations */ "./node_modules/@azure/cognitiveservices-face/esm/operations/snapshotOperations.js");
+/* harmony import */ var _faceClientContext__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./faceClientContext */ "./node_modules/@azure/cognitiveservices-face/esm/faceClientContext.js");
+/* harmony import */ var _operations__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./operations */ "./node_modules/@azure/cognitiveservices-face/esm/operations/index.js");
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License. See License.txt in the project root for
+ * license information.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is
+ * regenerated.
+ */
+
+
+
+
+
+var FaceClient = /** @class */ (function (_super) {
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__extends)(FaceClient, _super);
+    /**
+     * Initializes a new instance of the FaceClient class.
+     * @param endpoint Supported Cognitive Services endpoints (protocol and hostname, for example:
+     * https://westus.api.cognitive.microsoft.com).
+     * @param credentials Subscription credentials which uniquely identify client subscription.
+     * @param [options] The parameter options
+     */
+    function FaceClient(credentials, endpoint, options) {
+        var _this = _super.call(this, credentials, endpoint, options) || this;
+        _this.face = new _operations__WEBPACK_IMPORTED_MODULE_1__.Face(_this);
+        _this.personGroupPerson = new _operations__WEBPACK_IMPORTED_MODULE_2__.PersonGroupPerson(_this);
+        _this.personGroup = new _operations__WEBPACK_IMPORTED_MODULE_3__.PersonGroupOperations(_this);
+        _this.faceList = new _operations__WEBPACK_IMPORTED_MODULE_4__.FaceListOperations(_this);
+        _this.largePersonGroupPerson = new _operations__WEBPACK_IMPORTED_MODULE_5__.LargePersonGroupPerson(_this);
+        _this.largePersonGroup = new _operations__WEBPACK_IMPORTED_MODULE_6__.LargePersonGroupOperations(_this);
+        _this.largeFaceList = new _operations__WEBPACK_IMPORTED_MODULE_7__.LargeFaceListOperations(_this);
+        _this.snapshot = new _operations__WEBPACK_IMPORTED_MODULE_8__.SnapshotOperations(_this);
+        return _this;
+    }
+    return FaceClient;
+}(_faceClientContext__WEBPACK_IMPORTED_MODULE_9__.FaceClientContext));
+// Operation Specifications
+
+
+//# sourceMappingURL=faceClient.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/cognitiveservices-face/esm/faceClientContext.js":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/@azure/cognitiveservices-face/esm/faceClientContext.js ***!
+  \*****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "FaceClientContext": () => (/* binding */ FaceClientContext)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/@azure/cognitiveservices-face/node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _azure_ms_rest_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @azure/ms-rest-js */ "./node_modules/@azure/ms-rest-js/es/lib/policies/userAgentPolicy.js");
+/* harmony import */ var _azure_ms_rest_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @azure/ms-rest-js */ "./node_modules/@azure/ms-rest-js/es/lib/serviceClient.js");
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License. See License.txt in the project root for
+ * license information.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is
+ * regenerated.
+ */
+
+
+var packageName = "@azure/cognitiveservices-face";
+var packageVersion = "4.2.0";
+var FaceClientContext = /** @class */ (function (_super) {
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__extends)(FaceClientContext, _super);
+    /**
+     * Initializes a new instance of the FaceClientContext class.
+     * @param endpoint Supported Cognitive Services endpoints (protocol and hostname, for example:
+     * https://westus.api.cognitive.microsoft.com).
+     * @param credentials Subscription credentials which uniquely identify client subscription.
+     * @param [options] The parameter options
+     */
+    function FaceClientContext(credentials, endpoint, options) {
+        var _this = this;
+        if (endpoint == undefined) {
+            throw new Error("'endpoint' cannot be null.");
+        }
+        if (credentials == undefined) {
+            throw new Error("'credentials' cannot be null.");
+        }
+        if (!options) {
+            options = {};
+        }
+        if (!options.userAgent) {
+            var defaultUserAgent = _azure_ms_rest_js__WEBPACK_IMPORTED_MODULE_1__.getDefaultUserAgentValue();
+            options.userAgent = packageName + "/" + packageVersion + " " + defaultUserAgent;
+        }
+        _this = _super.call(this, credentials, options) || this;
+        _this.baseUri = "{Endpoint}/face/v1.0";
+        _this.requestContentType = "application/json; charset=utf-8";
+        _this.endpoint = endpoint;
+        _this.credentials = credentials;
+        return _this;
+    }
+    return FaceClientContext;
+}(_azure_ms_rest_js__WEBPACK_IMPORTED_MODULE_2__.ServiceClient));
+
+//# sourceMappingURL=faceClientContext.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/cognitiveservices-face/esm/models/faceListOperationsMappers.js":
+/*!********************************************************************************************!*\
+  !*** ./node_modules/@azure/cognitiveservices-face/esm/models/faceListOperationsMappers.js ***!
+  \********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "APIError": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.APIError),
+/* harmony export */   "ErrorModel": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.ErrorModel),
+/* harmony export */   "FaceList": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.FaceList),
+/* harmony export */   "ImageUrl": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.ImageUrl),
+/* harmony export */   "LargeFaceList": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.LargeFaceList),
+/* harmony export */   "LargePersonGroup": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.LargePersonGroup),
+/* harmony export */   "MetaDataContract": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.MetaDataContract),
+/* harmony export */   "NameAndUserDataContract": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.NameAndUserDataContract),
+/* harmony export */   "PersistedFace": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.PersistedFace),
+/* harmony export */   "Person": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.Person),
+/* harmony export */   "PersonGroup": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.PersonGroup)
+/* harmony export */ });
+/* harmony import */ var _models_mappers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../models/mappers */ "./node_modules/@azure/cognitiveservices-face/esm/models/mappers.js");
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License. See License.txt in the project root for license information.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+
+//# sourceMappingURL=faceListOperationsMappers.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/cognitiveservices-face/esm/models/faceMappers.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/@azure/cognitiveservices-face/esm/models/faceMappers.js ***!
+  \******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Accessory": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.Accessory),
+/* harmony export */   "APIError": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.APIError),
+/* harmony export */   "Blur": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.Blur),
+/* harmony export */   "Coordinate": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.Coordinate),
+/* harmony export */   "DetectedFace": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.DetectedFace),
+/* harmony export */   "Emotion": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.Emotion),
+/* harmony export */   "ErrorModel": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.ErrorModel),
+/* harmony export */   "Exposure": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.Exposure),
+/* harmony export */   "FaceAttributes": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.FaceAttributes),
+/* harmony export */   "FaceLandmarks": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.FaceLandmarks),
+/* harmony export */   "FaceRectangle": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.FaceRectangle),
+/* harmony export */   "FacialHair": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.FacialHair),
+/* harmony export */   "FindSimilarRequest": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.FindSimilarRequest),
+/* harmony export */   "GroupRequest": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.GroupRequest),
+/* harmony export */   "GroupResult": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.GroupResult),
+/* harmony export */   "Hair": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.Hair),
+/* harmony export */   "HairColor": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.HairColor),
+/* harmony export */   "HeadPose": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.HeadPose),
+/* harmony export */   "IdentifyCandidate": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.IdentifyCandidate),
+/* harmony export */   "IdentifyRequest": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.IdentifyRequest),
+/* harmony export */   "IdentifyResult": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.IdentifyResult),
+/* harmony export */   "ImageUrl": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.ImageUrl),
+/* harmony export */   "Makeup": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.Makeup),
+/* harmony export */   "Mask": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.Mask),
+/* harmony export */   "Noise": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.Noise),
+/* harmony export */   "Occlusion": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.Occlusion),
+/* harmony export */   "SimilarFace": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.SimilarFace),
+/* harmony export */   "VerifyFaceToFaceRequest": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.VerifyFaceToFaceRequest),
+/* harmony export */   "VerifyFaceToPersonRequest": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.VerifyFaceToPersonRequest),
+/* harmony export */   "VerifyResult": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.VerifyResult)
+/* harmony export */ });
+/* harmony import */ var _models_mappers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../models/mappers */ "./node_modules/@azure/cognitiveservices-face/esm/models/mappers.js");
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License. See License.txt in the project root for license information.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+
+//# sourceMappingURL=faceMappers.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/cognitiveservices-face/esm/models/index.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/@azure/cognitiveservices-face/esm/models/index.js ***!
+  \************************************************************************/
+/***/ (() => {
+
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License. See License.txt in the project root for license information.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/cognitiveservices-face/esm/models/largeFaceListOperationsMappers.js":
+/*!*************************************************************************************************!*\
+  !*** ./node_modules/@azure/cognitiveservices-face/esm/models/largeFaceListOperationsMappers.js ***!
+  \*************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "APIError": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.APIError),
+/* harmony export */   "ErrorModel": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.ErrorModel),
+/* harmony export */   "FaceList": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.FaceList),
+/* harmony export */   "ImageUrl": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.ImageUrl),
+/* harmony export */   "LargeFaceList": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.LargeFaceList),
+/* harmony export */   "LargePersonGroup": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.LargePersonGroup),
+/* harmony export */   "MetaDataContract": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.MetaDataContract),
+/* harmony export */   "NameAndUserDataContract": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.NameAndUserDataContract),
+/* harmony export */   "PersistedFace": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.PersistedFace),
+/* harmony export */   "Person": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.Person),
+/* harmony export */   "PersonGroup": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.PersonGroup),
+/* harmony export */   "TrainingStatus": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.TrainingStatus),
+/* harmony export */   "UpdateFaceRequest": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.UpdateFaceRequest)
+/* harmony export */ });
+/* harmony import */ var _models_mappers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../models/mappers */ "./node_modules/@azure/cognitiveservices-face/esm/models/mappers.js");
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License. See License.txt in the project root for license information.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+
+//# sourceMappingURL=largeFaceListOperationsMappers.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/cognitiveservices-face/esm/models/largePersonGroupOperationsMappers.js":
+/*!****************************************************************************************************!*\
+  !*** ./node_modules/@azure/cognitiveservices-face/esm/models/largePersonGroupOperationsMappers.js ***!
+  \****************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "APIError": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.APIError),
+/* harmony export */   "ErrorModel": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.ErrorModel),
+/* harmony export */   "FaceList": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.FaceList),
+/* harmony export */   "LargeFaceList": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.LargeFaceList),
+/* harmony export */   "LargePersonGroup": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.LargePersonGroup),
+/* harmony export */   "MetaDataContract": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.MetaDataContract),
+/* harmony export */   "NameAndUserDataContract": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.NameAndUserDataContract),
+/* harmony export */   "PersistedFace": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.PersistedFace),
+/* harmony export */   "Person": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.Person),
+/* harmony export */   "PersonGroup": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.PersonGroup),
+/* harmony export */   "TrainingStatus": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.TrainingStatus)
+/* harmony export */ });
+/* harmony import */ var _models_mappers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../models/mappers */ "./node_modules/@azure/cognitiveservices-face/esm/models/mappers.js");
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License. See License.txt in the project root for license information.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+
+//# sourceMappingURL=largePersonGroupOperationsMappers.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/cognitiveservices-face/esm/models/largePersonGroupPersonMappers.js":
+/*!************************************************************************************************!*\
+  !*** ./node_modules/@azure/cognitiveservices-face/esm/models/largePersonGroupPersonMappers.js ***!
+  \************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "APIError": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.APIError),
+/* harmony export */   "ErrorModel": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.ErrorModel),
+/* harmony export */   "FaceList": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.FaceList),
+/* harmony export */   "ImageUrl": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.ImageUrl),
+/* harmony export */   "LargeFaceList": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.LargeFaceList),
+/* harmony export */   "LargePersonGroup": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.LargePersonGroup),
+/* harmony export */   "MetaDataContract": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.MetaDataContract),
+/* harmony export */   "NameAndUserDataContract": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.NameAndUserDataContract),
+/* harmony export */   "PersistedFace": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.PersistedFace),
+/* harmony export */   "Person": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.Person),
+/* harmony export */   "PersonGroup": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.PersonGroup),
+/* harmony export */   "UpdateFaceRequest": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.UpdateFaceRequest)
+/* harmony export */ });
+/* harmony import */ var _models_mappers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../models/mappers */ "./node_modules/@azure/cognitiveservices-face/esm/models/mappers.js");
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License. See License.txt in the project root for license information.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+
+//# sourceMappingURL=largePersonGroupPersonMappers.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/cognitiveservices-face/esm/models/mappers.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/@azure/cognitiveservices-face/esm/models/mappers.js ***!
+  \**************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "ErrorModel": () => (/* binding */ ErrorModel),
+/* harmony export */   "APIError": () => (/* binding */ APIError),
+/* harmony export */   "FaceRectangle": () => (/* binding */ FaceRectangle),
+/* harmony export */   "Coordinate": () => (/* binding */ Coordinate),
+/* harmony export */   "FaceLandmarks": () => (/* binding */ FaceLandmarks),
+/* harmony export */   "FacialHair": () => (/* binding */ FacialHair),
+/* harmony export */   "HeadPose": () => (/* binding */ HeadPose),
+/* harmony export */   "Emotion": () => (/* binding */ Emotion),
+/* harmony export */   "HairColor": () => (/* binding */ HairColor),
+/* harmony export */   "Hair": () => (/* binding */ Hair),
+/* harmony export */   "Makeup": () => (/* binding */ Makeup),
+/* harmony export */   "Occlusion": () => (/* binding */ Occlusion),
+/* harmony export */   "Accessory": () => (/* binding */ Accessory),
+/* harmony export */   "Blur": () => (/* binding */ Blur),
+/* harmony export */   "Exposure": () => (/* binding */ Exposure),
+/* harmony export */   "Noise": () => (/* binding */ Noise),
+/* harmony export */   "Mask": () => (/* binding */ Mask),
+/* harmony export */   "FaceAttributes": () => (/* binding */ FaceAttributes),
+/* harmony export */   "DetectedFace": () => (/* binding */ DetectedFace),
+/* harmony export */   "FindSimilarRequest": () => (/* binding */ FindSimilarRequest),
+/* harmony export */   "SimilarFace": () => (/* binding */ SimilarFace),
+/* harmony export */   "GroupRequest": () => (/* binding */ GroupRequest),
+/* harmony export */   "GroupResult": () => (/* binding */ GroupResult),
+/* harmony export */   "IdentifyRequest": () => (/* binding */ IdentifyRequest),
+/* harmony export */   "IdentifyCandidate": () => (/* binding */ IdentifyCandidate),
+/* harmony export */   "IdentifyResult": () => (/* binding */ IdentifyResult),
+/* harmony export */   "VerifyFaceToPersonRequest": () => (/* binding */ VerifyFaceToPersonRequest),
+/* harmony export */   "VerifyFaceToFaceRequest": () => (/* binding */ VerifyFaceToFaceRequest),
+/* harmony export */   "VerifyResult": () => (/* binding */ VerifyResult),
+/* harmony export */   "PersistedFace": () => (/* binding */ PersistedFace),
+/* harmony export */   "NameAndUserDataContract": () => (/* binding */ NameAndUserDataContract),
+/* harmony export */   "MetaDataContract": () => (/* binding */ MetaDataContract),
+/* harmony export */   "FaceList": () => (/* binding */ FaceList),
+/* harmony export */   "PersonGroup": () => (/* binding */ PersonGroup),
+/* harmony export */   "Person": () => (/* binding */ Person),
+/* harmony export */   "LargeFaceList": () => (/* binding */ LargeFaceList),
+/* harmony export */   "LargePersonGroup": () => (/* binding */ LargePersonGroup),
+/* harmony export */   "UpdateFaceRequest": () => (/* binding */ UpdateFaceRequest),
+/* harmony export */   "TrainingStatus": () => (/* binding */ TrainingStatus),
+/* harmony export */   "ApplySnapshotRequest": () => (/* binding */ ApplySnapshotRequest),
+/* harmony export */   "Snapshot": () => (/* binding */ Snapshot),
+/* harmony export */   "TakeSnapshotRequest": () => (/* binding */ TakeSnapshotRequest),
+/* harmony export */   "UpdateSnapshotRequest": () => (/* binding */ UpdateSnapshotRequest),
+/* harmony export */   "OperationStatus": () => (/* binding */ OperationStatus),
+/* harmony export */   "ImageUrl": () => (/* binding */ ImageUrl),
+/* harmony export */   "SnapshotTakeHeaders": () => (/* binding */ SnapshotTakeHeaders),
+/* harmony export */   "SnapshotApplyHeaders": () => (/* binding */ SnapshotApplyHeaders)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/@azure/cognitiveservices-face/node_modules/tslib/tslib.es6.js");
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License. See License.txt in the project root for license information.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+
+var ErrorModel = {
+    serializedName: "Error",
+    type: {
+        name: "Composite",
+        className: "ErrorModel",
+        modelProperties: {
+            code: {
+                serializedName: "code",
+                type: {
+                    name: "String"
+                }
+            },
+            message: {
+                serializedName: "message",
+                type: {
+                    name: "String"
+                }
+            }
+        }
+    }
+};
+var APIError = {
+    serializedName: "APIError",
+    type: {
+        name: "Composite",
+        className: "APIError",
+        modelProperties: {
+            error: {
+                serializedName: "error",
+                type: {
+                    name: "Composite",
+                    className: "ErrorModel"
+                }
+            }
+        }
+    }
+};
+var FaceRectangle = {
+    serializedName: "FaceRectangle",
+    type: {
+        name: "Composite",
+        className: "FaceRectangle",
+        modelProperties: {
+            width: {
+                required: true,
+                serializedName: "width",
+                type: {
+                    name: "Number"
+                }
+            },
+            height: {
+                required: true,
+                serializedName: "height",
+                type: {
+                    name: "Number"
+                }
+            },
+            left: {
+                required: true,
+                serializedName: "left",
+                type: {
+                    name: "Number"
+                }
+            },
+            top: {
+                required: true,
+                serializedName: "top",
+                type: {
+                    name: "Number"
+                }
+            }
+        }
+    }
+};
+var Coordinate = {
+    serializedName: "Coordinate",
+    type: {
+        name: "Composite",
+        className: "Coordinate",
+        modelProperties: {
+            x: {
+                required: true,
+                serializedName: "x",
+                type: {
+                    name: "Number"
+                }
+            },
+            y: {
+                required: true,
+                serializedName: "y",
+                type: {
+                    name: "Number"
+                }
+            }
+        }
+    }
+};
+var FaceLandmarks = {
+    serializedName: "FaceLandmarks",
+    type: {
+        name: "Composite",
+        className: "FaceLandmarks",
+        modelProperties: {
+            pupilLeft: {
+                serializedName: "pupilLeft",
+                type: {
+                    name: "Composite",
+                    className: "Coordinate"
+                }
+            },
+            pupilRight: {
+                serializedName: "pupilRight",
+                type: {
+                    name: "Composite",
+                    className: "Coordinate"
+                }
+            },
+            noseTip: {
+                serializedName: "noseTip",
+                type: {
+                    name: "Composite",
+                    className: "Coordinate"
+                }
+            },
+            mouthLeft: {
+                serializedName: "mouthLeft",
+                type: {
+                    name: "Composite",
+                    className: "Coordinate"
+                }
+            },
+            mouthRight: {
+                serializedName: "mouthRight",
+                type: {
+                    name: "Composite",
+                    className: "Coordinate"
+                }
+            },
+            eyebrowLeftOuter: {
+                serializedName: "eyebrowLeftOuter",
+                type: {
+                    name: "Composite",
+                    className: "Coordinate"
+                }
+            },
+            eyebrowLeftInner: {
+                serializedName: "eyebrowLeftInner",
+                type: {
+                    name: "Composite",
+                    className: "Coordinate"
+                }
+            },
+            eyeLeftOuter: {
+                serializedName: "eyeLeftOuter",
+                type: {
+                    name: "Composite",
+                    className: "Coordinate"
+                }
+            },
+            eyeLeftTop: {
+                serializedName: "eyeLeftTop",
+                type: {
+                    name: "Composite",
+                    className: "Coordinate"
+                }
+            },
+            eyeLeftBottom: {
+                serializedName: "eyeLeftBottom",
+                type: {
+                    name: "Composite",
+                    className: "Coordinate"
+                }
+            },
+            eyeLeftInner: {
+                serializedName: "eyeLeftInner",
+                type: {
+                    name: "Composite",
+                    className: "Coordinate"
+                }
+            },
+            eyebrowRightInner: {
+                serializedName: "eyebrowRightInner",
+                type: {
+                    name: "Composite",
+                    className: "Coordinate"
+                }
+            },
+            eyebrowRightOuter: {
+                serializedName: "eyebrowRightOuter",
+                type: {
+                    name: "Composite",
+                    className: "Coordinate"
+                }
+            },
+            eyeRightInner: {
+                serializedName: "eyeRightInner",
+                type: {
+                    name: "Composite",
+                    className: "Coordinate"
+                }
+            },
+            eyeRightTop: {
+                serializedName: "eyeRightTop",
+                type: {
+                    name: "Composite",
+                    className: "Coordinate"
+                }
+            },
+            eyeRightBottom: {
+                serializedName: "eyeRightBottom",
+                type: {
+                    name: "Composite",
+                    className: "Coordinate"
+                }
+            },
+            eyeRightOuter: {
+                serializedName: "eyeRightOuter",
+                type: {
+                    name: "Composite",
+                    className: "Coordinate"
+                }
+            },
+            noseRootLeft: {
+                serializedName: "noseRootLeft",
+                type: {
+                    name: "Composite",
+                    className: "Coordinate"
+                }
+            },
+            noseRootRight: {
+                serializedName: "noseRootRight",
+                type: {
+                    name: "Composite",
+                    className: "Coordinate"
+                }
+            },
+            noseLeftAlarTop: {
+                serializedName: "noseLeftAlarTop",
+                type: {
+                    name: "Composite",
+                    className: "Coordinate"
+                }
+            },
+            noseRightAlarTop: {
+                serializedName: "noseRightAlarTop",
+                type: {
+                    name: "Composite",
+                    className: "Coordinate"
+                }
+            },
+            noseLeftAlarOutTip: {
+                serializedName: "noseLeftAlarOutTip",
+                type: {
+                    name: "Composite",
+                    className: "Coordinate"
+                }
+            },
+            noseRightAlarOutTip: {
+                serializedName: "noseRightAlarOutTip",
+                type: {
+                    name: "Composite",
+                    className: "Coordinate"
+                }
+            },
+            upperLipTop: {
+                serializedName: "upperLipTop",
+                type: {
+                    name: "Composite",
+                    className: "Coordinate"
+                }
+            },
+            upperLipBottom: {
+                serializedName: "upperLipBottom",
+                type: {
+                    name: "Composite",
+                    className: "Coordinate"
+                }
+            },
+            underLipTop: {
+                serializedName: "underLipTop",
+                type: {
+                    name: "Composite",
+                    className: "Coordinate"
+                }
+            },
+            underLipBottom: {
+                serializedName: "underLipBottom",
+                type: {
+                    name: "Composite",
+                    className: "Coordinate"
+                }
+            }
+        }
+    }
+};
+var FacialHair = {
+    serializedName: "FacialHair",
+    type: {
+        name: "Composite",
+        className: "FacialHair",
+        modelProperties: {
+            moustache: {
+                nullable: false,
+                serializedName: "moustache",
+                type: {
+                    name: "Number"
+                }
+            },
+            beard: {
+                nullable: false,
+                serializedName: "beard",
+                type: {
+                    name: "Number"
+                }
+            },
+            sideburns: {
+                nullable: false,
+                serializedName: "sideburns",
+                type: {
+                    name: "Number"
+                }
+            }
+        }
+    }
+};
+var HeadPose = {
+    serializedName: "HeadPose",
+    type: {
+        name: "Composite",
+        className: "HeadPose",
+        modelProperties: {
+            roll: {
+                nullable: false,
+                serializedName: "roll",
+                type: {
+                    name: "Number"
+                }
+            },
+            yaw: {
+                nullable: false,
+                serializedName: "yaw",
+                type: {
+                    name: "Number"
+                }
+            },
+            pitch: {
+                nullable: false,
+                serializedName: "pitch",
+                type: {
+                    name: "Number"
+                }
+            }
+        }
+    }
+};
+var Emotion = {
+    serializedName: "Emotion",
+    type: {
+        name: "Composite",
+        className: "Emotion",
+        modelProperties: {
+            anger: {
+                nullable: false,
+                serializedName: "anger",
+                type: {
+                    name: "Number"
+                }
+            },
+            contempt: {
+                nullable: false,
+                serializedName: "contempt",
+                type: {
+                    name: "Number"
+                }
+            },
+            disgust: {
+                nullable: false,
+                serializedName: "disgust",
+                type: {
+                    name: "Number"
+                }
+            },
+            fear: {
+                nullable: false,
+                serializedName: "fear",
+                type: {
+                    name: "Number"
+                }
+            },
+            happiness: {
+                nullable: false,
+                serializedName: "happiness",
+                type: {
+                    name: "Number"
+                }
+            },
+            neutral: {
+                nullable: false,
+                serializedName: "neutral",
+                type: {
+                    name: "Number"
+                }
+            },
+            sadness: {
+                nullable: false,
+                serializedName: "sadness",
+                type: {
+                    name: "Number"
+                }
+            },
+            surprise: {
+                nullable: false,
+                serializedName: "surprise",
+                type: {
+                    name: "Number"
+                }
+            }
+        }
+    }
+};
+var HairColor = {
+    serializedName: "HairColor",
+    type: {
+        name: "Composite",
+        className: "HairColor",
+        modelProperties: {
+            color: {
+                nullable: false,
+                serializedName: "color",
+                type: {
+                    name: "Enum",
+                    allowedValues: [
+                        "unknown",
+                        "white",
+                        "gray",
+                        "blond",
+                        "brown",
+                        "red",
+                        "black",
+                        "other"
+                    ]
+                }
+            },
+            confidence: {
+                nullable: false,
+                serializedName: "confidence",
+                type: {
+                    name: "Number"
+                }
+            }
+        }
+    }
+};
+var Hair = {
+    serializedName: "Hair",
+    type: {
+        name: "Composite",
+        className: "Hair",
+        modelProperties: {
+            bald: {
+                nullable: false,
+                serializedName: "bald",
+                type: {
+                    name: "Number"
+                }
+            },
+            invisible: {
+                nullable: false,
+                serializedName: "invisible",
+                type: {
+                    name: "Boolean"
+                }
+            },
+            hairColor: {
+                serializedName: "hairColor",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "HairColor"
+                        }
+                    }
+                }
+            }
+        }
+    }
+};
+var Makeup = {
+    serializedName: "Makeup",
+    type: {
+        name: "Composite",
+        className: "Makeup",
+        modelProperties: {
+            eyeMakeup: {
+                nullable: false,
+                serializedName: "eyeMakeup",
+                type: {
+                    name: "Boolean"
+                }
+            },
+            lipMakeup: {
+                nullable: false,
+                serializedName: "lipMakeup",
+                type: {
+                    name: "Boolean"
+                }
+            }
+        }
+    }
+};
+var Occlusion = {
+    serializedName: "Occlusion",
+    type: {
+        name: "Composite",
+        className: "Occlusion",
+        modelProperties: {
+            foreheadOccluded: {
+                nullable: false,
+                serializedName: "foreheadOccluded",
+                type: {
+                    name: "Boolean"
+                }
+            },
+            eyeOccluded: {
+                nullable: false,
+                serializedName: "eyeOccluded",
+                type: {
+                    name: "Boolean"
+                }
+            },
+            mouthOccluded: {
+                nullable: false,
+                serializedName: "mouthOccluded",
+                type: {
+                    name: "Boolean"
+                }
+            }
+        }
+    }
+};
+var Accessory = {
+    serializedName: "Accessory",
+    type: {
+        name: "Composite",
+        className: "Accessory",
+        modelProperties: {
+            type: {
+                nullable: false,
+                serializedName: "type",
+                type: {
+                    name: "Enum",
+                    allowedValues: [
+                        "headWear",
+                        "glasses",
+                        "mask"
+                    ]
+                }
+            },
+            confidence: {
+                nullable: false,
+                serializedName: "confidence",
+                type: {
+                    name: "Number"
+                }
+            }
+        }
+    }
+};
+var Blur = {
+    serializedName: "Blur",
+    type: {
+        name: "Composite",
+        className: "Blur",
+        modelProperties: {
+            blurLevel: {
+                nullable: false,
+                serializedName: "blurLevel",
+                type: {
+                    name: "Enum",
+                    allowedValues: [
+                        "Low",
+                        "Medium",
+                        "High"
+                    ]
+                }
+            },
+            value: {
+                nullable: false,
+                serializedName: "value",
+                type: {
+                    name: "Number"
+                }
+            }
+        }
+    }
+};
+var Exposure = {
+    serializedName: "Exposure",
+    type: {
+        name: "Composite",
+        className: "Exposure",
+        modelProperties: {
+            exposureLevel: {
+                nullable: false,
+                serializedName: "exposureLevel",
+                type: {
+                    name: "Enum",
+                    allowedValues: [
+                        "UnderExposure",
+                        "GoodExposure",
+                        "OverExposure"
+                    ]
+                }
+            },
+            value: {
+                nullable: false,
+                serializedName: "value",
+                type: {
+                    name: "Number"
+                }
+            }
+        }
+    }
+};
+var Noise = {
+    serializedName: "Noise",
+    type: {
+        name: "Composite",
+        className: "Noise",
+        modelProperties: {
+            noiseLevel: {
+                nullable: false,
+                serializedName: "noiseLevel",
+                type: {
+                    name: "Enum",
+                    allowedValues: [
+                        "Low",
+                        "Medium",
+                        "High"
+                    ]
+                }
+            },
+            value: {
+                nullable: false,
+                serializedName: "value",
+                type: {
+                    name: "Number"
+                }
+            }
+        }
+    }
+};
+var Mask = {
+    serializedName: "Mask",
+    type: {
+        name: "Composite",
+        className: "Mask",
+        modelProperties: {
+            type: {
+                nullable: false,
+                serializedName: "type",
+                type: {
+                    name: "Enum",
+                    allowedValues: [
+                        "noMask",
+                        "faceMask",
+                        "otherMaskOrOcclusion",
+                        "uncertain"
+                    ]
+                }
+            },
+            noseAndMouthCovered: {
+                nullable: false,
+                serializedName: "noseAndMouthCovered",
+                type: {
+                    name: "Boolean"
+                }
+            }
+        }
+    }
+};
+var FaceAttributes = {
+    serializedName: "FaceAttributes",
+    type: {
+        name: "Composite",
+        className: "FaceAttributes",
+        modelProperties: {
+            age: {
+                serializedName: "age",
+                type: {
+                    name: "Number"
+                }
+            },
+            gender: {
+                serializedName: "gender",
+                type: {
+                    name: "Enum",
+                    allowedValues: [
+                        "male",
+                        "female"
+                    ]
+                }
+            },
+            smile: {
+                serializedName: "smile",
+                type: {
+                    name: "Number"
+                }
+            },
+            facialHair: {
+                serializedName: "facialHair",
+                type: {
+                    name: "Composite",
+                    className: "FacialHair"
+                }
+            },
+            glasses: {
+                serializedName: "glasses",
+                type: {
+                    name: "Enum",
+                    allowedValues: [
+                        "noGlasses",
+                        "readingGlasses",
+                        "sunglasses",
+                        "swimmingGoggles"
+                    ]
+                }
+            },
+            headPose: {
+                serializedName: "headPose",
+                type: {
+                    name: "Composite",
+                    className: "HeadPose"
+                }
+            },
+            emotion: {
+                serializedName: "emotion",
+                type: {
+                    name: "Composite",
+                    className: "Emotion"
+                }
+            },
+            hair: {
+                serializedName: "hair",
+                type: {
+                    name: "Composite",
+                    className: "Hair"
+                }
+            },
+            makeup: {
+                serializedName: "makeup",
+                type: {
+                    name: "Composite",
+                    className: "Makeup"
+                }
+            },
+            occlusion: {
+                serializedName: "occlusion",
+                type: {
+                    name: "Composite",
+                    className: "Occlusion"
+                }
+            },
+            accessories: {
+                serializedName: "accessories",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "Accessory"
+                        }
+                    }
+                }
+            },
+            blur: {
+                serializedName: "blur",
+                type: {
+                    name: "Composite",
+                    className: "Blur"
+                }
+            },
+            exposure: {
+                serializedName: "exposure",
+                type: {
+                    name: "Composite",
+                    className: "Exposure"
+                }
+            },
+            noise: {
+                serializedName: "noise",
+                type: {
+                    name: "Composite",
+                    className: "Noise"
+                }
+            },
+            mask: {
+                serializedName: "mask",
+                type: {
+                    name: "Composite",
+                    className: "Mask"
+                }
+            }
+        }
+    }
+};
+var DetectedFace = {
+    serializedName: "DetectedFace",
+    type: {
+        name: "Composite",
+        className: "DetectedFace",
+        modelProperties: {
+            faceId: {
+                serializedName: "faceId",
+                type: {
+                    name: "Uuid"
+                }
+            },
+            recognitionModel: {
+                nullable: false,
+                serializedName: "recognitionModel",
+                defaultValue: 'recognition_01',
+                type: {
+                    name: "String"
+                }
+            },
+            faceRectangle: {
+                required: true,
+                serializedName: "faceRectangle",
+                type: {
+                    name: "Composite",
+                    className: "FaceRectangle"
+                }
+            },
+            faceLandmarks: {
+                serializedName: "faceLandmarks",
+                type: {
+                    name: "Composite",
+                    className: "FaceLandmarks"
+                }
+            },
+            faceAttributes: {
+                serializedName: "faceAttributes",
+                type: {
+                    name: "Composite",
+                    className: "FaceAttributes"
+                }
+            }
+        }
+    }
+};
+var FindSimilarRequest = {
+    serializedName: "FindSimilarRequest",
+    type: {
+        name: "Composite",
+        className: "FindSimilarRequest",
+        modelProperties: {
+            faceId: {
+                required: true,
+                serializedName: "faceId",
+                type: {
+                    name: "Uuid"
+                }
+            },
+            faceListId: {
+                serializedName: "faceListId",
+                constraints: {
+                    MaxLength: 64,
+                    Pattern: /^[a-z0-9-_]+$/
+                },
+                type: {
+                    name: "String"
+                }
+            },
+            largeFaceListId: {
+                serializedName: "largeFaceListId",
+                constraints: {
+                    MaxLength: 64,
+                    Pattern: /^[a-z0-9-_]+$/
+                },
+                type: {
+                    name: "String"
+                }
+            },
+            faceIds: {
+                serializedName: "faceIds",
+                constraints: {
+                    MaxItems: 1000
+                },
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Uuid"
+                        }
+                    }
+                }
+            },
+            maxNumOfCandidatesReturned: {
+                serializedName: "maxNumOfCandidatesReturned",
+                defaultValue: 20,
+                constraints: {
+                    InclusiveMaximum: 1000,
+                    InclusiveMinimum: 1
+                },
+                type: {
+                    name: "Number"
+                }
+            },
+            mode: {
+                nullable: false,
+                serializedName: "mode",
+                defaultValue: 'matchPerson',
+                type: {
+                    name: "Enum",
+                    allowedValues: [
+                        "matchPerson",
+                        "matchFace"
+                    ]
+                }
+            }
+        }
+    }
+};
+var SimilarFace = {
+    serializedName: "SimilarFace",
+    type: {
+        name: "Composite",
+        className: "SimilarFace",
+        modelProperties: {
+            faceId: {
+                serializedName: "faceId",
+                type: {
+                    name: "Uuid"
+                }
+            },
+            persistedFaceId: {
+                serializedName: "persistedFaceId",
+                type: {
+                    name: "Uuid"
+                }
+            },
+            confidence: {
+                required: true,
+                serializedName: "confidence",
+                type: {
+                    name: "Number"
+                }
+            }
+        }
+    }
+};
+var GroupRequest = {
+    serializedName: "GroupRequest",
+    type: {
+        name: "Composite",
+        className: "GroupRequest",
+        modelProperties: {
+            faceIds: {
+                required: true,
+                serializedName: "faceIds",
+                constraints: {
+                    MaxItems: 1000
+                },
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Uuid"
+                        }
+                    }
+                }
+            }
+        }
+    }
+};
+var GroupResult = {
+    serializedName: "GroupResult",
+    type: {
+        name: "Composite",
+        className: "GroupResult",
+        modelProperties: {
+            groups: {
+                required: true,
+                serializedName: "groups",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Sequence",
+                            element: {
+                                type: {
+                                    name: "Uuid"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            messyGroup: {
+                serializedName: "messyGroup",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Uuid"
+                        }
+                    }
+                }
+            }
+        }
+    }
+};
+var IdentifyRequest = {
+    serializedName: "IdentifyRequest",
+    type: {
+        name: "Composite",
+        className: "IdentifyRequest",
+        modelProperties: {
+            faceIds: {
+                required: true,
+                serializedName: "faceIds",
+                constraints: {
+                    MaxItems: 10
+                },
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Uuid"
+                        }
+                    }
+                }
+            },
+            personGroupId: {
+                serializedName: "personGroupId",
+                constraints: {
+                    MaxLength: 64,
+                    Pattern: /^[a-z0-9-_]+$/
+                },
+                type: {
+                    name: "String"
+                }
+            },
+            largePersonGroupId: {
+                serializedName: "largePersonGroupId",
+                constraints: {
+                    MaxLength: 64,
+                    Pattern: /^[a-z0-9-_]+$/
+                },
+                type: {
+                    name: "String"
+                }
+            },
+            maxNumOfCandidatesReturned: {
+                serializedName: "maxNumOfCandidatesReturned",
+                defaultValue: 1,
+                constraints: {
+                    InclusiveMaximum: 5,
+                    InclusiveMinimum: 1
+                },
+                type: {
+                    name: "Number"
+                }
+            },
+            confidenceThreshold: {
+                serializedName: "confidenceThreshold",
+                type: {
+                    name: "Number"
+                }
+            }
+        }
+    }
+};
+var IdentifyCandidate = {
+    serializedName: "IdentifyCandidate",
+    type: {
+        name: "Composite",
+        className: "IdentifyCandidate",
+        modelProperties: {
+            personId: {
+                required: true,
+                serializedName: "personId",
+                type: {
+                    name: "Uuid"
+                }
+            },
+            confidence: {
+                required: true,
+                serializedName: "confidence",
+                type: {
+                    name: "Number"
+                }
+            }
+        }
+    }
+};
+var IdentifyResult = {
+    serializedName: "IdentifyResult",
+    type: {
+        name: "Composite",
+        className: "IdentifyResult",
+        modelProperties: {
+            faceId: {
+                required: true,
+                serializedName: "faceId",
+                type: {
+                    name: "Uuid"
+                }
+            },
+            candidates: {
+                required: true,
+                serializedName: "candidates",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "IdentifyCandidate"
+                        }
+                    }
+                }
+            }
+        }
+    }
+};
+var VerifyFaceToPersonRequest = {
+    serializedName: "VerifyFaceToPersonRequest",
+    type: {
+        name: "Composite",
+        className: "VerifyFaceToPersonRequest",
+        modelProperties: {
+            faceId: {
+                required: true,
+                serializedName: "faceId",
+                type: {
+                    name: "Uuid"
+                }
+            },
+            personGroupId: {
+                serializedName: "personGroupId",
+                constraints: {
+                    MaxLength: 64,
+                    Pattern: /^[a-z0-9-_]+$/
+                },
+                type: {
+                    name: "String"
+                }
+            },
+            largePersonGroupId: {
+                serializedName: "largePersonGroupId",
+                constraints: {
+                    MaxLength: 64,
+                    Pattern: /^[a-z0-9-_]+$/
+                },
+                type: {
+                    name: "String"
+                }
+            },
+            personId: {
+                required: true,
+                serializedName: "personId",
+                type: {
+                    name: "Uuid"
+                }
+            }
+        }
+    }
+};
+var VerifyFaceToFaceRequest = {
+    serializedName: "VerifyFaceToFaceRequest",
+    type: {
+        name: "Composite",
+        className: "VerifyFaceToFaceRequest",
+        modelProperties: {
+            faceId1: {
+                required: true,
+                serializedName: "faceId1",
+                type: {
+                    name: "Uuid"
+                }
+            },
+            faceId2: {
+                required: true,
+                serializedName: "faceId2",
+                type: {
+                    name: "Uuid"
+                }
+            }
+        }
+    }
+};
+var VerifyResult = {
+    serializedName: "VerifyResult",
+    type: {
+        name: "Composite",
+        className: "VerifyResult",
+        modelProperties: {
+            isIdentical: {
+                required: true,
+                serializedName: "isIdentical",
+                type: {
+                    name: "Boolean"
+                }
+            },
+            confidence: {
+                required: true,
+                serializedName: "confidence",
+                type: {
+                    name: "Number"
+                }
+            }
+        }
+    }
+};
+var PersistedFace = {
+    serializedName: "PersistedFace",
+    type: {
+        name: "Composite",
+        className: "PersistedFace",
+        modelProperties: {
+            persistedFaceId: {
+                required: true,
+                serializedName: "persistedFaceId",
+                type: {
+                    name: "Uuid"
+                }
+            },
+            userData: {
+                serializedName: "userData",
+                constraints: {
+                    MaxLength: 1024
+                },
+                type: {
+                    name: "String"
+                }
+            }
+        }
+    }
+};
+var NameAndUserDataContract = {
+    serializedName: "NameAndUserDataContract",
+    type: {
+        name: "Composite",
+        className: "NameAndUserDataContract",
+        modelProperties: {
+            name: {
+                serializedName: "name",
+                constraints: {
+                    MaxLength: 128
+                },
+                type: {
+                    name: "String"
+                }
+            },
+            userData: {
+                serializedName: "userData",
+                constraints: {
+                    MaxLength: 16384
+                },
+                type: {
+                    name: "String"
+                }
+            }
+        }
+    }
+};
+var MetaDataContract = {
+    serializedName: "MetaDataContract",
+    type: {
+        name: "Composite",
+        className: "MetaDataContract",
+        modelProperties: (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_0__.__assign)({}, NameAndUserDataContract.type.modelProperties), { recognitionModel: {
+                nullable: false,
+                serializedName: "recognitionModel",
+                defaultValue: 'recognition_01',
+                type: {
+                    name: "String"
+                }
+            } })
+    }
+};
+var FaceList = {
+    serializedName: "FaceList",
+    type: {
+        name: "Composite",
+        className: "FaceList",
+        modelProperties: (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_0__.__assign)({}, MetaDataContract.type.modelProperties), { faceListId: {
+                required: true,
+                serializedName: "faceListId",
+                constraints: {
+                    MaxLength: 64,
+                    Pattern: /^[a-z0-9-_]+$/
+                },
+                type: {
+                    name: "String"
+                }
+            }, persistedFaces: {
+                serializedName: "persistedFaces",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "PersistedFace"
+                        }
+                    }
+                }
+            } })
+    }
+};
+var PersonGroup = {
+    serializedName: "PersonGroup",
+    type: {
+        name: "Composite",
+        className: "PersonGroup",
+        modelProperties: (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_0__.__assign)({}, MetaDataContract.type.modelProperties), { personGroupId: {
+                required: true,
+                serializedName: "personGroupId",
+                constraints: {
+                    MaxLength: 64,
+                    Pattern: /^[a-z0-9-_]+$/
+                },
+                type: {
+                    name: "String"
+                }
+            } })
+    }
+};
+var Person = {
+    serializedName: "Person",
+    type: {
+        name: "Composite",
+        className: "Person",
+        modelProperties: (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_0__.__assign)({}, NameAndUserDataContract.type.modelProperties), { personId: {
+                required: true,
+                serializedName: "personId",
+                type: {
+                    name: "Uuid"
+                }
+            }, persistedFaceIds: {
+                serializedName: "persistedFaceIds",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Uuid"
+                        }
+                    }
+                }
+            } })
+    }
+};
+var LargeFaceList = {
+    serializedName: "LargeFaceList",
+    type: {
+        name: "Composite",
+        className: "LargeFaceList",
+        modelProperties: (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_0__.__assign)({}, MetaDataContract.type.modelProperties), { largeFaceListId: {
+                required: true,
+                serializedName: "largeFaceListId",
+                constraints: {
+                    MaxLength: 64,
+                    Pattern: /^[a-z0-9-_]+$/
+                },
+                type: {
+                    name: "String"
+                }
+            } })
+    }
+};
+var LargePersonGroup = {
+    serializedName: "LargePersonGroup",
+    type: {
+        name: "Composite",
+        className: "LargePersonGroup",
+        modelProperties: (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_0__.__assign)({}, MetaDataContract.type.modelProperties), { largePersonGroupId: {
+                required: true,
+                serializedName: "largePersonGroupId",
+                constraints: {
+                    MaxLength: 64,
+                    Pattern: /^[a-z0-9-_]+$/
+                },
+                type: {
+                    name: "String"
+                }
+            } })
+    }
+};
+var UpdateFaceRequest = {
+    serializedName: "UpdateFaceRequest",
+    type: {
+        name: "Composite",
+        className: "UpdateFaceRequest",
+        modelProperties: {
+            userData: {
+                serializedName: "userData",
+                constraints: {
+                    MaxLength: 1024
+                },
+                type: {
+                    name: "String"
+                }
+            }
+        }
+    }
+};
+var TrainingStatus = {
+    serializedName: "TrainingStatus",
+    type: {
+        name: "Composite",
+        className: "TrainingStatus",
+        modelProperties: {
+            status: {
+                required: true,
+                serializedName: "status",
+                type: {
+                    name: "Enum",
+                    allowedValues: [
+                        "nonstarted",
+                        "running",
+                        "succeeded",
+                        "failed"
+                    ]
+                }
+            },
+            created: {
+                required: true,
+                serializedName: "createdDateTime",
+                type: {
+                    name: "DateTime"
+                }
+            },
+            lastAction: {
+                serializedName: "lastActionDateTime",
+                type: {
+                    name: "DateTime"
+                }
+            },
+            lastSuccessfulTraining: {
+                serializedName: "lastSuccessfulTrainingDateTime",
+                type: {
+                    name: "DateTime"
+                }
+            },
+            message: {
+                serializedName: "message",
+                type: {
+                    name: "String"
+                }
+            }
+        }
+    }
+};
+var ApplySnapshotRequest = {
+    serializedName: "ApplySnapshotRequest",
+    type: {
+        name: "Composite",
+        className: "ApplySnapshotRequest",
+        modelProperties: {
+            objectId: {
+                required: true,
+                serializedName: "objectId",
+                constraints: {
+                    MaxLength: 64,
+                    Pattern: /^[a-z0-9-_]+$/
+                },
+                type: {
+                    name: "String"
+                }
+            },
+            mode: {
+                nullable: false,
+                serializedName: "mode",
+                defaultValue: 'CreateNew',
+                type: {
+                    name: "Enum",
+                    allowedValues: [
+                        "CreateNew"
+                    ]
+                }
+            }
+        }
+    }
+};
+var Snapshot = {
+    serializedName: "Snapshot",
+    type: {
+        name: "Composite",
+        className: "Snapshot",
+        modelProperties: {
+            id: {
+                required: true,
+                serializedName: "id",
+                type: {
+                    name: "Uuid"
+                }
+            },
+            account: {
+                required: true,
+                serializedName: "account",
+                type: {
+                    name: "String"
+                }
+            },
+            type: {
+                required: true,
+                serializedName: "type",
+                type: {
+                    name: "Enum",
+                    allowedValues: [
+                        "FaceList",
+                        "LargeFaceList",
+                        "LargePersonGroup",
+                        "PersonGroup"
+                    ]
+                }
+            },
+            applyScope: {
+                required: true,
+                serializedName: "applyScope",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Uuid"
+                        }
+                    }
+                }
+            },
+            userData: {
+                serializedName: "userData",
+                constraints: {
+                    MaxLength: 16384
+                },
+                type: {
+                    name: "String"
+                }
+            },
+            createdTime: {
+                required: true,
+                serializedName: "createdTime",
+                type: {
+                    name: "DateTime"
+                }
+            },
+            lastUpdateTime: {
+                required: true,
+                serializedName: "lastUpdateTime",
+                type: {
+                    name: "DateTime"
+                }
+            }
+        }
+    }
+};
+var TakeSnapshotRequest = {
+    serializedName: "TakeSnapshotRequest",
+    type: {
+        name: "Composite",
+        className: "TakeSnapshotRequest",
+        modelProperties: {
+            type: {
+                required: true,
+                serializedName: "type",
+                type: {
+                    name: "Enum",
+                    allowedValues: [
+                        "FaceList",
+                        "LargeFaceList",
+                        "LargePersonGroup",
+                        "PersonGroup"
+                    ]
+                }
+            },
+            objectId: {
+                required: true,
+                serializedName: "objectId",
+                constraints: {
+                    MaxLength: 64,
+                    Pattern: /^[a-z0-9-_]+$/
+                },
+                type: {
+                    name: "String"
+                }
+            },
+            applyScope: {
+                required: true,
+                serializedName: "applyScope",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Uuid"
+                        }
+                    }
+                }
+            },
+            userData: {
+                serializedName: "userData",
+                constraints: {
+                    MaxLength: 16384
+                },
+                type: {
+                    name: "String"
+                }
+            }
+        }
+    }
+};
+var UpdateSnapshotRequest = {
+    serializedName: "UpdateSnapshotRequest",
+    type: {
+        name: "Composite",
+        className: "UpdateSnapshotRequest",
+        modelProperties: {
+            applyScope: {
+                serializedName: "applyScope",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Uuid"
+                        }
+                    }
+                }
+            },
+            userData: {
+                serializedName: "userData",
+                constraints: {
+                    MaxLength: 16384
+                },
+                type: {
+                    name: "String"
+                }
+            }
+        }
+    }
+};
+var OperationStatus = {
+    serializedName: "OperationStatus",
+    type: {
+        name: "Composite",
+        className: "OperationStatus",
+        modelProperties: {
+            status: {
+                required: true,
+                serializedName: "status",
+                type: {
+                    name: "Enum",
+                    allowedValues: [
+                        "notstarted",
+                        "running",
+                        "succeeded",
+                        "failed"
+                    ]
+                }
+            },
+            createdTime: {
+                required: true,
+                serializedName: "createdTime",
+                type: {
+                    name: "DateTime"
+                }
+            },
+            lastActionTime: {
+                serializedName: "lastActionTime",
+                type: {
+                    name: "DateTime"
+                }
+            },
+            resourceLocation: {
+                serializedName: "resourceLocation",
+                type: {
+                    name: "String"
+                }
+            },
+            message: {
+                serializedName: "message",
+                type: {
+                    name: "String"
+                }
+            }
+        }
+    }
+};
+var ImageUrl = {
+    serializedName: "ImageUrl",
+    type: {
+        name: "Composite",
+        className: "ImageUrl",
+        modelProperties: {
+            url: {
+                required: true,
+                serializedName: "url",
+                type: {
+                    name: "String"
+                }
+            }
+        }
+    }
+};
+var SnapshotTakeHeaders = {
+    serializedName: "snapshot-take-headers",
+    type: {
+        name: "Composite",
+        className: "SnapshotTakeHeaders",
+        modelProperties: {
+            operationLocation: {
+                serializedName: "operation-location",
+                type: {
+                    name: "String"
+                }
+            }
+        }
+    }
+};
+var SnapshotApplyHeaders = {
+    serializedName: "snapshot-apply-headers",
+    type: {
+        name: "Composite",
+        className: "SnapshotApplyHeaders",
+        modelProperties: {
+            operationLocation: {
+                serializedName: "operation-location",
+                type: {
+                    name: "String"
+                }
+            }
+        }
+    }
+};
+//# sourceMappingURL=mappers.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/cognitiveservices-face/esm/models/parameters.js":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/@azure/cognitiveservices-face/esm/models/parameters.js ***!
+  \*****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "applyScope": () => (/* binding */ applyScope),
+/* harmony export */   "detectionModel": () => (/* binding */ detectionModel),
+/* harmony export */   "endpoint": () => (/* binding */ endpoint),
+/* harmony export */   "faceIdTimeToLive": () => (/* binding */ faceIdTimeToLive),
+/* harmony export */   "faceListId": () => (/* binding */ faceListId),
+/* harmony export */   "largeFaceListId": () => (/* binding */ largeFaceListId),
+/* harmony export */   "largePersonGroupId": () => (/* binding */ largePersonGroupId),
+/* harmony export */   "operationId": () => (/* binding */ operationId),
+/* harmony export */   "persistedFaceId": () => (/* binding */ persistedFaceId),
+/* harmony export */   "personGroupId": () => (/* binding */ personGroupId),
+/* harmony export */   "personId": () => (/* binding */ personId),
+/* harmony export */   "recognitionModel": () => (/* binding */ recognitionModel),
+/* harmony export */   "returnFaceAttributes": () => (/* binding */ returnFaceAttributes),
+/* harmony export */   "returnFaceId": () => (/* binding */ returnFaceId),
+/* harmony export */   "returnFaceLandmarks": () => (/* binding */ returnFaceLandmarks),
+/* harmony export */   "returnRecognitionModel": () => (/* binding */ returnRecognitionModel),
+/* harmony export */   "snapshotId": () => (/* binding */ snapshotId),
+/* harmony export */   "start0": () => (/* binding */ start0),
+/* harmony export */   "start1": () => (/* binding */ start1),
+/* harmony export */   "targetFace": () => (/* binding */ targetFace),
+/* harmony export */   "top0": () => (/* binding */ top0),
+/* harmony export */   "top1": () => (/* binding */ top1),
+/* harmony export */   "type": () => (/* binding */ type),
+/* harmony export */   "userData": () => (/* binding */ userData)
+/* harmony export */ });
+/* harmony import */ var _azure_ms_rest_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @azure/ms-rest-js */ "./node_modules/@azure/ms-rest-js/es/lib/queryCollectionFormat.js");
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License. See License.txt in the project root for
+ * license information.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is
+ * regenerated.
+ */
+
+var applyScope = {
+    parameterPath: [
+        "options",
+        "applyScope"
+    ],
+    mapper: {
+        serializedName: "applyScope",
+        type: {
+            name: "Sequence",
+            element: {
+                type: {
+                    name: "Uuid"
+                }
+            }
+        }
+    },
+    collectionFormat: _azure_ms_rest_js__WEBPACK_IMPORTED_MODULE_0__.QueryCollectionFormat.Csv
+};
+var detectionModel = {
+    parameterPath: [
+        "options",
+        "detectionModel"
+    ],
+    mapper: {
+        serializedName: "detectionModel",
+        defaultValue: 'detection_01',
+        type: {
+            name: "String"
+        }
+    }
+};
+var endpoint = {
+    parameterPath: "endpoint",
+    mapper: {
+        required: true,
+        serializedName: "Endpoint",
+        defaultValue: '',
+        type: {
+            name: "String"
+        }
+    },
+    skipEncoding: true
+};
+var faceIdTimeToLive = {
+    parameterPath: [
+        "options",
+        "faceIdTimeToLive"
+    ],
+    mapper: {
+        serializedName: "faceIdTimeToLive",
+        defaultValue: 86400,
+        constraints: {
+            InclusiveMaximum: 86400,
+            InclusiveMinimum: 60
+        },
+        type: {
+            name: "Number"
+        }
+    }
+};
+var faceListId = {
+    parameterPath: "faceListId",
+    mapper: {
+        required: true,
+        serializedName: "faceListId",
+        constraints: {
+            MaxLength: 64,
+            Pattern: /^[a-z0-9-_]+$/
+        },
+        type: {
+            name: "String"
+        }
+    }
+};
+var largeFaceListId = {
+    parameterPath: "largeFaceListId",
+    mapper: {
+        required: true,
+        serializedName: "largeFaceListId",
+        constraints: {
+            MaxLength: 64,
+            Pattern: /^[a-z0-9-_]+$/
+        },
+        type: {
+            name: "String"
+        }
+    }
+};
+var largePersonGroupId = {
+    parameterPath: "largePersonGroupId",
+    mapper: {
+        required: true,
+        serializedName: "largePersonGroupId",
+        constraints: {
+            MaxLength: 64,
+            Pattern: /^[a-z0-9-_]+$/
+        },
+        type: {
+            name: "String"
+        }
+    }
+};
+var operationId = {
+    parameterPath: "operationId",
+    mapper: {
+        required: true,
+        serializedName: "operationId",
+        type: {
+            name: "Uuid"
+        }
+    }
+};
+var persistedFaceId = {
+    parameterPath: "persistedFaceId",
+    mapper: {
+        required: true,
+        serializedName: "persistedFaceId",
+        type: {
+            name: "Uuid"
+        }
+    }
+};
+var personGroupId = {
+    parameterPath: "personGroupId",
+    mapper: {
+        required: true,
+        serializedName: "personGroupId",
+        constraints: {
+            MaxLength: 64,
+            Pattern: /^[a-z0-9-_]+$/
+        },
+        type: {
+            name: "String"
+        }
+    }
+};
+var personId = {
+    parameterPath: "personId",
+    mapper: {
+        required: true,
+        serializedName: "personId",
+        type: {
+            name: "Uuid"
+        }
+    }
+};
+var recognitionModel = {
+    parameterPath: [
+        "options",
+        "recognitionModel"
+    ],
+    mapper: {
+        serializedName: "recognitionModel",
+        defaultValue: 'recognition_01',
+        type: {
+            name: "String"
+        }
+    }
+};
+var returnFaceAttributes = {
+    parameterPath: [
+        "options",
+        "returnFaceAttributes"
+    ],
+    mapper: {
+        serializedName: "returnFaceAttributes",
+        type: {
+            name: "Sequence",
+            element: {
+                type: {
+                    name: "Enum",
+                    allowedValues: [
+                        "age",
+                        "gender",
+                        "headPose",
+                        "smile",
+                        "facialHair",
+                        "glasses",
+                        "emotion",
+                        "hair",
+                        "makeup",
+                        "occlusion",
+                        "accessories",
+                        "blur",
+                        "exposure",
+                        "noise",
+                        "mask"
+                    ]
+                }
+            }
+        }
+    },
+    collectionFormat: _azure_ms_rest_js__WEBPACK_IMPORTED_MODULE_0__.QueryCollectionFormat.Csv
+};
+var returnFaceId = {
+    parameterPath: [
+        "options",
+        "returnFaceId"
+    ],
+    mapper: {
+        serializedName: "returnFaceId",
+        defaultValue: true,
+        type: {
+            name: "Boolean"
+        }
+    }
+};
+var returnFaceLandmarks = {
+    parameterPath: [
+        "options",
+        "returnFaceLandmarks"
+    ],
+    mapper: {
+        serializedName: "returnFaceLandmarks",
+        defaultValue: false,
+        type: {
+            name: "Boolean"
+        }
+    }
+};
+var returnRecognitionModel = {
+    parameterPath: [
+        "options",
+        "returnRecognitionModel"
+    ],
+    mapper: {
+        serializedName: "returnRecognitionModel",
+        defaultValue: false,
+        type: {
+            name: "Boolean"
+        }
+    }
+};
+var snapshotId = {
+    parameterPath: "snapshotId",
+    mapper: {
+        required: true,
+        serializedName: "snapshotId",
+        type: {
+            name: "Uuid"
+        }
+    }
+};
+var start0 = {
+    parameterPath: [
+        "options",
+        "start"
+    ],
+    mapper: {
+        serializedName: "start",
+        type: {
+            name: "String"
+        }
+    }
+};
+var start1 = {
+    parameterPath: [
+        "options",
+        "start"
+    ],
+    mapper: {
+        serializedName: "start",
+        constraints: {
+            MaxLength: 64
+        },
+        type: {
+            name: "String"
+        }
+    }
+};
+var targetFace = {
+    parameterPath: [
+        "options",
+        "targetFace"
+    ],
+    mapper: {
+        serializedName: "targetFace",
+        type: {
+            name: "Sequence",
+            element: {
+                type: {
+                    name: "Number"
+                }
+            }
+        }
+    },
+    collectionFormat: _azure_ms_rest_js__WEBPACK_IMPORTED_MODULE_0__.QueryCollectionFormat.Csv
+};
+var top0 = {
+    parameterPath: [
+        "options",
+        "top"
+    ],
+    mapper: {
+        serializedName: "top",
+        constraints: {
+            InclusiveMaximum: 1000,
+            InclusiveMinimum: 1
+        },
+        type: {
+            name: "Number"
+        }
+    }
+};
+var top1 = {
+    parameterPath: [
+        "options",
+        "top"
+    ],
+    mapper: {
+        serializedName: "top",
+        defaultValue: 1000,
+        constraints: {
+            InclusiveMaximum: 1000,
+            InclusiveMinimum: 1
+        },
+        type: {
+            name: "Number"
+        }
+    }
+};
+var type = {
+    parameterPath: [
+        "options",
+        "type"
+    ],
+    mapper: {
+        serializedName: "type",
+        type: {
+            name: "Enum",
+            allowedValues: [
+                "FaceList",
+                "LargeFaceList",
+                "LargePersonGroup",
+                "PersonGroup"
+            ]
+        }
+    }
+};
+var userData = {
+    parameterPath: [
+        "options",
+        "userData"
+    ],
+    mapper: {
+        serializedName: "userData",
+        constraints: {
+            MaxLength: 1024
+        },
+        type: {
+            name: "String"
+        }
+    }
+};
+//# sourceMappingURL=parameters.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/cognitiveservices-face/esm/models/personGroupOperationsMappers.js":
+/*!***********************************************************************************************!*\
+  !*** ./node_modules/@azure/cognitiveservices-face/esm/models/personGroupOperationsMappers.js ***!
+  \***********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "APIError": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.APIError),
+/* harmony export */   "ErrorModel": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.ErrorModel),
+/* harmony export */   "FaceList": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.FaceList),
+/* harmony export */   "LargeFaceList": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.LargeFaceList),
+/* harmony export */   "LargePersonGroup": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.LargePersonGroup),
+/* harmony export */   "MetaDataContract": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.MetaDataContract),
+/* harmony export */   "NameAndUserDataContract": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.NameAndUserDataContract),
+/* harmony export */   "PersistedFace": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.PersistedFace),
+/* harmony export */   "Person": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.Person),
+/* harmony export */   "PersonGroup": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.PersonGroup),
+/* harmony export */   "TrainingStatus": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.TrainingStatus)
+/* harmony export */ });
+/* harmony import */ var _models_mappers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../models/mappers */ "./node_modules/@azure/cognitiveservices-face/esm/models/mappers.js");
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License. See License.txt in the project root for license information.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+
+//# sourceMappingURL=personGroupOperationsMappers.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/cognitiveservices-face/esm/models/personGroupPersonMappers.js":
+/*!*******************************************************************************************!*\
+  !*** ./node_modules/@azure/cognitiveservices-face/esm/models/personGroupPersonMappers.js ***!
+  \*******************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "APIError": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.APIError),
+/* harmony export */   "ErrorModel": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.ErrorModel),
+/* harmony export */   "FaceList": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.FaceList),
+/* harmony export */   "ImageUrl": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.ImageUrl),
+/* harmony export */   "LargeFaceList": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.LargeFaceList),
+/* harmony export */   "LargePersonGroup": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.LargePersonGroup),
+/* harmony export */   "MetaDataContract": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.MetaDataContract),
+/* harmony export */   "NameAndUserDataContract": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.NameAndUserDataContract),
+/* harmony export */   "PersistedFace": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.PersistedFace),
+/* harmony export */   "Person": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.Person),
+/* harmony export */   "PersonGroup": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.PersonGroup),
+/* harmony export */   "UpdateFaceRequest": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.UpdateFaceRequest)
+/* harmony export */ });
+/* harmony import */ var _models_mappers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../models/mappers */ "./node_modules/@azure/cognitiveservices-face/esm/models/mappers.js");
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License. See License.txt in the project root for license information.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+
+//# sourceMappingURL=personGroupPersonMappers.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/cognitiveservices-face/esm/models/snapshotOperationsMappers.js":
+/*!********************************************************************************************!*\
+  !*** ./node_modules/@azure/cognitiveservices-face/esm/models/snapshotOperationsMappers.js ***!
+  \********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "APIError": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.APIError),
+/* harmony export */   "ApplySnapshotRequest": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.ApplySnapshotRequest),
+/* harmony export */   "ErrorModel": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.ErrorModel),
+/* harmony export */   "OperationStatus": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.OperationStatus),
+/* harmony export */   "Snapshot": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.Snapshot),
+/* harmony export */   "SnapshotApplyHeaders": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.SnapshotApplyHeaders),
+/* harmony export */   "SnapshotTakeHeaders": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.SnapshotTakeHeaders),
+/* harmony export */   "TakeSnapshotRequest": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.TakeSnapshotRequest),
+/* harmony export */   "UpdateSnapshotRequest": () => (/* reexport safe */ _models_mappers__WEBPACK_IMPORTED_MODULE_0__.UpdateSnapshotRequest)
+/* harmony export */ });
+/* harmony import */ var _models_mappers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../models/mappers */ "./node_modules/@azure/cognitiveservices-face/esm/models/mappers.js");
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License. See License.txt in the project root for license information.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+
+//# sourceMappingURL=snapshotOperationsMappers.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/cognitiveservices-face/esm/operations/face.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/@azure/cognitiveservices-face/esm/operations/face.js ***!
+  \***************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Face": () => (/* binding */ Face)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tslib */ "./node_modules/@azure/cognitiveservices-face/node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _azure_ms_rest_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @azure/ms-rest-js */ "./node_modules/@azure/ms-rest-js/es/lib/serializer.js");
+/* harmony import */ var _models_faceMappers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../models/faceMappers */ "./node_modules/@azure/cognitiveservices-face/esm/models/faceMappers.js");
+/* harmony import */ var _models_faceMappers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../models/faceMappers */ "./node_modules/@azure/cognitiveservices-face/esm/models/mappers.js");
+/* harmony import */ var _models_parameters__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../models/parameters */ "./node_modules/@azure/cognitiveservices-face/esm/models/parameters.js");
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License. See License.txt in the project root for
+ * license information.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is
+ * regenerated.
+ */
+
+
+
+
+/** Class representing a Face. */
+var Face = /** @class */ (function () {
+    /**
+     * Create a Face.
+     * @param {FaceClientContext} client Reference to the service client.
+     */
+    function Face(client) {
+        this.client = client;
+    }
+    Face.prototype.findSimilar = function (faceId, options, callback) {
+        return this.client.sendOperationRequest({
+            faceId: faceId,
+            options: options
+        }, findSimilarOperationSpec, callback);
+    };
+    Face.prototype.group = function (faceIds, options, callback) {
+        return this.client.sendOperationRequest({
+            faceIds: faceIds,
+            options: options
+        }, groupOperationSpec, callback);
+    };
+    Face.prototype.identify = function (faceIds, options, callback) {
+        return this.client.sendOperationRequest({
+            faceIds: faceIds,
+            options: options
+        }, identifyOperationSpec, callback);
+    };
+    Face.prototype.verifyFaceToFace = function (faceId1, faceId2, options, callback) {
+        return this.client.sendOperationRequest({
+            faceId1: faceId1,
+            faceId2: faceId2,
+            options: options
+        }, verifyFaceToFaceOperationSpec, callback);
+    };
+    Face.prototype.detectWithUrl = function (url, options, callback) {
+        return this.client.sendOperationRequest({
+            url: url,
+            options: options
+        }, detectWithUrlOperationSpec, callback);
+    };
+    Face.prototype.verifyFaceToPerson = function (faceId, personId, options, callback) {
+        return this.client.sendOperationRequest({
+            faceId: faceId,
+            personId: personId,
+            options: options
+        }, verifyFaceToPersonOperationSpec, callback);
+    };
+    Face.prototype.detectWithStream = function (image, options, callback) {
+        return this.client.sendOperationRequest({
+            image: image,
+            options: options
+        }, detectWithStreamOperationSpec, callback);
+    };
+    return Face;
+}());
+
+// Operation Specifications
+var serializer = new _azure_ms_rest_js__WEBPACK_IMPORTED_MODULE_0__.Serializer(_models_faceMappers__WEBPACK_IMPORTED_MODULE_1__);
+var findSimilarOperationSpec = {
+    httpMethod: "POST",
+    path: "findsimilars",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint
+    ],
+    requestBody: {
+        parameterPath: {
+            faceId: "faceId",
+            faceListId: [
+                "options",
+                "faceListId"
+            ],
+            largeFaceListId: [
+                "options",
+                "largeFaceListId"
+            ],
+            faceIds: [
+                "options",
+                "faceIds"
+            ],
+            maxNumOfCandidatesReturned: [
+                "options",
+                "maxNumOfCandidatesReturned"
+            ],
+            mode: [
+                "options",
+                "mode"
+            ]
+        },
+        mapper: (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)({}, _models_faceMappers__WEBPACK_IMPORTED_MODULE_4__.FindSimilarRequest), { required: true })
+    },
+    responses: {
+        200: {
+            bodyMapper: {
+                serializedName: "parsedResponse",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "SimilarFace"
+                        }
+                    }
+                }
+            }
+        },
+        default: {
+            bodyMapper: _models_faceMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var groupOperationSpec = {
+    httpMethod: "POST",
+    path: "group",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint
+    ],
+    requestBody: {
+        parameterPath: {
+            faceIds: "faceIds"
+        },
+        mapper: (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)({}, _models_faceMappers__WEBPACK_IMPORTED_MODULE_4__.GroupRequest), { required: true })
+    },
+    responses: {
+        200: {
+            bodyMapper: _models_faceMappers__WEBPACK_IMPORTED_MODULE_4__.GroupResult
+        },
+        default: {
+            bodyMapper: _models_faceMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var identifyOperationSpec = {
+    httpMethod: "POST",
+    path: "identify",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint
+    ],
+    requestBody: {
+        parameterPath: {
+            faceIds: "faceIds",
+            personGroupId: [
+                "options",
+                "personGroupId"
+            ],
+            largePersonGroupId: [
+                "options",
+                "largePersonGroupId"
+            ],
+            maxNumOfCandidatesReturned: [
+                "options",
+                "maxNumOfCandidatesReturned"
+            ],
+            confidenceThreshold: [
+                "options",
+                "confidenceThreshold"
+            ]
+        },
+        mapper: (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)({}, _models_faceMappers__WEBPACK_IMPORTED_MODULE_4__.IdentifyRequest), { required: true })
+    },
+    responses: {
+        200: {
+            bodyMapper: {
+                serializedName: "parsedResponse",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "IdentifyResult"
+                        }
+                    }
+                }
+            }
+        },
+        default: {
+            bodyMapper: _models_faceMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var verifyFaceToFaceOperationSpec = {
+    httpMethod: "POST",
+    path: "verify",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint
+    ],
+    requestBody: {
+        parameterPath: {
+            faceId1: "faceId1",
+            faceId2: "faceId2"
+        },
+        mapper: (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)({}, _models_faceMappers__WEBPACK_IMPORTED_MODULE_4__.VerifyFaceToFaceRequest), { required: true })
+    },
+    responses: {
+        200: {
+            bodyMapper: _models_faceMappers__WEBPACK_IMPORTED_MODULE_4__.VerifyResult
+        },
+        default: {
+            bodyMapper: _models_faceMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var detectWithUrlOperationSpec = {
+    httpMethod: "POST",
+    path: "detect",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint
+    ],
+    queryParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.returnFaceId,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.returnFaceLandmarks,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.returnFaceAttributes,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.recognitionModel,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.returnRecognitionModel,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.detectionModel,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.faceIdTimeToLive
+    ],
+    requestBody: {
+        parameterPath: {
+            url: "url"
+        },
+        mapper: (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)({}, _models_faceMappers__WEBPACK_IMPORTED_MODULE_4__.ImageUrl), { required: true })
+    },
+    responses: {
+        200: {
+            bodyMapper: {
+                serializedName: "parsedResponse",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "DetectedFace"
+                        }
+                    }
+                }
+            }
+        },
+        default: {
+            bodyMapper: _models_faceMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var verifyFaceToPersonOperationSpec = {
+    httpMethod: "POST",
+    path: "verify",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint
+    ],
+    requestBody: {
+        parameterPath: {
+            faceId: "faceId",
+            personGroupId: [
+                "options",
+                "personGroupId"
+            ],
+            largePersonGroupId: [
+                "options",
+                "largePersonGroupId"
+            ],
+            personId: "personId"
+        },
+        mapper: (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)({}, _models_faceMappers__WEBPACK_IMPORTED_MODULE_4__.VerifyFaceToPersonRequest), { required: true })
+    },
+    responses: {
+        200: {
+            bodyMapper: _models_faceMappers__WEBPACK_IMPORTED_MODULE_4__.VerifyResult
+        },
+        default: {
+            bodyMapper: _models_faceMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var detectWithStreamOperationSpec = {
+    httpMethod: "POST",
+    path: "detect",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint
+    ],
+    queryParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.returnFaceId,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.returnFaceLandmarks,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.returnFaceAttributes,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.recognitionModel,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.returnRecognitionModel,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.detectionModel,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.faceIdTimeToLive
+    ],
+    requestBody: {
+        parameterPath: "image",
+        mapper: {
+            required: true,
+            serializedName: "Image",
+            type: {
+                name: "Stream"
+            }
+        }
+    },
+    contentType: "application/octet-stream",
+    responses: {
+        200: {
+            bodyMapper: {
+                serializedName: "parsedResponse",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "DetectedFace"
+                        }
+                    }
+                }
+            }
+        },
+        default: {
+            bodyMapper: _models_faceMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+//# sourceMappingURL=face.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/cognitiveservices-face/esm/operations/faceListOperations.js":
+/*!*****************************************************************************************!*\
+  !*** ./node_modules/@azure/cognitiveservices-face/esm/operations/faceListOperations.js ***!
+  \*****************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "FaceListOperations": () => (/* binding */ FaceListOperations)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tslib */ "./node_modules/@azure/cognitiveservices-face/node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _azure_ms_rest_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @azure/ms-rest-js */ "./node_modules/@azure/ms-rest-js/es/lib/serializer.js");
+/* harmony import */ var _models_faceListOperationsMappers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../models/faceListOperationsMappers */ "./node_modules/@azure/cognitiveservices-face/esm/models/faceListOperationsMappers.js");
+/* harmony import */ var _models_faceListOperationsMappers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../models/faceListOperationsMappers */ "./node_modules/@azure/cognitiveservices-face/esm/models/mappers.js");
+/* harmony import */ var _models_parameters__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../models/parameters */ "./node_modules/@azure/cognitiveservices-face/esm/models/parameters.js");
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License. See License.txt in the project root for
+ * license information.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is
+ * regenerated.
+ */
+
+
+
+
+/** Class representing a FaceListOperations. */
+var FaceListOperations = /** @class */ (function () {
+    /**
+     * Create a FaceListOperations.
+     * @param {FaceClientContext} client Reference to the service client.
+     */
+    function FaceListOperations(client) {
+        this.client = client;
+    }
+    FaceListOperations.prototype.create = function (faceListId, options, callback) {
+        return this.client.sendOperationRequest({
+            faceListId: faceListId,
+            options: options
+        }, createOperationSpec, callback);
+    };
+    FaceListOperations.prototype.get = function (faceListId, options, callback) {
+        return this.client.sendOperationRequest({
+            faceListId: faceListId,
+            options: options
+        }, getOperationSpec, callback);
+    };
+    FaceListOperations.prototype.update = function (faceListId, options, callback) {
+        return this.client.sendOperationRequest({
+            faceListId: faceListId,
+            options: options
+        }, updateOperationSpec, callback);
+    };
+    FaceListOperations.prototype.deleteMethod = function (faceListId, options, callback) {
+        return this.client.sendOperationRequest({
+            faceListId: faceListId,
+            options: options
+        }, deleteMethodOperationSpec, callback);
+    };
+    FaceListOperations.prototype.list = function (options, callback) {
+        return this.client.sendOperationRequest({
+            options: options
+        }, listOperationSpec, callback);
+    };
+    FaceListOperations.prototype.deleteFace = function (faceListId, persistedFaceId, options, callback) {
+        return this.client.sendOperationRequest({
+            faceListId: faceListId,
+            persistedFaceId: persistedFaceId,
+            options: options
+        }, deleteFaceOperationSpec, callback);
+    };
+    FaceListOperations.prototype.addFaceFromUrl = function (faceListId, url, options, callback) {
+        return this.client.sendOperationRequest({
+            faceListId: faceListId,
+            url: url,
+            options: options
+        }, addFaceFromUrlOperationSpec, callback);
+    };
+    FaceListOperations.prototype.addFaceFromStream = function (faceListId, image, options, callback) {
+        return this.client.sendOperationRequest({
+            faceListId: faceListId,
+            image: image,
+            options: options
+        }, addFaceFromStreamOperationSpec, callback);
+    };
+    return FaceListOperations;
+}());
+
+// Operation Specifications
+var serializer = new _azure_ms_rest_js__WEBPACK_IMPORTED_MODULE_0__.Serializer(_models_faceListOperationsMappers__WEBPACK_IMPORTED_MODULE_1__);
+var createOperationSpec = {
+    httpMethod: "PUT",
+    path: "facelists/{faceListId}",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.faceListId
+    ],
+    requestBody: {
+        parameterPath: {
+            name: [
+                "options",
+                "name"
+            ],
+            userData: [
+                "options",
+                "userData"
+            ],
+            recognitionModel: [
+                "options",
+                "recognitionModel"
+            ]
+        },
+        mapper: (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)({}, _models_faceListOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.MetaDataContract), { required: true })
+    },
+    responses: {
+        200: {},
+        default: {
+            bodyMapper: _models_faceListOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var getOperationSpec = {
+    httpMethod: "GET",
+    path: "facelists/{faceListId}",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.faceListId
+    ],
+    queryParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.returnRecognitionModel
+    ],
+    responses: {
+        200: {
+            bodyMapper: _models_faceListOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.FaceList
+        },
+        default: {
+            bodyMapper: _models_faceListOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var updateOperationSpec = {
+    httpMethod: "PATCH",
+    path: "facelists/{faceListId}",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.faceListId
+    ],
+    requestBody: {
+        parameterPath: {
+            name: [
+                "options",
+                "name"
+            ],
+            userData: [
+                "options",
+                "userData"
+            ]
+        },
+        mapper: (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)({}, _models_faceListOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.NameAndUserDataContract), { required: true })
+    },
+    responses: {
+        200: {},
+        default: {
+            bodyMapper: _models_faceListOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var deleteMethodOperationSpec = {
+    httpMethod: "DELETE",
+    path: "facelists/{faceListId}",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.faceListId
+    ],
+    responses: {
+        200: {},
+        default: {
+            bodyMapper: _models_faceListOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var listOperationSpec = {
+    httpMethod: "GET",
+    path: "facelists",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint
+    ],
+    queryParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.returnRecognitionModel
+    ],
+    responses: {
+        200: {
+            bodyMapper: {
+                serializedName: "parsedResponse",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "FaceList"
+                        }
+                    }
+                }
+            }
+        },
+        default: {
+            bodyMapper: _models_faceListOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var deleteFaceOperationSpec = {
+    httpMethod: "DELETE",
+    path: "facelists/{faceListId}/persistedfaces/{persistedFaceId}",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.faceListId,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.persistedFaceId
+    ],
+    responses: {
+        200: {},
+        default: {
+            bodyMapper: _models_faceListOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var addFaceFromUrlOperationSpec = {
+    httpMethod: "POST",
+    path: "facelists/{faceListId}/persistedfaces",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.faceListId
+    ],
+    queryParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.userData,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.targetFace,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.detectionModel
+    ],
+    requestBody: {
+        parameterPath: {
+            url: "url"
+        },
+        mapper: (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)({}, _models_faceListOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.ImageUrl), { required: true })
+    },
+    responses: {
+        200: {
+            bodyMapper: _models_faceListOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.PersistedFace
+        },
+        default: {
+            bodyMapper: _models_faceListOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var addFaceFromStreamOperationSpec = {
+    httpMethod: "POST",
+    path: "facelists/{faceListId}/persistedfaces",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.faceListId
+    ],
+    queryParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.userData,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.targetFace,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.detectionModel
+    ],
+    requestBody: {
+        parameterPath: "image",
+        mapper: {
+            required: true,
+            serializedName: "Image",
+            type: {
+                name: "Stream"
+            }
+        }
+    },
+    contentType: "application/octet-stream",
+    responses: {
+        200: {
+            bodyMapper: _models_faceListOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.PersistedFace
+        },
+        default: {
+            bodyMapper: _models_faceListOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+//# sourceMappingURL=faceListOperations.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/cognitiveservices-face/esm/operations/index.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/@azure/cognitiveservices-face/esm/operations/index.js ***!
+  \****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Face": () => (/* reexport safe */ _face__WEBPACK_IMPORTED_MODULE_0__.Face),
+/* harmony export */   "PersonGroupPerson": () => (/* reexport safe */ _personGroupPerson__WEBPACK_IMPORTED_MODULE_1__.PersonGroupPerson),
+/* harmony export */   "PersonGroupOperations": () => (/* reexport safe */ _personGroupOperations__WEBPACK_IMPORTED_MODULE_2__.PersonGroupOperations),
+/* harmony export */   "FaceListOperations": () => (/* reexport safe */ _faceListOperations__WEBPACK_IMPORTED_MODULE_3__.FaceListOperations),
+/* harmony export */   "LargePersonGroupPerson": () => (/* reexport safe */ _largePersonGroupPerson__WEBPACK_IMPORTED_MODULE_4__.LargePersonGroupPerson),
+/* harmony export */   "LargePersonGroupOperations": () => (/* reexport safe */ _largePersonGroupOperations__WEBPACK_IMPORTED_MODULE_5__.LargePersonGroupOperations),
+/* harmony export */   "LargeFaceListOperations": () => (/* reexport safe */ _largeFaceListOperations__WEBPACK_IMPORTED_MODULE_6__.LargeFaceListOperations),
+/* harmony export */   "SnapshotOperations": () => (/* reexport safe */ _snapshotOperations__WEBPACK_IMPORTED_MODULE_7__.SnapshotOperations)
+/* harmony export */ });
+/* harmony import */ var _face__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./face */ "./node_modules/@azure/cognitiveservices-face/esm/operations/face.js");
+/* harmony import */ var _personGroupPerson__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./personGroupPerson */ "./node_modules/@azure/cognitiveservices-face/esm/operations/personGroupPerson.js");
+/* harmony import */ var _personGroupOperations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./personGroupOperations */ "./node_modules/@azure/cognitiveservices-face/esm/operations/personGroupOperations.js");
+/* harmony import */ var _faceListOperations__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./faceListOperations */ "./node_modules/@azure/cognitiveservices-face/esm/operations/faceListOperations.js");
+/* harmony import */ var _largePersonGroupPerson__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./largePersonGroupPerson */ "./node_modules/@azure/cognitiveservices-face/esm/operations/largePersonGroupPerson.js");
+/* harmony import */ var _largePersonGroupOperations__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./largePersonGroupOperations */ "./node_modules/@azure/cognitiveservices-face/esm/operations/largePersonGroupOperations.js");
+/* harmony import */ var _largeFaceListOperations__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./largeFaceListOperations */ "./node_modules/@azure/cognitiveservices-face/esm/operations/largeFaceListOperations.js");
+/* harmony import */ var _snapshotOperations__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./snapshotOperations */ "./node_modules/@azure/cognitiveservices-face/esm/operations/snapshotOperations.js");
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License. See License.txt in the project root for
+ * license information.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is
+ * regenerated.
+ */
+
+
+
+
+
+
+
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/cognitiveservices-face/esm/operations/largeFaceListOperations.js":
+/*!**********************************************************************************************!*\
+  !*** ./node_modules/@azure/cognitiveservices-face/esm/operations/largeFaceListOperations.js ***!
+  \**********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "LargeFaceListOperations": () => (/* binding */ LargeFaceListOperations)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tslib */ "./node_modules/@azure/cognitiveservices-face/node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _azure_ms_rest_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @azure/ms-rest-js */ "./node_modules/@azure/ms-rest-js/es/lib/serializer.js");
+/* harmony import */ var _models_largeFaceListOperationsMappers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../models/largeFaceListOperationsMappers */ "./node_modules/@azure/cognitiveservices-face/esm/models/largeFaceListOperationsMappers.js");
+/* harmony import */ var _models_largeFaceListOperationsMappers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../models/largeFaceListOperationsMappers */ "./node_modules/@azure/cognitiveservices-face/esm/models/mappers.js");
+/* harmony import */ var _models_parameters__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../models/parameters */ "./node_modules/@azure/cognitiveservices-face/esm/models/parameters.js");
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License. See License.txt in the project root for
+ * license information.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is
+ * regenerated.
+ */
+
+
+
+
+/** Class representing a LargeFaceListOperations. */
+var LargeFaceListOperations = /** @class */ (function () {
+    /**
+     * Create a LargeFaceListOperations.
+     * @param {FaceClientContext} client Reference to the service client.
+     */
+    function LargeFaceListOperations(client) {
+        this.client = client;
+    }
+    LargeFaceListOperations.prototype.create = function (largeFaceListId, options, callback) {
+        return this.client.sendOperationRequest({
+            largeFaceListId: largeFaceListId,
+            options: options
+        }, createOperationSpec, callback);
+    };
+    LargeFaceListOperations.prototype.get = function (largeFaceListId, options, callback) {
+        return this.client.sendOperationRequest({
+            largeFaceListId: largeFaceListId,
+            options: options
+        }, getOperationSpec, callback);
+    };
+    LargeFaceListOperations.prototype.update = function (largeFaceListId, options, callback) {
+        return this.client.sendOperationRequest({
+            largeFaceListId: largeFaceListId,
+            options: options
+        }, updateOperationSpec, callback);
+    };
+    LargeFaceListOperations.prototype.deleteMethod = function (largeFaceListId, options, callback) {
+        return this.client.sendOperationRequest({
+            largeFaceListId: largeFaceListId,
+            options: options
+        }, deleteMethodOperationSpec, callback);
+    };
+    LargeFaceListOperations.prototype.getTrainingStatus = function (largeFaceListId, options, callback) {
+        return this.client.sendOperationRequest({
+            largeFaceListId: largeFaceListId,
+            options: options
+        }, getTrainingStatusOperationSpec, callback);
+    };
+    LargeFaceListOperations.prototype.list = function (options, callback) {
+        return this.client.sendOperationRequest({
+            options: options
+        }, listOperationSpec, callback);
+    };
+    LargeFaceListOperations.prototype.train = function (largeFaceListId, options, callback) {
+        return this.client.sendOperationRequest({
+            largeFaceListId: largeFaceListId,
+            options: options
+        }, trainOperationSpec, callback);
+    };
+    LargeFaceListOperations.prototype.deleteFace = function (largeFaceListId, persistedFaceId, options, callback) {
+        return this.client.sendOperationRequest({
+            largeFaceListId: largeFaceListId,
+            persistedFaceId: persistedFaceId,
+            options: options
+        }, deleteFaceOperationSpec, callback);
+    };
+    LargeFaceListOperations.prototype.getFace = function (largeFaceListId, persistedFaceId, options, callback) {
+        return this.client.sendOperationRequest({
+            largeFaceListId: largeFaceListId,
+            persistedFaceId: persistedFaceId,
+            options: options
+        }, getFaceOperationSpec, callback);
+    };
+    LargeFaceListOperations.prototype.updateFace = function (largeFaceListId, persistedFaceId, options, callback) {
+        return this.client.sendOperationRequest({
+            largeFaceListId: largeFaceListId,
+            persistedFaceId: persistedFaceId,
+            options: options
+        }, updateFaceOperationSpec, callback);
+    };
+    LargeFaceListOperations.prototype.addFaceFromUrl = function (largeFaceListId, url, options, callback) {
+        return this.client.sendOperationRequest({
+            largeFaceListId: largeFaceListId,
+            url: url,
+            options: options
+        }, addFaceFromUrlOperationSpec, callback);
+    };
+    LargeFaceListOperations.prototype.listFaces = function (largeFaceListId, options, callback) {
+        return this.client.sendOperationRequest({
+            largeFaceListId: largeFaceListId,
+            options: options
+        }, listFacesOperationSpec, callback);
+    };
+    LargeFaceListOperations.prototype.addFaceFromStream = function (largeFaceListId, image, options, callback) {
+        return this.client.sendOperationRequest({
+            largeFaceListId: largeFaceListId,
+            image: image,
+            options: options
+        }, addFaceFromStreamOperationSpec, callback);
+    };
+    return LargeFaceListOperations;
+}());
+
+// Operation Specifications
+var serializer = new _azure_ms_rest_js__WEBPACK_IMPORTED_MODULE_0__.Serializer(_models_largeFaceListOperationsMappers__WEBPACK_IMPORTED_MODULE_1__);
+var createOperationSpec = {
+    httpMethod: "PUT",
+    path: "largefacelists/{largeFaceListId}",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.largeFaceListId
+    ],
+    requestBody: {
+        parameterPath: {
+            name: [
+                "options",
+                "name"
+            ],
+            userData: [
+                "options",
+                "userData"
+            ],
+            recognitionModel: [
+                "options",
+                "recognitionModel"
+            ]
+        },
+        mapper: (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)({}, _models_largeFaceListOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.MetaDataContract), { required: true })
+    },
+    responses: {
+        200: {},
+        default: {
+            bodyMapper: _models_largeFaceListOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var getOperationSpec = {
+    httpMethod: "GET",
+    path: "largefacelists/{largeFaceListId}",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.largeFaceListId
+    ],
+    queryParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.returnRecognitionModel
+    ],
+    responses: {
+        200: {
+            bodyMapper: _models_largeFaceListOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.LargeFaceList
+        },
+        default: {
+            bodyMapper: _models_largeFaceListOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var updateOperationSpec = {
+    httpMethod: "PATCH",
+    path: "largefacelists/{largeFaceListId}",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.largeFaceListId
+    ],
+    requestBody: {
+        parameterPath: {
+            name: [
+                "options",
+                "name"
+            ],
+            userData: [
+                "options",
+                "userData"
+            ]
+        },
+        mapper: (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)({}, _models_largeFaceListOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.NameAndUserDataContract), { required: true })
+    },
+    responses: {
+        200: {},
+        default: {
+            bodyMapper: _models_largeFaceListOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var deleteMethodOperationSpec = {
+    httpMethod: "DELETE",
+    path: "largefacelists/{largeFaceListId}",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.largeFaceListId
+    ],
+    responses: {
+        200: {},
+        default: {
+            bodyMapper: _models_largeFaceListOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var getTrainingStatusOperationSpec = {
+    httpMethod: "GET",
+    path: "largefacelists/{largeFaceListId}/training",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.largeFaceListId
+    ],
+    responses: {
+        200: {
+            bodyMapper: _models_largeFaceListOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.TrainingStatus
+        },
+        default: {
+            bodyMapper: _models_largeFaceListOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var listOperationSpec = {
+    httpMethod: "GET",
+    path: "largefacelists",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint
+    ],
+    queryParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.returnRecognitionModel
+    ],
+    responses: {
+        200: {
+            bodyMapper: {
+                serializedName: "parsedResponse",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "LargeFaceList"
+                        }
+                    }
+                }
+            }
+        },
+        default: {
+            bodyMapper: _models_largeFaceListOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var trainOperationSpec = {
+    httpMethod: "POST",
+    path: "largefacelists/{largeFaceListId}/train",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.largeFaceListId
+    ],
+    responses: {
+        202: {},
+        default: {
+            bodyMapper: _models_largeFaceListOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var deleteFaceOperationSpec = {
+    httpMethod: "DELETE",
+    path: "largefacelists/{largeFaceListId}/persistedfaces/{persistedFaceId}",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.largeFaceListId,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.persistedFaceId
+    ],
+    responses: {
+        200: {},
+        default: {
+            bodyMapper: _models_largeFaceListOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var getFaceOperationSpec = {
+    httpMethod: "GET",
+    path: "largefacelists/{largeFaceListId}/persistedfaces/{persistedFaceId}",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.largeFaceListId,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.persistedFaceId
+    ],
+    responses: {
+        200: {
+            bodyMapper: _models_largeFaceListOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.PersistedFace
+        },
+        default: {
+            bodyMapper: _models_largeFaceListOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var updateFaceOperationSpec = {
+    httpMethod: "PATCH",
+    path: "largefacelists/{largeFaceListId}/persistedfaces/{persistedFaceId}",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.largeFaceListId,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.persistedFaceId
+    ],
+    requestBody: {
+        parameterPath: {
+            userData: [
+                "options",
+                "userData"
+            ]
+        },
+        mapper: (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)({}, _models_largeFaceListOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.UpdateFaceRequest), { required: true })
+    },
+    responses: {
+        200: {},
+        default: {
+            bodyMapper: _models_largeFaceListOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var addFaceFromUrlOperationSpec = {
+    httpMethod: "POST",
+    path: "largefacelists/{largeFaceListId}/persistedfaces",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.largeFaceListId
+    ],
+    queryParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.userData,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.targetFace,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.detectionModel
+    ],
+    requestBody: {
+        parameterPath: {
+            url: "url"
+        },
+        mapper: (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)({}, _models_largeFaceListOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.ImageUrl), { required: true })
+    },
+    responses: {
+        200: {
+            bodyMapper: _models_largeFaceListOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.PersistedFace
+        },
+        default: {
+            bodyMapper: _models_largeFaceListOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var listFacesOperationSpec = {
+    httpMethod: "GET",
+    path: "largefacelists/{largeFaceListId}/persistedfaces",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.largeFaceListId
+    ],
+    queryParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.start0,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.top0
+    ],
+    responses: {
+        200: {
+            bodyMapper: {
+                serializedName: "parsedResponse",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "PersistedFace"
+                        }
+                    }
+                }
+            }
+        },
+        default: {
+            bodyMapper: _models_largeFaceListOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var addFaceFromStreamOperationSpec = {
+    httpMethod: "POST",
+    path: "largefacelists/{largeFaceListId}/persistedfaces",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.largeFaceListId
+    ],
+    queryParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.userData,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.targetFace,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.detectionModel
+    ],
+    requestBody: {
+        parameterPath: "image",
+        mapper: {
+            required: true,
+            serializedName: "Image",
+            type: {
+                name: "Stream"
+            }
+        }
+    },
+    contentType: "application/octet-stream",
+    responses: {
+        200: {
+            bodyMapper: _models_largeFaceListOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.PersistedFace
+        },
+        default: {
+            bodyMapper: _models_largeFaceListOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+//# sourceMappingURL=largeFaceListOperations.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/cognitiveservices-face/esm/operations/largePersonGroupOperations.js":
+/*!*************************************************************************************************!*\
+  !*** ./node_modules/@azure/cognitiveservices-face/esm/operations/largePersonGroupOperations.js ***!
+  \*************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "LargePersonGroupOperations": () => (/* binding */ LargePersonGroupOperations)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tslib */ "./node_modules/@azure/cognitiveservices-face/node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _azure_ms_rest_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @azure/ms-rest-js */ "./node_modules/@azure/ms-rest-js/es/lib/serializer.js");
+/* harmony import */ var _models_largePersonGroupOperationsMappers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../models/largePersonGroupOperationsMappers */ "./node_modules/@azure/cognitiveservices-face/esm/models/largePersonGroupOperationsMappers.js");
+/* harmony import */ var _models_largePersonGroupOperationsMappers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../models/largePersonGroupOperationsMappers */ "./node_modules/@azure/cognitiveservices-face/esm/models/mappers.js");
+/* harmony import */ var _models_parameters__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../models/parameters */ "./node_modules/@azure/cognitiveservices-face/esm/models/parameters.js");
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License. See License.txt in the project root for
+ * license information.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is
+ * regenerated.
+ */
+
+
+
+
+/** Class representing a LargePersonGroupOperations. */
+var LargePersonGroupOperations = /** @class */ (function () {
+    /**
+     * Create a LargePersonGroupOperations.
+     * @param {FaceClientContext} client Reference to the service client.
+     */
+    function LargePersonGroupOperations(client) {
+        this.client = client;
+    }
+    LargePersonGroupOperations.prototype.create = function (largePersonGroupId, options, callback) {
+        return this.client.sendOperationRequest({
+            largePersonGroupId: largePersonGroupId,
+            options: options
+        }, createOperationSpec, callback);
+    };
+    LargePersonGroupOperations.prototype.deleteMethod = function (largePersonGroupId, options, callback) {
+        return this.client.sendOperationRequest({
+            largePersonGroupId: largePersonGroupId,
+            options: options
+        }, deleteMethodOperationSpec, callback);
+    };
+    LargePersonGroupOperations.prototype.get = function (largePersonGroupId, options, callback) {
+        return this.client.sendOperationRequest({
+            largePersonGroupId: largePersonGroupId,
+            options: options
+        }, getOperationSpec, callback);
+    };
+    LargePersonGroupOperations.prototype.update = function (largePersonGroupId, options, callback) {
+        return this.client.sendOperationRequest({
+            largePersonGroupId: largePersonGroupId,
+            options: options
+        }, updateOperationSpec, callback);
+    };
+    LargePersonGroupOperations.prototype.getTrainingStatus = function (largePersonGroupId, options, callback) {
+        return this.client.sendOperationRequest({
+            largePersonGroupId: largePersonGroupId,
+            options: options
+        }, getTrainingStatusOperationSpec, callback);
+    };
+    LargePersonGroupOperations.prototype.list = function (options, callback) {
+        return this.client.sendOperationRequest({
+            options: options
+        }, listOperationSpec, callback);
+    };
+    LargePersonGroupOperations.prototype.train = function (largePersonGroupId, options, callback) {
+        return this.client.sendOperationRequest({
+            largePersonGroupId: largePersonGroupId,
+            options: options
+        }, trainOperationSpec, callback);
+    };
+    return LargePersonGroupOperations;
+}());
+
+// Operation Specifications
+var serializer = new _azure_ms_rest_js__WEBPACK_IMPORTED_MODULE_0__.Serializer(_models_largePersonGroupOperationsMappers__WEBPACK_IMPORTED_MODULE_1__);
+var createOperationSpec = {
+    httpMethod: "PUT",
+    path: "largepersongroups/{largePersonGroupId}",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.largePersonGroupId
+    ],
+    requestBody: {
+        parameterPath: {
+            name: [
+                "options",
+                "name"
+            ],
+            userData: [
+                "options",
+                "userData"
+            ],
+            recognitionModel: [
+                "options",
+                "recognitionModel"
+            ]
+        },
+        mapper: (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)({}, _models_largePersonGroupOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.MetaDataContract), { required: true })
+    },
+    responses: {
+        200: {},
+        default: {
+            bodyMapper: _models_largePersonGroupOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var deleteMethodOperationSpec = {
+    httpMethod: "DELETE",
+    path: "largepersongroups/{largePersonGroupId}",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.largePersonGroupId
+    ],
+    responses: {
+        200: {},
+        default: {
+            bodyMapper: _models_largePersonGroupOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var getOperationSpec = {
+    httpMethod: "GET",
+    path: "largepersongroups/{largePersonGroupId}",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.largePersonGroupId
+    ],
+    queryParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.returnRecognitionModel
+    ],
+    responses: {
+        200: {
+            bodyMapper: _models_largePersonGroupOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.LargePersonGroup
+        },
+        default: {
+            bodyMapper: _models_largePersonGroupOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var updateOperationSpec = {
+    httpMethod: "PATCH",
+    path: "largepersongroups/{largePersonGroupId}",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.largePersonGroupId
+    ],
+    requestBody: {
+        parameterPath: {
+            name: [
+                "options",
+                "name"
+            ],
+            userData: [
+                "options",
+                "userData"
+            ]
+        },
+        mapper: (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)({}, _models_largePersonGroupOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.NameAndUserDataContract), { required: true })
+    },
+    responses: {
+        200: {},
+        default: {
+            bodyMapper: _models_largePersonGroupOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var getTrainingStatusOperationSpec = {
+    httpMethod: "GET",
+    path: "largepersongroups/{largePersonGroupId}/training",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.largePersonGroupId
+    ],
+    responses: {
+        200: {
+            bodyMapper: _models_largePersonGroupOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.TrainingStatus
+        },
+        default: {
+            bodyMapper: _models_largePersonGroupOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var listOperationSpec = {
+    httpMethod: "GET",
+    path: "largepersongroups",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint
+    ],
+    queryParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.start1,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.top1,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.returnRecognitionModel
+    ],
+    responses: {
+        200: {
+            bodyMapper: {
+                serializedName: "parsedResponse",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "LargePersonGroup"
+                        }
+                    }
+                }
+            }
+        },
+        default: {
+            bodyMapper: _models_largePersonGroupOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var trainOperationSpec = {
+    httpMethod: "POST",
+    path: "largepersongroups/{largePersonGroupId}/train",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.largePersonGroupId
+    ],
+    responses: {
+        202: {},
+        default: {
+            bodyMapper: _models_largePersonGroupOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+//# sourceMappingURL=largePersonGroupOperations.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/cognitiveservices-face/esm/operations/largePersonGroupPerson.js":
+/*!*********************************************************************************************!*\
+  !*** ./node_modules/@azure/cognitiveservices-face/esm/operations/largePersonGroupPerson.js ***!
+  \*********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "LargePersonGroupPerson": () => (/* binding */ LargePersonGroupPerson)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tslib */ "./node_modules/@azure/cognitiveservices-face/node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _azure_ms_rest_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @azure/ms-rest-js */ "./node_modules/@azure/ms-rest-js/es/lib/serializer.js");
+/* harmony import */ var _models_largePersonGroupPersonMappers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../models/largePersonGroupPersonMappers */ "./node_modules/@azure/cognitiveservices-face/esm/models/largePersonGroupPersonMappers.js");
+/* harmony import */ var _models_largePersonGroupPersonMappers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../models/largePersonGroupPersonMappers */ "./node_modules/@azure/cognitiveservices-face/esm/models/mappers.js");
+/* harmony import */ var _models_parameters__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../models/parameters */ "./node_modules/@azure/cognitiveservices-face/esm/models/parameters.js");
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License. See License.txt in the project root for
+ * license information.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is
+ * regenerated.
+ */
+
+
+
+
+/** Class representing a LargePersonGroupPerson. */
+var LargePersonGroupPerson = /** @class */ (function () {
+    /**
+     * Create a LargePersonGroupPerson.
+     * @param {FaceClientContext} client Reference to the service client.
+     */
+    function LargePersonGroupPerson(client) {
+        this.client = client;
+    }
+    LargePersonGroupPerson.prototype.create = function (largePersonGroupId, options, callback) {
+        return this.client.sendOperationRequest({
+            largePersonGroupId: largePersonGroupId,
+            options: options
+        }, createOperationSpec, callback);
+    };
+    LargePersonGroupPerson.prototype.list = function (largePersonGroupId, options, callback) {
+        return this.client.sendOperationRequest({
+            largePersonGroupId: largePersonGroupId,
+            options: options
+        }, listOperationSpec, callback);
+    };
+    LargePersonGroupPerson.prototype.deleteMethod = function (largePersonGroupId, personId, options, callback) {
+        return this.client.sendOperationRequest({
+            largePersonGroupId: largePersonGroupId,
+            personId: personId,
+            options: options
+        }, deleteMethodOperationSpec, callback);
+    };
+    LargePersonGroupPerson.prototype.get = function (largePersonGroupId, personId, options, callback) {
+        return this.client.sendOperationRequest({
+            largePersonGroupId: largePersonGroupId,
+            personId: personId,
+            options: options
+        }, getOperationSpec, callback);
+    };
+    LargePersonGroupPerson.prototype.update = function (largePersonGroupId, personId, options, callback) {
+        return this.client.sendOperationRequest({
+            largePersonGroupId: largePersonGroupId,
+            personId: personId,
+            options: options
+        }, updateOperationSpec, callback);
+    };
+    LargePersonGroupPerson.prototype.deleteFace = function (largePersonGroupId, personId, persistedFaceId, options, callback) {
+        return this.client.sendOperationRequest({
+            largePersonGroupId: largePersonGroupId,
+            personId: personId,
+            persistedFaceId: persistedFaceId,
+            options: options
+        }, deleteFaceOperationSpec, callback);
+    };
+    LargePersonGroupPerson.prototype.getFace = function (largePersonGroupId, personId, persistedFaceId, options, callback) {
+        return this.client.sendOperationRequest({
+            largePersonGroupId: largePersonGroupId,
+            personId: personId,
+            persistedFaceId: persistedFaceId,
+            options: options
+        }, getFaceOperationSpec, callback);
+    };
+    LargePersonGroupPerson.prototype.updateFace = function (largePersonGroupId, personId, persistedFaceId, options, callback) {
+        return this.client.sendOperationRequest({
+            largePersonGroupId: largePersonGroupId,
+            personId: personId,
+            persistedFaceId: persistedFaceId,
+            options: options
+        }, updateFaceOperationSpec, callback);
+    };
+    LargePersonGroupPerson.prototype.addFaceFromUrl = function (largePersonGroupId, personId, url, options, callback) {
+        return this.client.sendOperationRequest({
+            largePersonGroupId: largePersonGroupId,
+            personId: personId,
+            url: url,
+            options: options
+        }, addFaceFromUrlOperationSpec, callback);
+    };
+    LargePersonGroupPerson.prototype.addFaceFromStream = function (largePersonGroupId, personId, image, options, callback) {
+        return this.client.sendOperationRequest({
+            largePersonGroupId: largePersonGroupId,
+            personId: personId,
+            image: image,
+            options: options
+        }, addFaceFromStreamOperationSpec, callback);
+    };
+    return LargePersonGroupPerson;
+}());
+
+// Operation Specifications
+var serializer = new _azure_ms_rest_js__WEBPACK_IMPORTED_MODULE_0__.Serializer(_models_largePersonGroupPersonMappers__WEBPACK_IMPORTED_MODULE_1__);
+var createOperationSpec = {
+    httpMethod: "POST",
+    path: "largepersongroups/{largePersonGroupId}/persons",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.largePersonGroupId
+    ],
+    requestBody: {
+        parameterPath: {
+            name: [
+                "options",
+                "name"
+            ],
+            userData: [
+                "options",
+                "userData"
+            ]
+        },
+        mapper: (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)({}, _models_largePersonGroupPersonMappers__WEBPACK_IMPORTED_MODULE_4__.NameAndUserDataContract), { required: true })
+    },
+    responses: {
+        200: {
+            bodyMapper: _models_largePersonGroupPersonMappers__WEBPACK_IMPORTED_MODULE_4__.Person
+        },
+        default: {
+            bodyMapper: _models_largePersonGroupPersonMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var listOperationSpec = {
+    httpMethod: "GET",
+    path: "largepersongroups/{largePersonGroupId}/persons",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.largePersonGroupId
+    ],
+    queryParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.start0,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.top0
+    ],
+    responses: {
+        200: {
+            bodyMapper: {
+                serializedName: "parsedResponse",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "Person"
+                        }
+                    }
+                }
+            }
+        },
+        default: {
+            bodyMapper: _models_largePersonGroupPersonMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var deleteMethodOperationSpec = {
+    httpMethod: "DELETE",
+    path: "largepersongroups/{largePersonGroupId}/persons/{personId}",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.largePersonGroupId,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.personId
+    ],
+    responses: {
+        200: {},
+        default: {
+            bodyMapper: _models_largePersonGroupPersonMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var getOperationSpec = {
+    httpMethod: "GET",
+    path: "largepersongroups/{largePersonGroupId}/persons/{personId}",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.largePersonGroupId,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.personId
+    ],
+    responses: {
+        200: {
+            bodyMapper: _models_largePersonGroupPersonMappers__WEBPACK_IMPORTED_MODULE_4__.Person
+        },
+        default: {
+            bodyMapper: _models_largePersonGroupPersonMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var updateOperationSpec = {
+    httpMethod: "PATCH",
+    path: "largepersongroups/{largePersonGroupId}/persons/{personId}",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.largePersonGroupId,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.personId
+    ],
+    requestBody: {
+        parameterPath: {
+            name: [
+                "options",
+                "name"
+            ],
+            userData: [
+                "options",
+                "userData"
+            ]
+        },
+        mapper: (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)({}, _models_largePersonGroupPersonMappers__WEBPACK_IMPORTED_MODULE_4__.NameAndUserDataContract), { required: true })
+    },
+    responses: {
+        200: {},
+        default: {
+            bodyMapper: _models_largePersonGroupPersonMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var deleteFaceOperationSpec = {
+    httpMethod: "DELETE",
+    path: "largepersongroups/{largePersonGroupId}/persons/{personId}/persistedfaces/{persistedFaceId}",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.largePersonGroupId,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.personId,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.persistedFaceId
+    ],
+    responses: {
+        200: {},
+        default: {
+            bodyMapper: _models_largePersonGroupPersonMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var getFaceOperationSpec = {
+    httpMethod: "GET",
+    path: "largepersongroups/{largePersonGroupId}/persons/{personId}/persistedfaces/{persistedFaceId}",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.largePersonGroupId,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.personId,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.persistedFaceId
+    ],
+    responses: {
+        200: {
+            bodyMapper: _models_largePersonGroupPersonMappers__WEBPACK_IMPORTED_MODULE_4__.PersistedFace
+        },
+        default: {
+            bodyMapper: _models_largePersonGroupPersonMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var updateFaceOperationSpec = {
+    httpMethod: "PATCH",
+    path: "largepersongroups/{largePersonGroupId}/persons/{personId}/persistedfaces/{persistedFaceId}",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.largePersonGroupId,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.personId,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.persistedFaceId
+    ],
+    requestBody: {
+        parameterPath: {
+            userData: [
+                "options",
+                "userData"
+            ]
+        },
+        mapper: (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)({}, _models_largePersonGroupPersonMappers__WEBPACK_IMPORTED_MODULE_4__.UpdateFaceRequest), { required: true })
+    },
+    responses: {
+        200: {},
+        default: {
+            bodyMapper: _models_largePersonGroupPersonMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var addFaceFromUrlOperationSpec = {
+    httpMethod: "POST",
+    path: "largepersongroups/{largePersonGroupId}/persons/{personId}/persistedfaces",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.largePersonGroupId,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.personId
+    ],
+    queryParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.userData,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.targetFace,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.detectionModel
+    ],
+    requestBody: {
+        parameterPath: {
+            url: "url"
+        },
+        mapper: (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)({}, _models_largePersonGroupPersonMappers__WEBPACK_IMPORTED_MODULE_4__.ImageUrl), { required: true })
+    },
+    responses: {
+        200: {
+            bodyMapper: _models_largePersonGroupPersonMappers__WEBPACK_IMPORTED_MODULE_4__.PersistedFace
+        },
+        default: {
+            bodyMapper: _models_largePersonGroupPersonMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var addFaceFromStreamOperationSpec = {
+    httpMethod: "POST",
+    path: "largepersongroups/{largePersonGroupId}/persons/{personId}/persistedfaces",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.largePersonGroupId,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.personId
+    ],
+    queryParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.userData,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.targetFace,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.detectionModel
+    ],
+    requestBody: {
+        parameterPath: "image",
+        mapper: {
+            required: true,
+            serializedName: "Image",
+            type: {
+                name: "Stream"
+            }
+        }
+    },
+    contentType: "application/octet-stream",
+    responses: {
+        200: {
+            bodyMapper: _models_largePersonGroupPersonMappers__WEBPACK_IMPORTED_MODULE_4__.PersistedFace
+        },
+        default: {
+            bodyMapper: _models_largePersonGroupPersonMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+//# sourceMappingURL=largePersonGroupPerson.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/cognitiveservices-face/esm/operations/personGroupOperations.js":
+/*!********************************************************************************************!*\
+  !*** ./node_modules/@azure/cognitiveservices-face/esm/operations/personGroupOperations.js ***!
+  \********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "PersonGroupOperations": () => (/* binding */ PersonGroupOperations)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tslib */ "./node_modules/@azure/cognitiveservices-face/node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _azure_ms_rest_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @azure/ms-rest-js */ "./node_modules/@azure/ms-rest-js/es/lib/serializer.js");
+/* harmony import */ var _models_personGroupOperationsMappers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../models/personGroupOperationsMappers */ "./node_modules/@azure/cognitiveservices-face/esm/models/personGroupOperationsMappers.js");
+/* harmony import */ var _models_personGroupOperationsMappers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../models/personGroupOperationsMappers */ "./node_modules/@azure/cognitiveservices-face/esm/models/mappers.js");
+/* harmony import */ var _models_parameters__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../models/parameters */ "./node_modules/@azure/cognitiveservices-face/esm/models/parameters.js");
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License. See License.txt in the project root for
+ * license information.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is
+ * regenerated.
+ */
+
+
+
+
+/** Class representing a PersonGroupOperations. */
+var PersonGroupOperations = /** @class */ (function () {
+    /**
+     * Create a PersonGroupOperations.
+     * @param {FaceClientContext} client Reference to the service client.
+     */
+    function PersonGroupOperations(client) {
+        this.client = client;
+    }
+    PersonGroupOperations.prototype.create = function (personGroupId, options, callback) {
+        return this.client.sendOperationRequest({
+            personGroupId: personGroupId,
+            options: options
+        }, createOperationSpec, callback);
+    };
+    PersonGroupOperations.prototype.deleteMethod = function (personGroupId, options, callback) {
+        return this.client.sendOperationRequest({
+            personGroupId: personGroupId,
+            options: options
+        }, deleteMethodOperationSpec, callback);
+    };
+    PersonGroupOperations.prototype.get = function (personGroupId, options, callback) {
+        return this.client.sendOperationRequest({
+            personGroupId: personGroupId,
+            options: options
+        }, getOperationSpec, callback);
+    };
+    PersonGroupOperations.prototype.update = function (personGroupId, options, callback) {
+        return this.client.sendOperationRequest({
+            personGroupId: personGroupId,
+            options: options
+        }, updateOperationSpec, callback);
+    };
+    PersonGroupOperations.prototype.getTrainingStatus = function (personGroupId, options, callback) {
+        return this.client.sendOperationRequest({
+            personGroupId: personGroupId,
+            options: options
+        }, getTrainingStatusOperationSpec, callback);
+    };
+    PersonGroupOperations.prototype.list = function (options, callback) {
+        return this.client.sendOperationRequest({
+            options: options
+        }, listOperationSpec, callback);
+    };
+    PersonGroupOperations.prototype.train = function (personGroupId, options, callback) {
+        return this.client.sendOperationRequest({
+            personGroupId: personGroupId,
+            options: options
+        }, trainOperationSpec, callback);
+    };
+    return PersonGroupOperations;
+}());
+
+// Operation Specifications
+var serializer = new _azure_ms_rest_js__WEBPACK_IMPORTED_MODULE_0__.Serializer(_models_personGroupOperationsMappers__WEBPACK_IMPORTED_MODULE_1__);
+var createOperationSpec = {
+    httpMethod: "PUT",
+    path: "persongroups/{personGroupId}",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.personGroupId
+    ],
+    requestBody: {
+        parameterPath: {
+            name: [
+                "options",
+                "name"
+            ],
+            userData: [
+                "options",
+                "userData"
+            ],
+            recognitionModel: [
+                "options",
+                "recognitionModel"
+            ]
+        },
+        mapper: (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)({}, _models_personGroupOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.MetaDataContract), { required: true })
+    },
+    responses: {
+        200: {},
+        default: {
+            bodyMapper: _models_personGroupOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var deleteMethodOperationSpec = {
+    httpMethod: "DELETE",
+    path: "persongroups/{personGroupId}",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.personGroupId
+    ],
+    responses: {
+        200: {},
+        default: {
+            bodyMapper: _models_personGroupOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var getOperationSpec = {
+    httpMethod: "GET",
+    path: "persongroups/{personGroupId}",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.personGroupId
+    ],
+    queryParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.returnRecognitionModel
+    ],
+    responses: {
+        200: {
+            bodyMapper: _models_personGroupOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.PersonGroup
+        },
+        default: {
+            bodyMapper: _models_personGroupOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var updateOperationSpec = {
+    httpMethod: "PATCH",
+    path: "persongroups/{personGroupId}",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.personGroupId
+    ],
+    requestBody: {
+        parameterPath: {
+            name: [
+                "options",
+                "name"
+            ],
+            userData: [
+                "options",
+                "userData"
+            ]
+        },
+        mapper: (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)({}, _models_personGroupOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.NameAndUserDataContract), { required: true })
+    },
+    responses: {
+        200: {},
+        default: {
+            bodyMapper: _models_personGroupOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var getTrainingStatusOperationSpec = {
+    httpMethod: "GET",
+    path: "persongroups/{personGroupId}/training",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.personGroupId
+    ],
+    responses: {
+        200: {
+            bodyMapper: _models_personGroupOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.TrainingStatus
+        },
+        default: {
+            bodyMapper: _models_personGroupOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var listOperationSpec = {
+    httpMethod: "GET",
+    path: "persongroups",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint
+    ],
+    queryParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.start1,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.top1,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.returnRecognitionModel
+    ],
+    responses: {
+        200: {
+            bodyMapper: {
+                serializedName: "parsedResponse",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "PersonGroup"
+                        }
+                    }
+                }
+            }
+        },
+        default: {
+            bodyMapper: _models_personGroupOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var trainOperationSpec = {
+    httpMethod: "POST",
+    path: "persongroups/{personGroupId}/train",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.personGroupId
+    ],
+    responses: {
+        202: {},
+        default: {
+            bodyMapper: _models_personGroupOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+//# sourceMappingURL=personGroupOperations.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/cognitiveservices-face/esm/operations/personGroupPerson.js":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/@azure/cognitiveservices-face/esm/operations/personGroupPerson.js ***!
+  \****************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "PersonGroupPerson": () => (/* binding */ PersonGroupPerson)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tslib */ "./node_modules/@azure/cognitiveservices-face/node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _azure_ms_rest_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @azure/ms-rest-js */ "./node_modules/@azure/ms-rest-js/es/lib/serializer.js");
+/* harmony import */ var _models_personGroupPersonMappers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../models/personGroupPersonMappers */ "./node_modules/@azure/cognitiveservices-face/esm/models/personGroupPersonMappers.js");
+/* harmony import */ var _models_personGroupPersonMappers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../models/personGroupPersonMappers */ "./node_modules/@azure/cognitiveservices-face/esm/models/mappers.js");
+/* harmony import */ var _models_parameters__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../models/parameters */ "./node_modules/@azure/cognitiveservices-face/esm/models/parameters.js");
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License. See License.txt in the project root for
+ * license information.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is
+ * regenerated.
+ */
+
+
+
+
+/** Class representing a PersonGroupPerson. */
+var PersonGroupPerson = /** @class */ (function () {
+    /**
+     * Create a PersonGroupPerson.
+     * @param {FaceClientContext} client Reference to the service client.
+     */
+    function PersonGroupPerson(client) {
+        this.client = client;
+    }
+    PersonGroupPerson.prototype.create = function (personGroupId, options, callback) {
+        return this.client.sendOperationRequest({
+            personGroupId: personGroupId,
+            options: options
+        }, createOperationSpec, callback);
+    };
+    PersonGroupPerson.prototype.list = function (personGroupId, options, callback) {
+        return this.client.sendOperationRequest({
+            personGroupId: personGroupId,
+            options: options
+        }, listOperationSpec, callback);
+    };
+    PersonGroupPerson.prototype.deleteMethod = function (personGroupId, personId, options, callback) {
+        return this.client.sendOperationRequest({
+            personGroupId: personGroupId,
+            personId: personId,
+            options: options
+        }, deleteMethodOperationSpec, callback);
+    };
+    PersonGroupPerson.prototype.get = function (personGroupId, personId, options, callback) {
+        return this.client.sendOperationRequest({
+            personGroupId: personGroupId,
+            personId: personId,
+            options: options
+        }, getOperationSpec, callback);
+    };
+    PersonGroupPerson.prototype.update = function (personGroupId, personId, options, callback) {
+        return this.client.sendOperationRequest({
+            personGroupId: personGroupId,
+            personId: personId,
+            options: options
+        }, updateOperationSpec, callback);
+    };
+    PersonGroupPerson.prototype.deleteFace = function (personGroupId, personId, persistedFaceId, options, callback) {
+        return this.client.sendOperationRequest({
+            personGroupId: personGroupId,
+            personId: personId,
+            persistedFaceId: persistedFaceId,
+            options: options
+        }, deleteFaceOperationSpec, callback);
+    };
+    PersonGroupPerson.prototype.getFace = function (personGroupId, personId, persistedFaceId, options, callback) {
+        return this.client.sendOperationRequest({
+            personGroupId: personGroupId,
+            personId: personId,
+            persistedFaceId: persistedFaceId,
+            options: options
+        }, getFaceOperationSpec, callback);
+    };
+    PersonGroupPerson.prototype.updateFace = function (personGroupId, personId, persistedFaceId, options, callback) {
+        return this.client.sendOperationRequest({
+            personGroupId: personGroupId,
+            personId: personId,
+            persistedFaceId: persistedFaceId,
+            options: options
+        }, updateFaceOperationSpec, callback);
+    };
+    PersonGroupPerson.prototype.addFaceFromUrl = function (personGroupId, personId, url, options, callback) {
+        return this.client.sendOperationRequest({
+            personGroupId: personGroupId,
+            personId: personId,
+            url: url,
+            options: options
+        }, addFaceFromUrlOperationSpec, callback);
+    };
+    PersonGroupPerson.prototype.addFaceFromStream = function (personGroupId, personId, image, options, callback) {
+        return this.client.sendOperationRequest({
+            personGroupId: personGroupId,
+            personId: personId,
+            image: image,
+            options: options
+        }, addFaceFromStreamOperationSpec, callback);
+    };
+    return PersonGroupPerson;
+}());
+
+// Operation Specifications
+var serializer = new _azure_ms_rest_js__WEBPACK_IMPORTED_MODULE_0__.Serializer(_models_personGroupPersonMappers__WEBPACK_IMPORTED_MODULE_1__);
+var createOperationSpec = {
+    httpMethod: "POST",
+    path: "persongroups/{personGroupId}/persons",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.personGroupId
+    ],
+    requestBody: {
+        parameterPath: {
+            name: [
+                "options",
+                "name"
+            ],
+            userData: [
+                "options",
+                "userData"
+            ]
+        },
+        mapper: (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)({}, _models_personGroupPersonMappers__WEBPACK_IMPORTED_MODULE_4__.NameAndUserDataContract), { required: true })
+    },
+    responses: {
+        200: {
+            bodyMapper: _models_personGroupPersonMappers__WEBPACK_IMPORTED_MODULE_4__.Person
+        },
+        default: {
+            bodyMapper: _models_personGroupPersonMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var listOperationSpec = {
+    httpMethod: "GET",
+    path: "persongroups/{personGroupId}/persons",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.personGroupId
+    ],
+    queryParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.start0,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.top0
+    ],
+    responses: {
+        200: {
+            bodyMapper: {
+                serializedName: "parsedResponse",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "Person"
+                        }
+                    }
+                }
+            }
+        },
+        default: {
+            bodyMapper: _models_personGroupPersonMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var deleteMethodOperationSpec = {
+    httpMethod: "DELETE",
+    path: "persongroups/{personGroupId}/persons/{personId}",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.personGroupId,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.personId
+    ],
+    responses: {
+        200: {},
+        default: {
+            bodyMapper: _models_personGroupPersonMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var getOperationSpec = {
+    httpMethod: "GET",
+    path: "persongroups/{personGroupId}/persons/{personId}",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.personGroupId,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.personId
+    ],
+    responses: {
+        200: {
+            bodyMapper: _models_personGroupPersonMappers__WEBPACK_IMPORTED_MODULE_4__.Person
+        },
+        default: {
+            bodyMapper: _models_personGroupPersonMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var updateOperationSpec = {
+    httpMethod: "PATCH",
+    path: "persongroups/{personGroupId}/persons/{personId}",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.personGroupId,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.personId
+    ],
+    requestBody: {
+        parameterPath: {
+            name: [
+                "options",
+                "name"
+            ],
+            userData: [
+                "options",
+                "userData"
+            ]
+        },
+        mapper: (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)({}, _models_personGroupPersonMappers__WEBPACK_IMPORTED_MODULE_4__.NameAndUserDataContract), { required: true })
+    },
+    responses: {
+        200: {},
+        default: {
+            bodyMapper: _models_personGroupPersonMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var deleteFaceOperationSpec = {
+    httpMethod: "DELETE",
+    path: "persongroups/{personGroupId}/persons/{personId}/persistedfaces/{persistedFaceId}",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.personGroupId,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.personId,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.persistedFaceId
+    ],
+    responses: {
+        200: {},
+        default: {
+            bodyMapper: _models_personGroupPersonMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var getFaceOperationSpec = {
+    httpMethod: "GET",
+    path: "persongroups/{personGroupId}/persons/{personId}/persistedfaces/{persistedFaceId}",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.personGroupId,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.personId,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.persistedFaceId
+    ],
+    responses: {
+        200: {
+            bodyMapper: _models_personGroupPersonMappers__WEBPACK_IMPORTED_MODULE_4__.PersistedFace
+        },
+        default: {
+            bodyMapper: _models_personGroupPersonMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var updateFaceOperationSpec = {
+    httpMethod: "PATCH",
+    path: "persongroups/{personGroupId}/persons/{personId}/persistedfaces/{persistedFaceId}",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.personGroupId,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.personId,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.persistedFaceId
+    ],
+    requestBody: {
+        parameterPath: {
+            userData: [
+                "options",
+                "userData"
+            ]
+        },
+        mapper: (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)({}, _models_personGroupPersonMappers__WEBPACK_IMPORTED_MODULE_4__.UpdateFaceRequest), { required: true })
+    },
+    responses: {
+        200: {},
+        default: {
+            bodyMapper: _models_personGroupPersonMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var addFaceFromUrlOperationSpec = {
+    httpMethod: "POST",
+    path: "persongroups/{personGroupId}/persons/{personId}/persistedfaces",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.personGroupId,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.personId
+    ],
+    queryParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.userData,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.targetFace,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.detectionModel
+    ],
+    requestBody: {
+        parameterPath: {
+            url: "url"
+        },
+        mapper: (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)({}, _models_personGroupPersonMappers__WEBPACK_IMPORTED_MODULE_4__.ImageUrl), { required: true })
+    },
+    responses: {
+        200: {
+            bodyMapper: _models_personGroupPersonMappers__WEBPACK_IMPORTED_MODULE_4__.PersistedFace
+        },
+        default: {
+            bodyMapper: _models_personGroupPersonMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var addFaceFromStreamOperationSpec = {
+    httpMethod: "POST",
+    path: "persongroups/{personGroupId}/persons/{personId}/persistedfaces",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.personGroupId,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.personId
+    ],
+    queryParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.userData,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.targetFace,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.detectionModel
+    ],
+    requestBody: {
+        parameterPath: "image",
+        mapper: {
+            required: true,
+            serializedName: "Image",
+            type: {
+                name: "Stream"
+            }
+        }
+    },
+    contentType: "application/octet-stream",
+    responses: {
+        200: {
+            bodyMapper: _models_personGroupPersonMappers__WEBPACK_IMPORTED_MODULE_4__.PersistedFace
+        },
+        default: {
+            bodyMapper: _models_personGroupPersonMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+//# sourceMappingURL=personGroupPerson.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/cognitiveservices-face/esm/operations/snapshotOperations.js":
+/*!*****************************************************************************************!*\
+  !*** ./node_modules/@azure/cognitiveservices-face/esm/operations/snapshotOperations.js ***!
+  \*****************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "SnapshotOperations": () => (/* binding */ SnapshotOperations)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tslib */ "./node_modules/@azure/cognitiveservices-face/node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _azure_ms_rest_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @azure/ms-rest-js */ "./node_modules/@azure/ms-rest-js/es/lib/serializer.js");
+/* harmony import */ var _models_snapshotOperationsMappers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../models/snapshotOperationsMappers */ "./node_modules/@azure/cognitiveservices-face/esm/models/snapshotOperationsMappers.js");
+/* harmony import */ var _models_snapshotOperationsMappers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../models/snapshotOperationsMappers */ "./node_modules/@azure/cognitiveservices-face/esm/models/mappers.js");
+/* harmony import */ var _models_parameters__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../models/parameters */ "./node_modules/@azure/cognitiveservices-face/esm/models/parameters.js");
+/*
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License. See License.txt in the project root for
+ * license information.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is
+ * regenerated.
+ */
+
+
+
+
+/** Class representing a SnapshotOperations. */
+var SnapshotOperations = /** @class */ (function () {
+    /**
+     * Create a SnapshotOperations.
+     * @param {FaceClientContext} client Reference to the service client.
+     */
+    function SnapshotOperations(client) {
+        this.client = client;
+    }
+    SnapshotOperations.prototype.take = function (type, objectId, applyScope, options, callback) {
+        return this.client.sendOperationRequest({
+            type: type,
+            objectId: objectId,
+            applyScope: applyScope,
+            options: options
+        }, takeOperationSpec, callback);
+    };
+    SnapshotOperations.prototype.list = function (options, callback) {
+        return this.client.sendOperationRequest({
+            options: options
+        }, listOperationSpec, callback);
+    };
+    SnapshotOperations.prototype.get = function (snapshotId, options, callback) {
+        return this.client.sendOperationRequest({
+            snapshotId: snapshotId,
+            options: options
+        }, getOperationSpec, callback);
+    };
+    SnapshotOperations.prototype.update = function (snapshotId, options, callback) {
+        return this.client.sendOperationRequest({
+            snapshotId: snapshotId,
+            options: options
+        }, updateOperationSpec, callback);
+    };
+    SnapshotOperations.prototype.deleteMethod = function (snapshotId, options, callback) {
+        return this.client.sendOperationRequest({
+            snapshotId: snapshotId,
+            options: options
+        }, deleteMethodOperationSpec, callback);
+    };
+    SnapshotOperations.prototype.apply = function (snapshotId, objectId, options, callback) {
+        return this.client.sendOperationRequest({
+            snapshotId: snapshotId,
+            objectId: objectId,
+            options: options
+        }, applyOperationSpec, callback);
+    };
+    SnapshotOperations.prototype.getOperationStatus = function (operationId, options, callback) {
+        return this.client.sendOperationRequest({
+            operationId: operationId,
+            options: options
+        }, getOperationStatusOperationSpec, callback);
+    };
+    return SnapshotOperations;
+}());
+
+// Operation Specifications
+var serializer = new _azure_ms_rest_js__WEBPACK_IMPORTED_MODULE_0__.Serializer(_models_snapshotOperationsMappers__WEBPACK_IMPORTED_MODULE_1__);
+var takeOperationSpec = {
+    httpMethod: "POST",
+    path: "snapshots",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint
+    ],
+    requestBody: {
+        parameterPath: {
+            type: "type",
+            objectId: "objectId",
+            applyScope: "applyScope",
+            userData: [
+                "options",
+                "userData"
+            ]
+        },
+        mapper: (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)({}, _models_snapshotOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.TakeSnapshotRequest), { required: true })
+    },
+    responses: {
+        202: {
+            headersMapper: _models_snapshotOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.SnapshotTakeHeaders
+        },
+        default: {
+            bodyMapper: _models_snapshotOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var listOperationSpec = {
+    httpMethod: "GET",
+    path: "snapshots",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint
+    ],
+    queryParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.type,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.applyScope
+    ],
+    responses: {
+        200: {
+            bodyMapper: {
+                serializedName: "parsedResponse",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "Snapshot"
+                        }
+                    }
+                }
+            }
+        },
+        default: {
+            bodyMapper: _models_snapshotOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var getOperationSpec = {
+    httpMethod: "GET",
+    path: "snapshots/{snapshotId}",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.snapshotId
+    ],
+    responses: {
+        200: {
+            bodyMapper: _models_snapshotOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.Snapshot
+        },
+        default: {
+            bodyMapper: _models_snapshotOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var updateOperationSpec = {
+    httpMethod: "PATCH",
+    path: "snapshots/{snapshotId}",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.snapshotId
+    ],
+    requestBody: {
+        parameterPath: {
+            applyScope: [
+                "options",
+                "applyScope"
+            ],
+            userData: [
+                "options",
+                "userData"
+            ]
+        },
+        mapper: (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)({}, _models_snapshotOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.UpdateSnapshotRequest), { required: true })
+    },
+    responses: {
+        200: {},
+        default: {
+            bodyMapper: _models_snapshotOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var deleteMethodOperationSpec = {
+    httpMethod: "DELETE",
+    path: "snapshots/{snapshotId}",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.snapshotId
+    ],
+    responses: {
+        200: {},
+        default: {
+            bodyMapper: _models_snapshotOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var applyOperationSpec = {
+    httpMethod: "POST",
+    path: "snapshots/{snapshotId}/apply",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.snapshotId
+    ],
+    requestBody: {
+        parameterPath: {
+            objectId: "objectId",
+            mode: [
+                "options",
+                "mode"
+            ]
+        },
+        mapper: (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_3__.__assign)({}, _models_snapshotOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.ApplySnapshotRequest), { required: true })
+    },
+    responses: {
+        202: {
+            headersMapper: _models_snapshotOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.SnapshotApplyHeaders
+        },
+        default: {
+            bodyMapper: _models_snapshotOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+var getOperationStatusOperationSpec = {
+    httpMethod: "GET",
+    path: "operations/{operationId}",
+    urlParameters: [
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.endpoint,
+        _models_parameters__WEBPACK_IMPORTED_MODULE_2__.operationId
+    ],
+    responses: {
+        200: {
+            bodyMapper: _models_snapshotOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.OperationStatus
+        },
+        default: {
+            bodyMapper: _models_snapshotOperationsMappers__WEBPACK_IMPORTED_MODULE_4__.APIError
+        }
+    },
+    serializer: serializer
+};
+//# sourceMappingURL=snapshotOperations.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/cognitiveservices-face/node_modules/tslib/tslib.es6.js":
+/*!************************************************************************************!*\
+  !*** ./node_modules/@azure/cognitiveservices-face/node_modules/tslib/tslib.es6.js ***!
+  \************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "__extends": () => (/* binding */ __extends),
+/* harmony export */   "__assign": () => (/* binding */ __assign),
+/* harmony export */   "__rest": () => (/* binding */ __rest),
+/* harmony export */   "__decorate": () => (/* binding */ __decorate),
+/* harmony export */   "__param": () => (/* binding */ __param),
+/* harmony export */   "__metadata": () => (/* binding */ __metadata),
+/* harmony export */   "__awaiter": () => (/* binding */ __awaiter),
+/* harmony export */   "__generator": () => (/* binding */ __generator),
+/* harmony export */   "__createBinding": () => (/* binding */ __createBinding),
+/* harmony export */   "__exportStar": () => (/* binding */ __exportStar),
+/* harmony export */   "__values": () => (/* binding */ __values),
+/* harmony export */   "__read": () => (/* binding */ __read),
+/* harmony export */   "__spread": () => (/* binding */ __spread),
+/* harmony export */   "__spreadArrays": () => (/* binding */ __spreadArrays),
+/* harmony export */   "__await": () => (/* binding */ __await),
+/* harmony export */   "__asyncGenerator": () => (/* binding */ __asyncGenerator),
+/* harmony export */   "__asyncDelegator": () => (/* binding */ __asyncDelegator),
+/* harmony export */   "__asyncValues": () => (/* binding */ __asyncValues),
+/* harmony export */   "__makeTemplateObject": () => (/* binding */ __makeTemplateObject),
+/* harmony export */   "__importStar": () => (/* binding */ __importStar),
+/* harmony export */   "__importDefault": () => (/* binding */ __importDefault),
+/* harmony export */   "__classPrivateFieldGet": () => (/* binding */ __classPrivateFieldGet),
+/* harmony export */   "__classPrivateFieldSet": () => (/* binding */ __classPrivateFieldSet)
+/* harmony export */ });
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */
+/* global Reflect, Promise */
+
+var extendStatics = function(d, b) {
+    extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return extendStatics(d, b);
+};
+
+function __extends(d, b) {
+    extendStatics(d, b);
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+}
+
+var __assign = function() {
+    __assign = Object.assign || function __assign(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+        }
+        return t;
+    }
+    return __assign.apply(this, arguments);
+}
+
+function __rest(s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+                t[p[i]] = s[p[i]];
+        }
+    return t;
+}
+
+function __decorate(decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+}
+
+function __param(paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+}
+
+function __metadata(metadataKey, metadataValue) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(metadataKey, metadataValue);
+}
+
+function __awaiter(thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+}
+
+function __generator(thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+}
+
+function __createBinding(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}
+
+function __exportStar(m, exports) {
+    for (var p in m) if (p !== "default" && !exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+
+function __values(o) {
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
+    if (m) return m.call(o);
+    if (o && typeof o.length === "number") return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+}
+
+function __read(o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+}
+
+function __spread() {
+    for (var ar = [], i = 0; i < arguments.length; i++)
+        ar = ar.concat(__read(arguments[i]));
+    return ar;
+}
+
+function __spreadArrays() {
+    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+    for (var r = Array(s), k = 0, i = 0; i < il; i++)
+        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+            r[k] = a[j];
+    return r;
+};
+
+function __await(v) {
+    return this instanceof __await ? (this.v = v, this) : new __await(v);
+}
+
+function __asyncGenerator(thisArg, _arguments, generator) {
+    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+    var g = generator.apply(thisArg, _arguments || []), i, q = [];
+    return i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i;
+    function verb(n) { if (g[n]) i[n] = function (v) { return new Promise(function (a, b) { q.push([n, v, a, b]) > 1 || resume(n, v); }); }; }
+    function resume(n, v) { try { step(g[n](v)); } catch (e) { settle(q[0][3], e); } }
+    function step(r) { r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r); }
+    function fulfill(value) { resume("next", value); }
+    function reject(value) { resume("throw", value); }
+    function settle(f, v) { if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]); }
+}
+
+function __asyncDelegator(o) {
+    var i, p;
+    return i = {}, verb("next"), verb("throw", function (e) { throw e; }), verb("return"), i[Symbol.iterator] = function () { return this; }, i;
+    function verb(n, f) { i[n] = o[n] ? function (v) { return (p = !p) ? { value: __await(o[n](v)), done: n === "return" } : f ? f(v) : v; } : f; }
+}
+
+function __asyncValues(o) {
+    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+    var m = o[Symbol.asyncIterator], i;
+    return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i);
+    function verb(n) { i[n] = o[n] && function (v) { return new Promise(function (resolve, reject) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }
+    function settle(resolve, reject, d, v) { Promise.resolve(v).then(function(v) { resolve({ value: v, done: d }); }, reject); }
+}
+
+function __makeTemplateObject(cooked, raw) {
+    if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
+    return cooked;
+};
+
+function __importStar(mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+    result.default = mod;
+    return result;
+}
+
+function __importDefault(mod) {
+    return (mod && mod.__esModule) ? mod : { default: mod };
+}
+
+function __classPrivateFieldGet(receiver, privateMap) {
+    if (!privateMap.has(receiver)) {
+        throw new TypeError("attempted to get private field on non-instance");
+    }
+    return privateMap.get(receiver);
+}
+
+function __classPrivateFieldSet(receiver, privateMap, value) {
+    if (!privateMap.has(receiver)) {
+        throw new TypeError("attempted to set private field on non-instance");
+    }
+    privateMap.set(receiver, value);
+    return value;
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/@azure/core-auth/dist-esm/src/tokenCredential.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@azure/core-auth/dist-esm/src/tokenCredential.js ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "isTokenCredential": () => (/* binding */ isTokenCredential)
+/* harmony export */ });
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+/**
+ * Tests an object to determine whether it implements TokenCredential.
+ *
+ * @param credential - The assumed TokenCredential to be tested.
+ */
+function isTokenCredential(credential) {
+    // Check for an object with a 'getToken' function and possibly with
+    // a 'signRequest' function.  We do this check to make sure that
+    // a ServiceClientCredentials implementor (like TokenClientCredentials
+    // in ms-rest-nodeauth) doesn't get mistaken for a TokenCredential if
+    // it doesn't actually implement TokenCredential also.
+    const castCredential = credential;
+    return (castCredential &&
+        typeof castCredential.getToken === "function" &&
+        (castCredential.signRequest === undefined || castCredential.getToken.length > 0));
+}
+//# sourceMappingURL=tokenCredential.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/es/lib/credentials/apiKeyCredentials.js":
+/*!********************************************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/es/lib/credentials/apiKeyCredentials.js ***!
+  \********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "ApiKeyCredentials": () => (/* binding */ ApiKeyCredentials)
+/* harmony export */ });
+/* harmony import */ var _httpHeaders__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../httpHeaders */ "./node_modules/@azure/ms-rest-js/es/lib/httpHeaders.js");
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+
+/**
+ * Authenticates to a service using an API key.
+ */
+var ApiKeyCredentials = /** @class */ (function () {
+    /**
+     * @constructor
+     * @param {object} options   Specifies the options to be provided for auth. Either header or query needs to be provided.
+     */
+    function ApiKeyCredentials(options) {
+        if (!options || (options && !options.inHeader && !options.inQuery)) {
+            throw new Error("options cannot be null or undefined. Either \"inHeader\" or \"inQuery\" property of the options object needs to be provided.");
+        }
+        this.inHeader = options.inHeader;
+        this.inQuery = options.inQuery;
+    }
+    /**
+     * Signs a request with the values provided in the inHeader and inQuery parameter.
+     *
+     * @param {WebResource} webResource The WebResource to be signed.
+     * @returns {Promise<WebResource>} The signed request object.
+     */
+    ApiKeyCredentials.prototype.signRequest = function (webResource) {
+        if (!webResource) {
+            return Promise.reject(new Error("webResource cannot be null or undefined and must be of type \"object\"."));
+        }
+        if (this.inHeader) {
+            if (!webResource.headers) {
+                webResource.headers = new _httpHeaders__WEBPACK_IMPORTED_MODULE_0__.HttpHeaders();
+            }
+            for (var headerName in this.inHeader) {
+                webResource.headers.set(headerName, this.inHeader[headerName]);
+            }
+        }
+        if (this.inQuery) {
+            if (!webResource.url) {
+                return Promise.reject(new Error("url cannot be null in the request object."));
+            }
+            if (webResource.url.indexOf("?") < 0) {
+                webResource.url += "?";
+            }
+            for (var key in this.inQuery) {
+                if (!webResource.url.endsWith("?")) {
+                    webResource.url += "&";
+                }
+                webResource.url += key + "=" + this.inQuery[key];
+            }
+        }
+        return Promise.resolve(webResource);
+    };
+    return ApiKeyCredentials;
+}());
+
+//# sourceMappingURL=apiKeyCredentials.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/es/lib/credentials/azureIdentityTokenCredentialAdapter.js":
+/*!**************************************************************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/es/lib/credentials/azureIdentityTokenCredentialAdapter.js ***!
+  \**************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "AzureIdentityCredentialAdapter": () => (/* binding */ AzureIdentityCredentialAdapter)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/@azure/ms-rest-js/node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _util_constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../util/constants */ "./node_modules/@azure/ms-rest-js/es/lib/util/constants.js");
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+
+
+var DEFAULT_AUTHORIZATION_SCHEME = "Bearer";
+/**
+ * This class provides a simple extension to use {@link TokenCredential} from `@azure/identity` library to
+ * use with legacy Azure SDKs that accept {@link ServiceClientCredentials} family of credentials for authentication.
+ */
+var AzureIdentityCredentialAdapter = /** @class */ (function () {
+    function AzureIdentityCredentialAdapter(azureTokenCredential, scopes) {
+        if (scopes === void 0) { scopes = "https://management.azure.com/.default"; }
+        this.azureTokenCredential = azureTokenCredential;
+        this.scopes = scopes;
+    }
+    AzureIdentityCredentialAdapter.prototype.getToken = function () {
+        return (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__awaiter)(this, void 0, void 0, function () {
+            var accessToken, result;
+            return (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__generator)(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.azureTokenCredential.getToken(this.scopes)];
+                    case 1:
+                        accessToken = _a.sent();
+                        if (accessToken !== null) {
+                            result = {
+                                accessToken: accessToken.token,
+                                tokenType: DEFAULT_AUTHORIZATION_SCHEME,
+                                expiresOn: accessToken.expiresOnTimestamp,
+                            };
+                            return [2 /*return*/, result];
+                        }
+                        else {
+                            throw new Error("Could find token for scope");
+                        }
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    AzureIdentityCredentialAdapter.prototype.signRequest = function (webResource) {
+        return (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__awaiter)(this, void 0, void 0, function () {
+            var tokenResponse;
+            return (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__generator)(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.getToken()];
+                    case 1:
+                        tokenResponse = _a.sent();
+                        webResource.headers.set(_util_constants__WEBPACK_IMPORTED_MODULE_1__.Constants.HeaderConstants.AUTHORIZATION, tokenResponse.tokenType + " " + tokenResponse.accessToken);
+                        return [2 /*return*/, Promise.resolve(webResource)];
+                }
+            });
+        });
+    };
+    return AzureIdentityCredentialAdapter;
+}());
+
+//# sourceMappingURL=azureIdentityTokenCredentialAdapter.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/es/lib/credentials/basicAuthenticationCredentials.js":
+/*!*********************************************************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/es/lib/credentials/basicAuthenticationCredentials.js ***!
+  \*********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "BasicAuthenticationCredentials": () => (/* binding */ BasicAuthenticationCredentials)
+/* harmony export */ });
+/* harmony import */ var _httpHeaders__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../httpHeaders */ "./node_modules/@azure/ms-rest-js/es/lib/httpHeaders.js");
+/* harmony import */ var _util_base64__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../util/base64 */ "./node_modules/@azure/ms-rest-js/es/lib/util/base64.browser.js");
+/* harmony import */ var _util_constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/constants */ "./node_modules/@azure/ms-rest-js/es/lib/util/constants.js");
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+
+
+
+var HeaderConstants = _util_constants__WEBPACK_IMPORTED_MODULE_0__.Constants.HeaderConstants;
+var DEFAULT_AUTHORIZATION_SCHEME = "Basic";
+var BasicAuthenticationCredentials = /** @class */ (function () {
+    /**
+     * Creates a new BasicAuthenticationCredentials object.
+     *
+     * @constructor
+     * @param {string} userName User name.
+     * @param {string} password Password.
+     * @param {string} [authorizationScheme] The authorization scheme.
+     */
+    function BasicAuthenticationCredentials(userName, password, authorizationScheme) {
+        if (authorizationScheme === void 0) { authorizationScheme = DEFAULT_AUTHORIZATION_SCHEME; }
+        this.authorizationScheme = DEFAULT_AUTHORIZATION_SCHEME;
+        if (userName === null || userName === undefined || typeof userName.valueOf() !== "string") {
+            throw new Error("userName cannot be null or undefined and must be of type string.");
+        }
+        if (password === null || password === undefined || typeof password.valueOf() !== "string") {
+            throw new Error("password cannot be null or undefined and must be of type string.");
+        }
+        this.userName = userName;
+        this.password = password;
+        this.authorizationScheme = authorizationScheme;
+    }
+    /**
+     * Signs a request with the Authentication header.
+     *
+     * @param {WebResourceLike} webResource The WebResourceLike to be signed.
+     * @returns {Promise<WebResourceLike>} The signed request object.
+     */
+    BasicAuthenticationCredentials.prototype.signRequest = function (webResource) {
+        var credentials = this.userName + ":" + this.password;
+        var encodedCredentials = this.authorizationScheme + " " + _util_base64__WEBPACK_IMPORTED_MODULE_1__.encodeString(credentials);
+        if (!webResource.headers)
+            webResource.headers = new _httpHeaders__WEBPACK_IMPORTED_MODULE_2__.HttpHeaders();
+        webResource.headers.set(HeaderConstants.AUTHORIZATION, encodedCredentials);
+        return Promise.resolve(webResource);
+    };
+    return BasicAuthenticationCredentials;
+}());
+
+//# sourceMappingURL=basicAuthenticationCredentials.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/es/lib/credentials/domainCredentials.js":
+/*!********************************************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/es/lib/credentials/domainCredentials.js ***!
+  \********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "DomainCredentials": () => (/* binding */ DomainCredentials)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/@azure/ms-rest-js/node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _apiKeyCredentials__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./apiKeyCredentials */ "./node_modules/@azure/ms-rest-js/es/lib/credentials/apiKeyCredentials.js");
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+
+
+var DomainCredentials = /** @class */ (function (_super) {
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__extends)(DomainCredentials, _super);
+    /**
+     * Creates a new EventGrid DomainCredentials object.
+     *
+     * @constructor
+     * @param {string} domainKey   The EventGrid domain key
+     */
+    function DomainCredentials(domainKey) {
+        var _this = this;
+        if (!domainKey || (domainKey && typeof domainKey !== "string")) {
+            throw new Error("domainKey cannot be null or undefined and must be of type string.");
+        }
+        var options = {
+            inHeader: {
+                "aeg-sas-key": domainKey,
+            },
+        };
+        _this = _super.call(this, options) || this;
+        return _this;
+    }
+    return DomainCredentials;
+}(_apiKeyCredentials__WEBPACK_IMPORTED_MODULE_1__.ApiKeyCredentials));
+
+//# sourceMappingURL=domainCredentials.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/es/lib/credentials/tokenCredentials.js":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/es/lib/credentials/tokenCredentials.js ***!
+  \*******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "TokenCredentials": () => (/* binding */ TokenCredentials)
+/* harmony export */ });
+/* harmony import */ var _httpHeaders__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../httpHeaders */ "./node_modules/@azure/ms-rest-js/es/lib/httpHeaders.js");
+/* harmony import */ var _util_constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/constants */ "./node_modules/@azure/ms-rest-js/es/lib/util/constants.js");
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+
+
+var HeaderConstants = _util_constants__WEBPACK_IMPORTED_MODULE_0__.Constants.HeaderConstants;
+var DEFAULT_AUTHORIZATION_SCHEME = "Bearer";
+/**
+ * A credentials object that uses a token string and a authorzation scheme to authenticate.
+ */
+var TokenCredentials = /** @class */ (function () {
+    /**
+     * Creates a new TokenCredentials object.
+     *
+     * @constructor
+     * @param {string} token The token.
+     * @param {string} [authorizationScheme] The authorization scheme.
+     */
+    function TokenCredentials(token, authorizationScheme) {
+        if (authorizationScheme === void 0) { authorizationScheme = DEFAULT_AUTHORIZATION_SCHEME; }
+        this.authorizationScheme = DEFAULT_AUTHORIZATION_SCHEME;
+        if (!token) {
+            throw new Error("token cannot be null or undefined.");
+        }
+        this.token = token;
+        this.authorizationScheme = authorizationScheme;
+    }
+    /**
+     * Signs a request with the Authentication header.
+     *
+     * @param {WebResourceLike} webResource The WebResourceLike to be signed.
+     * @return {Promise<WebResourceLike>} The signed request object.
+     */
+    TokenCredentials.prototype.signRequest = function (webResource) {
+        if (!webResource.headers)
+            webResource.headers = new _httpHeaders__WEBPACK_IMPORTED_MODULE_1__.HttpHeaders();
+        webResource.headers.set(HeaderConstants.AUTHORIZATION, this.authorizationScheme + " " + this.token);
+        return Promise.resolve(webResource);
+    };
+    return TokenCredentials;
+}());
+
+//# sourceMappingURL=tokenCredentials.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/es/lib/credentials/topicCredentials.js":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/es/lib/credentials/topicCredentials.js ***!
+  \*******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "TopicCredentials": () => (/* binding */ TopicCredentials)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/@azure/ms-rest-js/node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _apiKeyCredentials__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./apiKeyCredentials */ "./node_modules/@azure/ms-rest-js/es/lib/credentials/apiKeyCredentials.js");
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+
+
+var TopicCredentials = /** @class */ (function (_super) {
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__extends)(TopicCredentials, _super);
+    /**
+     * Creates a new EventGrid TopicCredentials object.
+     *
+     * @constructor
+     * @param {string} topicKey   The EventGrid topic key
+     */
+    function TopicCredentials(topicKey) {
+        var _this = this;
+        if (!topicKey || (topicKey && typeof topicKey !== "string")) {
+            throw new Error("topicKey cannot be null or undefined and must be of type string.");
+        }
+        var options = {
+            inHeader: {
+                "aeg-sas-key": topicKey,
+            },
+        };
+        _this = _super.call(this, options) || this;
+        return _this;
+    }
+    return TopicCredentials;
+}(_apiKeyCredentials__WEBPACK_IMPORTED_MODULE_1__.ApiKeyCredentials));
+
+//# sourceMappingURL=topicCredentials.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/es/lib/httpHeaders.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/es/lib/httpHeaders.js ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "isHttpHeadersLike": () => (/* binding */ isHttpHeadersLike),
+/* harmony export */   "HttpHeaders": () => (/* binding */ HttpHeaders)
+/* harmony export */ });
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+/**
+ * A collection of HttpHeaders that can be sent with a HTTP request.
+ */
+function getHeaderKey(headerName) {
+    return headerName.toLowerCase();
+}
+function isHttpHeadersLike(object) {
+    if (!object || typeof object !== "object") {
+        return false;
+    }
+    if (typeof object.rawHeaders === "function" &&
+        typeof object.clone === "function" &&
+        typeof object.get === "function" &&
+        typeof object.set === "function" &&
+        typeof object.contains === "function" &&
+        typeof object.remove === "function" &&
+        typeof object.headersArray === "function" &&
+        typeof object.headerValues === "function" &&
+        typeof object.headerNames === "function" &&
+        typeof object.toJson === "function") {
+        return true;
+    }
+    return false;
+}
+/**
+ * A collection of HTTP header key/value pairs.
+ */
+var HttpHeaders = /** @class */ (function () {
+    function HttpHeaders(rawHeaders) {
+        this._headersMap = {};
+        if (rawHeaders) {
+            for (var headerName in rawHeaders) {
+                this.set(headerName, rawHeaders[headerName]);
+            }
+        }
+    }
+    /**
+     * Set a header in this collection with the provided name and value. The name is
+     * case-insensitive.
+     * @param headerName The name of the header to set. This value is case-insensitive.
+     * @param headerValue The value of the header to set.
+     */
+    HttpHeaders.prototype.set = function (headerName, headerValue) {
+        this._headersMap[getHeaderKey(headerName)] = {
+            name: headerName,
+            value: headerValue.toString(),
+        };
+    };
+    /**
+     * Get the header value for the provided header name, or undefined if no header exists in this
+     * collection with the provided name.
+     * @param headerName The name of the header.
+     */
+    HttpHeaders.prototype.get = function (headerName) {
+        var header = this._headersMap[getHeaderKey(headerName)];
+        return !header ? undefined : header.value;
+    };
+    /**
+     * Get whether or not this header collection contains a header entry for the provided header name.
+     */
+    HttpHeaders.prototype.contains = function (headerName) {
+        return !!this._headersMap[getHeaderKey(headerName)];
+    };
+    /**
+     * Remove the header with the provided headerName. Return whether or not the header existed and
+     * was removed.
+     * @param headerName The name of the header to remove.
+     */
+    HttpHeaders.prototype.remove = function (headerName) {
+        var result = this.contains(headerName);
+        delete this._headersMap[getHeaderKey(headerName)];
+        return result;
+    };
+    /**
+     * Get the headers that are contained this collection as an object.
+     */
+    HttpHeaders.prototype.rawHeaders = function () {
+        var result = {};
+        for (var headerKey in this._headersMap) {
+            var header = this._headersMap[headerKey];
+            result[header.name.toLowerCase()] = header.value;
+        }
+        return result;
+    };
+    /**
+     * Get the headers that are contained in this collection as an array.
+     */
+    HttpHeaders.prototype.headersArray = function () {
+        var headers = [];
+        for (var headerKey in this._headersMap) {
+            headers.push(this._headersMap[headerKey]);
+        }
+        return headers;
+    };
+    /**
+     * Get the header names that are contained in this collection.
+     */
+    HttpHeaders.prototype.headerNames = function () {
+        var headerNames = [];
+        var headers = this.headersArray();
+        for (var i = 0; i < headers.length; ++i) {
+            headerNames.push(headers[i].name);
+        }
+        return headerNames;
+    };
+    /**
+     * Get the header names that are contained in this collection.
+     */
+    HttpHeaders.prototype.headerValues = function () {
+        var headerValues = [];
+        var headers = this.headersArray();
+        for (var i = 0; i < headers.length; ++i) {
+            headerValues.push(headers[i].value);
+        }
+        return headerValues;
+    };
+    /**
+     * Get the JSON object representation of this HTTP header collection.
+     */
+    HttpHeaders.prototype.toJson = function () {
+        return this.rawHeaders();
+    };
+    /**
+     * Get the string representation of this HTTP header collection.
+     */
+    HttpHeaders.prototype.toString = function () {
+        return JSON.stringify(this.toJson());
+    };
+    /**
+     * Create a deep clone/copy of this HttpHeaders collection.
+     */
+    HttpHeaders.prototype.clone = function () {
+        return new HttpHeaders(this.rawHeaders());
+    };
+    return HttpHeaders;
+}());
+
+//# sourceMappingURL=httpHeaders.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/es/lib/httpPipelineLogLevel.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/es/lib/httpPipelineLogLevel.js ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "HttpPipelineLogLevel": () => (/* binding */ HttpPipelineLogLevel)
+/* harmony export */ });
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+/**
+ * The different levels of logs that can be used with the HttpPipelineLogger.
+ */
+var HttpPipelineLogLevel;
+(function (HttpPipelineLogLevel) {
+    /**
+     * A log level that indicates that no logs will be logged.
+     */
+    HttpPipelineLogLevel[HttpPipelineLogLevel["OFF"] = 0] = "OFF";
+    /**
+     * An error log.
+     */
+    HttpPipelineLogLevel[HttpPipelineLogLevel["ERROR"] = 1] = "ERROR";
+    /**
+     * A warning log.
+     */
+    HttpPipelineLogLevel[HttpPipelineLogLevel["WARNING"] = 2] = "WARNING";
+    /**
+     * An information log.
+     */
+    HttpPipelineLogLevel[HttpPipelineLogLevel["INFO"] = 3] = "INFO";
+})(HttpPipelineLogLevel || (HttpPipelineLogLevel = {}));
+//# sourceMappingURL=httpPipelineLogLevel.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/es/lib/msRest.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/es/lib/msRest.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "WebResource": () => (/* reexport safe */ _webResource__WEBPACK_IMPORTED_MODULE_0__.WebResource),
+/* harmony export */   "DefaultHttpClient": () => (/* reexport safe */ _defaultHttpClient__WEBPACK_IMPORTED_MODULE_1__.XhrHttpClient),
+/* harmony export */   "HttpHeaders": () => (/* reexport safe */ _httpHeaders__WEBPACK_IMPORTED_MODULE_2__.HttpHeaders),
+/* harmony export */   "HttpPipelineLogLevel": () => (/* reexport safe */ _httpPipelineLogLevel__WEBPACK_IMPORTED_MODULE_3__.HttpPipelineLogLevel),
+/* harmony export */   "RestError": () => (/* reexport safe */ _restError__WEBPACK_IMPORTED_MODULE_4__.RestError),
+/* harmony export */   "ServiceClient": () => (/* reexport safe */ _serviceClient__WEBPACK_IMPORTED_MODULE_5__.ServiceClient),
+/* harmony export */   "flattenResponse": () => (/* reexport safe */ _serviceClient__WEBPACK_IMPORTED_MODULE_5__.flattenResponse),
+/* harmony export */   "QueryCollectionFormat": () => (/* reexport safe */ _queryCollectionFormat__WEBPACK_IMPORTED_MODULE_6__.QueryCollectionFormat),
+/* harmony export */   "Constants": () => (/* reexport safe */ _util_constants__WEBPACK_IMPORTED_MODULE_7__.Constants),
+/* harmony export */   "logPolicy": () => (/* reexport safe */ _policies_logPolicy__WEBPACK_IMPORTED_MODULE_8__.logPolicy),
+/* harmony export */   "BaseRequestPolicy": () => (/* reexport safe */ _policies_requestPolicy__WEBPACK_IMPORTED_MODULE_9__.BaseRequestPolicy),
+/* harmony export */   "RequestPolicyOptions": () => (/* reexport safe */ _policies_requestPolicy__WEBPACK_IMPORTED_MODULE_9__.RequestPolicyOptions),
+/* harmony export */   "generateClientRequestIdPolicy": () => (/* reexport safe */ _policies_generateClientRequestIdPolicy__WEBPACK_IMPORTED_MODULE_10__.generateClientRequestIdPolicy),
+/* harmony export */   "exponentialRetryPolicy": () => (/* reexport safe */ _policies_exponentialRetryPolicy__WEBPACK_IMPORTED_MODULE_11__.exponentialRetryPolicy),
+/* harmony export */   "systemErrorRetryPolicy": () => (/* reexport safe */ _policies_systemErrorRetryPolicy__WEBPACK_IMPORTED_MODULE_12__.systemErrorRetryPolicy),
+/* harmony export */   "throttlingRetryPolicy": () => (/* reexport safe */ _policies_throttlingRetryPolicy__WEBPACK_IMPORTED_MODULE_13__.throttlingRetryPolicy),
+/* harmony export */   "agentPolicy": () => (/* reexport safe */ _policies_agentPolicy__WEBPACK_IMPORTED_MODULE_14__.agentPolicy),
+/* harmony export */   "getDefaultProxySettings": () => (/* reexport safe */ _policies_proxyPolicy__WEBPACK_IMPORTED_MODULE_15__.getDefaultProxySettings),
+/* harmony export */   "proxyPolicy": () => (/* reexport safe */ _policies_proxyPolicy__WEBPACK_IMPORTED_MODULE_15__.proxyPolicy),
+/* harmony export */   "redirectPolicy": () => (/* reexport safe */ _policies_redirectPolicy__WEBPACK_IMPORTED_MODULE_16__.redirectPolicy),
+/* harmony export */   "signingPolicy": () => (/* reexport safe */ _policies_signingPolicy__WEBPACK_IMPORTED_MODULE_17__.signingPolicy),
+/* harmony export */   "userAgentPolicy": () => (/* reexport safe */ _policies_userAgentPolicy__WEBPACK_IMPORTED_MODULE_18__.userAgentPolicy),
+/* harmony export */   "getDefaultUserAgentValue": () => (/* reexport safe */ _policies_userAgentPolicy__WEBPACK_IMPORTED_MODULE_18__.getDefaultUserAgentValue),
+/* harmony export */   "deserializationPolicy": () => (/* reexport safe */ _policies_deserializationPolicy__WEBPACK_IMPORTED_MODULE_19__.deserializationPolicy),
+/* harmony export */   "deserializeResponseBody": () => (/* reexport safe */ _policies_deserializationPolicy__WEBPACK_IMPORTED_MODULE_19__.deserializeResponseBody),
+/* harmony export */   "MapperType": () => (/* reexport safe */ _serializer__WEBPACK_IMPORTED_MODULE_20__.MapperType),
+/* harmony export */   "Serializer": () => (/* reexport safe */ _serializer__WEBPACK_IMPORTED_MODULE_20__.Serializer),
+/* harmony export */   "serializeObject": () => (/* reexport safe */ _serializer__WEBPACK_IMPORTED_MODULE_20__.serializeObject),
+/* harmony export */   "stripRequest": () => (/* reexport safe */ _util_utils__WEBPACK_IMPORTED_MODULE_21__.stripRequest),
+/* harmony export */   "stripResponse": () => (/* reexport safe */ _util_utils__WEBPACK_IMPORTED_MODULE_21__.stripResponse),
+/* harmony export */   "delay": () => (/* reexport safe */ _util_utils__WEBPACK_IMPORTED_MODULE_21__.delay),
+/* harmony export */   "executePromisesSequentially": () => (/* reexport safe */ _util_utils__WEBPACK_IMPORTED_MODULE_21__.executePromisesSequentially),
+/* harmony export */   "generateUuid": () => (/* reexport safe */ _util_utils__WEBPACK_IMPORTED_MODULE_21__.generateUuid),
+/* harmony export */   "encodeUri": () => (/* reexport safe */ _util_utils__WEBPACK_IMPORTED_MODULE_21__.encodeUri),
+/* harmony export */   "promiseToCallback": () => (/* reexport safe */ _util_utils__WEBPACK_IMPORTED_MODULE_21__.promiseToCallback),
+/* harmony export */   "promiseToServiceCallback": () => (/* reexport safe */ _util_utils__WEBPACK_IMPORTED_MODULE_21__.promiseToServiceCallback),
+/* harmony export */   "isValidUuid": () => (/* reexport safe */ _util_utils__WEBPACK_IMPORTED_MODULE_21__.isValidUuid),
+/* harmony export */   "applyMixins": () => (/* reexport safe */ _util_utils__WEBPACK_IMPORTED_MODULE_21__.applyMixins),
+/* harmony export */   "isNode": () => (/* reexport safe */ _util_utils__WEBPACK_IMPORTED_MODULE_21__.isNode),
+/* harmony export */   "isDuration": () => (/* reexport safe */ _util_utils__WEBPACK_IMPORTED_MODULE_21__.isDuration),
+/* harmony export */   "URLBuilder": () => (/* reexport safe */ _url__WEBPACK_IMPORTED_MODULE_22__.URLBuilder),
+/* harmony export */   "URLQuery": () => (/* reexport safe */ _url__WEBPACK_IMPORTED_MODULE_22__.URLQuery),
+/* harmony export */   "TokenCredentials": () => (/* reexport safe */ _credentials_tokenCredentials__WEBPACK_IMPORTED_MODULE_23__.TokenCredentials),
+/* harmony export */   "BasicAuthenticationCredentials": () => (/* reexport safe */ _credentials_basicAuthenticationCredentials__WEBPACK_IMPORTED_MODULE_24__.BasicAuthenticationCredentials),
+/* harmony export */   "ApiKeyCredentials": () => (/* reexport safe */ _credentials_apiKeyCredentials__WEBPACK_IMPORTED_MODULE_25__.ApiKeyCredentials),
+/* harmony export */   "TopicCredentials": () => (/* reexport safe */ _credentials_topicCredentials__WEBPACK_IMPORTED_MODULE_26__.TopicCredentials),
+/* harmony export */   "DomainCredentials": () => (/* reexport safe */ _credentials_domainCredentials__WEBPACK_IMPORTED_MODULE_27__.DomainCredentials),
+/* harmony export */   "AzureIdentityCredentialAdapter": () => (/* reexport safe */ _credentials_azureIdentityTokenCredentialAdapter__WEBPACK_IMPORTED_MODULE_28__.AzureIdentityCredentialAdapter)
+/* harmony export */ });
+/* harmony import */ var _webResource__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./webResource */ "./node_modules/@azure/ms-rest-js/es/lib/webResource.js");
+/* harmony import */ var _defaultHttpClient__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./defaultHttpClient */ "./node_modules/@azure/ms-rest-js/es/lib/xhrHttpClient.js");
+/* harmony import */ var _httpHeaders__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./httpHeaders */ "./node_modules/@azure/ms-rest-js/es/lib/httpHeaders.js");
+/* harmony import */ var _httpPipelineLogLevel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./httpPipelineLogLevel */ "./node_modules/@azure/ms-rest-js/es/lib/httpPipelineLogLevel.js");
+/* harmony import */ var _restError__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./restError */ "./node_modules/@azure/ms-rest-js/es/lib/restError.js");
+/* harmony import */ var _serviceClient__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./serviceClient */ "./node_modules/@azure/ms-rest-js/es/lib/serviceClient.js");
+/* harmony import */ var _queryCollectionFormat__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./queryCollectionFormat */ "./node_modules/@azure/ms-rest-js/es/lib/queryCollectionFormat.js");
+/* harmony import */ var _util_constants__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./util/constants */ "./node_modules/@azure/ms-rest-js/es/lib/util/constants.js");
+/* harmony import */ var _policies_logPolicy__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./policies/logPolicy */ "./node_modules/@azure/ms-rest-js/es/lib/policies/logPolicy.js");
+/* harmony import */ var _policies_requestPolicy__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./policies/requestPolicy */ "./node_modules/@azure/ms-rest-js/es/lib/policies/requestPolicy.js");
+/* harmony import */ var _policies_generateClientRequestIdPolicy__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./policies/generateClientRequestIdPolicy */ "./node_modules/@azure/ms-rest-js/es/lib/policies/generateClientRequestIdPolicy.js");
+/* harmony import */ var _policies_exponentialRetryPolicy__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./policies/exponentialRetryPolicy */ "./node_modules/@azure/ms-rest-js/es/lib/policies/exponentialRetryPolicy.js");
+/* harmony import */ var _policies_systemErrorRetryPolicy__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./policies/systemErrorRetryPolicy */ "./node_modules/@azure/ms-rest-js/es/lib/policies/systemErrorRetryPolicy.js");
+/* harmony import */ var _policies_throttlingRetryPolicy__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./policies/throttlingRetryPolicy */ "./node_modules/@azure/ms-rest-js/es/lib/policies/throttlingRetryPolicy.js");
+/* harmony import */ var _policies_agentPolicy__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./policies/agentPolicy */ "./node_modules/@azure/ms-rest-js/es/lib/policies/agentPolicy.browser.js");
+/* harmony import */ var _policies_proxyPolicy__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./policies/proxyPolicy */ "./node_modules/@azure/ms-rest-js/es/lib/policies/proxyPolicy.browser.js");
+/* harmony import */ var _policies_redirectPolicy__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./policies/redirectPolicy */ "./node_modules/@azure/ms-rest-js/es/lib/policies/redirectPolicy.js");
+/* harmony import */ var _policies_signingPolicy__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./policies/signingPolicy */ "./node_modules/@azure/ms-rest-js/es/lib/policies/signingPolicy.js");
+/* harmony import */ var _policies_userAgentPolicy__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./policies/userAgentPolicy */ "./node_modules/@azure/ms-rest-js/es/lib/policies/userAgentPolicy.js");
+/* harmony import */ var _policies_deserializationPolicy__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./policies/deserializationPolicy */ "./node_modules/@azure/ms-rest-js/es/lib/policies/deserializationPolicy.js");
+/* harmony import */ var _serializer__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./serializer */ "./node_modules/@azure/ms-rest-js/es/lib/serializer.js");
+/* harmony import */ var _util_utils__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./util/utils */ "./node_modules/@azure/ms-rest-js/es/lib/util/utils.js");
+/* harmony import */ var _url__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./url */ "./node_modules/@azure/ms-rest-js/es/lib/url.js");
+/* harmony import */ var _credentials_tokenCredentials__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./credentials/tokenCredentials */ "./node_modules/@azure/ms-rest-js/es/lib/credentials/tokenCredentials.js");
+/* harmony import */ var _credentials_basicAuthenticationCredentials__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./credentials/basicAuthenticationCredentials */ "./node_modules/@azure/ms-rest-js/es/lib/credentials/basicAuthenticationCredentials.js");
+/* harmony import */ var _credentials_apiKeyCredentials__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./credentials/apiKeyCredentials */ "./node_modules/@azure/ms-rest-js/es/lib/credentials/apiKeyCredentials.js");
+/* harmony import */ var _credentials_topicCredentials__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./credentials/topicCredentials */ "./node_modules/@azure/ms-rest-js/es/lib/credentials/topicCredentials.js");
+/* harmony import */ var _credentials_domainCredentials__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./credentials/domainCredentials */ "./node_modules/@azure/ms-rest-js/es/lib/credentials/domainCredentials.js");
+/* harmony import */ var _credentials_azureIdentityTokenCredentialAdapter__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./credentials/azureIdentityTokenCredentialAdapter */ "./node_modules/@azure/ms-rest-js/es/lib/credentials/azureIdentityTokenCredentialAdapter.js");
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+/// <reference path="../dom-shim.d.ts" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Credentials
+
+
+
+
+
+
+//# sourceMappingURL=msRest.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/es/lib/operationParameter.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/es/lib/operationParameter.js ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "getPathStringFromParameter": () => (/* binding */ getPathStringFromParameter),
+/* harmony export */   "getPathStringFromParameterPath": () => (/* binding */ getPathStringFromParameterPath)
+/* harmony export */ });
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+/**
+ * Get the path to this parameter's value as a dotted string (a.b.c).
+ * @param parameter The parameter to get the path string for.
+ * @returns The path to this parameter's value as a dotted string.
+ */
+function getPathStringFromParameter(parameter) {
+    return getPathStringFromParameterPath(parameter.parameterPath, parameter.mapper);
+}
+function getPathStringFromParameterPath(parameterPath, mapper) {
+    var result;
+    if (typeof parameterPath === "string") {
+        result = parameterPath;
+    }
+    else if (Array.isArray(parameterPath)) {
+        result = parameterPath.join(".");
+    }
+    else {
+        result = mapper.serializedName;
+    }
+    return result;
+}
+//# sourceMappingURL=operationParameter.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/es/lib/operationSpec.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/es/lib/operationSpec.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "isStreamOperation": () => (/* binding */ isStreamOperation)
+/* harmony export */ });
+/* harmony import */ var _serializer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./serializer */ "./node_modules/@azure/ms-rest-js/es/lib/serializer.js");
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+
+function isStreamOperation(operationSpec) {
+    var result = false;
+    for (var statusCode in operationSpec.responses) {
+        var operationResponse = operationSpec.responses[statusCode];
+        if (operationResponse.bodyMapper &&
+            operationResponse.bodyMapper.type.name === _serializer__WEBPACK_IMPORTED_MODULE_0__.MapperType.Stream) {
+            result = true;
+            break;
+        }
+    }
+    return result;
+}
+//# sourceMappingURL=operationSpec.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/es/lib/policies/agentPolicy.browser.js":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/es/lib/policies/agentPolicy.browser.js ***!
+  \*******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "agentPolicy": () => (/* binding */ agentPolicy),
+/* harmony export */   "AgentPolicy": () => (/* binding */ AgentPolicy)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/@azure/ms-rest-js/node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _requestPolicy__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./requestPolicy */ "./node_modules/@azure/ms-rest-js/es/lib/policies/requestPolicy.js");
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+
+
+var agentNotSupportedInBrowser = new Error("AgentPolicy is not supported in browser environment");
+function agentPolicy(_agentSettings) {
+    return {
+        create: function (_nextPolicy, _options) {
+            throw agentNotSupportedInBrowser;
+        },
+    };
+}
+var AgentPolicy = /** @class */ (function (_super) {
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__extends)(AgentPolicy, _super);
+    function AgentPolicy(nextPolicy, options) {
+        var _this = _super.call(this, nextPolicy, options) || this;
+        throw agentNotSupportedInBrowser;
+        return _this;
+    }
+    AgentPolicy.prototype.sendRequest = function (_request) {
+        throw agentNotSupportedInBrowser;
+    };
+    return AgentPolicy;
+}(_requestPolicy__WEBPACK_IMPORTED_MODULE_1__.BaseRequestPolicy));
+
+//# sourceMappingURL=agentPolicy.browser.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/es/lib/policies/deserializationPolicy.js":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/es/lib/policies/deserializationPolicy.js ***!
+  \*********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "deserializationPolicy": () => (/* binding */ deserializationPolicy),
+/* harmony export */   "defaultJsonContentTypes": () => (/* binding */ defaultJsonContentTypes),
+/* harmony export */   "defaultXmlContentTypes": () => (/* binding */ defaultXmlContentTypes),
+/* harmony export */   "DeserializationPolicy": () => (/* binding */ DeserializationPolicy),
+/* harmony export */   "deserializeResponseBody": () => (/* binding */ deserializeResponseBody)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/@azure/ms-rest-js/node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _operationSpec__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../operationSpec */ "./node_modules/@azure/ms-rest-js/es/lib/operationSpec.js");
+/* harmony import */ var _restError__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../restError */ "./node_modules/@azure/ms-rest-js/es/lib/restError.js");
+/* harmony import */ var _serializer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../serializer */ "./node_modules/@azure/ms-rest-js/es/lib/serializer.js");
+/* harmony import */ var _util_utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../util/utils */ "./node_modules/@azure/ms-rest-js/es/lib/util/utils.js");
+/* harmony import */ var _util_xml__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../util/xml */ "./node_modules/@azure/ms-rest-js/es/lib/util/xml.browser.js");
+/* harmony import */ var _requestPolicy__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./requestPolicy */ "./node_modules/@azure/ms-rest-js/es/lib/policies/requestPolicy.js");
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+
+
+
+
+
+
+
+/**
+ * Create a new serialization RequestPolicyCreator that will serialized HTTP request bodies as they
+ * pass through the HTTP pipeline.
+ */
+function deserializationPolicy(deserializationContentTypes) {
+    return {
+        create: function (nextPolicy, options) {
+            return new DeserializationPolicy(nextPolicy, deserializationContentTypes, options);
+        },
+    };
+}
+var defaultJsonContentTypes = ["application/json", "text/json"];
+var defaultXmlContentTypes = ["application/xml", "application/atom+xml"];
+/**
+ * A RequestPolicy that will deserialize HTTP response bodies and headers as they pass through the
+ * HTTP pipeline.
+ */
+var DeserializationPolicy = /** @class */ (function (_super) {
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__extends)(DeserializationPolicy, _super);
+    function DeserializationPolicy(nextPolicy, deserializationContentTypes, options) {
+        var _this = _super.call(this, nextPolicy, options) || this;
+        _this.jsonContentTypes =
+            (deserializationContentTypes && deserializationContentTypes.json) || defaultJsonContentTypes;
+        _this.xmlContentTypes =
+            (deserializationContentTypes && deserializationContentTypes.xml) || defaultXmlContentTypes;
+        return _this;
+    }
+    DeserializationPolicy.prototype.sendRequest = function (request) {
+        return (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__awaiter)(this, void 0, void 0, function () {
+            var _this = this;
+            return (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__generator)(this, function (_a) {
+                return [2 /*return*/, this._nextPolicy
+                        .sendRequest(request)
+                        .then(function (response) {
+                        return deserializeResponseBody(_this.jsonContentTypes, _this.xmlContentTypes, response);
+                    })];
+            });
+        });
+    };
+    return DeserializationPolicy;
+}(_requestPolicy__WEBPACK_IMPORTED_MODULE_1__.BaseRequestPolicy));
+
+function getOperationResponse(parsedResponse) {
+    var result;
+    var request = parsedResponse.request;
+    var operationSpec = request.operationSpec;
+    if (operationSpec) {
+        var operationResponseGetter = request.operationResponseGetter;
+        if (!operationResponseGetter) {
+            result = operationSpec.responses[parsedResponse.status];
+        }
+        else {
+            result = operationResponseGetter(operationSpec, parsedResponse);
+        }
+    }
+    return result;
+}
+function shouldDeserializeResponse(parsedResponse) {
+    var shouldDeserialize = parsedResponse.request.shouldDeserialize;
+    var result;
+    if (shouldDeserialize === undefined) {
+        result = true;
+    }
+    else if (typeof shouldDeserialize === "boolean") {
+        result = shouldDeserialize;
+    }
+    else {
+        result = shouldDeserialize(parsedResponse);
+    }
+    return result;
+}
+function deserializeResponseBody(jsonContentTypes, xmlContentTypes, response) {
+    return parse(jsonContentTypes, xmlContentTypes, response).then(function (parsedResponse) {
+        var shouldDeserialize = shouldDeserializeResponse(parsedResponse);
+        if (shouldDeserialize) {
+            var operationSpec = parsedResponse.request.operationSpec;
+            if (operationSpec && operationSpec.responses) {
+                var statusCode = parsedResponse.status;
+                var expectedStatusCodes = Object.keys(operationSpec.responses);
+                var hasNoExpectedStatusCodes = expectedStatusCodes.length === 0 ||
+                    (expectedStatusCodes.length === 1 && expectedStatusCodes[0] === "default");
+                var responseSpec = getOperationResponse(parsedResponse);
+                var isExpectedStatusCode = hasNoExpectedStatusCodes
+                    ? 200 <= statusCode && statusCode < 300
+                    : !!responseSpec;
+                if (!isExpectedStatusCode) {
+                    var defaultResponseSpec = operationSpec.responses.default;
+                    if (defaultResponseSpec) {
+                        var initialErrorMessage = (0,_operationSpec__WEBPACK_IMPORTED_MODULE_2__.isStreamOperation)(operationSpec)
+                            ? "Unexpected status code: " + statusCode
+                            : parsedResponse.bodyAsText;
+                        var error = new _restError__WEBPACK_IMPORTED_MODULE_3__.RestError(initialErrorMessage);
+                        error.statusCode = statusCode;
+                        error.request = _util_utils__WEBPACK_IMPORTED_MODULE_4__.stripRequest(parsedResponse.request);
+                        error.response = _util_utils__WEBPACK_IMPORTED_MODULE_4__.stripResponse(parsedResponse);
+                        var parsedErrorResponse = parsedResponse.parsedBody;
+                        try {
+                            if (parsedErrorResponse) {
+                                var defaultResponseBodyMapper = defaultResponseSpec.bodyMapper;
+                                if (defaultResponseBodyMapper &&
+                                    defaultResponseBodyMapper.serializedName === "CloudError") {
+                                    if (parsedErrorResponse.error) {
+                                        parsedErrorResponse = parsedErrorResponse.error;
+                                    }
+                                    if (parsedErrorResponse.code) {
+                                        error.code = parsedErrorResponse.code;
+                                    }
+                                    if (parsedErrorResponse.message) {
+                                        error.message = parsedErrorResponse.message;
+                                    }
+                                }
+                                else {
+                                    var internalError = parsedErrorResponse;
+                                    if (parsedErrorResponse.error) {
+                                        internalError = parsedErrorResponse.error;
+                                    }
+                                    error.code = internalError.code;
+                                    if (internalError.message) {
+                                        error.message = internalError.message;
+                                    }
+                                }
+                                if (defaultResponseBodyMapper) {
+                                    var valueToDeserialize = parsedErrorResponse;
+                                    if (operationSpec.isXML &&
+                                        defaultResponseBodyMapper.type.name === _serializer__WEBPACK_IMPORTED_MODULE_5__.MapperType.Sequence) {
+                                        valueToDeserialize =
+                                            typeof parsedErrorResponse === "object"
+                                                ? parsedErrorResponse[defaultResponseBodyMapper.xmlElementName]
+                                                : [];
+                                    }
+                                    error.body = operationSpec.serializer.deserialize(defaultResponseBodyMapper, valueToDeserialize, "error.body");
+                                }
+                            }
+                        }
+                        catch (defaultError) {
+                            error.message = "Error \"" + defaultError.message + "\" occurred in deserializing the responseBody - \"" + parsedResponse.bodyAsText + "\" for the default response.";
+                        }
+                        return Promise.reject(error);
+                    }
+                }
+                else if (responseSpec) {
+                    if (responseSpec.bodyMapper) {
+                        var valueToDeserialize = parsedResponse.parsedBody;
+                        if (operationSpec.isXML && responseSpec.bodyMapper.type.name === _serializer__WEBPACK_IMPORTED_MODULE_5__.MapperType.Sequence) {
+                            valueToDeserialize =
+                                typeof valueToDeserialize === "object"
+                                    ? valueToDeserialize[responseSpec.bodyMapper.xmlElementName]
+                                    : [];
+                        }
+                        try {
+                            parsedResponse.parsedBody = operationSpec.serializer.deserialize(responseSpec.bodyMapper, valueToDeserialize, "operationRes.parsedBody");
+                        }
+                        catch (error) {
+                            var restError = new _restError__WEBPACK_IMPORTED_MODULE_3__.RestError("Error " + error + " occurred in deserializing the responseBody - " + parsedResponse.bodyAsText);
+                            restError.request = _util_utils__WEBPACK_IMPORTED_MODULE_4__.stripRequest(parsedResponse.request);
+                            restError.response = _util_utils__WEBPACK_IMPORTED_MODULE_4__.stripResponse(parsedResponse);
+                            return Promise.reject(restError);
+                        }
+                    }
+                    else if (operationSpec.httpMethod === "HEAD") {
+                        // head methods never have a body, but we return a boolean to indicate presence/absence of the resource
+                        parsedResponse.parsedBody = response.status >= 200 && response.status < 300;
+                    }
+                    if (responseSpec.headersMapper) {
+                        parsedResponse.parsedHeaders = operationSpec.serializer.deserialize(responseSpec.headersMapper, parsedResponse.headers.rawHeaders(), "operationRes.parsedHeaders");
+                    }
+                }
+            }
+        }
+        return Promise.resolve(parsedResponse);
+    });
+}
+function parse(jsonContentTypes, xmlContentTypes, operationResponse) {
+    var errorHandler = function (err) {
+        var msg = "Error \"" + err + "\" occurred while parsing the response body - " + operationResponse.bodyAsText + ".";
+        var errCode = err.code || _restError__WEBPACK_IMPORTED_MODULE_3__.RestError.PARSE_ERROR;
+        var e = new _restError__WEBPACK_IMPORTED_MODULE_3__.RestError(msg, errCode, operationResponse.status, operationResponse.request, operationResponse, operationResponse.bodyAsText);
+        return Promise.reject(e);
+    };
+    if (!operationResponse.request.streamResponseBody && operationResponse.bodyAsText) {
+        var text_1 = operationResponse.bodyAsText;
+        var contentType = operationResponse.headers.get("Content-Type") || "";
+        var contentComponents = !contentType
+            ? []
+            : contentType.split(";").map(function (component) { return component.toLowerCase(); });
+        if (contentComponents.length === 0 ||
+            contentComponents.some(function (component) { return jsonContentTypes.indexOf(component) !== -1; })) {
+            return new Promise(function (resolve) {
+                operationResponse.parsedBody = JSON.parse(text_1);
+                resolve(operationResponse);
+            }).catch(errorHandler);
+        }
+        else if (contentComponents.some(function (component) { return xmlContentTypes.indexOf(component) !== -1; })) {
+            return (0,_util_xml__WEBPACK_IMPORTED_MODULE_6__.parseXML)(text_1)
+                .then(function (body) {
+                operationResponse.parsedBody = body;
+                return operationResponse;
+            })
+                .catch(errorHandler);
+        }
+    }
+    return Promise.resolve(operationResponse);
+}
+//# sourceMappingURL=deserializationPolicy.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/es/lib/policies/exponentialRetryPolicy.js":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/es/lib/policies/exponentialRetryPolicy.js ***!
+  \**********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "exponentialRetryPolicy": () => (/* binding */ exponentialRetryPolicy),
+/* harmony export */   "ExponentialRetryPolicy": () => (/* binding */ ExponentialRetryPolicy)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/@azure/ms-rest-js/node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _util_utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../util/utils */ "./node_modules/@azure/ms-rest-js/es/lib/util/utils.js");
+/* harmony import */ var _requestPolicy__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./requestPolicy */ "./node_modules/@azure/ms-rest-js/es/lib/policies/requestPolicy.js");
+/* harmony import */ var _restError__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../restError */ "./node_modules/@azure/ms-rest-js/es/lib/restError.js");
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+
+
+
+
+function exponentialRetryPolicy(retryCount, retryInterval, minRetryInterval, maxRetryInterval) {
+    return {
+        create: function (nextPolicy, options) {
+            return new ExponentialRetryPolicy(nextPolicy, options, retryCount, retryInterval, minRetryInterval, maxRetryInterval);
+        },
+    };
+}
+var DEFAULT_CLIENT_RETRY_INTERVAL = 1000 * 30;
+var DEFAULT_CLIENT_RETRY_COUNT = 3;
+var DEFAULT_CLIENT_MAX_RETRY_INTERVAL = 1000 * 90;
+var DEFAULT_CLIENT_MIN_RETRY_INTERVAL = 1000 * 3;
+/**
+ * @class
+ * Instantiates a new "ExponentialRetryPolicyFilter" instance.
+ */
+var ExponentialRetryPolicy = /** @class */ (function (_super) {
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__extends)(ExponentialRetryPolicy, _super);
+    /**
+     * @constructor
+     * @param {RequestPolicy} nextPolicy The next RequestPolicy in the pipeline chain.
+     * @param {RequestPolicyOptionsLike} options The options for this RequestPolicy.
+     * @param {number} [retryCount]        The client retry count.
+     * @param {number} [retryInterval]     The client retry interval, in milliseconds.
+     * @param {number} [minRetryInterval]  The minimum retry interval, in milliseconds.
+     * @param {number} [maxRetryInterval]  The maximum retry interval, in milliseconds.
+     */
+    function ExponentialRetryPolicy(nextPolicy, options, retryCount, retryInterval, minRetryInterval, maxRetryInterval) {
+        var _this = _super.call(this, nextPolicy, options) || this;
+        function isNumber(n) {
+            return typeof n === "number";
+        }
+        _this.retryCount = isNumber(retryCount) ? retryCount : DEFAULT_CLIENT_RETRY_COUNT;
+        _this.retryInterval = isNumber(retryInterval) ? retryInterval : DEFAULT_CLIENT_RETRY_INTERVAL;
+        _this.minRetryInterval = isNumber(minRetryInterval)
+            ? minRetryInterval
+            : DEFAULT_CLIENT_MIN_RETRY_INTERVAL;
+        _this.maxRetryInterval = isNumber(maxRetryInterval)
+            ? maxRetryInterval
+            : DEFAULT_CLIENT_MAX_RETRY_INTERVAL;
+        return _this;
+    }
+    ExponentialRetryPolicy.prototype.sendRequest = function (request) {
+        var _this = this;
+        return this._nextPolicy
+            .sendRequest(request.clone())
+            .then(function (response) { return retry(_this, request, response); })
+            .catch(function (error) { return retry(_this, request, error.response, undefined, error); });
+    };
+    return ExponentialRetryPolicy;
+}(_requestPolicy__WEBPACK_IMPORTED_MODULE_1__.BaseRequestPolicy));
+
+/**
+ * Determines if the operation should be retried and how long to wait until the next retry.
+ *
+ * @param {ExponentialRetryPolicy} policy The ExponentialRetryPolicy that this function is being called against.
+ * @param {number} statusCode The HTTP status code.
+ * @param {RetryData} retryData  The retry data.
+ * @return {boolean} True if the operation qualifies for a retry; false otherwise.
+ */
+function shouldRetry(policy, statusCode, retryData) {
+    if (statusCode == undefined ||
+        (statusCode < 500 && statusCode !== 408) ||
+        statusCode === 501 ||
+        statusCode === 505) {
+        return false;
+    }
+    var currentCount;
+    if (!retryData) {
+        throw new Error("retryData for the ExponentialRetryPolicyFilter cannot be null.");
+    }
+    else {
+        currentCount = retryData && retryData.retryCount;
+    }
+    return currentCount < policy.retryCount;
+}
+/**
+ * Updates the retry data for the next attempt.
+ *
+ * @param {ExponentialRetryPolicy} policy The ExponentialRetryPolicy that this function is being called against.
+ * @param {RetryData} retryData  The retry data.
+ * @param {RetryError} [err] The operation"s error, if any.
+ */
+function updateRetryData(policy, retryData, err) {
+    if (!retryData) {
+        retryData = {
+            retryCount: 0,
+            retryInterval: 0,
+        };
+    }
+    if (err) {
+        if (retryData.error) {
+            err.innerError = retryData.error;
+        }
+        retryData.error = err;
+    }
+    // Adjust retry count
+    retryData.retryCount++;
+    // Adjust retry interval
+    var incrementDelta = Math.pow(2, retryData.retryCount) - 1;
+    var boundedRandDelta = policy.retryInterval * 0.8 +
+        Math.floor(Math.random() * (policy.retryInterval * 1.2 - policy.retryInterval * 0.8));
+    incrementDelta *= boundedRandDelta;
+    retryData.retryInterval = Math.min(policy.minRetryInterval + incrementDelta, policy.maxRetryInterval);
+    return retryData;
+}
+function retry(policy, request, response, retryData, requestError) {
+    retryData = updateRetryData(policy, retryData, requestError);
+    var isAborted = request.abortSignal && request.abortSignal.aborted;
+    if (!isAborted && shouldRetry(policy, response && response.status, retryData)) {
+        return _util_utils__WEBPACK_IMPORTED_MODULE_2__.delay(retryData.retryInterval)
+            .then(function () { return policy._nextPolicy.sendRequest(request.clone()); })
+            .then(function (res) { return retry(policy, request, res, retryData, undefined); })
+            .catch(function (err) { return retry(policy, request, response, retryData, err); });
+    }
+    else if (isAborted || requestError || !response) {
+        // If the operation failed in the end, return all errors instead of just the last one
+        var err = retryData.error ||
+            new _restError__WEBPACK_IMPORTED_MODULE_3__.RestError("Failed to send the request.", _restError__WEBPACK_IMPORTED_MODULE_3__.RestError.REQUEST_SEND_ERROR, response && response.status, response && response.request, response);
+        return Promise.reject(err);
+    }
+    else {
+        return Promise.resolve(response);
+    }
+}
+//# sourceMappingURL=exponentialRetryPolicy.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/es/lib/policies/generateClientRequestIdPolicy.js":
+/*!*****************************************************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/es/lib/policies/generateClientRequestIdPolicy.js ***!
+  \*****************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "generateClientRequestIdPolicy": () => (/* binding */ generateClientRequestIdPolicy),
+/* harmony export */   "GenerateClientRequestIdPolicy": () => (/* binding */ GenerateClientRequestIdPolicy)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/@azure/ms-rest-js/node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _util_utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../util/utils */ "./node_modules/@azure/ms-rest-js/es/lib/util/utils.js");
+/* harmony import */ var _requestPolicy__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./requestPolicy */ "./node_modules/@azure/ms-rest-js/es/lib/policies/requestPolicy.js");
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+
+
+
+function generateClientRequestIdPolicy(requestIdHeaderName) {
+    if (requestIdHeaderName === void 0) { requestIdHeaderName = "x-ms-client-request-id"; }
+    return {
+        create: function (nextPolicy, options) {
+            return new GenerateClientRequestIdPolicy(nextPolicy, options, requestIdHeaderName);
+        },
+    };
+}
+var GenerateClientRequestIdPolicy = /** @class */ (function (_super) {
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__extends)(GenerateClientRequestIdPolicy, _super);
+    function GenerateClientRequestIdPolicy(nextPolicy, options, _requestIdHeaderName) {
+        var _this = _super.call(this, nextPolicy, options) || this;
+        _this._requestIdHeaderName = _requestIdHeaderName;
+        return _this;
+    }
+    GenerateClientRequestIdPolicy.prototype.sendRequest = function (request) {
+        if (!request.headers.contains(this._requestIdHeaderName)) {
+            request.headers.set(this._requestIdHeaderName, _util_utils__WEBPACK_IMPORTED_MODULE_1__.generateUuid());
+        }
+        return this._nextPolicy.sendRequest(request);
+    };
+    return GenerateClientRequestIdPolicy;
+}(_requestPolicy__WEBPACK_IMPORTED_MODULE_2__.BaseRequestPolicy));
+
+//# sourceMappingURL=generateClientRequestIdPolicy.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/es/lib/policies/logPolicy.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/es/lib/policies/logPolicy.js ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "logPolicy": () => (/* binding */ logPolicy),
+/* harmony export */   "LogPolicy": () => (/* binding */ LogPolicy)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/@azure/ms-rest-js/node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _requestPolicy__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./requestPolicy */ "./node_modules/@azure/ms-rest-js/es/lib/policies/requestPolicy.js");
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+
+
+function logPolicy(logger) {
+    if (logger === void 0) { logger = console.log; }
+    return {
+        create: function (nextPolicy, options) {
+            return new LogPolicy(nextPolicy, options, logger);
+        },
+    };
+}
+var LogPolicy = /** @class */ (function (_super) {
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__extends)(LogPolicy, _super);
+    function LogPolicy(nextPolicy, options, logger) {
+        if (logger === void 0) { logger = console.log; }
+        var _this = _super.call(this, nextPolicy, options) || this;
+        _this.logger = logger;
+        return _this;
+    }
+    LogPolicy.prototype.sendRequest = function (request) {
+        var _this = this;
+        return this._nextPolicy.sendRequest(request).then(function (response) { return logResponse(_this, response); });
+    };
+    return LogPolicy;
+}(_requestPolicy__WEBPACK_IMPORTED_MODULE_1__.BaseRequestPolicy));
+
+function logResponse(policy, response) {
+    policy.logger(">> Request: " + JSON.stringify(response.request, undefined, 2));
+    policy.logger(">> Response status code: " + response.status);
+    var responseBody = response.bodyAsText;
+    policy.logger(">> Body: " + responseBody);
+    return Promise.resolve(response);
+}
+//# sourceMappingURL=logPolicy.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/es/lib/policies/msRestUserAgentPolicy.browser.js":
+/*!*****************************************************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/es/lib/policies/msRestUserAgentPolicy.browser.js ***!
+  \*****************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "getDefaultUserAgentKey": () => (/* binding */ getDefaultUserAgentKey),
+/* harmony export */   "getPlatformSpecificData": () => (/* binding */ getPlatformSpecificData)
+/* harmony export */ });
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+function getDefaultUserAgentKey() {
+    return "x-ms-command-name";
+}
+function getPlatformSpecificData() {
+    var navigator = self.navigator;
+    var osInfo = {
+        key: "OS",
+        value: (navigator.oscpu || navigator.platform).replace(" ", ""),
+    };
+    return [osInfo];
+}
+//# sourceMappingURL=msRestUserAgentPolicy.browser.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/es/lib/policies/proxyPolicy.browser.js":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/es/lib/policies/proxyPolicy.browser.js ***!
+  \*******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "getDefaultProxySettings": () => (/* binding */ getDefaultProxySettings),
+/* harmony export */   "proxyPolicy": () => (/* binding */ proxyPolicy),
+/* harmony export */   "ProxyPolicy": () => (/* binding */ ProxyPolicy)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/@azure/ms-rest-js/node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _requestPolicy__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./requestPolicy */ "./node_modules/@azure/ms-rest-js/es/lib/policies/requestPolicy.js");
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+
+
+var proxyNotSupportedInBrowser = new Error("ProxyPolicy is not supported in browser environment");
+function getDefaultProxySettings(_proxyUrl) {
+    return undefined;
+}
+function proxyPolicy(_proxySettings) {
+    return {
+        create: function (_nextPolicy, _options) {
+            throw proxyNotSupportedInBrowser;
+        },
+    };
+}
+var ProxyPolicy = /** @class */ (function (_super) {
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__extends)(ProxyPolicy, _super);
+    function ProxyPolicy(nextPolicy, options) {
+        var _this = _super.call(this, nextPolicy, options) || this;
+        throw proxyNotSupportedInBrowser;
+        return _this;
+    }
+    ProxyPolicy.prototype.sendRequest = function (_request) {
+        throw proxyNotSupportedInBrowser;
+    };
+    return ProxyPolicy;
+}(_requestPolicy__WEBPACK_IMPORTED_MODULE_1__.BaseRequestPolicy));
+
+//# sourceMappingURL=proxyPolicy.browser.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/es/lib/policies/redirectPolicy.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/es/lib/policies/redirectPolicy.js ***!
+  \**************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "DefaultRedirectOptions": () => (/* binding */ DefaultRedirectOptions),
+/* harmony export */   "redirectPolicy": () => (/* binding */ redirectPolicy),
+/* harmony export */   "RedirectPolicy": () => (/* binding */ RedirectPolicy)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/@azure/ms-rest-js/node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _url__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../url */ "./node_modules/@azure/ms-rest-js/es/lib/url.js");
+/* harmony import */ var _requestPolicy__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./requestPolicy */ "./node_modules/@azure/ms-rest-js/es/lib/policies/requestPolicy.js");
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+
+
+
+var DefaultRedirectOptions = {
+    handleRedirects: true,
+    maxRetries: 20,
+};
+function redirectPolicy(maximumRetries) {
+    if (maximumRetries === void 0) { maximumRetries = 20; }
+    return {
+        create: function (nextPolicy, options) {
+            return new RedirectPolicy(nextPolicy, options, maximumRetries);
+        },
+    };
+}
+var RedirectPolicy = /** @class */ (function (_super) {
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__extends)(RedirectPolicy, _super);
+    function RedirectPolicy(nextPolicy, options, maxRetries) {
+        if (maxRetries === void 0) { maxRetries = 20; }
+        var _this = _super.call(this, nextPolicy, options) || this;
+        _this.maxRetries = maxRetries;
+        return _this;
+    }
+    RedirectPolicy.prototype.sendRequest = function (request) {
+        var _this = this;
+        return this._nextPolicy
+            .sendRequest(request)
+            .then(function (response) { return handleRedirect(_this, response, 0); });
+    };
+    return RedirectPolicy;
+}(_requestPolicy__WEBPACK_IMPORTED_MODULE_1__.BaseRequestPolicy));
+
+function handleRedirect(policy, response, currentRetries) {
+    var request = response.request, status = response.status;
+    var locationHeader = response.headers.get("location");
+    if (locationHeader &&
+        (status === 300 ||
+            (status === 301 && ["GET", "HEAD"].includes(request.method)) ||
+            (status === 302 && ["GET", "POST", "HEAD"].includes(request.method)) ||
+            (status === 303 && "POST" === request.method) ||
+            status === 307) &&
+        ((request.redirectLimit !== undefined && currentRetries < request.redirectLimit) ||
+            (request.redirectLimit === undefined && currentRetries < policy.maxRetries))) {
+        var builder = _url__WEBPACK_IMPORTED_MODULE_2__.URLBuilder.parse(request.url);
+        builder.setPath(locationHeader);
+        request.url = builder.toString();
+        // POST request with Status code 302 and 303 should be converted into a
+        // redirected GET request if the redirect url is present in the location header
+        // reference: https://tools.ietf.org/html/rfc7231#page-57 && https://fetch.spec.whatwg.org/#http-redirect-fetch
+        if ((status === 302 || status === 303) && request.method === "POST") {
+            request.method = "GET";
+            delete request.body;
+        }
+        return policy._nextPolicy
+            .sendRequest(request)
+            .then(function (res) { return handleRedirect(policy, res, currentRetries + 1); })
+            .then(function (res) { return recordRedirect(res, request.url); });
+    }
+    return Promise.resolve(response);
+}
+function recordRedirect(response, redirect) {
+    // This is called as the recursive calls to handleRedirect() unwind,
+    // only record the deepest/last redirect
+    if (!response.redirected) {
+        response.redirected = true;
+        response.url = redirect;
+    }
+    return response;
+}
+//# sourceMappingURL=redirectPolicy.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/es/lib/policies/requestPolicy.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/es/lib/policies/requestPolicy.js ***!
+  \*************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "BaseRequestPolicy": () => (/* binding */ BaseRequestPolicy),
+/* harmony export */   "RequestPolicyOptions": () => (/* binding */ RequestPolicyOptions)
+/* harmony export */ });
+/* harmony import */ var _httpPipelineLogLevel__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../httpPipelineLogLevel */ "./node_modules/@azure/ms-rest-js/es/lib/httpPipelineLogLevel.js");
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+
+var BaseRequestPolicy = /** @class */ (function () {
+    function BaseRequestPolicy(_nextPolicy, _options) {
+        this._nextPolicy = _nextPolicy;
+        this._options = _options;
+    }
+    /**
+     * Get whether or not a log with the provided log level should be logged.
+     * @param logLevel The log level of the log that will be logged.
+     * @returns Whether or not a log with the provided log level should be logged.
+     */
+    BaseRequestPolicy.prototype.shouldLog = function (logLevel) {
+        return this._options.shouldLog(logLevel);
+    };
+    /**
+     * Attempt to log the provided message to the provided logger. If no logger was provided or if
+     * the log level does not meat the logger's threshold, then nothing will be logged.
+     * @param logLevel The log level of this log.
+     * @param message The message of this log.
+     */
+    BaseRequestPolicy.prototype.log = function (logLevel, message) {
+        this._options.log(logLevel, message);
+    };
+    return BaseRequestPolicy;
+}());
+
+/**
+ * Optional properties that can be used when creating a RequestPolicy.
+ */
+var RequestPolicyOptions = /** @class */ (function () {
+    function RequestPolicyOptions(_logger) {
+        this._logger = _logger;
+    }
+    /**
+     * Get whether or not a log with the provided log level should be logged.
+     * @param logLevel The log level of the log that will be logged.
+     * @returns Whether or not a log with the provided log level should be logged.
+     */
+    RequestPolicyOptions.prototype.shouldLog = function (logLevel) {
+        return (!!this._logger &&
+            logLevel !== _httpPipelineLogLevel__WEBPACK_IMPORTED_MODULE_0__.HttpPipelineLogLevel.OFF &&
+            logLevel <= this._logger.minimumLogLevel);
+    };
+    /**
+     * Attempt to log the provided message to the provided logger. If no logger was provided or if
+     * the log level does not meat the logger's threshold, then nothing will be logged.
+     * @param logLevel The log level of this log.
+     * @param message The message of this log.
+     */
+    RequestPolicyOptions.prototype.log = function (logLevel, message) {
+        if (this._logger && this.shouldLog(logLevel)) {
+            this._logger.log(logLevel, message);
+        }
+    };
+    return RequestPolicyOptions;
+}());
+
+//# sourceMappingURL=requestPolicy.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/es/lib/policies/rpRegistrationPolicy.js":
+/*!********************************************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/es/lib/policies/rpRegistrationPolicy.js ***!
+  \********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "rpRegistrationPolicy": () => (/* binding */ rpRegistrationPolicy),
+/* harmony export */   "RPRegistrationPolicy": () => (/* binding */ RPRegistrationPolicy)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/@azure/ms-rest-js/node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _util_utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../util/utils */ "./node_modules/@azure/ms-rest-js/es/lib/util/utils.js");
+/* harmony import */ var _requestPolicy__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./requestPolicy */ "./node_modules/@azure/ms-rest-js/es/lib/policies/requestPolicy.js");
+
+
+
+function rpRegistrationPolicy(retryTimeout) {
+    if (retryTimeout === void 0) { retryTimeout = 30; }
+    return {
+        create: function (nextPolicy, options) {
+            return new RPRegistrationPolicy(nextPolicy, options, retryTimeout);
+        },
+    };
+}
+var RPRegistrationPolicy = /** @class */ (function (_super) {
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__extends)(RPRegistrationPolicy, _super);
+    function RPRegistrationPolicy(nextPolicy, options, _retryTimeout) {
+        if (_retryTimeout === void 0) { _retryTimeout = 30; }
+        var _this = _super.call(this, nextPolicy, options) || this;
+        _this._retryTimeout = _retryTimeout;
+        return _this;
+    }
+    RPRegistrationPolicy.prototype.sendRequest = function (request) {
+        var _this = this;
+        return this._nextPolicy
+            .sendRequest(request.clone())
+            .then(function (response) { return registerIfNeeded(_this, request, response); });
+    };
+    return RPRegistrationPolicy;
+}(_requestPolicy__WEBPACK_IMPORTED_MODULE_1__.BaseRequestPolicy));
+
+function registerIfNeeded(policy, request, response) {
+    if (response.status === 409) {
+        var rpName = checkRPNotRegisteredError(response.bodyAsText);
+        if (rpName) {
+            var urlPrefix = extractSubscriptionUrl(request.url);
+            return (registerRP(policy, urlPrefix, rpName, request)
+                // Autoregistration of ${provider} failed for some reason. We will not return this error
+                // instead will return the initial response with 409 status code back to the user.
+                // do nothing here as we are returning the original response at the end of this method.
+                .catch(function () { return false; })
+                .then(function (registrationStatus) {
+                if (registrationStatus) {
+                    // Retry the original request. We have to change the x-ms-client-request-id
+                    // otherwise Azure endpoint will return the initial 409 (cached) response.
+                    request.headers.set("x-ms-client-request-id", _util_utils__WEBPACK_IMPORTED_MODULE_2__.generateUuid());
+                    return policy._nextPolicy.sendRequest(request.clone());
+                }
+                return response;
+            }));
+        }
+    }
+    return Promise.resolve(response);
+}
+/**
+ * Reuses the headers of the original request and url (if specified).
+ * @param {WebResourceLike} originalRequest The original request
+ * @param {boolean} reuseUrlToo Should the url from the original request be reused as well. Default false.
+ * @returns {object} A new request object with desired headers.
+ */
+function getRequestEssentials(originalRequest, reuseUrlToo) {
+    if (reuseUrlToo === void 0) { reuseUrlToo = false; }
+    var reqOptions = originalRequest.clone();
+    if (reuseUrlToo) {
+        reqOptions.url = originalRequest.url;
+    }
+    // We have to change the x-ms-client-request-id otherwise Azure endpoint
+    // will return the initial 409 (cached) response.
+    reqOptions.headers.set("x-ms-client-request-id", _util_utils__WEBPACK_IMPORTED_MODULE_2__.generateUuid());
+    // Set content-type to application/json
+    reqOptions.headers.set("Content-Type", "application/json; charset=utf-8");
+    return reqOptions;
+}
+/**
+ * Validates the error code and message associated with 409 response status code. If it matches to that of
+ * RP not registered then it returns the name of the RP else returns undefined.
+ * @param {string} body The response body received after making the original request.
+ * @returns {string} The name of the RP if condition is satisfied else undefined.
+ */
+function checkRPNotRegisteredError(body) {
+    var result, responseBody;
+    if (body) {
+        try {
+            responseBody = JSON.parse(body);
+        }
+        catch (err) {
+            // do nothing;
+        }
+        if (responseBody &&
+            responseBody.error &&
+            responseBody.error.message &&
+            responseBody.error.code &&
+            responseBody.error.code === "MissingSubscriptionRegistration") {
+            var matchRes = responseBody.error.message.match(/.*'(.*)'/i);
+            if (matchRes) {
+                result = matchRes.pop();
+            }
+        }
+    }
+    return result;
+}
+/**
+ * Extracts the first part of the URL, just after subscription:
+ * https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/
+ * @param {string} url The original request url
+ * @returns {string} The url prefix as explained above.
+ */
+function extractSubscriptionUrl(url) {
+    var result;
+    var matchRes = url.match(/.*\/subscriptions\/[a-f0-9-]+\//gi);
+    if (matchRes && matchRes[0]) {
+        result = matchRes[0];
+    }
+    else {
+        throw new Error("Unable to extract subscriptionId from the given url - " + url + ".");
+    }
+    return result;
+}
+/**
+ * Registers the given provider.
+ * @param {RPRegistrationPolicy} policy The RPRegistrationPolicy this function is being called against.
+ * @param {string} urlPrefix https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/
+ * @param {string} provider The provider name to be registered.
+ * @param {WebResourceLike} originalRequest The original request sent by the user that returned a 409 response
+ * with a message that the provider is not registered.
+ * @param {registrationCallback} callback The callback that handles the RP registration
+ */
+function registerRP(policy, urlPrefix, provider, originalRequest) {
+    var postUrl = urlPrefix + "providers/" + provider + "/register?api-version=2016-02-01";
+    var getUrl = urlPrefix + "providers/" + provider + "?api-version=2016-02-01";
+    var reqOptions = getRequestEssentials(originalRequest);
+    reqOptions.method = "POST";
+    reqOptions.url = postUrl;
+    return policy._nextPolicy.sendRequest(reqOptions).then(function (response) {
+        if (response.status !== 200) {
+            throw new Error("Autoregistration of " + provider + " failed. Please try registering manually.");
+        }
+        return getRegistrationStatus(policy, getUrl, originalRequest);
+    });
+}
+/**
+ * Polls the registration status of the provider that was registered. Polling happens at an interval of 30 seconds.
+ * Polling will happen till the registrationState property of the response body is "Registered".
+ * @param {RPRegistrationPolicy} policy The RPRegistrationPolicy this function is being called against.
+ * @param {string} url The request url for polling
+ * @param {WebResourceLike} originalRequest The original request sent by the user that returned a 409 response
+ * with a message that the provider is not registered.
+ * @returns {Promise<boolean>} True if RP Registration is successful.
+ */
+function getRegistrationStatus(policy, url, originalRequest) {
+    var reqOptions = getRequestEssentials(originalRequest);
+    reqOptions.url = url;
+    reqOptions.method = "GET";
+    return policy._nextPolicy.sendRequest(reqOptions).then(function (res) {
+        var obj = res.parsedBody;
+        if (res.parsedBody && obj.registrationState && obj.registrationState === "Registered") {
+            return true;
+        }
+        else {
+            return _util_utils__WEBPACK_IMPORTED_MODULE_2__.delay(policy._retryTimeout * 1000)
+                .then(function () { return getRegistrationStatus(policy, url, originalRequest); });
+        }
+    });
+}
+//# sourceMappingURL=rpRegistrationPolicy.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/es/lib/policies/signingPolicy.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/es/lib/policies/signingPolicy.js ***!
+  \*************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "signingPolicy": () => (/* binding */ signingPolicy),
+/* harmony export */   "SigningPolicy": () => (/* binding */ SigningPolicy)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/@azure/ms-rest-js/node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _requestPolicy__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./requestPolicy */ "./node_modules/@azure/ms-rest-js/es/lib/policies/requestPolicy.js");
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+
+
+function signingPolicy(authenticationProvider) {
+    return {
+        create: function (nextPolicy, options) {
+            return new SigningPolicy(nextPolicy, options, authenticationProvider);
+        },
+    };
+}
+var SigningPolicy = /** @class */ (function (_super) {
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__extends)(SigningPolicy, _super);
+    function SigningPolicy(nextPolicy, options, authenticationProvider) {
+        var _this = _super.call(this, nextPolicy, options) || this;
+        _this.authenticationProvider = authenticationProvider;
+        return _this;
+    }
+    SigningPolicy.prototype.signRequest = function (request) {
+        return this.authenticationProvider.signRequest(request);
+    };
+    SigningPolicy.prototype.sendRequest = function (request) {
+        var _this = this;
+        return this.signRequest(request).then(function (nextRequest) {
+            return _this._nextPolicy.sendRequest(nextRequest);
+        });
+    };
+    return SigningPolicy;
+}(_requestPolicy__WEBPACK_IMPORTED_MODULE_1__.BaseRequestPolicy));
+
+//# sourceMappingURL=signingPolicy.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/es/lib/policies/systemErrorRetryPolicy.js":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/es/lib/policies/systemErrorRetryPolicy.js ***!
+  \**********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "systemErrorRetryPolicy": () => (/* binding */ systemErrorRetryPolicy),
+/* harmony export */   "SystemErrorRetryPolicy": () => (/* binding */ SystemErrorRetryPolicy)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/@azure/ms-rest-js/node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _util_utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../util/utils */ "./node_modules/@azure/ms-rest-js/es/lib/util/utils.js");
+/* harmony import */ var _requestPolicy__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./requestPolicy */ "./node_modules/@azure/ms-rest-js/es/lib/policies/requestPolicy.js");
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+
+
+
+function systemErrorRetryPolicy(retryCount, retryInterval, minRetryInterval, maxRetryInterval) {
+    return {
+        create: function (nextPolicy, options) {
+            return new SystemErrorRetryPolicy(nextPolicy, options, retryCount, retryInterval, minRetryInterval, maxRetryInterval);
+        },
+    };
+}
+/**
+ * @class
+ * Instantiates a new "ExponentialRetryPolicyFilter" instance.
+ *
+ * @constructor
+ * @param {number} retryCount        The client retry count.
+ * @param {number} retryInterval     The client retry interval, in milliseconds.
+ * @param {number} minRetryInterval  The minimum retry interval, in milliseconds.
+ * @param {number} maxRetryInterval  The maximum retry interval, in milliseconds.
+ */
+var SystemErrorRetryPolicy = /** @class */ (function (_super) {
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__extends)(SystemErrorRetryPolicy, _super);
+    function SystemErrorRetryPolicy(nextPolicy, options, retryCount, retryInterval, minRetryInterval, maxRetryInterval) {
+        var _this = _super.call(this, nextPolicy, options) || this;
+        _this.DEFAULT_CLIENT_RETRY_INTERVAL = 1000 * 30;
+        _this.DEFAULT_CLIENT_RETRY_COUNT = 3;
+        _this.DEFAULT_CLIENT_MAX_RETRY_INTERVAL = 1000 * 90;
+        _this.DEFAULT_CLIENT_MIN_RETRY_INTERVAL = 1000 * 3;
+        _this.retryCount = typeof retryCount === "number" ? retryCount : _this.DEFAULT_CLIENT_RETRY_COUNT;
+        _this.retryInterval =
+            typeof retryInterval === "number" ? retryInterval : _this.DEFAULT_CLIENT_RETRY_INTERVAL;
+        _this.minRetryInterval =
+            typeof minRetryInterval === "number"
+                ? minRetryInterval
+                : _this.DEFAULT_CLIENT_MIN_RETRY_INTERVAL;
+        _this.maxRetryInterval =
+            typeof maxRetryInterval === "number"
+                ? maxRetryInterval
+                : _this.DEFAULT_CLIENT_MAX_RETRY_INTERVAL;
+        return _this;
+    }
+    SystemErrorRetryPolicy.prototype.sendRequest = function (request) {
+        var _this = this;
+        return this._nextPolicy
+            .sendRequest(request.clone())
+            .catch(function (error) { return retry(_this, request, error.response, error); });
+    };
+    return SystemErrorRetryPolicy;
+}(_requestPolicy__WEBPACK_IMPORTED_MODULE_1__.BaseRequestPolicy));
+
+/**
+ * Determines if the operation should be retried and how long to wait until the next retry.
+ *
+ * @param {number} statusCode The HTTP status code.
+ * @param {RetryData} retryData  The retry data.
+ * @return {boolean} True if the operation qualifies for a retry; false otherwise.
+ */
+function shouldRetry(policy, retryData) {
+    var currentCount;
+    if (!retryData) {
+        throw new Error("retryData for the SystemErrorRetryPolicyFilter cannot be null.");
+    }
+    else {
+        currentCount = retryData && retryData.retryCount;
+    }
+    return currentCount < policy.retryCount;
+}
+/**
+ * Updates the retry data for the next attempt.
+ *
+ * @param {RetryData} retryData  The retry data.
+ * @param {object} err        The operation"s error, if any.
+ */
+function updateRetryData(policy, retryData, err) {
+    if (!retryData) {
+        retryData = {
+            retryCount: 0,
+            retryInterval: 0,
+        };
+    }
+    if (err) {
+        if (retryData.error) {
+            err.innerError = retryData.error;
+        }
+        retryData.error = err;
+    }
+    // Adjust retry count
+    retryData.retryCount++;
+    // Adjust retry interval
+    var incrementDelta = Math.pow(2, retryData.retryCount) - 1;
+    var boundedRandDelta = policy.retryInterval * 0.8 + Math.floor(Math.random() * (policy.retryInterval * 0.4));
+    incrementDelta *= boundedRandDelta;
+    retryData.retryInterval = Math.min(policy.minRetryInterval + incrementDelta, policy.maxRetryInterval);
+    return retryData;
+}
+function retry(policy, request, operationResponse, err, retryData) {
+    return (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__awaiter)(this, void 0, void 0, function () {
+        var error_1;
+        return (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__generator)(this, function (_a) {
+            switch (_a.label) {
+                case 0:
+                    retryData = updateRetryData(policy, retryData, err);
+                    if (!(err &&
+                        err.code &&
+                        shouldRetry(policy, retryData) &&
+                        (err.code === "ETIMEDOUT" ||
+                            err.code === "ESOCKETTIMEDOUT" ||
+                            err.code === "ECONNREFUSED" ||
+                            err.code === "ECONNRESET" ||
+                            err.code === "ENOENT"))) return [3 /*break*/, 5];
+                    _a.label = 1;
+                case 1:
+                    _a.trys.push([1, 3, , 4]);
+                    return [4 /*yield*/, _util_utils__WEBPACK_IMPORTED_MODULE_2__.delay(retryData.retryInterval)];
+                case 2:
+                    _a.sent();
+                    return [2 /*return*/, policy._nextPolicy.sendRequest(request.clone())];
+                case 3:
+                    error_1 = _a.sent();
+                    return [2 /*return*/, retry(policy, request, operationResponse, error_1, retryData)];
+                case 4: return [3 /*break*/, 6];
+                case 5:
+                    if (err) {
+                        // If the operation failed in the end, return all errors instead of just the last one
+                        return [2 /*return*/, Promise.reject(retryData.error)];
+                    }
+                    return [2 /*return*/, operationResponse];
+                case 6: return [2 /*return*/];
+            }
+        });
+    });
+}
+//# sourceMappingURL=systemErrorRetryPolicy.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/es/lib/policies/throttlingRetryPolicy.js":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/es/lib/policies/throttlingRetryPolicy.js ***!
+  \*********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "throttlingRetryPolicy": () => (/* binding */ throttlingRetryPolicy),
+/* harmony export */   "ThrottlingRetryPolicy": () => (/* binding */ ThrottlingRetryPolicy)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! tslib */ "./node_modules/@azure/ms-rest-js/node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _requestPolicy__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./requestPolicy */ "./node_modules/@azure/ms-rest-js/es/lib/policies/requestPolicy.js");
+/* harmony import */ var _util_constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/constants */ "./node_modules/@azure/ms-rest-js/es/lib/util/constants.js");
+/* harmony import */ var _util_utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../util/utils */ "./node_modules/@azure/ms-rest-js/es/lib/util/utils.js");
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+
+
+
+
+var StatusCodes = _util_constants__WEBPACK_IMPORTED_MODULE_0__.Constants.HttpConstants.StatusCodes;
+var DEFAULT_RETRY_COUNT = 3;
+function throttlingRetryPolicy(maxRetries) {
+    if (maxRetries === void 0) { maxRetries = DEFAULT_RETRY_COUNT; }
+    return {
+        create: function (nextPolicy, options) {
+            return new ThrottlingRetryPolicy(nextPolicy, options, maxRetries);
+        },
+    };
+}
+/**
+ * To learn more, please refer to
+ * https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-request-limits,
+ * https://docs.microsoft.com/en-us/azure/azure-subscription-service-limits and
+ * https://docs.microsoft.com/en-us/azure/virtual-machines/troubleshooting/troubleshooting-throttling-errors
+ */
+var ThrottlingRetryPolicy = /** @class */ (function (_super) {
+    (0,tslib__WEBPACK_IMPORTED_MODULE_1__.__extends)(ThrottlingRetryPolicy, _super);
+    function ThrottlingRetryPolicy(nextPolicy, options, retryLimit) {
+        var _this = _super.call(this, nextPolicy, options) || this;
+        _this.retryLimit = retryLimit;
+        return _this;
+    }
+    ThrottlingRetryPolicy.prototype.sendRequest = function (httpRequest) {
+        return (0,tslib__WEBPACK_IMPORTED_MODULE_1__.__awaiter)(this, void 0, void 0, function () {
+            var _this = this;
+            return (0,tslib__WEBPACK_IMPORTED_MODULE_1__.__generator)(this, function (_a) {
+                return [2 /*return*/, this._nextPolicy.sendRequest(httpRequest.clone()).then(function (response) {
+                        return _this.retry(httpRequest, response, 0);
+                    })];
+            });
+        });
+    };
+    ThrottlingRetryPolicy.prototype.retry = function (httpRequest, httpResponse, retryCount) {
+        return (0,tslib__WEBPACK_IMPORTED_MODULE_1__.__awaiter)(this, void 0, void 0, function () {
+            var retryAfterHeader, delayInMs, res;
+            return (0,tslib__WEBPACK_IMPORTED_MODULE_1__.__generator)(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        if (httpResponse.status !== StatusCodes.TooManyRequests) {
+                            return [2 /*return*/, httpResponse];
+                        }
+                        retryAfterHeader = httpResponse.headers.get(_util_constants__WEBPACK_IMPORTED_MODULE_0__.Constants.HeaderConstants.RETRY_AFTER);
+                        if (!(retryAfterHeader && retryCount < this.retryLimit)) return [3 /*break*/, 3];
+                        delayInMs = ThrottlingRetryPolicy.parseRetryAfterHeader(retryAfterHeader);
+                        if (!delayInMs) return [3 /*break*/, 3];
+                        return [4 /*yield*/, (0,_util_utils__WEBPACK_IMPORTED_MODULE_2__.delay)(delayInMs)];
+                    case 1:
+                        _a.sent();
+                        return [4 /*yield*/, this._nextPolicy.sendRequest(httpRequest)];
+                    case 2:
+                        res = _a.sent();
+                        return [2 /*return*/, this.retry(httpRequest, res, retryCount + 1)];
+                    case 3: return [2 /*return*/, httpResponse];
+                }
+            });
+        });
+    };
+    ThrottlingRetryPolicy.parseRetryAfterHeader = function (headerValue) {
+        var retryAfterInSeconds = Number(headerValue);
+        if (Number.isNaN(retryAfterInSeconds)) {
+            return ThrottlingRetryPolicy.parseDateRetryAfterHeader(headerValue);
+        }
+        else {
+            return retryAfterInSeconds * 1000;
+        }
+    };
+    ThrottlingRetryPolicy.parseDateRetryAfterHeader = function (headerValue) {
+        try {
+            var now = Date.now();
+            var date = Date.parse(headerValue);
+            var diff = date - now;
+            return Number.isNaN(diff) ? undefined : diff;
+        }
+        catch (error) {
+            return undefined;
+        }
+    };
+    return ThrottlingRetryPolicy;
+}(_requestPolicy__WEBPACK_IMPORTED_MODULE_3__.BaseRequestPolicy));
+
+//# sourceMappingURL=throttlingRetryPolicy.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/es/lib/policies/userAgentPolicy.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/es/lib/policies/userAgentPolicy.js ***!
+  \***************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "getDefaultUserAgentHeaderName": () => (/* binding */ getDefaultUserAgentHeaderName),
+/* harmony export */   "getDefaultUserAgentValue": () => (/* binding */ getDefaultUserAgentValue),
+/* harmony export */   "userAgentPolicy": () => (/* binding */ userAgentPolicy),
+/* harmony export */   "UserAgentPolicy": () => (/* binding */ UserAgentPolicy)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! tslib */ "./node_modules/@azure/ms-rest-js/node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _httpHeaders__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../httpHeaders */ "./node_modules/@azure/ms-rest-js/es/lib/httpHeaders.js");
+/* harmony import */ var _util_constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/constants */ "./node_modules/@azure/ms-rest-js/es/lib/util/constants.js");
+/* harmony import */ var _msRestUserAgentPolicy__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./msRestUserAgentPolicy */ "./node_modules/@azure/ms-rest-js/es/lib/policies/msRestUserAgentPolicy.browser.js");
+/* harmony import */ var _requestPolicy__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./requestPolicy */ "./node_modules/@azure/ms-rest-js/es/lib/policies/requestPolicy.js");
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+
+
+
+
+
+function getRuntimeInfo() {
+    var msRestRuntime = {
+        key: "ms-rest-js",
+        value: _util_constants__WEBPACK_IMPORTED_MODULE_0__.Constants.msRestVersion,
+    };
+    return [msRestRuntime];
+}
+function getUserAgentString(telemetryInfo, keySeparator, valueSeparator) {
+    if (keySeparator === void 0) { keySeparator = " "; }
+    if (valueSeparator === void 0) { valueSeparator = "/"; }
+    return telemetryInfo
+        .map(function (info) {
+        var value = info.value ? "" + valueSeparator + info.value : "";
+        return "" + info.key + value;
+    })
+        .join(keySeparator);
+}
+var getDefaultUserAgentHeaderName = _msRestUserAgentPolicy__WEBPACK_IMPORTED_MODULE_1__.getDefaultUserAgentKey;
+function getDefaultUserAgentValue() {
+    var runtimeInfo = getRuntimeInfo();
+    var platformSpecificData = (0,_msRestUserAgentPolicy__WEBPACK_IMPORTED_MODULE_1__.getPlatformSpecificData)();
+    var userAgent = getUserAgentString(runtimeInfo.concat(platformSpecificData));
+    return userAgent;
+}
+function userAgentPolicy(userAgentData) {
+    var key = !userAgentData || userAgentData.key == undefined ? (0,_msRestUserAgentPolicy__WEBPACK_IMPORTED_MODULE_1__.getDefaultUserAgentKey)() : userAgentData.key;
+    var value = !userAgentData || userAgentData.value == undefined
+        ? getDefaultUserAgentValue()
+        : userAgentData.value;
+    return {
+        create: function (nextPolicy, options) {
+            return new UserAgentPolicy(nextPolicy, options, key, value);
+        },
+    };
+}
+var UserAgentPolicy = /** @class */ (function (_super) {
+    (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__extends)(UserAgentPolicy, _super);
+    function UserAgentPolicy(_nextPolicy, _options, headerKey, headerValue) {
+        var _this = _super.call(this, _nextPolicy, _options) || this;
+        _this._nextPolicy = _nextPolicy;
+        _this._options = _options;
+        _this.headerKey = headerKey;
+        _this.headerValue = headerValue;
+        return _this;
+    }
+    UserAgentPolicy.prototype.sendRequest = function (request) {
+        this.addUserAgentHeader(request);
+        return this._nextPolicy.sendRequest(request);
+    };
+    UserAgentPolicy.prototype.addUserAgentHeader = function (request) {
+        if (!request.headers) {
+            request.headers = new _httpHeaders__WEBPACK_IMPORTED_MODULE_3__.HttpHeaders();
+        }
+        if (!request.headers.get(this.headerKey) && this.headerValue) {
+            request.headers.set(this.headerKey, this.headerValue);
+        }
+    };
+    return UserAgentPolicy;
+}(_requestPolicy__WEBPACK_IMPORTED_MODULE_4__.BaseRequestPolicy));
+
+//# sourceMappingURL=userAgentPolicy.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/es/lib/queryCollectionFormat.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/es/lib/queryCollectionFormat.js ***!
+  \************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "QueryCollectionFormat": () => (/* binding */ QueryCollectionFormat)
+/* harmony export */ });
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+/**
+ * The format that will be used to join an array of values together for a query parameter value.
+ */
+var QueryCollectionFormat;
+(function (QueryCollectionFormat) {
+    QueryCollectionFormat["Csv"] = ",";
+    QueryCollectionFormat["Ssv"] = " ";
+    QueryCollectionFormat["Tsv"] = "\t";
+    QueryCollectionFormat["Pipes"] = "|";
+    QueryCollectionFormat["Multi"] = "Multi";
+})(QueryCollectionFormat || (QueryCollectionFormat = {}));
+//# sourceMappingURL=queryCollectionFormat.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/es/lib/restError.js":
+/*!************************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/es/lib/restError.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "RestError": () => (/* binding */ RestError)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/@azure/ms-rest-js/node_modules/tslib/tslib.es6.js");
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+
+var RestError = /** @class */ (function (_super) {
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__extends)(RestError, _super);
+    function RestError(message, code, statusCode, request, response, body) {
+        var _this = _super.call(this, message) || this;
+        _this.code = code;
+        _this.statusCode = statusCode;
+        _this.request = request;
+        _this.response = response;
+        _this.body = body;
+        Object.setPrototypeOf(_this, RestError.prototype);
+        return _this;
+    }
+    RestError.REQUEST_SEND_ERROR = "REQUEST_SEND_ERROR";
+    RestError.REQUEST_ABORTED_ERROR = "REQUEST_ABORTED_ERROR";
+    RestError.PARSE_ERROR = "PARSE_ERROR";
+    return RestError;
+}(Error));
+
+//# sourceMappingURL=restError.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/es/lib/serializer.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/es/lib/serializer.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Serializer": () => (/* binding */ Serializer),
+/* harmony export */   "serializeObject": () => (/* binding */ serializeObject),
+/* harmony export */   "MapperType": () => (/* binding */ MapperType)
+/* harmony export */ });
+/* harmony import */ var _util_base64__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./util/base64 */ "./node_modules/@azure/ms-rest-js/es/lib/util/base64.browser.js");
+/* harmony import */ var _util_utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./util/utils */ "./node_modules/@azure/ms-rest-js/es/lib/util/utils.js");
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+
+
+var Serializer = /** @class */ (function () {
+    function Serializer(modelMappers, isXML) {
+        if (modelMappers === void 0) { modelMappers = {}; }
+        this.modelMappers = modelMappers;
+        this.isXML = isXML;
+    }
+    Serializer.prototype.validateConstraints = function (mapper, value, objectName) {
+        var failValidation = function (constraintName, constraintValue) {
+            throw new Error("\"" + objectName + "\" with value \"" + value + "\" should satisfy the constraint \"" + constraintName + "\": " + constraintValue + ".");
+        };
+        if (mapper.constraints && value != undefined) {
+            var _a = mapper.constraints, ExclusiveMaximum = _a.ExclusiveMaximum, ExclusiveMinimum = _a.ExclusiveMinimum, InclusiveMaximum = _a.InclusiveMaximum, InclusiveMinimum = _a.InclusiveMinimum, MaxItems = _a.MaxItems, MaxLength = _a.MaxLength, MinItems = _a.MinItems, MinLength = _a.MinLength, MultipleOf = _a.MultipleOf, Pattern = _a.Pattern, UniqueItems = _a.UniqueItems;
+            if (ExclusiveMaximum != undefined && value >= ExclusiveMaximum) {
+                failValidation("ExclusiveMaximum", ExclusiveMaximum);
+            }
+            if (ExclusiveMinimum != undefined && value <= ExclusiveMinimum) {
+                failValidation("ExclusiveMinimum", ExclusiveMinimum);
+            }
+            if (InclusiveMaximum != undefined && value > InclusiveMaximum) {
+                failValidation("InclusiveMaximum", InclusiveMaximum);
+            }
+            if (InclusiveMinimum != undefined && value < InclusiveMinimum) {
+                failValidation("InclusiveMinimum", InclusiveMinimum);
+            }
+            if (MaxItems != undefined && value.length > MaxItems) {
+                failValidation("MaxItems", MaxItems);
+            }
+            if (MaxLength != undefined && value.length > MaxLength) {
+                failValidation("MaxLength", MaxLength);
+            }
+            if (MinItems != undefined && value.length < MinItems) {
+                failValidation("MinItems", MinItems);
+            }
+            if (MinLength != undefined && value.length < MinLength) {
+                failValidation("MinLength", MinLength);
+            }
+            if (MultipleOf != undefined && value % MultipleOf !== 0) {
+                failValidation("MultipleOf", MultipleOf);
+            }
+            if (Pattern) {
+                var pattern = typeof Pattern === "string" ? new RegExp(Pattern) : Pattern;
+                if (typeof value !== "string" || value.match(pattern) === null) {
+                    failValidation("Pattern", Pattern);
+                }
+            }
+            if (UniqueItems &&
+                value.some(function (item, i, ar) { return ar.indexOf(item) !== i; })) {
+                failValidation("UniqueItems", UniqueItems);
+            }
+        }
+    };
+    /**
+     * Serialize the given object based on its metadata defined in the mapper
+     *
+     * @param {Mapper} mapper The mapper which defines the metadata of the serializable object
+     *
+     * @param {object|string|Array|number|boolean|Date|stream} object A valid Javascript object to be serialized
+     *
+     * @param {string} objectName Name of the serialized object
+     *
+     * @returns {object|string|Array|number|boolean|Date|stream} A valid serialized Javascript object
+     */
+    Serializer.prototype.serialize = function (mapper, object, objectName) {
+        var payload = {};
+        var mapperType = mapper.type.name;
+        if (!objectName) {
+            objectName = mapper.serializedName;
+        }
+        if (mapperType.match(/^Sequence$/gi) !== null) {
+            payload = [];
+        }
+        if (mapper.isConstant) {
+            object = mapper.defaultValue;
+        }
+        // This table of allowed values should help explain
+        // the mapper.required and mapper.nullable properties.
+        // X means "neither undefined or null are allowed".
+        //           || required
+        //           || true      | false
+        //  nullable || ==========================
+        //      true || null      | undefined/null
+        //     false || X         | undefined
+        // undefined || X         | undefined/null
+        var required = mapper.required, nullable = mapper.nullable;
+        if (required && nullable && object === undefined) {
+            throw new Error(objectName + " cannot be undefined.");
+        }
+        if (required && !nullable && object == undefined) {
+            throw new Error(objectName + " cannot be null or undefined.");
+        }
+        if (!required && nullable === false && object === null) {
+            throw new Error(objectName + " cannot be null.");
+        }
+        if (object == undefined) {
+            payload = object;
+        }
+        else {
+            // Validate Constraints if any
+            this.validateConstraints(mapper, object, objectName);
+            if (mapperType.match(/^any$/gi) !== null) {
+                payload = object;
+            }
+            else if (mapperType.match(/^(Number|String|Boolean|Object|Stream|Uuid)$/gi) !== null) {
+                payload = serializeBasicTypes(mapperType, objectName, object);
+            }
+            else if (mapperType.match(/^Enum$/gi) !== null) {
+                var enumMapper = mapper;
+                payload = serializeEnumType(objectName, enumMapper.type.allowedValues, object);
+            }
+            else if (mapperType.match(/^(Date|DateTime|TimeSpan|DateTimeRfc1123|UnixTime)$/gi) !== null) {
+                payload = serializeDateTypes(mapperType, object, objectName);
+            }
+            else if (mapperType.match(/^ByteArray$/gi) !== null) {
+                payload = serializeByteArrayType(objectName, object);
+            }
+            else if (mapperType.match(/^Base64Url$/gi) !== null) {
+                payload = serializeBase64UrlType(objectName, object);
+            }
+            else if (mapperType.match(/^Sequence$/gi) !== null) {
+                payload = serializeSequenceType(this, mapper, object, objectName);
+            }
+            else if (mapperType.match(/^Dictionary$/gi) !== null) {
+                payload = serializeDictionaryType(this, mapper, object, objectName);
+            }
+            else if (mapperType.match(/^Composite$/gi) !== null) {
+                payload = serializeCompositeType(this, mapper, object, objectName);
+            }
+        }
+        return payload;
+    };
+    /**
+     * Deserialize the given object based on its metadata defined in the mapper
+     *
+     * @param {object} mapper The mapper which defines the metadata of the serializable object
+     *
+     * @param {object|string|Array|number|boolean|Date|stream} responseBody A valid Javascript entity to be deserialized
+     *
+     * @param {string} objectName Name of the deserialized object
+     *
+     * @returns {object|string|Array|number|boolean|Date|stream} A valid deserialized Javascript object
+     */
+    Serializer.prototype.deserialize = function (mapper, responseBody, objectName) {
+        if (responseBody == undefined) {
+            if (this.isXML && mapper.type.name === "Sequence" && !mapper.xmlIsWrapped) {
+                // Edge case for empty XML non-wrapped lists. xml2js can't distinguish
+                // between the list being empty versus being missing,
+                // so let's do the more user-friendly thing and return an empty list.
+                responseBody = [];
+            }
+            // specifically check for undefined as default value can be a falsey value `0, "", false, null`
+            if (mapper.defaultValue !== undefined) {
+                responseBody = mapper.defaultValue;
+            }
+            return responseBody;
+        }
+        var payload;
+        var mapperType = mapper.type.name;
+        if (!objectName) {
+            objectName = mapper.serializedName;
+        }
+        if (mapperType.match(/^Composite$/gi) !== null) {
+            payload = deserializeCompositeType(this, mapper, responseBody, objectName);
+        }
+        else {
+            if (this.isXML) {
+                /**
+                 * If the mapper specifies this as a non-composite type value but the responseBody contains
+                 * both header ("$") and body ("_") properties, then just reduce the responseBody value to
+                 * the body ("_") property.
+                 */
+                if (responseBody["$"] != undefined && responseBody["_"] != undefined) {
+                    responseBody = responseBody["_"];
+                }
+            }
+            if (mapperType.match(/^Number$/gi) !== null) {
+                payload = parseFloat(responseBody);
+                if (isNaN(payload)) {
+                    payload = responseBody;
+                }
+            }
+            else if (mapperType.match(/^Boolean$/gi) !== null) {
+                if (responseBody === "true") {
+                    payload = true;
+                }
+                else if (responseBody === "false") {
+                    payload = false;
+                }
+                else {
+                    payload = responseBody;
+                }
+            }
+            else if (mapperType.match(/^(String|Enum|Object|Stream|Uuid|TimeSpan|any)$/gi) !== null) {
+                payload = responseBody;
+            }
+            else if (mapperType.match(/^(Date|DateTime|DateTimeRfc1123)$/gi) !== null) {
+                payload = new Date(responseBody);
+            }
+            else if (mapperType.match(/^UnixTime$/gi) !== null) {
+                payload = unixTimeToDate(responseBody);
+            }
+            else if (mapperType.match(/^ByteArray$/gi) !== null) {
+                payload = _util_base64__WEBPACK_IMPORTED_MODULE_0__.decodeString(responseBody);
+            }
+            else if (mapperType.match(/^Base64Url$/gi) !== null) {
+                payload = base64UrlToByteArray(responseBody);
+            }
+            else if (mapperType.match(/^Sequence$/gi) !== null) {
+                payload = deserializeSequenceType(this, mapper, responseBody, objectName);
+            }
+            else if (mapperType.match(/^Dictionary$/gi) !== null) {
+                payload = deserializeDictionaryType(this, mapper, responseBody, objectName);
+            }
+        }
+        if (mapper.isConstant) {
+            payload = mapper.defaultValue;
+        }
+        return payload;
+    };
+    return Serializer;
+}());
+
+function trimEnd(str, ch) {
+    var len = str.length;
+    while (len - 1 >= 0 && str[len - 1] === ch) {
+        --len;
+    }
+    return str.substr(0, len);
+}
+function bufferToBase64Url(buffer) {
+    if (!buffer) {
+        return undefined;
+    }
+    if (!(buffer instanceof Uint8Array)) {
+        throw new Error("Please provide an input of type Uint8Array for converting to Base64Url.");
+    }
+    // Uint8Array to Base64.
+    var str = _util_base64__WEBPACK_IMPORTED_MODULE_0__.encodeByteArray(buffer);
+    // Base64 to Base64Url.
+    return trimEnd(str, "=").replace(/\+/g, "-").replace(/\//g, "_");
+}
+function base64UrlToByteArray(str) {
+    if (!str) {
+        return undefined;
+    }
+    if (str && typeof str.valueOf() !== "string") {
+        throw new Error("Please provide an input of type string for converting to Uint8Array");
+    }
+    // Base64Url to Base64.
+    str = str.replace(/\-/g, "+").replace(/\_/g, "/");
+    // Base64 to Uint8Array.
+    return _util_base64__WEBPACK_IMPORTED_MODULE_0__.decodeString(str);
+}
+function splitSerializeName(prop) {
+    var classes = [];
+    var partialclass = "";
+    if (prop) {
+        var subwords = prop.split(".");
+        for (var _i = 0, subwords_1 = subwords; _i < subwords_1.length; _i++) {
+            var item = subwords_1[_i];
+            if (item.charAt(item.length - 1) === "\\") {
+                partialclass += item.substr(0, item.length - 1) + ".";
+            }
+            else {
+                partialclass += item;
+                classes.push(partialclass);
+                partialclass = "";
+            }
+        }
+    }
+    return classes;
+}
+function dateToUnixTime(d) {
+    if (!d) {
+        return undefined;
+    }
+    if (typeof d.valueOf() === "string") {
+        d = new Date(d);
+    }
+    return Math.floor(d.getTime() / 1000);
+}
+function unixTimeToDate(n) {
+    if (!n) {
+        return undefined;
+    }
+    return new Date(n * 1000);
+}
+function serializeBasicTypes(typeName, objectName, value) {
+    if (value !== null && value !== undefined) {
+        if (typeName.match(/^Number$/gi) !== null) {
+            if (typeof value !== "number") {
+                throw new Error(objectName + " with value " + value + " must be of type number.");
+            }
+        }
+        else if (typeName.match(/^String$/gi) !== null) {
+            if (typeof value.valueOf() !== "string") {
+                throw new Error(objectName + " with value \"" + value + "\" must be of type string.");
+            }
+        }
+        else if (typeName.match(/^Uuid$/gi) !== null) {
+            if (!(typeof value.valueOf() === "string" && _util_utils__WEBPACK_IMPORTED_MODULE_1__.isValidUuid(value))) {
+                throw new Error(objectName + " with value \"" + value + "\" must be of type string and a valid uuid.");
+            }
+        }
+        else if (typeName.match(/^Boolean$/gi) !== null) {
+            if (typeof value !== "boolean") {
+                throw new Error(objectName + " with value " + value + " must be of type boolean.");
+            }
+        }
+        else if (typeName.match(/^Stream$/gi) !== null) {
+            var objectType = typeof value;
+            if (objectType !== "string" &&
+                objectType !== "function" &&
+                !(value instanceof ArrayBuffer) &&
+                !ArrayBuffer.isView(value) &&
+                !(typeof Blob === "function" && value instanceof Blob)) {
+                throw new Error(objectName + " must be a string, Blob, ArrayBuffer, ArrayBufferView, or a function returning NodeJS.ReadableStream.");
+            }
+        }
+    }
+    return value;
+}
+function serializeEnumType(objectName, allowedValues, value) {
+    if (!allowedValues) {
+        throw new Error("Please provide a set of allowedValues to validate " + objectName + " as an Enum Type.");
+    }
+    var isPresent = allowedValues.some(function (item) {
+        if (typeof item.valueOf() === "string") {
+            return item.toLowerCase() === value.toLowerCase();
+        }
+        return item === value;
+    });
+    if (!isPresent) {
+        throw new Error(value + " is not a valid value for " + objectName + ". The valid values are: " + JSON.stringify(allowedValues) + ".");
+    }
+    return value;
+}
+function serializeByteArrayType(objectName, value) {
+    if (value != undefined) {
+        if (!(value instanceof Uint8Array)) {
+            throw new Error(objectName + " must be of type Uint8Array.");
+        }
+        value = _util_base64__WEBPACK_IMPORTED_MODULE_0__.encodeByteArray(value);
+    }
+    return value;
+}
+function serializeBase64UrlType(objectName, value) {
+    if (value != undefined) {
+        if (!(value instanceof Uint8Array)) {
+            throw new Error(objectName + " must be of type Uint8Array.");
+        }
+        value = bufferToBase64Url(value);
+    }
+    return value;
+}
+function serializeDateTypes(typeName, value, objectName) {
+    if (value != undefined) {
+        if (typeName.match(/^Date$/gi) !== null) {
+            if (!(value instanceof Date ||
+                (typeof value.valueOf() === "string" && !isNaN(Date.parse(value))))) {
+                throw new Error(objectName + " must be an instanceof Date or a string in ISO8601 format.");
+            }
+            value =
+                value instanceof Date
+                    ? value.toISOString().substring(0, 10)
+                    : new Date(value).toISOString().substring(0, 10);
+        }
+        else if (typeName.match(/^DateTime$/gi) !== null) {
+            if (!(value instanceof Date ||
+                (typeof value.valueOf() === "string" && !isNaN(Date.parse(value))))) {
+                throw new Error(objectName + " must be an instanceof Date or a string in ISO8601 format.");
+            }
+            value = value instanceof Date ? value.toISOString() : new Date(value).toISOString();
+        }
+        else if (typeName.match(/^DateTimeRfc1123$/gi) !== null) {
+            if (!(value instanceof Date ||
+                (typeof value.valueOf() === "string" && !isNaN(Date.parse(value))))) {
+                throw new Error(objectName + " must be an instanceof Date or a string in RFC-1123 format.");
+            }
+            value = value instanceof Date ? value.toUTCString() : new Date(value).toUTCString();
+        }
+        else if (typeName.match(/^UnixTime$/gi) !== null) {
+            if (!(value instanceof Date ||
+                (typeof value.valueOf() === "string" && !isNaN(Date.parse(value))))) {
+                throw new Error(objectName + " must be an instanceof Date or a string in RFC-1123/ISO8601 format " +
+                    "for it to be serialized in UnixTime/Epoch format.");
+            }
+            value = dateToUnixTime(value);
+        }
+        else if (typeName.match(/^TimeSpan$/gi) !== null) {
+            if (!_util_utils__WEBPACK_IMPORTED_MODULE_1__.isDuration(value)) {
+                throw new Error(objectName + " must be a string in ISO 8601 format. Instead was \"" + value + "\".");
+            }
+            value = value;
+        }
+    }
+    return value;
+}
+function serializeSequenceType(serializer, mapper, object, objectName) {
+    if (!Array.isArray(object)) {
+        throw new Error(objectName + " must be of type Array.");
+    }
+    var elementType = mapper.type.element;
+    if (!elementType || typeof elementType !== "object") {
+        throw new Error("element\" metadata for an Array must be defined in the " +
+            ("mapper and it must of type \"object\" in " + objectName + "."));
+    }
+    var tempArray = [];
+    for (var i = 0; i < object.length; i++) {
+        tempArray[i] = serializer.serialize(elementType, object[i], objectName);
+    }
+    return tempArray;
+}
+function serializeDictionaryType(serializer, mapper, object, objectName) {
+    if (typeof object !== "object") {
+        throw new Error(objectName + " must be of type object.");
+    }
+    var valueType = mapper.type.value;
+    if (!valueType || typeof valueType !== "object") {
+        throw new Error("\"value\" metadata for a Dictionary must be defined in the " +
+            ("mapper and it must of type \"object\" in " + objectName + "."));
+    }
+    var tempDictionary = {};
+    for (var _i = 0, _a = Object.keys(object); _i < _a.length; _i++) {
+        var key = _a[_i];
+        tempDictionary[key] = serializer.serialize(valueType, object[key], objectName + "." + key);
+    }
+    return tempDictionary;
+}
+/**
+ * Resolves a composite mapper's modelProperties.
+ * @param serializer the serializer containing the entire set of mappers
+ * @param mapper the composite mapper to resolve
+ */
+function resolveModelProperties(serializer, mapper, objectName) {
+    var modelProps = mapper.type.modelProperties;
+    if (!modelProps) {
+        var className = mapper.type.className;
+        if (!className) {
+            throw new Error("Class name for model \"" + objectName + "\" is not provided in the mapper \"" + JSON.stringify(mapper, undefined, 2) + "\".");
+        }
+        var modelMapper = serializer.modelMappers[className];
+        if (!modelMapper) {
+            throw new Error("mapper() cannot be null or undefined for model \"" + className + "\".");
+        }
+        modelProps = modelMapper.type.modelProperties;
+        if (!modelProps) {
+            throw new Error("modelProperties cannot be null or undefined in the " +
+                ("mapper \"" + JSON.stringify(modelMapper) + "\" of type \"" + className + "\" for object \"" + objectName + "\"."));
+        }
+    }
+    return modelProps;
+}
+function serializeCompositeType(serializer, mapper, object, objectName) {
+    var _a;
+    if (getPolymorphicDiscriminatorRecursively(serializer, mapper)) {
+        mapper = getPolymorphicMapper(serializer, mapper, object, "clientName");
+    }
+    if (object != undefined) {
+        var payload = {};
+        var modelProps = resolveModelProperties(serializer, mapper, objectName);
+        for (var _i = 0, _b = Object.keys(modelProps); _i < _b.length; _i++) {
+            var key = _b[_i];
+            var propertyMapper = modelProps[key];
+            if (propertyMapper.readOnly) {
+                continue;
+            }
+            var propName = void 0;
+            var parentObject = payload;
+            if (serializer.isXML) {
+                if (propertyMapper.xmlIsWrapped) {
+                    propName = propertyMapper.xmlName;
+                }
+                else {
+                    propName = propertyMapper.xmlElementName || propertyMapper.xmlName;
+                }
+            }
+            else {
+                var paths = splitSerializeName(propertyMapper.serializedName);
+                propName = paths.pop();
+                for (var _c = 0, paths_1 = paths; _c < paths_1.length; _c++) {
+                    var pathName = paths_1[_c];
+                    var childObject = parentObject[pathName];
+                    if (childObject == undefined && object[key] != undefined) {
+                        parentObject[pathName] = {};
+                    }
+                    parentObject = parentObject[pathName];
+                }
+            }
+            if (parentObject != undefined) {
+                var propertyObjectName = propertyMapper.serializedName !== ""
+                    ? objectName + "." + propertyMapper.serializedName
+                    : objectName;
+                var toSerialize = object[key];
+                var polymorphicDiscriminator = getPolymorphicDiscriminatorRecursively(serializer, mapper);
+                if (polymorphicDiscriminator &&
+                    polymorphicDiscriminator.clientName === key &&
+                    toSerialize == undefined) {
+                    toSerialize = mapper.serializedName;
+                }
+                var serializedValue = serializer.serialize(propertyMapper, toSerialize, propertyObjectName);
+                if (serializedValue !== undefined && propName != undefined) {
+                    if (propertyMapper.xmlIsAttribute) {
+                        // $ is the key attributes are kept under in xml2js.
+                        // This keeps things simple while preventing name collision
+                        // with names in user documents.
+                        parentObject.$ = parentObject.$ || {};
+                        parentObject.$[propName] = serializedValue;
+                    }
+                    else if (propertyMapper.xmlIsWrapped) {
+                        parentObject[propName] = (_a = {}, _a[propertyMapper.xmlElementName] = serializedValue, _a);
+                    }
+                    else {
+                        parentObject[propName] = serializedValue;
+                    }
+                }
+            }
+        }
+        var additionalPropertiesMapper = mapper.type.additionalProperties;
+        if (additionalPropertiesMapper) {
+            var propNames = Object.keys(modelProps);
+            var _loop_1 = function (clientPropName) {
+                var isAdditionalProperty = propNames.every(function (pn) { return pn !== clientPropName; });
+                if (isAdditionalProperty) {
+                    payload[clientPropName] = serializer.serialize(additionalPropertiesMapper, object[clientPropName], objectName + '["' + clientPropName + '"]');
+                }
+            };
+            for (var clientPropName in object) {
+                _loop_1(clientPropName);
+            }
+        }
+        return payload;
+    }
+    return object;
+}
+function isSpecialXmlProperty(propertyName) {
+    return ["$", "_"].includes(propertyName);
+}
+function deserializeCompositeType(serializer, mapper, responseBody, objectName) {
+    if (getPolymorphicDiscriminatorRecursively(serializer, mapper)) {
+        mapper = getPolymorphicMapper(serializer, mapper, responseBody, "serializedName");
+    }
+    var modelProps = resolveModelProperties(serializer, mapper, objectName);
+    var instance = {};
+    var handledPropertyNames = [];
+    for (var _i = 0, _a = Object.keys(modelProps); _i < _a.length; _i++) {
+        var key = _a[_i];
+        var propertyMapper = modelProps[key];
+        var paths = splitSerializeName(modelProps[key].serializedName);
+        handledPropertyNames.push(paths[0]);
+        var serializedName = propertyMapper.serializedName, xmlName = propertyMapper.xmlName, xmlElementName = propertyMapper.xmlElementName;
+        var propertyObjectName = objectName;
+        if (serializedName !== "" && serializedName !== undefined) {
+            propertyObjectName = objectName + "." + serializedName;
+        }
+        var headerCollectionPrefix = propertyMapper.headerCollectionPrefix;
+        if (headerCollectionPrefix) {
+            var dictionary = {};
+            for (var _b = 0, _c = Object.keys(responseBody); _b < _c.length; _b++) {
+                var headerKey = _c[_b];
+                if (headerKey.startsWith(headerCollectionPrefix)) {
+                    dictionary[headerKey.substring(headerCollectionPrefix.length)] = serializer.deserialize(propertyMapper.type.value, responseBody[headerKey], propertyObjectName);
+                }
+                handledPropertyNames.push(headerKey);
+            }
+            instance[key] = dictionary;
+        }
+        else if (serializer.isXML) {
+            if (propertyMapper.xmlIsAttribute && responseBody.$) {
+                instance[key] = serializer.deserialize(propertyMapper, responseBody.$[xmlName], propertyObjectName);
+            }
+            else {
+                var propertyName = xmlElementName || xmlName || serializedName;
+                var unwrappedProperty = responseBody[propertyName];
+                if (propertyMapper.xmlIsWrapped) {
+                    unwrappedProperty = responseBody[xmlName];
+                    unwrappedProperty = unwrappedProperty && unwrappedProperty[xmlElementName];
+                    var isEmptyWrappedList = unwrappedProperty === undefined;
+                    if (isEmptyWrappedList) {
+                        unwrappedProperty = [];
+                    }
+                }
+                instance[key] = serializer.deserialize(propertyMapper, unwrappedProperty, propertyObjectName);
+            }
+        }
+        else {
+            // deserialize the property if it is present in the provided responseBody instance
+            var propertyInstance = void 0;
+            var res = responseBody;
+            // traversing the object step by step.
+            for (var _d = 0, paths_2 = paths; _d < paths_2.length; _d++) {
+                var item = paths_2[_d];
+                if (!res)
+                    break;
+                res = res[item];
+            }
+            propertyInstance = res;
+            var polymorphicDiscriminator = mapper.type.polymorphicDiscriminator;
+            // checking that the model property name (key)(ex: "fishtype") and the
+            // clientName of the polymorphicDiscriminator {metadata} (ex: "fishtype")
+            // instead of the serializedName of the polymorphicDiscriminator (ex: "fish.type")
+            // is a better approach. The generator is not consistent with escaping '\.' in the
+            // serializedName of the property (ex: "fish\.type") that is marked as polymorphic discriminator
+            // and the serializedName of the metadata polymorphicDiscriminator (ex: "fish.type"). However,
+            // the clientName transformation of the polymorphicDiscriminator (ex: "fishtype") and
+            // the transformation of model property name (ex: "fishtype") is done consistently.
+            // Hence, it is a safer bet to rely on the clientName of the polymorphicDiscriminator.
+            if (polymorphicDiscriminator &&
+                key === polymorphicDiscriminator.clientName &&
+                propertyInstance == undefined) {
+                propertyInstance = mapper.serializedName;
+            }
+            var serializedValue = void 0;
+            // paging
+            if (Array.isArray(responseBody[key]) && modelProps[key].serializedName === "") {
+                propertyInstance = responseBody[key];
+                var arrayInstance = serializer.deserialize(propertyMapper, propertyInstance, propertyObjectName);
+                // Copy over any properties that have already been added into the instance, where they do
+                // not exist on the newly de-serialized array
+                for (var _e = 0, _f = Object.entries(instance); _e < _f.length; _e++) {
+                    var _g = _f[_e], key_1 = _g[0], value = _g[1];
+                    if (!arrayInstance.hasOwnProperty(key_1)) {
+                        arrayInstance[key_1] = value;
+                    }
+                }
+                instance = arrayInstance;
+            }
+            else if (propertyInstance !== undefined || propertyMapper.defaultValue !== undefined) {
+                serializedValue = serializer.deserialize(propertyMapper, propertyInstance, propertyObjectName);
+                instance[key] = serializedValue;
+            }
+        }
+    }
+    var additionalPropertiesMapper = mapper.type.additionalProperties;
+    if (additionalPropertiesMapper) {
+        var isAdditionalProperty = function (responsePropName) {
+            for (var clientPropName in modelProps) {
+                var paths = splitSerializeName(modelProps[clientPropName].serializedName);
+                if (paths[0] === responsePropName) {
+                    return false;
+                }
+            }
+            return true;
+        };
+        for (var responsePropName in responseBody) {
+            if (isAdditionalProperty(responsePropName)) {
+                instance[responsePropName] = serializer.deserialize(additionalPropertiesMapper, responseBody[responsePropName], objectName + '["' + responsePropName + '"]');
+            }
+        }
+    }
+    else if (responseBody) {
+        for (var _h = 0, _j = Object.keys(responseBody); _h < _j.length; _h++) {
+            var key = _j[_h];
+            if (instance[key] === undefined &&
+                !handledPropertyNames.includes(key) &&
+                !isSpecialXmlProperty(key)) {
+                instance[key] = responseBody[key];
+            }
+        }
+    }
+    return instance;
+}
+function deserializeDictionaryType(serializer, mapper, responseBody, objectName) {
+    /*jshint validthis: true */
+    var value = mapper.type.value;
+    if (!value || typeof value !== "object") {
+        throw new Error("\"value\" metadata for a Dictionary must be defined in the " +
+            ("mapper and it must of type \"object\" in " + objectName));
+    }
+    if (responseBody) {
+        var tempDictionary = {};
+        for (var _i = 0, _a = Object.keys(responseBody); _i < _a.length; _i++) {
+            var key = _a[_i];
+            tempDictionary[key] = serializer.deserialize(value, responseBody[key], objectName);
+        }
+        return tempDictionary;
+    }
+    return responseBody;
+}
+function deserializeSequenceType(serializer, mapper, responseBody, objectName) {
+    /*jshint validthis: true */
+    var element = mapper.type.element;
+    if (!element || typeof element !== "object") {
+        throw new Error("element\" metadata for an Array must be defined in the " +
+            ("mapper and it must of type \"object\" in " + objectName));
+    }
+    if (responseBody) {
+        if (!Array.isArray(responseBody)) {
+            // xml2js will interpret a single element array as just the element, so force it to be an array
+            responseBody = [responseBody];
+        }
+        var tempArray = [];
+        for (var i = 0; i < responseBody.length; i++) {
+            tempArray[i] = serializer.deserialize(element, responseBody[i], objectName + "[" + i + "]");
+        }
+        return tempArray;
+    }
+    return responseBody;
+}
+function getPolymorphicMapper(serializer, mapper, object, polymorphicPropertyName) {
+    var polymorphicDiscriminator = getPolymorphicDiscriminatorRecursively(serializer, mapper);
+    if (polymorphicDiscriminator) {
+        var discriminatorName = polymorphicDiscriminator[polymorphicPropertyName];
+        if (discriminatorName != undefined) {
+            var discriminatorValue = object[discriminatorName];
+            if (discriminatorValue != undefined) {
+                var typeName = mapper.type.uberParent || mapper.type.className;
+                var indexDiscriminator = discriminatorValue === typeName
+                    ? discriminatorValue
+                    : typeName + "." + discriminatorValue;
+                var polymorphicMapper = serializer.modelMappers.discriminators[indexDiscriminator];
+                if (polymorphicMapper) {
+                    mapper = polymorphicMapper;
+                }
+            }
+        }
+    }
+    return mapper;
+}
+function getPolymorphicDiscriminatorRecursively(serializer, mapper) {
+    return (mapper.type.polymorphicDiscriminator ||
+        getPolymorphicDiscriminatorSafely(serializer, mapper.type.uberParent) ||
+        getPolymorphicDiscriminatorSafely(serializer, mapper.type.className));
+}
+function getPolymorphicDiscriminatorSafely(serializer, typeName) {
+    return (typeName &&
+        serializer.modelMappers[typeName] &&
+        serializer.modelMappers[typeName].type.polymorphicDiscriminator);
+}
+// TODO: why is this here?
+function serializeObject(toSerialize) {
+    if (toSerialize == undefined)
+        return undefined;
+    if (toSerialize instanceof Uint8Array) {
+        toSerialize = _util_base64__WEBPACK_IMPORTED_MODULE_0__.encodeByteArray(toSerialize);
+        return toSerialize;
+    }
+    else if (toSerialize instanceof Date) {
+        return toSerialize.toISOString();
+    }
+    else if (Array.isArray(toSerialize)) {
+        var array = [];
+        for (var i = 0; i < toSerialize.length; i++) {
+            array.push(serializeObject(toSerialize[i]));
+        }
+        return array;
+    }
+    else if (typeof toSerialize === "object") {
+        var dictionary = {};
+        for (var property in toSerialize) {
+            dictionary[property] = serializeObject(toSerialize[property]);
+        }
+        return dictionary;
+    }
+    return toSerialize;
+}
+/**
+ * Utility function to create a K:V from a list of strings
+ */
+function strEnum(o) {
+    var result = {};
+    for (var _i = 0, o_1 = o; _i < o_1.length; _i++) {
+        var key = o_1[_i];
+        result[key] = key;
+    }
+    return result;
+}
+var MapperType = strEnum([
+    "Base64Url",
+    "Boolean",
+    "ByteArray",
+    "Composite",
+    "Date",
+    "DateTime",
+    "DateTimeRfc1123",
+    "Dictionary",
+    "Enum",
+    "Number",
+    "Object",
+    "Sequence",
+    "String",
+    "Stream",
+    "TimeSpan",
+    "UnixTime",
+]);
+//# sourceMappingURL=serializer.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/es/lib/serviceClient.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/es/lib/serviceClient.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "ServiceClient": () => (/* binding */ ServiceClient),
+/* harmony export */   "serializeRequestBody": () => (/* binding */ serializeRequestBody),
+/* harmony export */   "getPropertyParent": () => (/* binding */ getPropertyParent),
+/* harmony export */   "getOperationArgumentValueFromParameterPath": () => (/* binding */ getOperationArgumentValueFromParameterPath),
+/* harmony export */   "flattenResponse": () => (/* binding */ flattenResponse)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! tslib */ "./node_modules/@azure/ms-rest-js/node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _azure_core_auth__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @azure/core-auth */ "./node_modules/@azure/core-auth/dist-esm/src/tokenCredential.js");
+/* harmony import */ var _defaultHttpClient__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./defaultHttpClient */ "./node_modules/@azure/ms-rest-js/es/lib/xhrHttpClient.js");
+/* harmony import */ var _operationParameter__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./operationParameter */ "./node_modules/@azure/ms-rest-js/es/lib/operationParameter.js");
+/* harmony import */ var _operationSpec__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./operationSpec */ "./node_modules/@azure/ms-rest-js/es/lib/operationSpec.js");
+/* harmony import */ var _policies_deserializationPolicy__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./policies/deserializationPolicy */ "./node_modules/@azure/ms-rest-js/es/lib/policies/deserializationPolicy.js");
+/* harmony import */ var _policies_exponentialRetryPolicy__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./policies/exponentialRetryPolicy */ "./node_modules/@azure/ms-rest-js/es/lib/policies/exponentialRetryPolicy.js");
+/* harmony import */ var _policies_generateClientRequestIdPolicy__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./policies/generateClientRequestIdPolicy */ "./node_modules/@azure/ms-rest-js/es/lib/policies/generateClientRequestIdPolicy.js");
+/* harmony import */ var _policies_userAgentPolicy__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./policies/userAgentPolicy */ "./node_modules/@azure/ms-rest-js/es/lib/policies/userAgentPolicy.js");
+/* harmony import */ var _policies_redirectPolicy__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./policies/redirectPolicy */ "./node_modules/@azure/ms-rest-js/es/lib/policies/redirectPolicy.js");
+/* harmony import */ var _policies_requestPolicy__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./policies/requestPolicy */ "./node_modules/@azure/ms-rest-js/es/lib/policies/requestPolicy.js");
+/* harmony import */ var _policies_rpRegistrationPolicy__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./policies/rpRegistrationPolicy */ "./node_modules/@azure/ms-rest-js/es/lib/policies/rpRegistrationPolicy.js");
+/* harmony import */ var _policies_signingPolicy__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./policies/signingPolicy */ "./node_modules/@azure/ms-rest-js/es/lib/policies/signingPolicy.js");
+/* harmony import */ var _policies_systemErrorRetryPolicy__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./policies/systemErrorRetryPolicy */ "./node_modules/@azure/ms-rest-js/es/lib/policies/systemErrorRetryPolicy.js");
+/* harmony import */ var _queryCollectionFormat__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./queryCollectionFormat */ "./node_modules/@azure/ms-rest-js/es/lib/queryCollectionFormat.js");
+/* harmony import */ var _serializer__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./serializer */ "./node_modules/@azure/ms-rest-js/es/lib/serializer.js");
+/* harmony import */ var _url__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./url */ "./node_modules/@azure/ms-rest-js/es/lib/url.js");
+/* harmony import */ var _util_utils__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./util/utils */ "./node_modules/@azure/ms-rest-js/es/lib/util/utils.js");
+/* harmony import */ var _util_xml__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./util/xml */ "./node_modules/@azure/ms-rest-js/es/lib/util/xml.browser.js");
+/* harmony import */ var _webResource__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./webResource */ "./node_modules/@azure/ms-rest-js/es/lib/webResource.js");
+/* harmony import */ var _policies_agentPolicy__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./policies/agentPolicy */ "./node_modules/@azure/ms-rest-js/es/lib/policies/agentPolicy.browser.js");
+/* harmony import */ var _policies_proxyPolicy__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./policies/proxyPolicy */ "./node_modules/@azure/ms-rest-js/es/lib/policies/proxyPolicy.browser.js");
+/* harmony import */ var _policies_throttlingRetryPolicy__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./policies/throttlingRetryPolicy */ "./node_modules/@azure/ms-rest-js/es/lib/policies/throttlingRetryPolicy.js");
+/* harmony import */ var _credentials_azureIdentityTokenCredentialAdapter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./credentials/azureIdentityTokenCredentialAdapter */ "./node_modules/@azure/ms-rest-js/es/lib/credentials/azureIdentityTokenCredentialAdapter.js");
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * @class
+ * Initializes a new instance of the ServiceClient.
+ */
+var ServiceClient = /** @class */ (function () {
+    /**
+     * The ServiceClient constructor
+     * @constructor
+     * @param {ServiceClientCredentials} [credentials] The credentials object used for authentication.
+     * @param {ServiceClientOptions} [options] The service client options that govern the behavior of the client.
+     */
+    function ServiceClient(credentials, options) {
+        if (!options) {
+            options = {};
+        }
+        var serviceClientCredentials;
+        if ((0,_azure_core_auth__WEBPACK_IMPORTED_MODULE_0__.isTokenCredential)(credentials)) {
+            serviceClientCredentials = new _credentials_azureIdentityTokenCredentialAdapter__WEBPACK_IMPORTED_MODULE_1__.AzureIdentityCredentialAdapter(credentials);
+        }
+        else {
+            serviceClientCredentials = credentials;
+        }
+        if (serviceClientCredentials && !serviceClientCredentials.signRequest) {
+            throw new Error("credentials argument needs to implement signRequest method");
+        }
+        this._withCredentials = options.withCredentials || false;
+        this._httpClient = options.httpClient || new _defaultHttpClient__WEBPACK_IMPORTED_MODULE_2__.XhrHttpClient();
+        this._requestPolicyOptions = new _policies_requestPolicy__WEBPACK_IMPORTED_MODULE_3__.RequestPolicyOptions(options.httpPipelineLogger);
+        var requestPolicyFactories;
+        if (Array.isArray(options.requestPolicyFactories)) {
+            requestPolicyFactories = options.requestPolicyFactories;
+        }
+        else {
+            requestPolicyFactories = createDefaultRequestPolicyFactories(serviceClientCredentials, options);
+            if (options.requestPolicyFactories) {
+                var newRequestPolicyFactories = options.requestPolicyFactories(requestPolicyFactories);
+                if (newRequestPolicyFactories) {
+                    requestPolicyFactories = newRequestPolicyFactories;
+                }
+            }
+        }
+        this._requestPolicyFactories = requestPolicyFactories;
+    }
+    /**
+     * Send the provided httpRequest.
+     */
+    ServiceClient.prototype.sendRequest = function (options) {
+        if (options === null || options === undefined || typeof options !== "object") {
+            throw new Error("options cannot be null or undefined and it must be of type object.");
+        }
+        var httpRequest;
+        try {
+            if ((0,_webResource__WEBPACK_IMPORTED_MODULE_4__.isWebResourceLike)(options)) {
+                options.validateRequestProperties();
+                httpRequest = options;
+            }
+            else {
+                httpRequest = new _webResource__WEBPACK_IMPORTED_MODULE_4__.WebResource();
+                httpRequest = httpRequest.prepare(options);
+            }
+        }
+        catch (error) {
+            return Promise.reject(error);
+        }
+        var httpPipeline = this._httpClient;
+        if (this._requestPolicyFactories && this._requestPolicyFactories.length > 0) {
+            for (var i = this._requestPolicyFactories.length - 1; i >= 0; --i) {
+                httpPipeline = this._requestPolicyFactories[i].create(httpPipeline, this._requestPolicyOptions);
+            }
+        }
+        return httpPipeline.sendRequest(httpRequest);
+    };
+    /**
+     * Send an HTTP request that is populated using the provided OperationSpec.
+     * @param {OperationArguments} operationArguments The arguments that the HTTP request's templated values will be populated from.
+     * @param {OperationSpec} operationSpec The OperationSpec to use to populate the httpRequest.
+     * @param {ServiceCallback} callback The callback to call when the response is received.
+     */
+    ServiceClient.prototype.sendOperationRequest = function (operationArguments, operationSpec, callback) {
+        if (typeof operationArguments.options === "function") {
+            callback = operationArguments.options;
+            operationArguments.options = undefined;
+        }
+        var httpRequest = new _webResource__WEBPACK_IMPORTED_MODULE_4__.WebResource();
+        var result;
+        try {
+            var baseUri = operationSpec.baseUrl || this.baseUri;
+            if (!baseUri) {
+                throw new Error("If operationSpec.baseUrl is not specified, then the ServiceClient must have a baseUri string property that contains the base URL to use.");
+            }
+            httpRequest.method = operationSpec.httpMethod;
+            httpRequest.operationSpec = operationSpec;
+            var requestUrl = _url__WEBPACK_IMPORTED_MODULE_5__.URLBuilder.parse(baseUri);
+            if (operationSpec.path) {
+                requestUrl.appendPath(operationSpec.path);
+            }
+            if (operationSpec.urlParameters && operationSpec.urlParameters.length > 0) {
+                for (var _i = 0, _a = operationSpec.urlParameters; _i < _a.length; _i++) {
+                    var urlParameter = _a[_i];
+                    var urlParameterValue = getOperationArgumentValueFromParameter(this, operationArguments, urlParameter, operationSpec.serializer);
+                    urlParameterValue = operationSpec.serializer.serialize(urlParameter.mapper, urlParameterValue, (0,_operationParameter__WEBPACK_IMPORTED_MODULE_6__.getPathStringFromParameter)(urlParameter));
+                    if (!urlParameter.skipEncoding) {
+                        urlParameterValue = encodeURIComponent(urlParameterValue);
+                    }
+                    requestUrl.replaceAll("{" + (urlParameter.mapper.serializedName || (0,_operationParameter__WEBPACK_IMPORTED_MODULE_6__.getPathStringFromParameter)(urlParameter)) + "}", urlParameterValue);
+                }
+            }
+            if (operationSpec.queryParameters && operationSpec.queryParameters.length > 0) {
+                for (var _b = 0, _c = operationSpec.queryParameters; _b < _c.length; _b++) {
+                    var queryParameter = _c[_b];
+                    var queryParameterValue = getOperationArgumentValueFromParameter(this, operationArguments, queryParameter, operationSpec.serializer);
+                    if (queryParameterValue != undefined) {
+                        queryParameterValue = operationSpec.serializer.serialize(queryParameter.mapper, queryParameterValue, (0,_operationParameter__WEBPACK_IMPORTED_MODULE_6__.getPathStringFromParameter)(queryParameter));
+                        if (queryParameter.collectionFormat != undefined) {
+                            if (queryParameter.collectionFormat === _queryCollectionFormat__WEBPACK_IMPORTED_MODULE_7__.QueryCollectionFormat.Multi) {
+                                if (queryParameterValue.length === 0) {
+                                    queryParameterValue = "";
+                                }
+                                else {
+                                    for (var index in queryParameterValue) {
+                                        var item = queryParameterValue[index];
+                                        queryParameterValue[index] = item == undefined ? "" : item.toString();
+                                    }
+                                }
+                            }
+                            else if (queryParameter.collectionFormat === _queryCollectionFormat__WEBPACK_IMPORTED_MODULE_7__.QueryCollectionFormat.Ssv ||
+                                queryParameter.collectionFormat === _queryCollectionFormat__WEBPACK_IMPORTED_MODULE_7__.QueryCollectionFormat.Tsv) {
+                                queryParameterValue = queryParameterValue.join(queryParameter.collectionFormat);
+                            }
+                        }
+                        if (!queryParameter.skipEncoding) {
+                            if (Array.isArray(queryParameterValue)) {
+                                for (var index in queryParameterValue) {
+                                    if (queryParameterValue[index] !== undefined &&
+                                        queryParameterValue[index] !== null) {
+                                        queryParameterValue[index] = encodeURIComponent(queryParameterValue[index]);
+                                    }
+                                }
+                            }
+                            else {
+                                queryParameterValue = encodeURIComponent(queryParameterValue);
+                            }
+                        }
+                        if (queryParameter.collectionFormat != undefined &&
+                            queryParameter.collectionFormat !== _queryCollectionFormat__WEBPACK_IMPORTED_MODULE_7__.QueryCollectionFormat.Multi &&
+                            queryParameter.collectionFormat !== _queryCollectionFormat__WEBPACK_IMPORTED_MODULE_7__.QueryCollectionFormat.Ssv &&
+                            queryParameter.collectionFormat !== _queryCollectionFormat__WEBPACK_IMPORTED_MODULE_7__.QueryCollectionFormat.Tsv) {
+                            queryParameterValue = queryParameterValue.join(queryParameter.collectionFormat);
+                        }
+                        requestUrl.setQueryParameter(queryParameter.mapper.serializedName || (0,_operationParameter__WEBPACK_IMPORTED_MODULE_6__.getPathStringFromParameter)(queryParameter), queryParameterValue);
+                    }
+                }
+            }
+            httpRequest.url = requestUrl.toString();
+            var contentType = operationSpec.contentType || this.requestContentType;
+            if (contentType) {
+                httpRequest.headers.set("Content-Type", contentType);
+            }
+            if (operationSpec.headerParameters) {
+                for (var _d = 0, _e = operationSpec.headerParameters; _d < _e.length; _d++) {
+                    var headerParameter = _e[_d];
+                    var headerValue = getOperationArgumentValueFromParameter(this, operationArguments, headerParameter, operationSpec.serializer);
+                    if (headerValue != undefined) {
+                        headerValue = operationSpec.serializer.serialize(headerParameter.mapper, headerValue, (0,_operationParameter__WEBPACK_IMPORTED_MODULE_6__.getPathStringFromParameter)(headerParameter));
+                        var headerCollectionPrefix = headerParameter.mapper
+                            .headerCollectionPrefix;
+                        if (headerCollectionPrefix) {
+                            for (var _f = 0, _g = Object.keys(headerValue); _f < _g.length; _f++) {
+                                var key = _g[_f];
+                                httpRequest.headers.set(headerCollectionPrefix + key, headerValue[key]);
+                            }
+                        }
+                        else {
+                            httpRequest.headers.set(headerParameter.mapper.serializedName ||
+                                (0,_operationParameter__WEBPACK_IMPORTED_MODULE_6__.getPathStringFromParameter)(headerParameter), headerValue);
+                        }
+                    }
+                }
+            }
+            var options = operationArguments.options;
+            if (options) {
+                if (options.customHeaders) {
+                    for (var customHeaderName in options.customHeaders) {
+                        httpRequest.headers.set(customHeaderName, options.customHeaders[customHeaderName]);
+                    }
+                }
+                if (options.abortSignal) {
+                    httpRequest.abortSignal = options.abortSignal;
+                }
+                if (options.timeout) {
+                    httpRequest.timeout = options.timeout;
+                }
+                if (options.onUploadProgress) {
+                    httpRequest.onUploadProgress = options.onUploadProgress;
+                }
+                if (options.onDownloadProgress) {
+                    httpRequest.onDownloadProgress = options.onDownloadProgress;
+                }
+            }
+            httpRequest.withCredentials = this._withCredentials;
+            serializeRequestBody(this, httpRequest, operationArguments, operationSpec);
+            if (httpRequest.streamResponseBody == undefined) {
+                httpRequest.streamResponseBody = (0,_operationSpec__WEBPACK_IMPORTED_MODULE_8__.isStreamOperation)(operationSpec);
+            }
+            result = this.sendRequest(httpRequest).then(function (res) {
+                return flattenResponse(res, operationSpec.responses[res.status]);
+            });
+        }
+        catch (error) {
+            result = Promise.reject(error);
+        }
+        var cb = callback;
+        if (cb) {
+            result
+                // tslint:disable-next-line:no-null-keyword
+                .then(function (res) { return cb(null, res._response.parsedBody, res._response.request, res._response); })
+                .catch(function (err) { return cb(err); });
+        }
+        return result;
+    };
+    return ServiceClient;
+}());
+
+function serializeRequestBody(serviceClient, httpRequest, operationArguments, operationSpec) {
+    if (operationSpec.requestBody && operationSpec.requestBody.mapper) {
+        httpRequest.body = getOperationArgumentValueFromParameter(serviceClient, operationArguments, operationSpec.requestBody, operationSpec.serializer);
+        var bodyMapper = operationSpec.requestBody.mapper;
+        var required = bodyMapper.required, xmlName = bodyMapper.xmlName, xmlElementName = bodyMapper.xmlElementName, serializedName = bodyMapper.serializedName;
+        var typeName = bodyMapper.type.name;
+        try {
+            if (httpRequest.body != undefined || required) {
+                var requestBodyParameterPathString = (0,_operationParameter__WEBPACK_IMPORTED_MODULE_6__.getPathStringFromParameter)(operationSpec.requestBody);
+                httpRequest.body = operationSpec.serializer.serialize(bodyMapper, httpRequest.body, requestBodyParameterPathString);
+                var isStream = typeName === _serializer__WEBPACK_IMPORTED_MODULE_9__.MapperType.Stream;
+                if (operationSpec.isXML) {
+                    if (typeName === _serializer__WEBPACK_IMPORTED_MODULE_9__.MapperType.Sequence) {
+                        httpRequest.body = (0,_util_xml__WEBPACK_IMPORTED_MODULE_10__.stringifyXML)(_util_utils__WEBPACK_IMPORTED_MODULE_11__.prepareXMLRootList(httpRequest.body, xmlElementName || xmlName || serializedName), { rootName: xmlName || serializedName });
+                    }
+                    else if (!isStream) {
+                        httpRequest.body = (0,_util_xml__WEBPACK_IMPORTED_MODULE_10__.stringifyXML)(httpRequest.body, {
+                            rootName: xmlName || serializedName,
+                        });
+                    }
+                }
+                else if (!isStream) {
+                    httpRequest.body = JSON.stringify(httpRequest.body);
+                }
+            }
+        }
+        catch (error) {
+            throw new Error("Error \"" + error.message + "\" occurred in serializing the payload - " + JSON.stringify(serializedName, undefined, "  ") + ".");
+        }
+    }
+    else if (operationSpec.formDataParameters && operationSpec.formDataParameters.length > 0) {
+        httpRequest.formData = {};
+        for (var _i = 0, _a = operationSpec.formDataParameters; _i < _a.length; _i++) {
+            var formDataParameter = _a[_i];
+            var formDataParameterValue = getOperationArgumentValueFromParameter(serviceClient, operationArguments, formDataParameter, operationSpec.serializer);
+            if (formDataParameterValue != undefined) {
+                var formDataParameterPropertyName = formDataParameter.mapper.serializedName || (0,_operationParameter__WEBPACK_IMPORTED_MODULE_6__.getPathStringFromParameter)(formDataParameter);
+                httpRequest.formData[formDataParameterPropertyName] = operationSpec.serializer.serialize(formDataParameter.mapper, formDataParameterValue, (0,_operationParameter__WEBPACK_IMPORTED_MODULE_6__.getPathStringFromParameter)(formDataParameter));
+            }
+        }
+    }
+}
+function isRequestPolicyFactory(instance) {
+    return typeof instance.create === "function";
+}
+function getValueOrFunctionResult(value, defaultValueCreator) {
+    var result;
+    if (typeof value === "string") {
+        result = value;
+    }
+    else {
+        result = defaultValueCreator();
+        if (typeof value === "function") {
+            result = value(result);
+        }
+    }
+    return result;
+}
+function createDefaultRequestPolicyFactories(credentials, options) {
+    var factories = [];
+    if (options.generateClientRequestIdHeader) {
+        factories.push((0,_policies_generateClientRequestIdPolicy__WEBPACK_IMPORTED_MODULE_12__.generateClientRequestIdPolicy)(options.clientRequestIdHeaderName));
+    }
+    if (credentials) {
+        if (isRequestPolicyFactory(credentials)) {
+            factories.push(credentials);
+        }
+        else {
+            factories.push((0,_policies_signingPolicy__WEBPACK_IMPORTED_MODULE_13__.signingPolicy)(credentials));
+        }
+    }
+    var userAgentHeaderName = getValueOrFunctionResult(options.userAgentHeaderName, _policies_userAgentPolicy__WEBPACK_IMPORTED_MODULE_14__.getDefaultUserAgentHeaderName);
+    var userAgentHeaderValue = getValueOrFunctionResult(options.userAgent, _policies_userAgentPolicy__WEBPACK_IMPORTED_MODULE_14__.getDefaultUserAgentValue);
+    if (userAgentHeaderName && userAgentHeaderValue) {
+        factories.push((0,_policies_userAgentPolicy__WEBPACK_IMPORTED_MODULE_14__.userAgentPolicy)({ key: userAgentHeaderName, value: userAgentHeaderValue }));
+    }
+    var redirectOptions = (0,tslib__WEBPACK_IMPORTED_MODULE_15__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_15__.__assign)({}, _policies_redirectPolicy__WEBPACK_IMPORTED_MODULE_16__.DefaultRedirectOptions), options.redirectOptions);
+    if (redirectOptions.handleRedirects) {
+        factories.push((0,_policies_redirectPolicy__WEBPACK_IMPORTED_MODULE_16__.redirectPolicy)(redirectOptions.maxRetries));
+    }
+    factories.push((0,_policies_rpRegistrationPolicy__WEBPACK_IMPORTED_MODULE_17__.rpRegistrationPolicy)(options.rpRegistrationRetryTimeout));
+    if (!options.noRetryPolicy) {
+        factories.push((0,_policies_exponentialRetryPolicy__WEBPACK_IMPORTED_MODULE_18__.exponentialRetryPolicy)());
+        factories.push((0,_policies_systemErrorRetryPolicy__WEBPACK_IMPORTED_MODULE_19__.systemErrorRetryPolicy)());
+        factories.push((0,_policies_throttlingRetryPolicy__WEBPACK_IMPORTED_MODULE_20__.throttlingRetryPolicy)());
+    }
+    factories.push((0,_policies_deserializationPolicy__WEBPACK_IMPORTED_MODULE_21__.deserializationPolicy)(options.deserializationContentTypes));
+    var proxySettings = options.proxySettings || (0,_policies_proxyPolicy__WEBPACK_IMPORTED_MODULE_22__.getDefaultProxySettings)();
+    if (proxySettings) {
+        factories.push((0,_policies_proxyPolicy__WEBPACK_IMPORTED_MODULE_22__.proxyPolicy)(proxySettings));
+    }
+    if (options.agentSettings) {
+        factories.push((0,_policies_agentPolicy__WEBPACK_IMPORTED_MODULE_23__.agentPolicy)(options.agentSettings));
+    }
+    return factories;
+}
+/**
+ * Get the property parent for the property at the provided path when starting with the provided
+ * parent object.
+ */
+function getPropertyParent(parent, propertyPath) {
+    if (parent && propertyPath) {
+        var propertyPathLength = propertyPath.length;
+        for (var i = 0; i < propertyPathLength - 1; ++i) {
+            var propertyName = propertyPath[i];
+            if (!parent[propertyName]) {
+                parent[propertyName] = {};
+            }
+            parent = parent[propertyName];
+        }
+    }
+    return parent;
+}
+function getOperationArgumentValueFromParameter(serviceClient, operationArguments, parameter, serializer) {
+    return getOperationArgumentValueFromParameterPath(serviceClient, operationArguments, parameter.parameterPath, parameter.mapper, serializer);
+}
+function getOperationArgumentValueFromParameterPath(serviceClient, operationArguments, parameterPath, parameterMapper, serializer) {
+    var value;
+    if (typeof parameterPath === "string") {
+        parameterPath = [parameterPath];
+    }
+    if (Array.isArray(parameterPath)) {
+        if (parameterPath.length > 0) {
+            if (parameterMapper.isConstant) {
+                value = parameterMapper.defaultValue;
+            }
+            else {
+                var propertySearchResult = getPropertyFromParameterPath(operationArguments, parameterPath);
+                if (!propertySearchResult.propertyFound) {
+                    propertySearchResult = getPropertyFromParameterPath(serviceClient, parameterPath);
+                }
+                var useDefaultValue = false;
+                if (!propertySearchResult.propertyFound) {
+                    useDefaultValue =
+                        parameterMapper.required ||
+                            (parameterPath[0] === "options" && parameterPath.length === 2);
+                }
+                value = useDefaultValue ? parameterMapper.defaultValue : propertySearchResult.propertyValue;
+            }
+            // Serialize just for validation purposes.
+            var parameterPathString = (0,_operationParameter__WEBPACK_IMPORTED_MODULE_6__.getPathStringFromParameterPath)(parameterPath, parameterMapper);
+            serializer.serialize(parameterMapper, value, parameterPathString);
+        }
+    }
+    else {
+        if (parameterMapper.required) {
+            value = {};
+        }
+        for (var propertyName in parameterPath) {
+            var propertyMapper = parameterMapper.type.modelProperties[propertyName];
+            var propertyPath = parameterPath[propertyName];
+            var propertyValue = getOperationArgumentValueFromParameterPath(serviceClient, operationArguments, propertyPath, propertyMapper, serializer);
+            // Serialize just for validation purposes.
+            var propertyPathString = (0,_operationParameter__WEBPACK_IMPORTED_MODULE_6__.getPathStringFromParameterPath)(propertyPath, propertyMapper);
+            serializer.serialize(propertyMapper, propertyValue, propertyPathString);
+            if (propertyValue !== undefined) {
+                if (!value) {
+                    value = {};
+                }
+                value[propertyName] = propertyValue;
+            }
+        }
+    }
+    return value;
+}
+function getPropertyFromParameterPath(parent, parameterPath) {
+    var result = { propertyFound: false };
+    var i = 0;
+    for (; i < parameterPath.length; ++i) {
+        var parameterPathPart = parameterPath[i];
+        // Make sure to check inherited properties too, so don't use hasOwnProperty().
+        if (parent != undefined && parameterPathPart in parent) {
+            parent = parent[parameterPathPart];
+        }
+        else {
+            break;
+        }
+    }
+    if (i === parameterPath.length) {
+        result.propertyValue = parent;
+        result.propertyFound = true;
+    }
+    return result;
+}
+function flattenResponse(_response, responseSpec) {
+    var parsedHeaders = _response.parsedHeaders;
+    var bodyMapper = responseSpec && responseSpec.bodyMapper;
+    var addOperationResponse = function (obj) {
+        return Object.defineProperty(obj, "_response", {
+            value: _response,
+        });
+    };
+    if (bodyMapper) {
+        var typeName = bodyMapper.type.name;
+        if (typeName === "Stream") {
+            return addOperationResponse((0,tslib__WEBPACK_IMPORTED_MODULE_15__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_15__.__assign)({}, parsedHeaders), { blobBody: _response.blobBody, readableStreamBody: _response.readableStreamBody }));
+        }
+        var modelProperties_1 = (typeName === "Composite" && bodyMapper.type.modelProperties) || {};
+        var isPageableResponse = Object.keys(modelProperties_1).some(function (k) { return modelProperties_1[k].serializedName === ""; });
+        if (typeName === "Sequence" || isPageableResponse) {
+            // We're expecting a sequece(array) make sure that the response body is in the
+            // correct format, if not make it an empty array []
+            var parsedBody = Array.isArray(_response.parsedBody) ? _response.parsedBody : [];
+            var arrayResponse = (0,tslib__WEBPACK_IMPORTED_MODULE_15__.__spreadArrays)(parsedBody);
+            for (var _i = 0, _a = Object.keys(modelProperties_1); _i < _a.length; _i++) {
+                var key = _a[_i];
+                if (modelProperties_1[key].serializedName) {
+                    arrayResponse[key] = _response.parsedBody[key];
+                }
+            }
+            if (parsedHeaders) {
+                for (var _b = 0, _c = Object.keys(parsedHeaders); _b < _c.length; _b++) {
+                    var key = _c[_b];
+                    arrayResponse[key] = parsedHeaders[key];
+                }
+            }
+            addOperationResponse(arrayResponse);
+            return arrayResponse;
+        }
+        if (typeName === "Composite" || typeName === "Dictionary") {
+            return addOperationResponse((0,tslib__WEBPACK_IMPORTED_MODULE_15__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_15__.__assign)({}, parsedHeaders), _response.parsedBody));
+        }
+    }
+    if (bodyMapper ||
+        _response.request.method === "HEAD" ||
+        _util_utils__WEBPACK_IMPORTED_MODULE_11__.isPrimitiveType(_response.parsedBody)) {
+        // primitive body types and HEAD booleans
+        return addOperationResponse((0,tslib__WEBPACK_IMPORTED_MODULE_15__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_15__.__assign)({}, parsedHeaders), { body: _response.parsedBody }));
+    }
+    return addOperationResponse((0,tslib__WEBPACK_IMPORTED_MODULE_15__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_15__.__assign)({}, parsedHeaders), _response.parsedBody));
+}
+//# sourceMappingURL=serviceClient.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/es/lib/url.js":
+/*!******************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/es/lib/url.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "URLQuery": () => (/* binding */ URLQuery),
+/* harmony export */   "URLBuilder": () => (/* binding */ URLBuilder),
+/* harmony export */   "URLToken": () => (/* binding */ URLToken),
+/* harmony export */   "isAlphaNumericCharacter": () => (/* binding */ isAlphaNumericCharacter),
+/* harmony export */   "URLTokenizer": () => (/* binding */ URLTokenizer)
+/* harmony export */ });
+/* harmony import */ var _util_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./util/utils */ "./node_modules/@azure/ms-rest-js/es/lib/util/utils.js");
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+
+/**
+ * A class that handles the query portion of a URLBuilder.
+ */
+var URLQuery = /** @class */ (function () {
+    function URLQuery() {
+        this._rawQuery = {};
+    }
+    /**
+     * Get whether or not there any query parameters in this URLQuery.
+     */
+    URLQuery.prototype.any = function () {
+        return Object.keys(this._rawQuery).length > 0;
+    };
+    /**
+     * Set a query parameter with the provided name and value. If the parameterValue is undefined or
+     * empty, then this will attempt to remove an existing query parameter with the provided
+     * parameterName.
+     */
+    URLQuery.prototype.set = function (parameterName, parameterValue) {
+        if (parameterName) {
+            if (parameterValue != undefined) {
+                var newValue = Array.isArray(parameterValue) ? parameterValue : parameterValue.toString();
+                this._rawQuery[parameterName] = newValue;
+            }
+            else {
+                delete this._rawQuery[parameterName];
+            }
+        }
+    };
+    /**
+     * Get the value of the query parameter with the provided name. If no parameter exists with the
+     * provided parameter name, then undefined will be returned.
+     */
+    URLQuery.prototype.get = function (parameterName) {
+        return parameterName ? this._rawQuery[parameterName] : undefined;
+    };
+    /**
+     * Get the string representation of this query. The return value will not start with a "?".
+     */
+    URLQuery.prototype.toString = function () {
+        var result = "";
+        for (var parameterName in this._rawQuery) {
+            if (result) {
+                result += "&";
+            }
+            var parameterValue = this._rawQuery[parameterName];
+            if (Array.isArray(parameterValue)) {
+                var parameterStrings = [];
+                for (var _i = 0, parameterValue_1 = parameterValue; _i < parameterValue_1.length; _i++) {
+                    var parameterValueElement = parameterValue_1[_i];
+                    parameterStrings.push(parameterName + "=" + parameterValueElement);
+                }
+                result += parameterStrings.join("&");
+            }
+            else {
+                result += parameterName + "=" + parameterValue;
+            }
+        }
+        return result;
+    };
+    /**
+     * Parse a URLQuery from the provided text.
+     */
+    URLQuery.parse = function (text) {
+        var result = new URLQuery();
+        if (text) {
+            if (text.startsWith("?")) {
+                text = text.substring(1);
+            }
+            var currentState = "ParameterName";
+            var parameterName = "";
+            var parameterValue = "";
+            for (var i = 0; i < text.length; ++i) {
+                var currentCharacter = text[i];
+                switch (currentState) {
+                    case "ParameterName":
+                        switch (currentCharacter) {
+                            case "=":
+                                currentState = "ParameterValue";
+                                break;
+                            case "&":
+                                parameterName = "";
+                                parameterValue = "";
+                                break;
+                            default:
+                                parameterName += currentCharacter;
+                                break;
+                        }
+                        break;
+                    case "ParameterValue":
+                        switch (currentCharacter) {
+                            case "&":
+                                result.set(parameterName, parameterValue);
+                                parameterName = "";
+                                parameterValue = "";
+                                currentState = "ParameterName";
+                                break;
+                            default:
+                                parameterValue += currentCharacter;
+                                break;
+                        }
+                        break;
+                    default:
+                        throw new Error("Unrecognized URLQuery parse state: " + currentState);
+                }
+            }
+            if (currentState === "ParameterValue") {
+                result.set(parameterName, parameterValue);
+            }
+        }
+        return result;
+    };
+    return URLQuery;
+}());
+
+/**
+ * A class that handles creating, modifying, and parsing URLs.
+ */
+var URLBuilder = /** @class */ (function () {
+    function URLBuilder() {
+    }
+    /**
+     * Set the scheme/protocol for this URL. If the provided scheme contains other parts of a URL
+     * (such as a host, port, path, or query), those parts will be added to this URL as well.
+     */
+    URLBuilder.prototype.setScheme = function (scheme) {
+        if (!scheme) {
+            this._scheme = undefined;
+        }
+        else {
+            this.set(scheme, "SCHEME");
+        }
+    };
+    /**
+     * Get the scheme that has been set in this URL.
+     */
+    URLBuilder.prototype.getScheme = function () {
+        return this._scheme;
+    };
+    /**
+     * Set the host for this URL. If the provided host contains other parts of a URL (such as a
+     * port, path, or query), those parts will be added to this URL as well.
+     */
+    URLBuilder.prototype.setHost = function (host) {
+        if (!host) {
+            this._host = undefined;
+        }
+        else {
+            this.set(host, "SCHEME_OR_HOST");
+        }
+    };
+    /**
+     * Get the host that has been set in this URL.
+     */
+    URLBuilder.prototype.getHost = function () {
+        return this._host;
+    };
+    /**
+     * Set the port for this URL. If the provided port contains other parts of a URL (such as a
+     * path or query), those parts will be added to this URL as well.
+     */
+    URLBuilder.prototype.setPort = function (port) {
+        if (port == undefined || port === "") {
+            this._port = undefined;
+        }
+        else {
+            this.set(port.toString(), "PORT");
+        }
+    };
+    /**
+     * Get the port that has been set in this URL.
+     */
+    URLBuilder.prototype.getPort = function () {
+        return this._port;
+    };
+    /**
+     * Set the path for this URL. If the provided path contains a query, then it will be added to
+     * this URL as well.
+     */
+    URLBuilder.prototype.setPath = function (path) {
+        if (!path) {
+            this._path = undefined;
+        }
+        else {
+            var schemeIndex = path.indexOf("://");
+            if (schemeIndex !== -1) {
+                var schemeStart = path.lastIndexOf("/", schemeIndex);
+                // Make sure to only grab the URL part of the path before setting the state back to SCHEME
+                // this will handle cases such as "/a/b/c/https://microsoft.com" => "https://microsoft.com"
+                this.set(schemeStart === -1 ? path : path.substr(schemeStart + 1), "SCHEME");
+            }
+            else {
+                this.set(path, "PATH");
+            }
+        }
+    };
+    /**
+     * Append the provided path to this URL's existing path. If the provided path contains a query,
+     * then it will be added to this URL as well.
+     */
+    URLBuilder.prototype.appendPath = function (path) {
+        if (path) {
+            var currentPath = this.getPath();
+            if (currentPath) {
+                if (!currentPath.endsWith("/")) {
+                    currentPath += "/";
+                }
+                if (path.startsWith("/")) {
+                    path = path.substring(1);
+                }
+                path = currentPath + path;
+            }
+            this.set(path, "PATH");
+        }
+    };
+    /**
+     * Get the path that has been set in this URL.
+     */
+    URLBuilder.prototype.getPath = function () {
+        return this._path;
+    };
+    /**
+     * Set the query in this URL.
+     */
+    URLBuilder.prototype.setQuery = function (query) {
+        if (!query) {
+            this._query = undefined;
+        }
+        else {
+            this._query = URLQuery.parse(query);
+        }
+    };
+    /**
+     * Set a query parameter with the provided name and value in this URL's query. If the provided
+     * query parameter value is undefined or empty, then the query parameter will be removed if it
+     * existed.
+     */
+    URLBuilder.prototype.setQueryParameter = function (queryParameterName, queryParameterValue) {
+        if (queryParameterName) {
+            if (!this._query) {
+                this._query = new URLQuery();
+            }
+            this._query.set(queryParameterName, queryParameterValue);
+        }
+    };
+    /**
+     * Get the value of the query parameter with the provided query parameter name. If no query
+     * parameter exists with the provided name, then undefined will be returned.
+     */
+    URLBuilder.prototype.getQueryParameterValue = function (queryParameterName) {
+        return this._query ? this._query.get(queryParameterName) : undefined;
+    };
+    /**
+     * Get the query in this URL.
+     */
+    URLBuilder.prototype.getQuery = function () {
+        return this._query ? this._query.toString() : undefined;
+    };
+    /**
+     * Set the parts of this URL by parsing the provided text using the provided startState.
+     */
+    URLBuilder.prototype.set = function (text, startState) {
+        var tokenizer = new URLTokenizer(text, startState);
+        while (tokenizer.next()) {
+            var token = tokenizer.current();
+            if (token) {
+                switch (token.type) {
+                    case "SCHEME":
+                        this._scheme = token.text || undefined;
+                        break;
+                    case "HOST":
+                        this._host = token.text || undefined;
+                        break;
+                    case "PORT":
+                        this._port = token.text || undefined;
+                        break;
+                    case "PATH":
+                        var tokenPath = token.text || undefined;
+                        if (!this._path || this._path === "/" || tokenPath !== "/") {
+                            this._path = tokenPath;
+                        }
+                        break;
+                    case "QUERY":
+                        this._query = URLQuery.parse(token.text);
+                        break;
+                    default:
+                        throw new Error("Unrecognized URLTokenType: " + token.type);
+                }
+            }
+        }
+    };
+    URLBuilder.prototype.toString = function () {
+        var result = "";
+        if (this._scheme) {
+            result += this._scheme + "://";
+        }
+        if (this._host) {
+            result += this._host;
+        }
+        if (this._port) {
+            result += ":" + this._port;
+        }
+        if (this._path) {
+            if (!this._path.startsWith("/")) {
+                result += "/";
+            }
+            result += this._path;
+        }
+        if (this._query && this._query.any()) {
+            result += "?" + this._query.toString();
+        }
+        return result;
+    };
+    /**
+     * If the provided searchValue is found in this URLBuilder, then replace it with the provided
+     * replaceValue.
+     */
+    URLBuilder.prototype.replaceAll = function (searchValue, replaceValue) {
+        if (searchValue) {
+            this.setScheme((0,_util_utils__WEBPACK_IMPORTED_MODULE_0__.replaceAll)(this.getScheme(), searchValue, replaceValue));
+            this.setHost((0,_util_utils__WEBPACK_IMPORTED_MODULE_0__.replaceAll)(this.getHost(), searchValue, replaceValue));
+            this.setPort((0,_util_utils__WEBPACK_IMPORTED_MODULE_0__.replaceAll)(this.getPort(), searchValue, replaceValue));
+            this.setPath((0,_util_utils__WEBPACK_IMPORTED_MODULE_0__.replaceAll)(this.getPath(), searchValue, replaceValue));
+            this.setQuery((0,_util_utils__WEBPACK_IMPORTED_MODULE_0__.replaceAll)(this.getQuery(), searchValue, replaceValue));
+        }
+    };
+    URLBuilder.parse = function (text) {
+        var result = new URLBuilder();
+        result.set(text, "SCHEME_OR_HOST");
+        return result;
+    };
+    return URLBuilder;
+}());
+
+var URLToken = /** @class */ (function () {
+    function URLToken(text, type) {
+        this.text = text;
+        this.type = type;
+    }
+    URLToken.scheme = function (text) {
+        return new URLToken(text, "SCHEME");
+    };
+    URLToken.host = function (text) {
+        return new URLToken(text, "HOST");
+    };
+    URLToken.port = function (text) {
+        return new URLToken(text, "PORT");
+    };
+    URLToken.path = function (text) {
+        return new URLToken(text, "PATH");
+    };
+    URLToken.query = function (text) {
+        return new URLToken(text, "QUERY");
+    };
+    return URLToken;
+}());
+
+/**
+ * Get whether or not the provided character (single character string) is an alphanumeric (letter or
+ * digit) character.
+ */
+function isAlphaNumericCharacter(character) {
+    var characterCode = character.charCodeAt(0);
+    return ((48 /* '0' */ <= characterCode && characterCode <= 57) /* '9' */ ||
+        (65 /* 'A' */ <= characterCode && characterCode <= 90) /* 'Z' */ ||
+        (97 /* 'a' */ <= characterCode && characterCode <= 122) /* 'z' */);
+}
+/**
+ * A class that tokenizes URL strings.
+ */
+var URLTokenizer = /** @class */ (function () {
+    function URLTokenizer(_text, state) {
+        this._text = _text;
+        this._textLength = _text ? _text.length : 0;
+        this._currentState = state != undefined ? state : "SCHEME_OR_HOST";
+        this._currentIndex = 0;
+    }
+    /**
+     * Get the current URLToken this URLTokenizer is pointing at, or undefined if the URLTokenizer
+     * hasn't started or has finished tokenizing.
+     */
+    URLTokenizer.prototype.current = function () {
+        return this._currentToken;
+    };
+    /**
+     * Advance to the next URLToken and return whether or not a URLToken was found.
+     */
+    URLTokenizer.prototype.next = function () {
+        if (!hasCurrentCharacter(this)) {
+            this._currentToken = undefined;
+        }
+        else {
+            switch (this._currentState) {
+                case "SCHEME":
+                    nextScheme(this);
+                    break;
+                case "SCHEME_OR_HOST":
+                    nextSchemeOrHost(this);
+                    break;
+                case "HOST":
+                    nextHost(this);
+                    break;
+                case "PORT":
+                    nextPort(this);
+                    break;
+                case "PATH":
+                    nextPath(this);
+                    break;
+                case "QUERY":
+                    nextQuery(this);
+                    break;
+                default:
+                    throw new Error("Unrecognized URLTokenizerState: " + this._currentState);
+            }
+        }
+        return !!this._currentToken;
+    };
+    return URLTokenizer;
+}());
+
+/**
+ * Read the remaining characters from this Tokenizer's character stream.
+ */
+function readRemaining(tokenizer) {
+    var result = "";
+    if (tokenizer._currentIndex < tokenizer._textLength) {
+        result = tokenizer._text.substring(tokenizer._currentIndex);
+        tokenizer._currentIndex = tokenizer._textLength;
+    }
+    return result;
+}
+/**
+ * Whether or not this URLTokenizer has a current character.
+ */
+function hasCurrentCharacter(tokenizer) {
+    return tokenizer._currentIndex < tokenizer._textLength;
+}
+/**
+ * Get the character in the text string at the current index.
+ */
+function getCurrentCharacter(tokenizer) {
+    return tokenizer._text[tokenizer._currentIndex];
+}
+/**
+ * Advance to the character in text that is "step" characters ahead. If no step value is provided,
+ * then step will default to 1.
+ */
+function nextCharacter(tokenizer, step) {
+    if (hasCurrentCharacter(tokenizer)) {
+        if (!step) {
+            step = 1;
+        }
+        tokenizer._currentIndex += step;
+    }
+}
+/**
+ * Starting with the current character, peek "charactersToPeek" number of characters ahead in this
+ * Tokenizer's stream of characters.
+ */
+function peekCharacters(tokenizer, charactersToPeek) {
+    var endIndex = tokenizer._currentIndex + charactersToPeek;
+    if (tokenizer._textLength < endIndex) {
+        endIndex = tokenizer._textLength;
+    }
+    return tokenizer._text.substring(tokenizer._currentIndex, endIndex);
+}
+/**
+ * Read characters from this Tokenizer until the end of the stream or until the provided condition
+ * is false when provided the current character.
+ */
+function readWhile(tokenizer, condition) {
+    var result = "";
+    while (hasCurrentCharacter(tokenizer)) {
+        var currentCharacter = getCurrentCharacter(tokenizer);
+        if (!condition(currentCharacter)) {
+            break;
+        }
+        else {
+            result += currentCharacter;
+            nextCharacter(tokenizer);
+        }
+    }
+    return result;
+}
+/**
+ * Read characters from this Tokenizer until a non-alphanumeric character or the end of the
+ * character stream is reached.
+ */
+function readWhileLetterOrDigit(tokenizer) {
+    return readWhile(tokenizer, function (character) { return isAlphaNumericCharacter(character); });
+}
+/**
+ * Read characters from this Tokenizer until one of the provided terminating characters is read or
+ * the end of the character stream is reached.
+ */
+function readUntilCharacter(tokenizer) {
+    var terminatingCharacters = [];
+    for (var _i = 1; _i < arguments.length; _i++) {
+        terminatingCharacters[_i - 1] = arguments[_i];
+    }
+    return readWhile(tokenizer, function (character) { return terminatingCharacters.indexOf(character) === -1; });
+}
+function nextScheme(tokenizer) {
+    var scheme = readWhileLetterOrDigit(tokenizer);
+    tokenizer._currentToken = URLToken.scheme(scheme);
+    if (!hasCurrentCharacter(tokenizer)) {
+        tokenizer._currentState = "DONE";
+    }
+    else {
+        tokenizer._currentState = "HOST";
+    }
+}
+function nextSchemeOrHost(tokenizer) {
+    var schemeOrHost = readUntilCharacter(tokenizer, ":", "/", "?");
+    if (!hasCurrentCharacter(tokenizer)) {
+        tokenizer._currentToken = URLToken.host(schemeOrHost);
+        tokenizer._currentState = "DONE";
+    }
+    else if (getCurrentCharacter(tokenizer) === ":") {
+        if (peekCharacters(tokenizer, 3) === "://") {
+            tokenizer._currentToken = URLToken.scheme(schemeOrHost);
+            tokenizer._currentState = "HOST";
+        }
+        else {
+            tokenizer._currentToken = URLToken.host(schemeOrHost);
+            tokenizer._currentState = "PORT";
+        }
+    }
+    else {
+        tokenizer._currentToken = URLToken.host(schemeOrHost);
+        if (getCurrentCharacter(tokenizer) === "/") {
+            tokenizer._currentState = "PATH";
+        }
+        else {
+            tokenizer._currentState = "QUERY";
+        }
+    }
+}
+function nextHost(tokenizer) {
+    if (peekCharacters(tokenizer, 3) === "://") {
+        nextCharacter(tokenizer, 3);
+    }
+    var host = readUntilCharacter(tokenizer, ":", "/", "?");
+    tokenizer._currentToken = URLToken.host(host);
+    if (!hasCurrentCharacter(tokenizer)) {
+        tokenizer._currentState = "DONE";
+    }
+    else if (getCurrentCharacter(tokenizer) === ":") {
+        tokenizer._currentState = "PORT";
+    }
+    else if (getCurrentCharacter(tokenizer) === "/") {
+        tokenizer._currentState = "PATH";
+    }
+    else {
+        tokenizer._currentState = "QUERY";
+    }
+}
+function nextPort(tokenizer) {
+    if (getCurrentCharacter(tokenizer) === ":") {
+        nextCharacter(tokenizer);
+    }
+    var port = readUntilCharacter(tokenizer, "/", "?");
+    tokenizer._currentToken = URLToken.port(port);
+    if (!hasCurrentCharacter(tokenizer)) {
+        tokenizer._currentState = "DONE";
+    }
+    else if (getCurrentCharacter(tokenizer) === "/") {
+        tokenizer._currentState = "PATH";
+    }
+    else {
+        tokenizer._currentState = "QUERY";
+    }
+}
+function nextPath(tokenizer) {
+    var path = readUntilCharacter(tokenizer, "?");
+    tokenizer._currentToken = URLToken.path(path);
+    if (!hasCurrentCharacter(tokenizer)) {
+        tokenizer._currentState = "DONE";
+    }
+    else {
+        tokenizer._currentState = "QUERY";
+    }
+}
+function nextQuery(tokenizer) {
+    if (getCurrentCharacter(tokenizer) === "?") {
+        nextCharacter(tokenizer);
+    }
+    var query = readRemaining(tokenizer);
+    tokenizer._currentToken = URLToken.query(query);
+    tokenizer._currentState = "DONE";
+}
+//# sourceMappingURL=url.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/es/lib/util/base64.browser.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/es/lib/util/base64.browser.js ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "encodeString": () => (/* binding */ encodeString),
+/* harmony export */   "encodeByteArray": () => (/* binding */ encodeByteArray),
+/* harmony export */   "decodeString": () => (/* binding */ decodeString)
+/* harmony export */ });
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+/**
+ * Encodes a string in base64 format.
+ * @param value the string to encode
+ */
+function encodeString(value) {
+    return btoa(value);
+}
+/**
+ * Encodes a byte array in base64 format.
+ * @param value the Uint8Aray to encode
+ */
+function encodeByteArray(value) {
+    var str = "";
+    for (var i = 0; i < value.length; i++) {
+        str += String.fromCharCode(value[i]);
+    }
+    return btoa(str);
+}
+/**
+ * Decodes a base64 string into a byte array.
+ * @param value the base64 string to decode
+ */
+function decodeString(value) {
+    var byteString = atob(value);
+    var arr = new Uint8Array(byteString.length);
+    for (var i = 0; i < byteString.length; i++) {
+        arr[i] = byteString.charCodeAt(i);
+    }
+    return arr;
+}
+//# sourceMappingURL=base64.browser.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/es/lib/util/constants.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/es/lib/util/constants.js ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Constants": () => (/* binding */ Constants)
+/* harmony export */ });
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+var Constants = {
+    /**
+     * The ms-rest version
+     * @const
+     * @type {string}
+     */
+    msRestVersion: "2.5.3",
+    /**
+     * Specifies HTTP.
+     *
+     * @const
+     * @type {string}
+     */
+    HTTP: "http:",
+    /**
+     * Specifies HTTPS.
+     *
+     * @const
+     * @type {string}
+     */
+    HTTPS: "https:",
+    /**
+     * Specifies HTTP Proxy.
+     *
+     * @const
+     * @type {string}
+     */
+    HTTP_PROXY: "HTTP_PROXY",
+    /**
+     * Specifies HTTPS Proxy.
+     *
+     * @const
+     * @type {string}
+     */
+    HTTPS_PROXY: "HTTPS_PROXY",
+    /**
+     * Specifies NO Proxy.
+     */
+    NO_PROXY: "NO_PROXY",
+    /**
+     * Specifies ALL Proxy.
+     */
+    ALL_PROXY: "ALL_PROXY",
+    HttpConstants: {
+        /**
+         * Http Verbs
+         *
+         * @const
+         * @enum {string}
+         */
+        HttpVerbs: {
+            PUT: "PUT",
+            GET: "GET",
+            DELETE: "DELETE",
+            POST: "POST",
+            MERGE: "MERGE",
+            HEAD: "HEAD",
+            PATCH: "PATCH",
+        },
+        StatusCodes: {
+            TooManyRequests: 429,
+        },
+    },
+    /**
+     * Defines constants for use with HTTP headers.
+     */
+    HeaderConstants: {
+        /**
+         * The Authorization header.
+         *
+         * @const
+         * @type {string}
+         */
+        AUTHORIZATION: "authorization",
+        AUTHORIZATION_SCHEME: "Bearer",
+        /**
+         * The Retry-After response-header field can be used with a 503 (Service
+         * Unavailable) or 349 (Too Many Requests) responses to indicate how long
+         * the service is expected to be unavailable to the requesting client.
+         *
+         * @const
+         * @type {string}
+         */
+        RETRY_AFTER: "Retry-After",
+        /**
+         * The UserAgent header.
+         *
+         * @const
+         * @type {string}
+         */
+        USER_AGENT: "User-Agent",
+    },
+};
+//# sourceMappingURL=constants.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/es/lib/util/utils.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/es/lib/util/utils.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "isNode": () => (/* binding */ isNode),
+/* harmony export */   "urlIsHTTPS": () => (/* binding */ urlIsHTTPS),
+/* harmony export */   "encodeUri": () => (/* binding */ encodeUri),
+/* harmony export */   "stripResponse": () => (/* binding */ stripResponse),
+/* harmony export */   "stripRequest": () => (/* binding */ stripRequest),
+/* harmony export */   "isValidUuid": () => (/* binding */ isValidUuid),
+/* harmony export */   "objectValues": () => (/* binding */ objectValues),
+/* harmony export */   "generateUuid": () => (/* binding */ generateUuid),
+/* harmony export */   "executePromisesSequentially": () => (/* binding */ executePromisesSequentially),
+/* harmony export */   "mergeObjects": () => (/* binding */ mergeObjects),
+/* harmony export */   "delay": () => (/* binding */ delay),
+/* harmony export */   "promiseToCallback": () => (/* binding */ promiseToCallback),
+/* harmony export */   "promiseToServiceCallback": () => (/* binding */ promiseToServiceCallback),
+/* harmony export */   "prepareXMLRootList": () => (/* binding */ prepareXMLRootList),
+/* harmony export */   "applyMixins": () => (/* binding */ applyMixins),
+/* harmony export */   "isDuration": () => (/* binding */ isDuration),
+/* harmony export */   "replaceAll": () => (/* binding */ replaceAll),
+/* harmony export */   "isPrimitiveType": () => (/* binding */ isPrimitiveType)
+/* harmony export */ });
+/* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! uuid */ "./node_modules/@azure/ms-rest-js/node_modules/uuid/dist/esm-browser/v4.js");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./constants */ "./node_modules/@azure/ms-rest-js/es/lib/util/constants.js");
+/* provided dependency */ var process = __webpack_require__(/*! process/browser */ "./node_modules/process/browser.js");
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+
+
+/**
+ * A constant that indicates whether the environment is node.js or browser based.
+ */
+var isNode = typeof process !== "undefined" &&
+    !!process.version &&
+    !!process.versions &&
+    !!process.versions.node;
+/**
+ * Checks if a parsed URL is HTTPS
+ *
+ * @param {object} urlToCheck The url to check
+ * @return {boolean} True if the URL is HTTPS; false otherwise.
+ */
+function urlIsHTTPS(urlToCheck) {
+    return urlToCheck.protocol.toLowerCase() === _constants__WEBPACK_IMPORTED_MODULE_0__.Constants.HTTPS;
+}
+/**
+ * Encodes an URI.
+ *
+ * @param {string} uri The URI to be encoded.
+ * @return {string} The encoded URI.
+ */
+function encodeUri(uri) {
+    return encodeURIComponent(uri)
+        .replace(/!/g, "%21")
+        .replace(/"/g, "%27")
+        .replace(/\(/g, "%28")
+        .replace(/\)/g, "%29")
+        .replace(/\*/g, "%2A");
+}
+/**
+ * Returns a stripped version of the Http Response which only contains body,
+ * headers and the status.
+ *
+ * @param {HttpOperationResponse} response The Http Response
+ *
+ * @return {object} The stripped version of Http Response.
+ */
+function stripResponse(response) {
+    var strippedResponse = {};
+    strippedResponse.body = response.bodyAsText;
+    strippedResponse.headers = response.headers;
+    strippedResponse.status = response.status;
+    return strippedResponse;
+}
+/**
+ * Returns a stripped version of the Http Request that does not contain the
+ * Authorization header.
+ *
+ * @param {WebResource} request The Http Request object
+ *
+ * @return {WebResource} The stripped version of Http Request.
+ */
+function stripRequest(request) {
+    var strippedRequest = request.clone();
+    if (strippedRequest.headers) {
+        strippedRequest.headers.remove("authorization");
+    }
+    return strippedRequest;
+}
+/**
+ * Validates the given uuid as a string
+ *
+ * @param {string} uuid The uuid as a string that needs to be validated
+ *
+ * @return {boolean} True if the uuid is valid; false otherwise.
+ */
+function isValidUuid(uuid) {
+    var validUuidRegex = new RegExp("^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$", "ig");
+    return validUuidRegex.test(uuid);
+}
+/**
+ * Provides an array of values of an object. For example
+ * for a given object { "a": "foo", "b": "bar" }, the method returns ["foo", "bar"].
+ *
+ * @param {object} obj An object whose properties need to be enumerated so that it"s values can be provided as an array
+ *
+ * @return {any[]} An array of values of the given object.
+ */
+function objectValues(obj) {
+    var result = [];
+    if (obj && obj instanceof Object) {
+        for (var key in obj) {
+            if (obj.hasOwnProperty(key)) {
+                result.push(obj[key]);
+            }
+        }
+    }
+    else {
+        throw new Error("The provided object " + JSON.stringify(obj, undefined, 2) + " is not a valid object that can be " + "enumerated to provide its values as an array.");
+    }
+    return result;
+}
+/**
+ * Generated UUID
+ *
+ * @return {string} RFC4122 v4 UUID.
+ */
+function generateUuid() {
+    return (0,uuid__WEBPACK_IMPORTED_MODULE_1__.default)();
+}
+/**
+ * Executes an array of promises sequentially. Inspiration of this method is here:
+ * https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html. An awesome blog on promises!
+ *
+ * @param {Array} promiseFactories An array of promise factories(A function that return a promise)
+ *
+ * @param {any} [kickstart] Input to the first promise that is used to kickstart the promise chain.
+ * If not provided then the promise chain starts with undefined.
+ *
+ * @return A chain of resolved or rejected promises
+ */
+function executePromisesSequentially(promiseFactories, kickstart) {
+    var result = Promise.resolve(kickstart);
+    promiseFactories.forEach(function (promiseFactory) {
+        result = result.then(promiseFactory);
+    });
+    return result;
+}
+/**
+ * Merges source object into the target object
+ * @param {object} source The object that needs to be merged
+ *
+ * @param {object} target The object to be merged into
+ *
+ * @returns {object} Returns the merged target object.
+ */
+function mergeObjects(source, target) {
+    Object.keys(source).forEach(function (key) {
+        target[key] = source[key];
+    });
+    return target;
+}
+/**
+ * A wrapper for setTimeout that resolves a promise after t milliseconds.
+ * @param {number} t The number of milliseconds to be delayed.
+ * @param {T} value The value to be resolved with after a timeout of t milliseconds.
+ * @returns {Promise<T>} Resolved promise
+ */
+function delay(t, value) {
+    return new Promise(function (resolve) { return setTimeout(function () { return resolve(value); }, t); });
+}
+/**
+ * Converts a Promise to a callback.
+ * @param {Promise<any>} promise The Promise to be converted to a callback
+ * @returns {Function} A function that takes the callback (cb: Function): void
+ * @deprecated generated code should instead depend on responseToBody
+ */
+function promiseToCallback(promise) {
+    if (typeof promise.then !== "function") {
+        throw new Error("The provided input is not a Promise.");
+    }
+    return function (cb) {
+        promise.then(function (data) {
+            cb(undefined, data);
+        }, function (err) {
+            cb(err);
+        });
+    };
+}
+/**
+ * Converts a Promise to a service callback.
+ * @param {Promise<HttpOperationResponse>} promise - The Promise of HttpOperationResponse to be converted to a service callback
+ * @returns {Function} A function that takes the service callback (cb: ServiceCallback<T>): void
+ */
+function promiseToServiceCallback(promise) {
+    if (typeof promise.then !== "function") {
+        throw new Error("The provided input is not a Promise.");
+    }
+    return function (cb) {
+        promise.then(function (data) {
+            process.nextTick(cb, undefined, data.parsedBody, data.request, data);
+        }, function (err) {
+            process.nextTick(cb, err);
+        });
+    };
+}
+function prepareXMLRootList(obj, elementName) {
+    var _a;
+    if (!Array.isArray(obj)) {
+        obj = [obj];
+    }
+    return _a = {}, _a[elementName] = obj, _a;
+}
+/**
+ * Applies the properties on the prototype of sourceCtors to the prototype of targetCtor
+ * @param {object} targetCtor The target object on which the properties need to be applied.
+ * @param {Array<object>} sourceCtors An array of source objects from which the properties need to be taken.
+ */
+function applyMixins(targetCtor, sourceCtors) {
+    sourceCtors.forEach(function (sourceCtors) {
+        Object.getOwnPropertyNames(sourceCtors.prototype).forEach(function (name) {
+            targetCtor.prototype[name] = sourceCtors.prototype[name];
+        });
+    });
+}
+var validateISODuration = /^(-|\+)?P(?:([-+]?[0-9,.]*)Y)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)W)?(?:([-+]?[0-9,.]*)D)?(?:T(?:([-+]?[0-9,.]*)H)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)S)?)?$/;
+/**
+ * Indicates whether the given string is in ISO 8601 format.
+ * @param {string} value The value to be validated for ISO 8601 duration format.
+ * @return {boolean} `true` if valid, `false` otherwise.
+ */
+function isDuration(value) {
+    return validateISODuration.test(value);
+}
+/**
+ * Replace all of the instances of searchValue in value with the provided replaceValue.
+ * @param {string | undefined} value The value to search and replace in.
+ * @param {string} searchValue The value to search for in the value argument.
+ * @param {string} replaceValue The value to replace searchValue with in the value argument.
+ * @returns {string | undefined} The value where each instance of searchValue was replaced with replacedValue.
+ */
+function replaceAll(value, searchValue, replaceValue) {
+    return !value || !searchValue ? value : value.split(searchValue).join(replaceValue || "");
+}
+/**
+ * Determines whether the given enity is a basic/primitive type
+ * (string, number, boolean, null, undefined).
+ * @param value Any entity
+ * @return boolean - true is it is primitive type, false otherwise.
+ */
+function isPrimitiveType(value) {
+    return (typeof value !== "object" && typeof value !== "function") || value === null;
+}
+//# sourceMappingURL=utils.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/es/lib/util/xml.browser.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/es/lib/util/xml.browser.js ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "parseXML": () => (/* binding */ parseXML),
+/* harmony export */   "stringifyXML": () => (/* binding */ stringifyXML)
+/* harmony export */ });
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+var parser = new DOMParser();
+function parseXML(str) {
+    try {
+        var dom = parser.parseFromString(str, "application/xml");
+        throwIfError(dom);
+        var obj = domToObject(dom.childNodes[0]);
+        return Promise.resolve(obj);
+    }
+    catch (err) {
+        return Promise.reject(err);
+    }
+}
+var errorNS = "";
+try {
+    errorNS = parser.parseFromString("INVALID", "text/xml").getElementsByTagName("parsererror")[0]
+        .namespaceURI;
+}
+catch (ignored) {
+    // Most browsers will return a document containing <parsererror>, but IE will throw.
+}
+function throwIfError(dom) {
+    if (errorNS) {
+        var parserErrors = dom.getElementsByTagNameNS(errorNS, "parsererror");
+        if (parserErrors.length) {
+            throw new Error(parserErrors.item(0).innerHTML);
+        }
+    }
+}
+function isElement(node) {
+    return !!node.attributes;
+}
+/**
+ * Get the Element-typed version of the provided Node if the provided node is an element with
+ * attributes. If it isn't, then undefined is returned.
+ */
+function asElementWithAttributes(node) {
+    return isElement(node) && node.hasAttributes() ? node : undefined;
+}
+function domToObject(node) {
+    var result = {};
+    var childNodeCount = node.childNodes.length;
+    var firstChildNode = node.childNodes[0];
+    var onlyChildTextValue = (firstChildNode &&
+        childNodeCount === 1 &&
+        firstChildNode.nodeType === Node.TEXT_NODE &&
+        firstChildNode.nodeValue) ||
+        undefined;
+    var elementWithAttributes = asElementWithAttributes(node);
+    if (elementWithAttributes) {
+        result["$"] = {};
+        for (var i = 0; i < elementWithAttributes.attributes.length; i++) {
+            var attr = elementWithAttributes.attributes[i];
+            result["$"][attr.nodeName] = attr.nodeValue;
+        }
+        if (onlyChildTextValue) {
+            result["_"] = onlyChildTextValue;
+        }
+    }
+    else if (childNodeCount === 0) {
+        result = "";
+    }
+    else if (onlyChildTextValue) {
+        result = onlyChildTextValue;
+    }
+    if (!onlyChildTextValue) {
+        for (var i = 0; i < childNodeCount; i++) {
+            var child = node.childNodes[i];
+            // Ignore leading/trailing whitespace nodes
+            if (child.nodeType !== Node.TEXT_NODE) {
+                var childObject = domToObject(child);
+                if (!result[child.nodeName]) {
+                    result[child.nodeName] = childObject;
+                }
+                else if (Array.isArray(result[child.nodeName])) {
+                    result[child.nodeName].push(childObject);
+                }
+                else {
+                    result[child.nodeName] = [result[child.nodeName], childObject];
+                }
+            }
+        }
+    }
+    return result;
+}
+// tslint:disable-next-line:no-null-keyword
+var doc = document.implementation.createDocument(null, null, null);
+var serializer = new XMLSerializer();
+function stringifyXML(obj, opts) {
+    var rootName = (opts && opts.rootName) || "root";
+    var dom = buildNode(obj, rootName)[0];
+    return ('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' + serializer.serializeToString(dom));
+}
+function buildAttributes(attrs) {
+    var result = [];
+    for (var _i = 0, _a = Object.keys(attrs); _i < _a.length; _i++) {
+        var key = _a[_i];
+        var attr = doc.createAttribute(key);
+        attr.value = attrs[key].toString();
+        result.push(attr);
+    }
+    return result;
+}
+function buildNode(obj, elementName) {
+    if (typeof obj === "string" || typeof obj === "number" || typeof obj === "boolean") {
+        var elem = doc.createElement(elementName);
+        elem.textContent = obj.toString();
+        return [elem];
+    }
+    else if (Array.isArray(obj)) {
+        var result = [];
+        for (var _i = 0, obj_1 = obj; _i < obj_1.length; _i++) {
+            var arrayElem = obj_1[_i];
+            for (var _a = 0, _b = buildNode(arrayElem, elementName); _a < _b.length; _a++) {
+                var child = _b[_a];
+                result.push(child);
+            }
+        }
+        return result;
+    }
+    else if (typeof obj === "object") {
+        var elem = doc.createElement(elementName);
+        for (var _c = 0, _d = Object.keys(obj); _c < _d.length; _c++) {
+            var key = _d[_c];
+            if (key === "$") {
+                for (var _e = 0, _f = buildAttributes(obj[key]); _e < _f.length; _e++) {
+                    var attr = _f[_e];
+                    elem.attributes.setNamedItem(attr);
+                }
+            }
+            else {
+                for (var _g = 0, _h = buildNode(obj[key], key); _g < _h.length; _g++) {
+                    var child = _h[_g];
+                    elem.appendChild(child);
+                }
+            }
+        }
+        return [elem];
+    }
+    else {
+        throw new Error("Illegal value passed to buildObject: " + obj);
+    }
+}
+//# sourceMappingURL=xml.browser.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/es/lib/webResource.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/es/lib/webResource.js ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "isWebResourceLike": () => (/* binding */ isWebResourceLike),
+/* harmony export */   "WebResource": () => (/* binding */ WebResource)
+/* harmony export */ });
+/* harmony import */ var _httpHeaders__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./httpHeaders */ "./node_modules/@azure/ms-rest-js/es/lib/httpHeaders.js");
+/* harmony import */ var _serializer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./serializer */ "./node_modules/@azure/ms-rest-js/es/lib/serializer.js");
+/* harmony import */ var _util_utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./util/utils */ "./node_modules/@azure/ms-rest-js/es/lib/util/utils.js");
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+
+
+
+function isWebResourceLike(object) {
+    if (typeof object !== "object") {
+        return false;
+    }
+    if (typeof object.url === "string" &&
+        typeof object.method === "string" &&
+        typeof object.headers === "object" &&
+        (0,_httpHeaders__WEBPACK_IMPORTED_MODULE_0__.isHttpHeadersLike)(object.headers) &&
+        typeof object.validateRequestProperties === "function" &&
+        typeof object.prepare === "function" &&
+        typeof object.clone === "function") {
+        return true;
+    }
+    return false;
+}
+/**
+ * Creates a new WebResource object.
+ *
+ * This class provides an abstraction over a REST call by being library / implementation agnostic and wrapping the necessary
+ * properties to initiate a request.
+ *
+ * @constructor
+ */
+var WebResource = /** @class */ (function () {
+    function WebResource(url, method, body, query, headers, streamResponseBody, withCredentials, abortSignal, timeout, onUploadProgress, onDownloadProgress, proxySettings, keepAlive, agentSettings, redirectLimit) {
+        this.streamResponseBody = streamResponseBody;
+        this.url = url || "";
+        this.method = method || "GET";
+        this.headers = (0,_httpHeaders__WEBPACK_IMPORTED_MODULE_0__.isHttpHeadersLike)(headers) ? headers : new _httpHeaders__WEBPACK_IMPORTED_MODULE_0__.HttpHeaders(headers);
+        this.body = body;
+        this.query = query;
+        this.formData = undefined;
+        this.withCredentials = withCredentials || false;
+        this.abortSignal = abortSignal;
+        this.timeout = timeout || 0;
+        this.onUploadProgress = onUploadProgress;
+        this.onDownloadProgress = onDownloadProgress;
+        this.proxySettings = proxySettings;
+        this.keepAlive = keepAlive;
+        this.agentSettings = agentSettings;
+        this.redirectLimit = redirectLimit;
+    }
+    /**
+     * Validates that the required properties such as method, url, headers["Content-Type"],
+     * headers["accept-language"] are defined. It will throw an error if one of the above
+     * mentioned properties are not defined.
+     */
+    WebResource.prototype.validateRequestProperties = function () {
+        if (!this.method) {
+            throw new Error("WebResource.method is required.");
+        }
+        if (!this.url) {
+            throw new Error("WebResource.url is required.");
+        }
+    };
+    /**
+     * Prepares the request.
+     * @param {RequestPrepareOptions} options Options to provide for preparing the request.
+     * @returns {WebResource} Returns the prepared WebResource (HTTP Request) object that needs to be given to the request pipeline.
+     */
+    WebResource.prototype.prepare = function (options) {
+        if (!options) {
+            throw new Error("options object is required");
+        }
+        if (options.method == undefined || typeof options.method.valueOf() !== "string") {
+            throw new Error("options.method must be a string.");
+        }
+        if (options.url && options.pathTemplate) {
+            throw new Error("options.url and options.pathTemplate are mutually exclusive. Please provide exactly one of them.");
+        }
+        if ((options.pathTemplate == undefined || typeof options.pathTemplate.valueOf() !== "string") &&
+            (options.url == undefined || typeof options.url.valueOf() !== "string")) {
+            throw new Error("Please provide exactly one of options.pathTemplate or options.url.");
+        }
+        // set the url if it is provided.
+        if (options.url) {
+            if (typeof options.url !== "string") {
+                throw new Error('options.url must be of type "string".');
+            }
+            this.url = options.url;
+        }
+        // set the method
+        if (options.method) {
+            var validMethods = ["GET", "PUT", "HEAD", "DELETE", "OPTIONS", "POST", "PATCH", "TRACE"];
+            if (validMethods.indexOf(options.method.toUpperCase()) === -1) {
+                throw new Error('The provided method "' +
+                    options.method +
+                    '" is invalid. Supported HTTP methods are: ' +
+                    JSON.stringify(validMethods));
+            }
+        }
+        this.method = options.method.toUpperCase();
+        // construct the url if path template is provided
+        if (options.pathTemplate) {
+            var pathTemplate_1 = options.pathTemplate, pathParameters_1 = options.pathParameters;
+            if (typeof pathTemplate_1 !== "string") {
+                throw new Error('options.pathTemplate must be of type "string".');
+            }
+            if (!options.baseUrl) {
+                options.baseUrl = "https://management.azure.com";
+            }
+            var baseUrl = options.baseUrl;
+            var url_1 = baseUrl +
+                (baseUrl.endsWith("/") ? "" : "/") +
+                (pathTemplate_1.startsWith("/") ? pathTemplate_1.slice(1) : pathTemplate_1);
+            var segments = url_1.match(/({\w*\s*\w*})/gi);
+            if (segments && segments.length) {
+                if (!pathParameters_1) {
+                    throw new Error("pathTemplate: " + pathTemplate_1 + " has been provided. Hence, options.pathParameters must also be provided.");
+                }
+                segments.forEach(function (item) {
+                    var pathParamName = item.slice(1, -1);
+                    var pathParam = pathParameters_1[pathParamName];
+                    if (pathParam === null ||
+                        pathParam === undefined ||
+                        !(typeof pathParam === "string" || typeof pathParam === "object")) {
+                        throw new Error("pathTemplate: " + pathTemplate_1 + " contains the path parameter " + pathParamName +
+                            (" however, it is not present in " + pathParameters_1 + " - " + JSON.stringify(pathParameters_1, undefined, 2) + ".") +
+                            ("The value of the path parameter can either be a \"string\" of the form { " + pathParamName + ": \"some sample value\" } or ") +
+                            ("it can be an \"object\" of the form { \"" + pathParamName + "\": { value: \"some sample value\", skipUrlEncoding: true } }."));
+                    }
+                    if (typeof pathParam.valueOf() === "string") {
+                        url_1 = url_1.replace(item, encodeURIComponent(pathParam));
+                    }
+                    if (typeof pathParam.valueOf() === "object") {
+                        if (!pathParam.value) {
+                            throw new Error("options.pathParameters[" + pathParamName + "] is of type \"object\" but it does not contain a \"value\" property.");
+                        }
+                        if (pathParam.skipUrlEncoding) {
+                            url_1 = url_1.replace(item, pathParam.value);
+                        }
+                        else {
+                            url_1 = url_1.replace(item, encodeURIComponent(pathParam.value));
+                        }
+                    }
+                });
+            }
+            this.url = url_1;
+        }
+        // append query parameters to the url if they are provided. They can be provided with pathTemplate or url option.
+        if (options.queryParameters) {
+            var queryParameters = options.queryParameters;
+            if (typeof queryParameters !== "object") {
+                throw new Error("options.queryParameters must be of type object. It should be a JSON object " +
+                    "of \"query-parameter-name\" as the key and the \"query-parameter-value\" as the value. " +
+                    "The \"query-parameter-value\" may be fo type \"string\" or an \"object\" of the form { value: \"query-parameter-value\", skipUrlEncoding: true }.");
+            }
+            // append question mark if it is not present in the url
+            if (this.url && this.url.indexOf("?") === -1) {
+                this.url += "?";
+            }
+            // construct queryString
+            var queryParams = [];
+            // We need to populate this.query as a dictionary if the request is being used for Sway's validateRequest().
+            this.query = {};
+            for (var queryParamName in queryParameters) {
+                var queryParam = queryParameters[queryParamName];
+                if (queryParam) {
+                    if (typeof queryParam === "string") {
+                        queryParams.push(queryParamName + "=" + encodeURIComponent(queryParam));
+                        this.query[queryParamName] = encodeURIComponent(queryParam);
+                    }
+                    else if (typeof queryParam === "object") {
+                        if (!queryParam.value) {
+                            throw new Error("options.queryParameters[" + queryParamName + "] is of type \"object\" but it does not contain a \"value\" property.");
+                        }
+                        if (queryParam.skipUrlEncoding) {
+                            queryParams.push(queryParamName + "=" + queryParam.value);
+                            this.query[queryParamName] = queryParam.value;
+                        }
+                        else {
+                            queryParams.push(queryParamName + "=" + encodeURIComponent(queryParam.value));
+                            this.query[queryParamName] = encodeURIComponent(queryParam.value);
+                        }
+                    }
+                }
+            } // end-of-for
+            // append the queryString
+            this.url += queryParams.join("&");
+        }
+        // add headers to the request if they are provided
+        if (options.headers) {
+            var headers = options.headers;
+            for (var _i = 0, _a = Object.keys(options.headers); _i < _a.length; _i++) {
+                var headerName = _a[_i];
+                this.headers.set(headerName, headers[headerName]);
+            }
+        }
+        // ensure accept-language is set correctly
+        if (!this.headers.get("accept-language")) {
+            this.headers.set("accept-language", "en-US");
+        }
+        // ensure the request-id is set correctly
+        if (!this.headers.get("x-ms-client-request-id") && !options.disableClientRequestId) {
+            this.headers.set("x-ms-client-request-id", (0,_util_utils__WEBPACK_IMPORTED_MODULE_1__.generateUuid)());
+        }
+        // default
+        if (!this.headers.get("Content-Type")) {
+            this.headers.set("Content-Type", "application/json; charset=utf-8");
+        }
+        // set the request body. request.js automatically sets the Content-Length request header, so we need not set it explicilty
+        this.body = options.body;
+        if (options.body != undefined) {
+            // body as a stream special case. set the body as-is and check for some special request headers specific to sending a stream.
+            if (options.bodyIsStream) {
+                if (!this.headers.get("Transfer-Encoding")) {
+                    this.headers.set("Transfer-Encoding", "chunked");
+                }
+                if (this.headers.get("Content-Type") !== "application/octet-stream") {
+                    this.headers.set("Content-Type", "application/octet-stream");
+                }
+            }
+            else {
+                if (options.serializationMapper) {
+                    this.body = new _serializer__WEBPACK_IMPORTED_MODULE_2__.Serializer(options.mappers).serialize(options.serializationMapper, options.body, "requestBody");
+                }
+                if (!options.disableJsonStringifyOnBody) {
+                    this.body = JSON.stringify(options.body);
+                }
+            }
+        }
+        this.abortSignal = options.abortSignal;
+        this.onDownloadProgress = options.onDownloadProgress;
+        this.onUploadProgress = options.onUploadProgress;
+        this.redirectLimit = options.redirectLimit;
+        this.streamResponseBody = options.streamResponseBody;
+        return this;
+    };
+    /**
+     * Clone this WebResource HTTP request object.
+     * @returns {WebResource} The clone of this WebResource HTTP request object.
+     */
+    WebResource.prototype.clone = function () {
+        var result = new WebResource(this.url, this.method, this.body, this.query, this.headers && this.headers.clone(), this.streamResponseBody, this.withCredentials, this.abortSignal, this.timeout, this.onUploadProgress, this.onDownloadProgress, this.proxySettings, this.keepAlive, this.agentSettings, this.redirectLimit);
+        if (this.formData) {
+            result.formData = this.formData;
+        }
+        if (this.operationSpec) {
+            result.operationSpec = this.operationSpec;
+        }
+        if (this.shouldDeserialize) {
+            result.shouldDeserialize = this.shouldDeserialize;
+        }
+        if (this.operationResponseGetter) {
+            result.operationResponseGetter = this.operationResponseGetter;
+        }
+        return result;
+    };
+    return WebResource;
+}());
+
+//# sourceMappingURL=webResource.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/es/lib/xhrHttpClient.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/es/lib/xhrHttpClient.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "XhrHttpClient": () => (/* binding */ XhrHttpClient),
+/* harmony export */   "parseHeaders": () => (/* binding */ parseHeaders)
+/* harmony export */ });
+/* harmony import */ var _httpHeaders__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./httpHeaders */ "./node_modules/@azure/ms-rest-js/es/lib/httpHeaders.js");
+/* harmony import */ var _restError__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./restError */ "./node_modules/@azure/ms-rest-js/es/lib/restError.js");
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+
+
+/**
+ * A HttpClient implementation that uses XMLHttpRequest to send HTTP requests.
+ */
+var XhrHttpClient = /** @class */ (function () {
+    function XhrHttpClient() {
+    }
+    XhrHttpClient.prototype.sendRequest = function (request) {
+        var xhr = new XMLHttpRequest();
+        if (request.agentSettings) {
+            throw new Error("HTTP agent settings not supported in browser environment");
+        }
+        if (request.proxySettings) {
+            throw new Error("HTTP proxy is not supported in browser environment");
+        }
+        var abortSignal = request.abortSignal;
+        if (abortSignal) {
+            var listener_1 = function () {
+                xhr.abort();
+            };
+            abortSignal.addEventListener("abort", listener_1);
+            xhr.addEventListener("readystatechange", function () {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    abortSignal.removeEventListener("abort", listener_1);
+                }
+            });
+        }
+        addProgressListener(xhr.upload, request.onUploadProgress);
+        addProgressListener(xhr, request.onDownloadProgress);
+        if (request.formData) {
+            var formData = request.formData;
+            var requestForm_1 = new FormData();
+            var appendFormValue = function (key, value) {
+                if (value && value.hasOwnProperty("value") && value.hasOwnProperty("options")) {
+                    requestForm_1.append(key, value.value, value.options);
+                }
+                else {
+                    requestForm_1.append(key, value);
+                }
+            };
+            for (var _i = 0, _a = Object.keys(formData); _i < _a.length; _i++) {
+                var formKey = _a[_i];
+                var formValue = formData[formKey];
+                if (Array.isArray(formValue)) {
+                    for (var j = 0; j < formValue.length; j++) {
+                        appendFormValue(formKey, formValue[j]);
+                    }
+                }
+                else {
+                    appendFormValue(formKey, formValue);
+                }
+            }
+            request.body = requestForm_1;
+            request.formData = undefined;
+            var contentType = request.headers.get("Content-Type");
+            if (contentType && contentType.indexOf("multipart/form-data") !== -1) {
+                // browser will automatically apply a suitable content-type header
+                request.headers.remove("Content-Type");
+            }
+        }
+        xhr.open(request.method, request.url);
+        xhr.timeout = request.timeout;
+        xhr.withCredentials = request.withCredentials;
+        for (var _b = 0, _c = request.headers.headersArray(); _b < _c.length; _b++) {
+            var header = _c[_b];
+            xhr.setRequestHeader(header.name, header.value);
+        }
+        xhr.responseType = request.streamResponseBody ? "blob" : "text";
+        // tslint:disable-next-line:no-null-keyword
+        xhr.send(request.body === undefined ? null : request.body);
+        if (request.streamResponseBody) {
+            return new Promise(function (resolve, reject) {
+                xhr.addEventListener("readystatechange", function () {
+                    // Resolve as soon as headers are loaded
+                    if (xhr.readyState === XMLHttpRequest.HEADERS_RECEIVED) {
+                        var blobBody = new Promise(function (resolve, reject) {
+                            xhr.addEventListener("load", function () {
+                                resolve(xhr.response);
+                            });
+                            rejectOnTerminalEvent(request, xhr, reject);
+                        });
+                        resolve({
+                            request: request,
+                            status: xhr.status,
+                            headers: parseHeaders(xhr),
+                            blobBody: blobBody,
+                        });
+                    }
+                });
+                rejectOnTerminalEvent(request, xhr, reject);
+            });
+        }
+        else {
+            return new Promise(function (resolve, reject) {
+                xhr.addEventListener("load", function () {
+                    return resolve({
+                        request: request,
+                        status: xhr.status,
+                        headers: parseHeaders(xhr),
+                        bodyAsText: xhr.responseText,
+                    });
+                });
+                rejectOnTerminalEvent(request, xhr, reject);
+            });
+        }
+    };
+    return XhrHttpClient;
+}());
+
+function addProgressListener(xhr, listener) {
+    if (listener) {
+        xhr.addEventListener("progress", function (rawEvent) {
+            return listener({
+                loadedBytes: rawEvent.loaded,
+            });
+        });
+    }
+}
+// exported locally for testing
+function parseHeaders(xhr) {
+    var responseHeaders = new _httpHeaders__WEBPACK_IMPORTED_MODULE_0__.HttpHeaders();
+    var headerLines = xhr
+        .getAllResponseHeaders()
+        .trim()
+        .split(/[\r\n]+/);
+    for (var _i = 0, headerLines_1 = headerLines; _i < headerLines_1.length; _i++) {
+        var line = headerLines_1[_i];
+        var index = line.indexOf(":");
+        var headerName = line.slice(0, index);
+        var headerValue = line.slice(index + 2);
+        responseHeaders.set(headerName, headerValue);
+    }
+    return responseHeaders;
+}
+function rejectOnTerminalEvent(request, xhr, reject) {
+    xhr.addEventListener("error", function () {
+        return reject(new _restError__WEBPACK_IMPORTED_MODULE_1__.RestError("Failed to send request to " + request.url, _restError__WEBPACK_IMPORTED_MODULE_1__.RestError.REQUEST_SEND_ERROR, undefined, request));
+    });
+    xhr.addEventListener("abort", function () {
+        return reject(new _restError__WEBPACK_IMPORTED_MODULE_1__.RestError("The request was aborted", _restError__WEBPACK_IMPORTED_MODULE_1__.RestError.REQUEST_ABORTED_ERROR, undefined, request));
+    });
+    xhr.addEventListener("timeout", function () {
+        return reject(new _restError__WEBPACK_IMPORTED_MODULE_1__.RestError("timeout of " + xhr.timeout + "ms exceeded", _restError__WEBPACK_IMPORTED_MODULE_1__.RestError.REQUEST_SEND_ERROR, undefined, request));
+    });
+}
+//# sourceMappingURL=xhrHttpClient.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/node_modules/tslib/tslib.es6.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/node_modules/tslib/tslib.es6.js ***!
+  \************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "__extends": () => (/* binding */ __extends),
+/* harmony export */   "__assign": () => (/* binding */ __assign),
+/* harmony export */   "__rest": () => (/* binding */ __rest),
+/* harmony export */   "__decorate": () => (/* binding */ __decorate),
+/* harmony export */   "__param": () => (/* binding */ __param),
+/* harmony export */   "__metadata": () => (/* binding */ __metadata),
+/* harmony export */   "__awaiter": () => (/* binding */ __awaiter),
+/* harmony export */   "__generator": () => (/* binding */ __generator),
+/* harmony export */   "__createBinding": () => (/* binding */ __createBinding),
+/* harmony export */   "__exportStar": () => (/* binding */ __exportStar),
+/* harmony export */   "__values": () => (/* binding */ __values),
+/* harmony export */   "__read": () => (/* binding */ __read),
+/* harmony export */   "__spread": () => (/* binding */ __spread),
+/* harmony export */   "__spreadArrays": () => (/* binding */ __spreadArrays),
+/* harmony export */   "__await": () => (/* binding */ __await),
+/* harmony export */   "__asyncGenerator": () => (/* binding */ __asyncGenerator),
+/* harmony export */   "__asyncDelegator": () => (/* binding */ __asyncDelegator),
+/* harmony export */   "__asyncValues": () => (/* binding */ __asyncValues),
+/* harmony export */   "__makeTemplateObject": () => (/* binding */ __makeTemplateObject),
+/* harmony export */   "__importStar": () => (/* binding */ __importStar),
+/* harmony export */   "__importDefault": () => (/* binding */ __importDefault),
+/* harmony export */   "__classPrivateFieldGet": () => (/* binding */ __classPrivateFieldGet),
+/* harmony export */   "__classPrivateFieldSet": () => (/* binding */ __classPrivateFieldSet)
+/* harmony export */ });
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */
+/* global Reflect, Promise */
+
+var extendStatics = function(d, b) {
+    extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return extendStatics(d, b);
+};
+
+function __extends(d, b) {
+    extendStatics(d, b);
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+}
+
+var __assign = function() {
+    __assign = Object.assign || function __assign(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+        }
+        return t;
+    }
+    return __assign.apply(this, arguments);
+}
+
+function __rest(s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+                t[p[i]] = s[p[i]];
+        }
+    return t;
+}
+
+function __decorate(decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+}
+
+function __param(paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+}
+
+function __metadata(metadataKey, metadataValue) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(metadataKey, metadataValue);
+}
+
+function __awaiter(thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+}
+
+function __generator(thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+}
+
+function __createBinding(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}
+
+function __exportStar(m, exports) {
+    for (var p in m) if (p !== "default" && !exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+
+function __values(o) {
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
+    if (m) return m.call(o);
+    if (o && typeof o.length === "number") return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+}
+
+function __read(o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+}
+
+function __spread() {
+    for (var ar = [], i = 0; i < arguments.length; i++)
+        ar = ar.concat(__read(arguments[i]));
+    return ar;
+}
+
+function __spreadArrays() {
+    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+    for (var r = Array(s), k = 0, i = 0; i < il; i++)
+        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+            r[k] = a[j];
+    return r;
+};
+
+function __await(v) {
+    return this instanceof __await ? (this.v = v, this) : new __await(v);
+}
+
+function __asyncGenerator(thisArg, _arguments, generator) {
+    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+    var g = generator.apply(thisArg, _arguments || []), i, q = [];
+    return i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i;
+    function verb(n) { if (g[n]) i[n] = function (v) { return new Promise(function (a, b) { q.push([n, v, a, b]) > 1 || resume(n, v); }); }; }
+    function resume(n, v) { try { step(g[n](v)); } catch (e) { settle(q[0][3], e); } }
+    function step(r) { r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r); }
+    function fulfill(value) { resume("next", value); }
+    function reject(value) { resume("throw", value); }
+    function settle(f, v) { if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]); }
+}
+
+function __asyncDelegator(o) {
+    var i, p;
+    return i = {}, verb("next"), verb("throw", function (e) { throw e; }), verb("return"), i[Symbol.iterator] = function () { return this; }, i;
+    function verb(n, f) { i[n] = o[n] ? function (v) { return (p = !p) ? { value: __await(o[n](v)), done: n === "return" } : f ? f(v) : v; } : f; }
+}
+
+function __asyncValues(o) {
+    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+    var m = o[Symbol.asyncIterator], i;
+    return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i);
+    function verb(n) { i[n] = o[n] && function (v) { return new Promise(function (resolve, reject) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }
+    function settle(resolve, reject, d, v) { Promise.resolve(v).then(function(v) { resolve({ value: v, done: d }); }, reject); }
+}
+
+function __makeTemplateObject(cooked, raw) {
+    if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
+    return cooked;
+};
+
+function __importStar(mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+    result.default = mod;
+    return result;
+}
+
+function __importDefault(mod) {
+    return (mod && mod.__esModule) ? mod : { default: mod };
+}
+
+function __classPrivateFieldGet(receiver, privateMap) {
+    if (!privateMap.has(receiver)) {
+        throw new TypeError("attempted to get private field on non-instance");
+    }
+    return privateMap.get(receiver);
+}
+
+function __classPrivateFieldSet(receiver, privateMap, value) {
+    if (!privateMap.has(receiver)) {
+        throw new TypeError("attempted to set private field on non-instance");
+    }
+    privateMap.set(receiver, value);
+    return value;
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/node_modules/uuid/dist/esm-browser/regex.js":
+/*!************************************************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/node_modules/uuid/dist/esm-browser/regex.js ***!
+  \************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (/^(?:[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}|00000000-0000-0000-0000-000000000000)$/i);
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/node_modules/uuid/dist/esm-browser/rng.js":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/node_modules/uuid/dist/esm-browser/rng.js ***!
+  \**********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ rng)
+/* harmony export */ });
+// Unique ID creation requires a high quality random # generator. In the browser we therefore
+// require the crypto API and do not support built-in fallback to lower quality random number
+// generators (like Math.random()).
+var getRandomValues;
+var rnds8 = new Uint8Array(16);
+function rng() {
+  // lazy load so that environments that need to polyfill have a chance to do so
+  if (!getRandomValues) {
+    // getRandomValues needs to be invoked in a context where "this" is a Crypto implementation. Also,
+    // find the complete implementation of crypto (msCrypto) on IE11.
+    getRandomValues = typeof crypto !== 'undefined' && crypto.getRandomValues && crypto.getRandomValues.bind(crypto) || typeof msCrypto !== 'undefined' && typeof msCrypto.getRandomValues === 'function' && msCrypto.getRandomValues.bind(msCrypto);
+
+    if (!getRandomValues) {
+      throw new Error('crypto.getRandomValues() not supported. See https://github.com/uuidjs/uuid#getrandomvalues-not-supported');
+    }
+  }
+
+  return getRandomValues(rnds8);
+}
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/node_modules/uuid/dist/esm-browser/stringify.js":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/node_modules/uuid/dist/esm-browser/stringify.js ***!
+  \****************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _validate_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./validate.js */ "./node_modules/@azure/ms-rest-js/node_modules/uuid/dist/esm-browser/validate.js");
+
+/**
+ * Convert array of 16 byte values to UUID string format of the form:
+ * XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+ */
+
+var byteToHex = [];
+
+for (var i = 0; i < 256; ++i) {
+  byteToHex.push((i + 0x100).toString(16).substr(1));
+}
+
+function stringify(arr) {
+  var offset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+  // Note: Be careful editing this code!  It's been tuned for performance
+  // and works in ways you may not expect. See https://github.com/uuidjs/uuid/pull/434
+  var uuid = (byteToHex[arr[offset + 0]] + byteToHex[arr[offset + 1]] + byteToHex[arr[offset + 2]] + byteToHex[arr[offset + 3]] + '-' + byteToHex[arr[offset + 4]] + byteToHex[arr[offset + 5]] + '-' + byteToHex[arr[offset + 6]] + byteToHex[arr[offset + 7]] + '-' + byteToHex[arr[offset + 8]] + byteToHex[arr[offset + 9]] + '-' + byteToHex[arr[offset + 10]] + byteToHex[arr[offset + 11]] + byteToHex[arr[offset + 12]] + byteToHex[arr[offset + 13]] + byteToHex[arr[offset + 14]] + byteToHex[arr[offset + 15]]).toLowerCase(); // Consistency check for valid UUID.  If this throws, it's likely due to one
+  // of the following:
+  // - One or more input array values don't map to a hex octet (leading to
+  // "undefined" in the uuid)
+  // - Invalid input values for the RFC `version` or `variant` fields
+
+  if (!(0,_validate_js__WEBPACK_IMPORTED_MODULE_0__.default)(uuid)) {
+    throw TypeError('Stringified UUID is invalid');
+  }
+
+  return uuid;
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (stringify);
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/node_modules/uuid/dist/esm-browser/v4.js":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/node_modules/uuid/dist/esm-browser/v4.js ***!
+  \*********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _rng_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./rng.js */ "./node_modules/@azure/ms-rest-js/node_modules/uuid/dist/esm-browser/rng.js");
+/* harmony import */ var _stringify_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./stringify.js */ "./node_modules/@azure/ms-rest-js/node_modules/uuid/dist/esm-browser/stringify.js");
+
+
+
+function v4(options, buf, offset) {
+  options = options || {};
+  var rnds = options.random || (options.rng || _rng_js__WEBPACK_IMPORTED_MODULE_0__.default)(); // Per 4.4, set bits for version and `clock_seq_hi_and_reserved`
+
+  rnds[6] = rnds[6] & 0x0f | 0x40;
+  rnds[8] = rnds[8] & 0x3f | 0x80; // Copy bytes to buffer, if provided
+
+  if (buf) {
+    offset = offset || 0;
+
+    for (var i = 0; i < 16; ++i) {
+      buf[offset + i] = rnds[i];
+    }
+
+    return buf;
+  }
+
+  return (0,_stringify_js__WEBPACK_IMPORTED_MODULE_1__.default)(rnds);
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (v4);
+
+/***/ }),
+
+/***/ "./node_modules/@azure/ms-rest-js/node_modules/uuid/dist/esm-browser/validate.js":
+/*!***************************************************************************************!*\
+  !*** ./node_modules/@azure/ms-rest-js/node_modules/uuid/dist/esm-browser/validate.js ***!
+  \***************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _regex_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./regex.js */ "./node_modules/@azure/ms-rest-js/node_modules/uuid/dist/esm-browser/regex.js");
+
+
+function validate(uuid) {
+  return typeof uuid === 'string' && _regex_js__WEBPACK_IMPORTED_MODULE_0__.default.test(uuid);
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (validate);
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/regenerator/index.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
+  \**********************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/regenerator-runtime/runtime.js");
+
+
+/***/ }),
+
 /***/ "./node_modules/axios/index.js":
 /*!*************************************!*\
   !*** ./node_modules/axios/index.js ***!
@@ -1838,9 +12966,614 @@ module.exports = {
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
   \*****************************/
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); // import msRest from '@azure/ms-rest-js';
+// import Face from '@azure/cognitiveservices-face';
+// import uuid from 'uuid/v4';
+
+
+var msRest = __webpack_require__(/*! @azure/ms-rest-js */ "./node_modules/@azure/ms-rest-js/es/lib/msRest.js");
+
+var Face = __webpack_require__(/*! @azure/cognitiveservices-face */ "./node_modules/@azure/cognitiveservices-face/esm/faceClient.js");
+
+var uuid = __webpack_require__(/*! uuid/v4 */ "./node_modules/uuid/v4.js");
+
+var key = "cf421e82604340f59cb64eaec8cb1aa1";
+var endpoint = "https://vuillermoz.cognitiveservices.azure.com/";
+var credentials = new msRest.ApiKeyCredentials({
+  inHeader: {
+    'Ocp-Apim-Subscription-Key': key
+  }
+});
+var client = new Face.FaceClient(credentials, endpoint);
+var image_base_url = "https://csdx.blob.core.windows.net/resources/Face/Images/"; // const image_base_url = "https://larry-lam.com/images/";
+
+var person_group_id = uuid();
+
+function sleep(ms) {
+  return new Promise(function (resolve) {
+    return setTimeout(resolve, ms);
+  });
+}
+
+function DetectFaceExtract() {
+  return _DetectFaceExtract.apply(this, arguments);
+}
+
+function _DetectFaceExtract() {
+  _DetectFaceExtract = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3() {
+    var image_file_names;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee3$(_context3) {
+      while (1) {
+        switch (_context3.prev = _context3.next) {
+          case 0:
+            console.log("========DETECT FACES========");
+            console.log(); // Create a list of images
+
+            image_file_names = ["detection1.jpg", // single female with glasses
+            // "detection2.jpg", // (optional: single man)
+            // "detection3.jpg", // (optional: single male construction worker)
+            // "detection4.jpg", // (optional: 3 people at cafe, 1 is blurred)
+            "detection5.jpg", // family, woman child man
+            "detection6.jpg" // elderly couple, male female
+            ]; // NOTE await does not work properly in for, forEach, and while loops. Use Array.map and Promise.all instead.
+
+            _context3.next = 5;
+            return Promise.all(image_file_names.map( /*#__PURE__*/function () {
+              var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2(image_file_name) {
+                var detected_faces;
+                return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
+                  while (1) {
+                    switch (_context2.prev = _context2.next) {
+                      case 0:
+                        _context2.next = 2;
+                        return client.face.detectWithUrl(image_base_url + image_file_name, {
+                          returnFaceAttributes: ["Accessories", "Age", "Blur", "Emotion", "Exposure", "FacialHair", "Gender", "Glasses", "Hair", "HeadPose", "Makeup", "Noise", "Occlusion", "Smile"],
+                          // We specify detection model 1 because we are retrieving attributes.
+                          detectionModel: "detection_01"
+                        });
+
+                      case 2:
+                        detected_faces = _context2.sent;
+                        console.log(detected_faces.length + " face(s) detected from image " + image_file_name + ".");
+                        console.log("Face attributes for face(s) in " + image_file_name + ":"); // Parse and print all attributes of each detected face.
+
+                        // Parse and print all attributes of each detected face.
+                        detected_faces.forEach( /*#__PURE__*/function () {
+                          var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee(face) {
+                            var accessories, emotions, emotion_threshold, color, highest_confidence;
+                            return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+                              while (1) {
+                                switch (_context.prev = _context.next) {
+                                  case 0:
+                                    // Get the bounding box of the face
+                                    console.log("Bounding box:\n  Left: " + face.faceRectangle.left + "\n  Top: " + face.faceRectangle.top + "\n  Width: " + face.faceRectangle.width + "\n  Height: " + face.faceRectangle.height); // Get the accessories of the face
+
+                                    // Get the accessories of the face
+                                    accessories = face.faceAttributes.accessories.join();
+
+                                    if (0 === accessories.length) {
+                                      console.log("No accessories detected.");
+                                    } else {
+                                      console.log("Accessories: " + accessories);
+                                    } // Get face other attributes
+
+
+                                    // Get face other attributes
+                                    console.log("Age: " + face.faceAttributes.age);
+                                    console.log("Blur: " + face.faceAttributes.blur.blurLevel); // Get emotion on the face
+
+                                    // Get emotion on the face
+                                    emotions = "";
+                                    emotion_threshold = 0.0;
+
+                                    if (face.faceAttributes.emotion.anger > emotion_threshold) {
+                                      emotions += "anger, ";
+                                    }
+
+                                    if (face.faceAttributes.emotion.contempt > emotion_threshold) {
+                                      emotions += "contempt, ";
+                                    }
+
+                                    if (face.faceAttributes.emotion.disgust > emotion_threshold) {
+                                      emotions += "disgust, ";
+                                    }
+
+                                    if (face.faceAttributes.emotion.fear > emotion_threshold) {
+                                      emotions += "fear, ";
+                                    }
+
+                                    if (face.faceAttributes.emotion.happiness > emotion_threshold) {
+                                      emotions += "happiness, ";
+                                    }
+
+                                    if (face.faceAttributes.emotion.neutral > emotion_threshold) {
+                                      emotions += "neutral, ";
+                                    }
+
+                                    if (face.faceAttributes.emotion.sadness > emotion_threshold) {
+                                      emotions += "sadness, ";
+                                    }
+
+                                    if (face.faceAttributes.emotion.surprise > emotion_threshold) {
+                                      emotions += "surprise, ";
+                                    }
+
+                                    if (emotions.length > 0) {
+                                      console.log("Emotions: " + emotions.slice(0, -2));
+                                    } else {
+                                      console.log("No emotions detected.");
+                                    } // Get more face attributes
+
+
+                                    // Get more face attributes
+                                    console.log("Exposure: " + face.faceAttributes.exposure.exposureLevel);
+
+                                    if (face.faceAttributes.facialHair.moustache + face.faceAttributes.facialHair.beard + face.faceAttributes.facialHair.sideburns > 0) {
+                                      console.log("FacialHair: Yes");
+                                    } else {
+                                      console.log("FacialHair: No");
+                                    }
+
+                                    console.log("Gender: " + face.faceAttributes.gender);
+                                    console.log("Glasses: " + face.faceAttributes.glasses); // Get hair color
+
+                                    // Get hair color
+                                    color = "";
+
+                                    if (face.faceAttributes.hair.hairColor.length === 0) {
+                                      if (face.faceAttributes.hair.invisible) {
+                                        color = "Invisible";
+                                      } else {
+                                        color = "Bald";
+                                      }
+                                    } else {
+                                      color = "Unknown";
+                                      highest_confidence = 0.0;
+                                      face.faceAttributes.hair.hairColor.forEach(function (hair_color) {
+                                        if (hair_color.confidence > highest_confidence) {
+                                          highest_confidence = hair_color.confidence;
+                                          color = hair_color.color;
+                                        }
+                                      });
+                                    }
+
+                                    console.log("Hair: " + color); // Get more attributes
+
+                                    // Get more attributes
+                                    console.log("Head pose:");
+                                    console.log("  Pitch: " + face.faceAttributes.headPose.pitch);
+                                    console.log("  Roll: " + face.faceAttributes.headPose.roll);
+                                    console.log("  Yaw: " + face.faceAttributes.headPose.yaw);
+                                    console.log("Makeup: " + (face.faceAttributes.makeup.eyeMakeup || face.faceAttributes.makeup.lipMakeup ? "Yes" : "No"));
+                                    console.log("Noise: " + face.faceAttributes.noise.noiseLevel);
+                                    console.log("Occlusion:");
+                                    console.log("  Eye occluded: " + (face.faceAttributes.occlusion.eyeOccluded ? "Yes" : "No"));
+                                    console.log("  Forehead occluded: " + (face.faceAttributes.occlusion.foreheadOccluded ? "Yes" : "No"));
+                                    console.log("  Mouth occluded: " + (face.faceAttributes.occlusion.mouthOccluded ? "Yes" : "No"));
+                                    console.log("Smile: " + face.faceAttributes.smile);
+                                    console.log();
+
+                                  case 35:
+                                  case "end":
+                                    return _context.stop();
+                                }
+                              }
+                            }, _callee);
+                          }));
+
+                          return function (_x6) {
+                            return _ref2.apply(this, arguments);
+                          };
+                        }());
+
+                      case 6:
+                      case "end":
+                        return _context2.stop();
+                    }
+                  }
+                }, _callee2);
+              }));
+
+              return function (_x5) {
+                return _ref.apply(this, arguments);
+              };
+            }()));
+
+          case 5:
+          case "end":
+            return _context3.stop();
+        }
+      }
+    }, _callee3);
+  }));
+  return _DetectFaceExtract.apply(this, arguments);
+}
+
+function DetectFaceRecognize(_x) {
+  return _DetectFaceRecognize.apply(this, arguments);
+}
+
+function _DetectFaceRecognize() {
+  _DetectFaceRecognize = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee4(url) {
+    var detected_faces;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee4$(_context4) {
+      while (1) {
+        switch (_context4.prev = _context4.next) {
+          case 0:
+            _context4.next = 2;
+            return client.face.detectWithUrl(url, {
+              detectionModel: "detection_03",
+              recognitionModel: "recognition_04"
+            });
+
+          case 2:
+            detected_faces = _context4.sent;
+            return _context4.abrupt("return", detected_faces);
+
+          case 4:
+          case "end":
+            return _context4.stop();
+        }
+      }
+    }, _callee4);
+  }));
+  return _DetectFaceRecognize.apply(this, arguments);
+}
+
+function FindSimilar() {
+  return _FindSimilar.apply(this, arguments);
+}
+
+function _FindSimilar() {
+  _FindSimilar = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee6() {
+    var source_image_file_name, target_image_file_names, target_face_ids, detected_faces, results;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee6$(_context6) {
+      while (1) {
+        switch (_context6.prev = _context6.next) {
+          case 0:
+            console.log("========FIND SIMILAR========");
+            console.log();
+            source_image_file_name = "findsimilar.jpg";
+            target_image_file_names = ["Family1-Dad1.jpg", "Family1-Daughter1.jpg", "Family1-Mom1.jpg", "Family1-Son1.jpg", "Family2-Lady1.jpg", "Family2-Man1.jpg", "Family3-Lady1.jpg", "Family3-Man1.jpg"];
+            _context6.next = 6;
+            return Promise.all(target_image_file_names.map( /*#__PURE__*/function () {
+              var _ref3 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee5(target_image_file_name) {
+                var faces;
+                return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee5$(_context5) {
+                  while (1) {
+                    switch (_context5.prev = _context5.next) {
+                      case 0:
+                        _context5.next = 2;
+                        return DetectFaceRecognize(image_base_url + target_image_file_name);
+
+                      case 2:
+                        faces = _context5.sent;
+                        console.log(faces.length + " face(s) detected from image: " + target_image_file_name + ".");
+                        return _context5.abrupt("return", faces.map(function (face) {
+                          return face.faceId;
+                        }));
+
+                      case 6:
+                      case "end":
+                        return _context5.stop();
+                    }
+                  }
+                }, _callee5);
+              }));
+
+              return function (_x7) {
+                return _ref3.apply(this, arguments);
+              };
+            }()));
+
+          case 6:
+            target_face_ids = _context6.sent.flat();
+            _context6.next = 9;
+            return DetectFaceRecognize(image_base_url + source_image_file_name);
+
+          case 9:
+            detected_faces = _context6.sent;
+            _context6.next = 12;
+            return client.face.findSimilar(detected_faces[0].faceId, {
+              faceIds: target_face_ids
+            });
+
+          case 12:
+            results = _context6.sent;
+            results.forEach(function (result) {
+              console.log("Faces from: " + source_image_file_name + " and ID: " + result.faceId + " are similar with confidence: " + result.confidence + ".");
+            });
+            console.log();
+
+          case 15:
+          case "end":
+            return _context6.stop();
+        }
+      }
+    }, _callee6);
+  }));
+  return _FindSimilar.apply(this, arguments);
+}
+
+function AddFacesToPersonGroup(_x2, _x3) {
+  return _AddFacesToPersonGroup.apply(this, arguments);
+}
+
+function _AddFacesToPersonGroup() {
+  _AddFacesToPersonGroup = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee9(person_dictionary, person_group_id) {
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee9$(_context9) {
+      while (1) {
+        switch (_context9.prev = _context9.next) {
+          case 0:
+            console.log("Adding faces to person group..."); // The similar faces will be grouped into a single person group person.
+
+            _context9.next = 3;
+            return Promise.all(Object.keys(person_dictionary).map( /*#__PURE__*/function () {
+              var _ref4 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee8(key) {
+                var value, person;
+                return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee8$(_context8) {
+                  while (1) {
+                    switch (_context8.prev = _context8.next) {
+                      case 0:
+                        value = person_dictionary[key]; // Wait briefly so we do not exceed rate limits.
+
+                        _context8.next = 3;
+                        return sleep(1000);
+
+                      case 3:
+                        _context8.next = 5;
+                        return client.personGroupPerson.create(person_group_id, {
+                          name: key
+                        });
+
+                      case 5:
+                        person = _context8.sent;
+                        console.log("Create a person group person: " + key + "."); // Add faces to the person group person.
+
+                        _context8.next = 9;
+                        return Promise.all(value.map( /*#__PURE__*/function () {
+                          var _ref5 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee7(similar_image) {
+                            return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee7$(_context7) {
+                              while (1) {
+                                switch (_context7.prev = _context7.next) {
+                                  case 0:
+                                    console.log("Add face to the person group person: (" + key + ") from image: " + similar_image + ".");
+                                    _context7.next = 3;
+                                    return client.personGroupPerson.addFaceFromUrl(person_group_id, person.personId, image_base_url + similar_image);
+
+                                  case 3:
+                                  case "end":
+                                    return _context7.stop();
+                                }
+                              }
+                            }, _callee7);
+                          }));
+
+                          return function (_x9) {
+                            return _ref5.apply(this, arguments);
+                          };
+                        }()));
+
+                      case 9:
+                      case "end":
+                        return _context8.stop();
+                    }
+                  }
+                }, _callee8);
+              }));
+
+              return function (_x8) {
+                return _ref4.apply(this, arguments);
+              };
+            }()));
+
+          case 3:
+            console.log("Done adding faces to person group.");
+
+          case 4:
+          case "end":
+            return _context9.stop();
+        }
+      }
+    }, _callee9);
+  }));
+  return _AddFacesToPersonGroup.apply(this, arguments);
+}
+
+function WaitForPersonGroupTraining(_x4) {
+  return _WaitForPersonGroupTraining.apply(this, arguments);
+}
+
+function _WaitForPersonGroupTraining() {
+  _WaitForPersonGroupTraining = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee10(person_group_id) {
+    var result;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee10$(_context10) {
+      while (1) {
+        switch (_context10.prev = _context10.next) {
+          case 0:
+            // Wait so we do not exceed rate limits.
+            console.log("Waiting 1 seconds...");
+            _context10.next = 3;
+            return sleep(1000);
+
+          case 3:
+            _context10.next = 5;
+            return client.personGroup.getTrainingStatus(person_group_id);
+
+          case 5:
+            result = _context10.sent;
+            console.log("Training status: " + result.status + ".");
+
+            if (!(result.status !== "succeeded")) {
+              _context10.next = 10;
+              break;
+            }
+
+            _context10.next = 10;
+            return WaitForPersonGroupTraining(person_group_id);
+
+          case 10:
+          case "end":
+            return _context10.stop();
+        }
+      }
+    }, _callee10);
+  }));
+  return _WaitForPersonGroupTraining.apply(this, arguments);
+}
+
+function IdentifyInPersonGroup() {
+  return _IdentifyInPersonGroup.apply(this, arguments);
+}
+
+function _IdentifyInPersonGroup() {
+  _IdentifyInPersonGroup = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee12() {
+    var person_dictionary, source_image_file_name, face_ids, results;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee12$(_context12) {
+      while (1) {
+        switch (_context12.prev = _context12.next) {
+          case 0:
+            console.log("========IDENTIFY FACES========");
+            console.log(); // Create a dictionary for all your images, grouping similar ones under the same key.
+
+            person_dictionary = {
+              "Family1-Dad": ["Family1-Dad1.jpg", "Family1-Dad2.jpg"],
+              "Family1-Mom": ["Family1-Mom1.jpg", "Family1-Mom2.jpg"],
+              "Family1-Son": ["Family1-Son1.jpg", "Family1-Son2.jpg"],
+              "Family1-Daughter": ["Family1-Daughter1.jpg", "Family1-Daughter2.jpg"],
+              "Family2-Lady": ["Family2-Lady1.jpg", "Family2-Lady2.jpg"],
+              "Family2-Man": ["Family2-Man1.jpg", "Family2-Man2.jpg"]
+            }; // A group photo that includes some of the persons you seek to identify from your dictionary.
+
+            source_image_file_name = "identification1.jpg"; // Create a person group. 
+
+            console.log("Creating a person group with ID: " + person_group_id);
+            _context12.next = 7;
+            return client.personGroup.create(person_group_id, {
+              name: person_group_id,
+              recognitionModel: "recognition_04"
+            });
+
+          case 7:
+            _context12.next = 9;
+            return AddFacesToPersonGroup(person_dictionary, person_group_id);
+
+          case 9:
+            // Start to train the person group.
+            console.log();
+            console.log("Training person group: " + person_group_id + ".");
+            _context12.next = 13;
+            return client.personGroup.train(person_group_id);
+
+          case 13:
+            _context12.next = 15;
+            return WaitForPersonGroupTraining(person_group_id);
+
+          case 15:
+            console.log(); // Detect faces from source image url.
+
+            _context12.next = 18;
+            return DetectFaceRecognize(image_base_url + source_image_file_name);
+
+          case 18:
+            face_ids = _context12.sent.map(function (face) {
+              return face.faceId;
+            });
+            _context12.next = 21;
+            return client.face.identify(face_ids, {
+              personGroupId: person_group_id
+            });
+
+          case 21:
+            results = _context12.sent;
+            _context12.next = 24;
+            return Promise.all(results.map( /*#__PURE__*/function () {
+              var _ref6 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee11(result) {
+                var person;
+                return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee11$(_context11) {
+                  while (1) {
+                    switch (_context11.prev = _context11.next) {
+                      case 0:
+                        _context11.next = 2;
+                        return client.personGroupPerson.get(person_group_id, result.candidates[0].personId);
+
+                      case 2:
+                        person = _context11.sent;
+                        console.log("Person: " + person.name + " is identified for face in: " + source_image_file_name + " with ID: " + result.faceId + ". Confidence: " + result.candidates[0].confidence + ".");
+
+                      case 4:
+                      case "end":
+                        return _context11.stop();
+                    }
+                  }
+                }, _callee11);
+              }));
+
+              return function (_x10) {
+                return _ref6.apply(this, arguments);
+              };
+            }()));
+
+          case 24:
+            console.log();
+
+          case 25:
+          case "end":
+            return _context12.stop();
+        }
+      }
+    }, _callee12);
+  }));
+  return _IdentifyInPersonGroup.apply(this, arguments);
+}
+
+function main() {
+  return _main.apply(this, arguments);
+}
+
+function _main() {
+  _main = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee13() {
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee13$(_context13) {
+      while (1) {
+        switch (_context13.prev = _context13.next) {
+          case 0:
+            _context13.next = 2;
+            return DetectFaceExtract();
+
+          case 2:
+            _context13.next = 4;
+            return FindSimilar();
+
+          case 4:
+            _context13.next = 6;
+            return IdentifyInPersonGroup();
+
+          case 6:
+            console.log("Done.");
+
+          case 7:
+          case "end":
+            return _context13.stop();
+        }
+      }
+    }, _callee13);
+  }));
+  return _main.apply(this, arguments);
+}
+
+main();
 
 /***/ }),
 
@@ -19292,6 +31025,883 @@ process.chdir = function (dir) {
 process.umask = function() { return 0; };
 
 
+/***/ }),
+
+/***/ "./node_modules/regenerator-runtime/runtime.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/regenerator-runtime/runtime.js ***!
+  \*****************************************************/
+/***/ ((module) => {
+
+/**
+ * Copyright (c) 2014-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+var runtime = (function (exports) {
+  "use strict";
+
+  var Op = Object.prototype;
+  var hasOwn = Op.hasOwnProperty;
+  var undefined; // More compressible than void 0.
+  var $Symbol = typeof Symbol === "function" ? Symbol : {};
+  var iteratorSymbol = $Symbol.iterator || "@@iterator";
+  var asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator";
+  var toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
+
+  function define(obj, key, value) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+    return obj[key];
+  }
+  try {
+    // IE 8 has a broken Object.defineProperty that only works on DOM objects.
+    define({}, "");
+  } catch (err) {
+    define = function(obj, key, value) {
+      return obj[key] = value;
+    };
+  }
+
+  function wrap(innerFn, outerFn, self, tryLocsList) {
+    // If outerFn provided and outerFn.prototype is a Generator, then outerFn.prototype instanceof Generator.
+    var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator;
+    var generator = Object.create(protoGenerator.prototype);
+    var context = new Context(tryLocsList || []);
+
+    // The ._invoke method unifies the implementations of the .next,
+    // .throw, and .return methods.
+    generator._invoke = makeInvokeMethod(innerFn, self, context);
+
+    return generator;
+  }
+  exports.wrap = wrap;
+
+  // Try/catch helper to minimize deoptimizations. Returns a completion
+  // record like context.tryEntries[i].completion. This interface could
+  // have been (and was previously) designed to take a closure to be
+  // invoked without arguments, but in all the cases we care about we
+  // already have an existing method we want to call, so there's no need
+  // to create a new function object. We can even get away with assuming
+  // the method takes exactly one argument, since that happens to be true
+  // in every case, so we don't have to touch the arguments object. The
+  // only additional allocation required is the completion record, which
+  // has a stable shape and so hopefully should be cheap to allocate.
+  function tryCatch(fn, obj, arg) {
+    try {
+      return { type: "normal", arg: fn.call(obj, arg) };
+    } catch (err) {
+      return { type: "throw", arg: err };
+    }
+  }
+
+  var GenStateSuspendedStart = "suspendedStart";
+  var GenStateSuspendedYield = "suspendedYield";
+  var GenStateExecuting = "executing";
+  var GenStateCompleted = "completed";
+
+  // Returning this object from the innerFn has the same effect as
+  // breaking out of the dispatch switch statement.
+  var ContinueSentinel = {};
+
+  // Dummy constructor functions that we use as the .constructor and
+  // .constructor.prototype properties for functions that return Generator
+  // objects. For full spec compliance, you may wish to configure your
+  // minifier not to mangle the names of these two functions.
+  function Generator() {}
+  function GeneratorFunction() {}
+  function GeneratorFunctionPrototype() {}
+
+  // This is a polyfill for %IteratorPrototype% for environments that
+  // don't natively support it.
+  var IteratorPrototype = {};
+  IteratorPrototype[iteratorSymbol] = function () {
+    return this;
+  };
+
+  var getProto = Object.getPrototypeOf;
+  var NativeIteratorPrototype = getProto && getProto(getProto(values([])));
+  if (NativeIteratorPrototype &&
+      NativeIteratorPrototype !== Op &&
+      hasOwn.call(NativeIteratorPrototype, iteratorSymbol)) {
+    // This environment has a native %IteratorPrototype%; use it instead
+    // of the polyfill.
+    IteratorPrototype = NativeIteratorPrototype;
+  }
+
+  var Gp = GeneratorFunctionPrototype.prototype =
+    Generator.prototype = Object.create(IteratorPrototype);
+  GeneratorFunction.prototype = Gp.constructor = GeneratorFunctionPrototype;
+  GeneratorFunctionPrototype.constructor = GeneratorFunction;
+  GeneratorFunction.displayName = define(
+    GeneratorFunctionPrototype,
+    toStringTagSymbol,
+    "GeneratorFunction"
+  );
+
+  // Helper for defining the .next, .throw, and .return methods of the
+  // Iterator interface in terms of a single ._invoke method.
+  function defineIteratorMethods(prototype) {
+    ["next", "throw", "return"].forEach(function(method) {
+      define(prototype, method, function(arg) {
+        return this._invoke(method, arg);
+      });
+    });
+  }
+
+  exports.isGeneratorFunction = function(genFun) {
+    var ctor = typeof genFun === "function" && genFun.constructor;
+    return ctor
+      ? ctor === GeneratorFunction ||
+        // For the native GeneratorFunction constructor, the best we can
+        // do is to check its .name property.
+        (ctor.displayName || ctor.name) === "GeneratorFunction"
+      : false;
+  };
+
+  exports.mark = function(genFun) {
+    if (Object.setPrototypeOf) {
+      Object.setPrototypeOf(genFun, GeneratorFunctionPrototype);
+    } else {
+      genFun.__proto__ = GeneratorFunctionPrototype;
+      define(genFun, toStringTagSymbol, "GeneratorFunction");
+    }
+    genFun.prototype = Object.create(Gp);
+    return genFun;
+  };
+
+  // Within the body of any async function, `await x` is transformed to
+  // `yield regeneratorRuntime.awrap(x)`, so that the runtime can test
+  // `hasOwn.call(value, "__await")` to determine if the yielded value is
+  // meant to be awaited.
+  exports.awrap = function(arg) {
+    return { __await: arg };
+  };
+
+  function AsyncIterator(generator, PromiseImpl) {
+    function invoke(method, arg, resolve, reject) {
+      var record = tryCatch(generator[method], generator, arg);
+      if (record.type === "throw") {
+        reject(record.arg);
+      } else {
+        var result = record.arg;
+        var value = result.value;
+        if (value &&
+            typeof value === "object" &&
+            hasOwn.call(value, "__await")) {
+          return PromiseImpl.resolve(value.__await).then(function(value) {
+            invoke("next", value, resolve, reject);
+          }, function(err) {
+            invoke("throw", err, resolve, reject);
+          });
+        }
+
+        return PromiseImpl.resolve(value).then(function(unwrapped) {
+          // When a yielded Promise is resolved, its final value becomes
+          // the .value of the Promise<{value,done}> result for the
+          // current iteration.
+          result.value = unwrapped;
+          resolve(result);
+        }, function(error) {
+          // If a rejected Promise was yielded, throw the rejection back
+          // into the async generator function so it can be handled there.
+          return invoke("throw", error, resolve, reject);
+        });
+      }
+    }
+
+    var previousPromise;
+
+    function enqueue(method, arg) {
+      function callInvokeWithMethodAndArg() {
+        return new PromiseImpl(function(resolve, reject) {
+          invoke(method, arg, resolve, reject);
+        });
+      }
+
+      return previousPromise =
+        // If enqueue has been called before, then we want to wait until
+        // all previous Promises have been resolved before calling invoke,
+        // so that results are always delivered in the correct order. If
+        // enqueue has not been called before, then it is important to
+        // call invoke immediately, without waiting on a callback to fire,
+        // so that the async generator function has the opportunity to do
+        // any necessary setup in a predictable way. This predictability
+        // is why the Promise constructor synchronously invokes its
+        // executor callback, and why async functions synchronously
+        // execute code before the first await. Since we implement simple
+        // async functions in terms of async generators, it is especially
+        // important to get this right, even though it requires care.
+        previousPromise ? previousPromise.then(
+          callInvokeWithMethodAndArg,
+          // Avoid propagating failures to Promises returned by later
+          // invocations of the iterator.
+          callInvokeWithMethodAndArg
+        ) : callInvokeWithMethodAndArg();
+    }
+
+    // Define the unified helper method that is used to implement .next,
+    // .throw, and .return (see defineIteratorMethods).
+    this._invoke = enqueue;
+  }
+
+  defineIteratorMethods(AsyncIterator.prototype);
+  AsyncIterator.prototype[asyncIteratorSymbol] = function () {
+    return this;
+  };
+  exports.AsyncIterator = AsyncIterator;
+
+  // Note that simple async functions are implemented on top of
+  // AsyncIterator objects; they just return a Promise for the value of
+  // the final result produced by the iterator.
+  exports.async = function(innerFn, outerFn, self, tryLocsList, PromiseImpl) {
+    if (PromiseImpl === void 0) PromiseImpl = Promise;
+
+    var iter = new AsyncIterator(
+      wrap(innerFn, outerFn, self, tryLocsList),
+      PromiseImpl
+    );
+
+    return exports.isGeneratorFunction(outerFn)
+      ? iter // If outerFn is a generator, return the full iterator.
+      : iter.next().then(function(result) {
+          return result.done ? result.value : iter.next();
+        });
+  };
+
+  function makeInvokeMethod(innerFn, self, context) {
+    var state = GenStateSuspendedStart;
+
+    return function invoke(method, arg) {
+      if (state === GenStateExecuting) {
+        throw new Error("Generator is already running");
+      }
+
+      if (state === GenStateCompleted) {
+        if (method === "throw") {
+          throw arg;
+        }
+
+        // Be forgiving, per 25.3.3.3.3 of the spec:
+        // https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generatorresume
+        return doneResult();
+      }
+
+      context.method = method;
+      context.arg = arg;
+
+      while (true) {
+        var delegate = context.delegate;
+        if (delegate) {
+          var delegateResult = maybeInvokeDelegate(delegate, context);
+          if (delegateResult) {
+            if (delegateResult === ContinueSentinel) continue;
+            return delegateResult;
+          }
+        }
+
+        if (context.method === "next") {
+          // Setting context._sent for legacy support of Babel's
+          // function.sent implementation.
+          context.sent = context._sent = context.arg;
+
+        } else if (context.method === "throw") {
+          if (state === GenStateSuspendedStart) {
+            state = GenStateCompleted;
+            throw context.arg;
+          }
+
+          context.dispatchException(context.arg);
+
+        } else if (context.method === "return") {
+          context.abrupt("return", context.arg);
+        }
+
+        state = GenStateExecuting;
+
+        var record = tryCatch(innerFn, self, context);
+        if (record.type === "normal") {
+          // If an exception is thrown from innerFn, we leave state ===
+          // GenStateExecuting and loop back for another invocation.
+          state = context.done
+            ? GenStateCompleted
+            : GenStateSuspendedYield;
+
+          if (record.arg === ContinueSentinel) {
+            continue;
+          }
+
+          return {
+            value: record.arg,
+            done: context.done
+          };
+
+        } else if (record.type === "throw") {
+          state = GenStateCompleted;
+          // Dispatch the exception by looping back around to the
+          // context.dispatchException(context.arg) call above.
+          context.method = "throw";
+          context.arg = record.arg;
+        }
+      }
+    };
+  }
+
+  // Call delegate.iterator[context.method](context.arg) and handle the
+  // result, either by returning a { value, done } result from the
+  // delegate iterator, or by modifying context.method and context.arg,
+  // setting context.delegate to null, and returning the ContinueSentinel.
+  function maybeInvokeDelegate(delegate, context) {
+    var method = delegate.iterator[context.method];
+    if (method === undefined) {
+      // A .throw or .return when the delegate iterator has no .throw
+      // method always terminates the yield* loop.
+      context.delegate = null;
+
+      if (context.method === "throw") {
+        // Note: ["return"] must be used for ES3 parsing compatibility.
+        if (delegate.iterator["return"]) {
+          // If the delegate iterator has a return method, give it a
+          // chance to clean up.
+          context.method = "return";
+          context.arg = undefined;
+          maybeInvokeDelegate(delegate, context);
+
+          if (context.method === "throw") {
+            // If maybeInvokeDelegate(context) changed context.method from
+            // "return" to "throw", let that override the TypeError below.
+            return ContinueSentinel;
+          }
+        }
+
+        context.method = "throw";
+        context.arg = new TypeError(
+          "The iterator does not provide a 'throw' method");
+      }
+
+      return ContinueSentinel;
+    }
+
+    var record = tryCatch(method, delegate.iterator, context.arg);
+
+    if (record.type === "throw") {
+      context.method = "throw";
+      context.arg = record.arg;
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    var info = record.arg;
+
+    if (! info) {
+      context.method = "throw";
+      context.arg = new TypeError("iterator result is not an object");
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    if (info.done) {
+      // Assign the result of the finished delegate to the temporary
+      // variable specified by delegate.resultName (see delegateYield).
+      context[delegate.resultName] = info.value;
+
+      // Resume execution at the desired location (see delegateYield).
+      context.next = delegate.nextLoc;
+
+      // If context.method was "throw" but the delegate handled the
+      // exception, let the outer generator proceed normally. If
+      // context.method was "next", forget context.arg since it has been
+      // "consumed" by the delegate iterator. If context.method was
+      // "return", allow the original .return call to continue in the
+      // outer generator.
+      if (context.method !== "return") {
+        context.method = "next";
+        context.arg = undefined;
+      }
+
+    } else {
+      // Re-yield the result returned by the delegate method.
+      return info;
+    }
+
+    // The delegate iterator is finished, so forget it and continue with
+    // the outer generator.
+    context.delegate = null;
+    return ContinueSentinel;
+  }
+
+  // Define Generator.prototype.{next,throw,return} in terms of the
+  // unified ._invoke helper method.
+  defineIteratorMethods(Gp);
+
+  define(Gp, toStringTagSymbol, "Generator");
+
+  // A Generator should always return itself as the iterator object when the
+  // @@iterator function is called on it. Some browsers' implementations of the
+  // iterator prototype chain incorrectly implement this, causing the Generator
+  // object to not be returned from this call. This ensures that doesn't happen.
+  // See https://github.com/facebook/regenerator/issues/274 for more details.
+  Gp[iteratorSymbol] = function() {
+    return this;
+  };
+
+  Gp.toString = function() {
+    return "[object Generator]";
+  };
+
+  function pushTryEntry(locs) {
+    var entry = { tryLoc: locs[0] };
+
+    if (1 in locs) {
+      entry.catchLoc = locs[1];
+    }
+
+    if (2 in locs) {
+      entry.finallyLoc = locs[2];
+      entry.afterLoc = locs[3];
+    }
+
+    this.tryEntries.push(entry);
+  }
+
+  function resetTryEntry(entry) {
+    var record = entry.completion || {};
+    record.type = "normal";
+    delete record.arg;
+    entry.completion = record;
+  }
+
+  function Context(tryLocsList) {
+    // The root entry object (effectively a try statement without a catch
+    // or a finally block) gives us a place to store values thrown from
+    // locations where there is no enclosing try statement.
+    this.tryEntries = [{ tryLoc: "root" }];
+    tryLocsList.forEach(pushTryEntry, this);
+    this.reset(true);
+  }
+
+  exports.keys = function(object) {
+    var keys = [];
+    for (var key in object) {
+      keys.push(key);
+    }
+    keys.reverse();
+
+    // Rather than returning an object with a next method, we keep
+    // things simple and return the next function itself.
+    return function next() {
+      while (keys.length) {
+        var key = keys.pop();
+        if (key in object) {
+          next.value = key;
+          next.done = false;
+          return next;
+        }
+      }
+
+      // To avoid creating an additional object, we just hang the .value
+      // and .done properties off the next function object itself. This
+      // also ensures that the minifier will not anonymize the function.
+      next.done = true;
+      return next;
+    };
+  };
+
+  function values(iterable) {
+    if (iterable) {
+      var iteratorMethod = iterable[iteratorSymbol];
+      if (iteratorMethod) {
+        return iteratorMethod.call(iterable);
+      }
+
+      if (typeof iterable.next === "function") {
+        return iterable;
+      }
+
+      if (!isNaN(iterable.length)) {
+        var i = -1, next = function next() {
+          while (++i < iterable.length) {
+            if (hasOwn.call(iterable, i)) {
+              next.value = iterable[i];
+              next.done = false;
+              return next;
+            }
+          }
+
+          next.value = undefined;
+          next.done = true;
+
+          return next;
+        };
+
+        return next.next = next;
+      }
+    }
+
+    // Return an iterator with no values.
+    return { next: doneResult };
+  }
+  exports.values = values;
+
+  function doneResult() {
+    return { value: undefined, done: true };
+  }
+
+  Context.prototype = {
+    constructor: Context,
+
+    reset: function(skipTempReset) {
+      this.prev = 0;
+      this.next = 0;
+      // Resetting context._sent for legacy support of Babel's
+      // function.sent implementation.
+      this.sent = this._sent = undefined;
+      this.done = false;
+      this.delegate = null;
+
+      this.method = "next";
+      this.arg = undefined;
+
+      this.tryEntries.forEach(resetTryEntry);
+
+      if (!skipTempReset) {
+        for (var name in this) {
+          // Not sure about the optimal order of these conditions:
+          if (name.charAt(0) === "t" &&
+              hasOwn.call(this, name) &&
+              !isNaN(+name.slice(1))) {
+            this[name] = undefined;
+          }
+        }
+      }
+    },
+
+    stop: function() {
+      this.done = true;
+
+      var rootEntry = this.tryEntries[0];
+      var rootRecord = rootEntry.completion;
+      if (rootRecord.type === "throw") {
+        throw rootRecord.arg;
+      }
+
+      return this.rval;
+    },
+
+    dispatchException: function(exception) {
+      if (this.done) {
+        throw exception;
+      }
+
+      var context = this;
+      function handle(loc, caught) {
+        record.type = "throw";
+        record.arg = exception;
+        context.next = loc;
+
+        if (caught) {
+          // If the dispatched exception was caught by a catch block,
+          // then let that catch block handle the exception normally.
+          context.method = "next";
+          context.arg = undefined;
+        }
+
+        return !! caught;
+      }
+
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        var record = entry.completion;
+
+        if (entry.tryLoc === "root") {
+          // Exception thrown outside of any try block that could handle
+          // it, so set the completion value of the entire function to
+          // throw the exception.
+          return handle("end");
+        }
+
+        if (entry.tryLoc <= this.prev) {
+          var hasCatch = hasOwn.call(entry, "catchLoc");
+          var hasFinally = hasOwn.call(entry, "finallyLoc");
+
+          if (hasCatch && hasFinally) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            } else if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+
+          } else if (hasCatch) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            }
+
+          } else if (hasFinally) {
+            if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+
+          } else {
+            throw new Error("try statement without catch or finally");
+          }
+        }
+      }
+    },
+
+    abrupt: function(type, arg) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc <= this.prev &&
+            hasOwn.call(entry, "finallyLoc") &&
+            this.prev < entry.finallyLoc) {
+          var finallyEntry = entry;
+          break;
+        }
+      }
+
+      if (finallyEntry &&
+          (type === "break" ||
+           type === "continue") &&
+          finallyEntry.tryLoc <= arg &&
+          arg <= finallyEntry.finallyLoc) {
+        // Ignore the finally entry if control is not jumping to a
+        // location outside the try/catch block.
+        finallyEntry = null;
+      }
+
+      var record = finallyEntry ? finallyEntry.completion : {};
+      record.type = type;
+      record.arg = arg;
+
+      if (finallyEntry) {
+        this.method = "next";
+        this.next = finallyEntry.finallyLoc;
+        return ContinueSentinel;
+      }
+
+      return this.complete(record);
+    },
+
+    complete: function(record, afterLoc) {
+      if (record.type === "throw") {
+        throw record.arg;
+      }
+
+      if (record.type === "break" ||
+          record.type === "continue") {
+        this.next = record.arg;
+      } else if (record.type === "return") {
+        this.rval = this.arg = record.arg;
+        this.method = "return";
+        this.next = "end";
+      } else if (record.type === "normal" && afterLoc) {
+        this.next = afterLoc;
+      }
+
+      return ContinueSentinel;
+    },
+
+    finish: function(finallyLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.finallyLoc === finallyLoc) {
+          this.complete(entry.completion, entry.afterLoc);
+          resetTryEntry(entry);
+          return ContinueSentinel;
+        }
+      }
+    },
+
+    "catch": function(tryLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc === tryLoc) {
+          var record = entry.completion;
+          if (record.type === "throw") {
+            var thrown = record.arg;
+            resetTryEntry(entry);
+          }
+          return thrown;
+        }
+      }
+
+      // The context.catch method must only be called with a location
+      // argument that corresponds to a known catch block.
+      throw new Error("illegal catch attempt");
+    },
+
+    delegateYield: function(iterable, resultName, nextLoc) {
+      this.delegate = {
+        iterator: values(iterable),
+        resultName: resultName,
+        nextLoc: nextLoc
+      };
+
+      if (this.method === "next") {
+        // Deliberately forget the last sent value so that we don't
+        // accidentally pass it on to the delegate.
+        this.arg = undefined;
+      }
+
+      return ContinueSentinel;
+    }
+  };
+
+  // Regardless of whether this script is executing as a CommonJS module
+  // or not, return the runtime object so that we can declare the variable
+  // regeneratorRuntime in the outer scope, which allows this module to be
+  // injected easily by `bin/regenerator --include-runtime script.js`.
+  return exports;
+
+}(
+  // If this script is executing as a CommonJS module, use module.exports
+  // as the regeneratorRuntime namespace. Otherwise create a new empty
+  // object. Either way, the resulting object will be used to initialize
+  // the regeneratorRuntime variable at the top of this file.
+   true ? module.exports : 0
+));
+
+try {
+  regeneratorRuntime = runtime;
+} catch (accidentalStrictMode) {
+  // This module should not be running in strict mode, so the above
+  // assignment should always work unless something is misconfigured. Just
+  // in case runtime.js accidentally runs in strict mode, we can escape
+  // strict mode using a global Function call. This could conceivably fail
+  // if a Content Security Policy forbids using Function, but in that case
+  // the proper solution is to fix the accidental strict mode problem. If
+  // you've misconfigured your bundler to force strict mode and applied a
+  // CSP to forbid Function, and you're not willing to fix either of those
+  // problems, please detail your unique predicament in a GitHub issue.
+  Function("r", "regeneratorRuntime = r")(runtime);
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/uuid/lib/bytesToUuid.js":
+/*!**********************************************!*\
+  !*** ./node_modules/uuid/lib/bytesToUuid.js ***!
+  \**********************************************/
+/***/ ((module) => {
+
+/**
+ * Convert array of 16 byte values to UUID string format of the form:
+ * XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+ */
+var byteToHex = [];
+for (var i = 0; i < 256; ++i) {
+  byteToHex[i] = (i + 0x100).toString(16).substr(1);
+}
+
+function bytesToUuid(buf, offset) {
+  var i = offset || 0;
+  var bth = byteToHex;
+  // join used to fix memory issue caused by concatenation: https://bugs.chromium.org/p/v8/issues/detail?id=3175#c4
+  return ([
+    bth[buf[i++]], bth[buf[i++]],
+    bth[buf[i++]], bth[buf[i++]], '-',
+    bth[buf[i++]], bth[buf[i++]], '-',
+    bth[buf[i++]], bth[buf[i++]], '-',
+    bth[buf[i++]], bth[buf[i++]], '-',
+    bth[buf[i++]], bth[buf[i++]],
+    bth[buf[i++]], bth[buf[i++]],
+    bth[buf[i++]], bth[buf[i++]]
+  ]).join('');
+}
+
+module.exports = bytesToUuid;
+
+
+/***/ }),
+
+/***/ "./node_modules/uuid/lib/rng-browser.js":
+/*!**********************************************!*\
+  !*** ./node_modules/uuid/lib/rng-browser.js ***!
+  \**********************************************/
+/***/ ((module) => {
+
+// Unique ID creation requires a high quality random # generator.  In the
+// browser this is a little complicated due to unknown quality of Math.random()
+// and inconsistent support for the `crypto` API.  We do the best we can via
+// feature-detection
+
+// getRandomValues needs to be invoked in a context where "this" is a Crypto
+// implementation. Also, find the complete implementation of crypto on IE11.
+var getRandomValues = (typeof(crypto) != 'undefined' && crypto.getRandomValues && crypto.getRandomValues.bind(crypto)) ||
+                      (typeof(msCrypto) != 'undefined' && typeof window.msCrypto.getRandomValues == 'function' && msCrypto.getRandomValues.bind(msCrypto));
+
+if (getRandomValues) {
+  // WHATWG crypto RNG - http://wiki.whatwg.org/wiki/Crypto
+  var rnds8 = new Uint8Array(16); // eslint-disable-line no-undef
+
+  module.exports = function whatwgRNG() {
+    getRandomValues(rnds8);
+    return rnds8;
+  };
+} else {
+  // Math.random()-based (RNG)
+  //
+  // If all else fails, use Math.random().  It's fast, but is of unspecified
+  // quality.
+  var rnds = new Array(16);
+
+  module.exports = function mathRNG() {
+    for (var i = 0, r; i < 16; i++) {
+      if ((i & 0x03) === 0) r = Math.random() * 0x100000000;
+      rnds[i] = r >>> ((i & 0x03) << 3) & 0xff;
+    }
+
+    return rnds;
+  };
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/uuid/v4.js":
+/*!*********************************!*\
+  !*** ./node_modules/uuid/v4.js ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var rng = __webpack_require__(/*! ./lib/rng */ "./node_modules/uuid/lib/rng-browser.js");
+var bytesToUuid = __webpack_require__(/*! ./lib/bytesToUuid */ "./node_modules/uuid/lib/bytesToUuid.js");
+
+function v4(options, buf, offset) {
+  var i = buf && offset || 0;
+
+  if (typeof(options) == 'string') {
+    buf = options === 'binary' ? new Array(16) : null;
+    options = null;
+  }
+  options = options || {};
+
+  var rnds = options.random || (options.rng || rng)();
+
+  // Per 4.4, set bits for version and `clock_seq_hi_and_reserved`
+  rnds[6] = (rnds[6] & 0x0f) | 0x40;
+  rnds[8] = (rnds[8] & 0x3f) | 0x80;
+
+  // Copy bytes to buffer, if provided
+  if (buf) {
+    for (var ii = 0; ii < 16; ++ii) {
+      buf[i + ii] = rnds[ii];
+    }
+  }
+
+  return buf || bytesToUuid(rnds);
+}
+
+module.exports = v4;
+
+
 /***/ })
 
 /******/ 	});
@@ -19356,6 +31966,30 @@ process.umask = function() { return 0; };
 /******/ 				}
 /******/ 			}
 /******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
 /******/ 		};
 /******/ 	})();
 /******/ 	
