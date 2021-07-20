@@ -16,6 +16,7 @@ const client = new Face.FaceClient(credentials, endpoint);
 
 const image_base_url = "https://csdx.blob.core.windows.net/resources/Face/Images/";
 // const image_base_url = "https://larry-lam.com/images/";
+// const image_base_url = "https://i.imgur.com/UASY9gJ.jpg";
 const person_group_id = uuid();
 
 function sleep(ms) {
@@ -49,6 +50,7 @@ async function DetectFaceExtract() {
 
         // Parse and print all attributes of each detected face.
         detected_faces.forEach(async function (face) {
+            console.log('---------------------------NEW FACE---------------------------------');
             // Get the bounding box of the face
             console.log("Bounding box:\n  Left: " + face.faceRectangle.left + "\n  Top: " + face.faceRectangle.top + "\n  Width: " + face.faceRectangle.width + "\n  Height: " + face.faceRectangle.height);
 
@@ -247,7 +249,7 @@ async function IdentifyInPersonGroup() {
     // Identify the faces in a person group.
     let results = await client.face.identify(face_ids, { personGroupId: person_group_id });
     await Promise.all(results.map(async function (result) {
-        let person = await client.personGroupPerson.get(person_group_id, result.candidates[0].personId);
+        let person = await cPlient.personGrouperson.get(person_group_id, result.candidates[0].personId);
         console.log("Person: " + person.name + " is identified for face in: " + source_image_file_name + " with ID: " + result.faceId + ". Confidence: " + result.candidates[0].confidence + ".");
     }));
     console.log();
@@ -259,4 +261,22 @@ async function main() {
     await IdentifyInPersonGroup();
     console.log("Done.");
 }
-main();
+// main();
+
+
+// fetch("https://vuillermoz.cognitiveservices.azure.com/face/v1.0/largefacelists/mx3_persistant_faces_final", {
+//     method: "PUT",
+//     headers: new Headers({
+//         "Content-Type": "application/json",
+//         "Host": "vuillermoz.cognitiveservices.azure.com",
+//         "Ocp-Apim-Subscription-Key": "cf421e82604340f59cb64eaec8cb1aa1"
+//     }),
+//     body: JSON.stringify({
+//         "name": "large-face-list-name",
+//         "userData": "User-provided data attached to the large face list.",
+//         "recognitionModel": "recognition_04"
+//     })
+// }).then(function (response) {
+//     console.log(response.status); // returns 200
+
+// });

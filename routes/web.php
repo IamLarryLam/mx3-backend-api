@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\apiController;
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,15 +15,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Config::set('endpoint', 'https://vuillermoz.cognitiveservices.azure.com/');
+Config::set('key', 'cf421e82604340f59cb64eaec8cb1aa1');
+Config::set('prefixURL', 'https://i.imgur.com/');
+Config::set('tempFileURL', 'UASY9gJ.jpg');
+
+
 Route::get('/', function () {
     return view('welcome');
 });
 
 
-//REST API Routing//begin
 Route::prefix('api')->group(function () {
 
-    //GET
-
-    Route::get('yo', [apiController::class, 'test']);
+    Route::get('addFace', [apiController::class, 'test']);
+    Route::get('detectFace/{image_url}', [apiController::class, 'detectFace']);
+    Route::get('createPersistantFaceList', [apiController::class, 'createPersistantFaceList']);
 });

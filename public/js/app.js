@@ -12998,6 +12998,7 @@ var credentials = new msRest.ApiKeyCredentials({
 });
 var client = new Face.FaceClient(credentials, endpoint);
 var image_base_url = "https://csdx.blob.core.windows.net/resources/Face/Images/"; // const image_base_url = "https://larry-lam.com/images/";
+// const image_base_url = "https://i.imgur.com/UASY9gJ.jpg";
 
 var person_group_id = uuid();
 
@@ -13057,6 +13058,8 @@ function _DetectFaceExtract() {
                               while (1) {
                                 switch (_context.prev = _context.next) {
                                   case 0:
+                                    console.log('---------------------------NEW FACE---------------------------------'); // Get the bounding box of the face
+
                                     // Get the bounding box of the face
                                     console.log("Bounding box:\n  Left: " + face.faceRectangle.left + "\n  Top: " + face.faceRectangle.top + "\n  Width: " + face.faceRectangle.width + "\n  Height: " + face.faceRectangle.height); // Get the accessories of the face
 
@@ -13165,7 +13168,7 @@ function _DetectFaceExtract() {
                                     console.log("Smile: " + face.faceAttributes.smile);
                                     console.log();
 
-                                  case 35:
+                                  case 36:
                                   case "end":
                                     return _context.stop();
                                 }
@@ -13507,7 +13510,7 @@ function _IdentifyInPersonGroup() {
                     switch (_context11.prev = _context11.next) {
                       case 0:
                         _context11.next = 2;
-                        return client.personGroupPerson.get(person_group_id, result.candidates[0].personId);
+                        return cPlient.personGrouperson.get(person_group_id, result.candidates[0].personId);
 
                       case 2:
                         person = _context11.sent;
@@ -13541,7 +13544,23 @@ function _IdentifyInPersonGroup() {
 
 function main() {
   return _main.apply(this, arguments);
-}
+} // main();
+// fetch("https://vuillermoz.cognitiveservices.azure.com/face/v1.0/largefacelists/mx3_persistant_faces_final", {
+//     method: "PUT",
+//     headers: new Headers({
+//         "Content-Type": "application/json",
+//         "Host": "vuillermoz.cognitiveservices.azure.com",
+//         "Ocp-Apim-Subscription-Key": "cf421e82604340f59cb64eaec8cb1aa1"
+//     }),
+//     body: JSON.stringify({
+//         "name": "large-face-list-name",
+//         "userData": "User-provided data attached to the large face list.",
+//         "recognitionModel": "recognition_04"
+//     })
+// }).then(function (response) {
+//     console.log(response.status); // returns 200
+// });
+
 
 function _main() {
   _main = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee13() {
@@ -13572,8 +13591,6 @@ function _main() {
   }));
   return _main.apply(this, arguments);
 }
-
-main();
 
 /***/ }),
 
