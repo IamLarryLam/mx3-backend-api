@@ -17,6 +17,7 @@ const client = new Face.FaceClient(credentials, endpoint);
 const image_base_url = "https://csdx.blob.core.windows.net/resources/Face/Images/";
 // const image_base_url = "https://larry-lam.com/images/";
 // const image_base_url = "https://i.imgur.com/UASY9gJ.jpg";
+// const image_base_url = "https://i.imgur.com/9Gsited.jpg";
 const person_group_id = uuid();
 
 function sleep(ms) {
@@ -151,6 +152,8 @@ async function FindSimilar() {
     const source_image_file_name = "findsimilar.jpg";
     const target_image_file_names = [
         "Family1-Dad1.jpg",
+        "Family1-Dad1.jpg",
+        "Family1-Dad1.jpg",
         "Family1-Daughter1.jpg",
         "Family1-Mom1.jpg",
         "Family1-Son1.jpg",
@@ -261,7 +264,7 @@ async function main() {
     await IdentifyInPersonGroup();
     console.log("Done.");
 }
-// main();
+main();
 
 
 // fetch("https://vuillermoz.cognitiveservices.azure.com/face/v1.0/largefacelists/mx3_persistant_faces_final", {
@@ -280,3 +283,4 @@ async function main() {
 //     console.log(response.status); // returns 200
 
 // });
+

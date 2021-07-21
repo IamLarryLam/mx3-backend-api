@@ -12999,6 +12999,7 @@ var credentials = new msRest.ApiKeyCredentials({
 var client = new Face.FaceClient(credentials, endpoint);
 var image_base_url = "https://csdx.blob.core.windows.net/resources/Face/Images/"; // const image_base_url = "https://larry-lam.com/images/";
 // const image_base_url = "https://i.imgur.com/UASY9gJ.jpg";
+// const image_base_url = "https://i.imgur.com/9Gsited.jpg";
 
 var person_group_id = uuid();
 
@@ -13249,7 +13250,7 @@ function _FindSimilar() {
             console.log("========FIND SIMILAR========");
             console.log();
             source_image_file_name = "findsimilar.jpg";
-            target_image_file_names = ["Family1-Dad1.jpg", "Family1-Daughter1.jpg", "Family1-Mom1.jpg", "Family1-Son1.jpg", "Family2-Lady1.jpg", "Family2-Man1.jpg", "Family3-Lady1.jpg", "Family3-Man1.jpg"];
+            target_image_file_names = ["Family1-Dad1.jpg", "Family1-Dad1.jpg", "Family1-Dad1.jpg", "Family1-Daughter1.jpg", "Family1-Mom1.jpg", "Family1-Son1.jpg", "Family2-Lady1.jpg", "Family2-Man1.jpg", "Family3-Lady1.jpg", "Family3-Man1.jpg"];
             _context6.next = 6;
             return Promise.all(target_image_file_names.map( /*#__PURE__*/function () {
               var _ref3 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee5(target_image_file_name) {
@@ -13544,23 +13545,7 @@ function _IdentifyInPersonGroup() {
 
 function main() {
   return _main.apply(this, arguments);
-} // main();
-// fetch("https://vuillermoz.cognitiveservices.azure.com/face/v1.0/largefacelists/mx3_persistant_faces_final", {
-//     method: "PUT",
-//     headers: new Headers({
-//         "Content-Type": "application/json",
-//         "Host": "vuillermoz.cognitiveservices.azure.com",
-//         "Ocp-Apim-Subscription-Key": "cf421e82604340f59cb64eaec8cb1aa1"
-//     }),
-//     body: JSON.stringify({
-//         "name": "large-face-list-name",
-//         "userData": "User-provided data attached to the large face list.",
-//         "recognitionModel": "recognition_04"
-//     })
-// }).then(function (response) {
-//     console.log(response.status); // returns 200
-// });
-
+}
 
 function _main() {
   _main = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee13() {
@@ -13591,6 +13576,22 @@ function _main() {
   }));
   return _main.apply(this, arguments);
 }
+
+main(); // fetch("https://vuillermoz.cognitiveservices.azure.com/face/v1.0/largefacelists/mx3_persistant_faces_final", {
+//     method: "PUT",
+//     headers: new Headers({
+//         "Content-Type": "application/json",
+//         "Host": "vuillermoz.cognitiveservices.azure.com",
+//         "Ocp-Apim-Subscription-Key": "cf421e82604340f59cb64eaec8cb1aa1"
+//     }),
+//     body: JSON.stringify({
+//         "name": "large-face-list-name",
+//         "userData": "User-provided data attached to the large face list.",
+//         "recognitionModel": "recognition_04"
+//     })
+// }).then(function (response) {
+//     console.log(response.status); // returns 200
+// });
 
 /***/ }),
 
