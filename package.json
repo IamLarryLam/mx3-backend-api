@@ -17,6 +17,7 @@
     },
     "dependencies": {
         "@azure/cognitiveservices-face": "^4.2.0",
-        "@azure/ms-rest-js": "^2.5.3"
+        "@azure/ms-rest-js": "^2.5.3",
+        "papaparse": "^5.3.1"
     }
 }

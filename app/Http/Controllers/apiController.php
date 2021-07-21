@@ -9,10 +9,19 @@ use phpDocumentor\Reflection\DocBlock\Tags\Var_;
 
 class apiController extends Controller
 {
-    public function test()
+    public function addArtistsFromCSV()
     {
-        echo ('yess');
+        return view('importcsv');
     }
+
+    public function callAPI()
+    {
+        echo '<script>
+        fetch("http://127.0.0.1:8000/api/refreshArtistList", {
+            method: "GET"
+        }).then(result => console.log(result.status))</script>';
+    }
+
     public function getArtistIdFromUUID($faceUuid)
     {
         $key = Config::get('key');
@@ -33,7 +42,7 @@ class apiController extends Controller
             .then(console.log);</script>');
     }
 
-    public function addPersistantFaceFromImageUrl($image_url, $idBand = 7)
+    public function addArtistFromImageUrl($image_url, $idBand)
     {
         // Larry's artist face UUID : e1fe8857-975e-471a-8dfd-9dbe891dae8c
         // Ophelie's artist face UUID : 45b04866-6446-4733-b0ee-88f598e06806
@@ -62,8 +71,34 @@ class apiController extends Controller
         echo ('<script>' . $request . '
             .then(res => res.json())
             .then(console.log);</script>');
+
+        echo ('<script>setTimeout(() => { fetch("' . $endpoint . 'face/v1.0/largefacelists/' . $faceListUUID . '/train", {
+            method: "POST",
+            headers: new Headers({
+                "Content-Type": "application/json",
+                "Host": "' . $endpoint . '",
+                "Ocp-Apim-Subscription-Key": "' . $key . '"
+            })
+        }) }, 500);
+        </script>');
     }
 
+    public function refreshArtistList()
+    {
+        $key = Config::get('key');
+        $endpoint = Config::get('endpoint');
+        $faceListUUID = Config::get('faceListUUID');
+
+        echo '<script>
+                fetch("' . $endpoint . 'face/v1.0/largefacelists/' . $faceListUUID . '/train", {
+                    method: "POST",
+                    headers: new Headers({
+                        "Content-Type": "application/json",
+                        "Host": "' . $endpoint . '",
+                        "Ocp-Apim-Subscription-Key": "' . $key . '"
+                    })
+                }).then(response => console.log(response.status))</script>';
+    }
     public function findSimilarFromImageUrl($image_url)
     {
         $key = Config::get('key');
@@ -80,13 +115,12 @@ class apiController extends Controller
                 "Ocp-Apim-Subscription-Key": "' . $key . '"
             }),
             body: JSON.stringify({
-                "url": "' . $prefixURL . $image_url . '",
-                "recognitionModel": "' . $prefixURL . $image_url . '",
-
+                "url": "' . $prefixURL . $image_url . '"
             })
         })';
         echo ('<script>' . $request . '.then(res => res.json())
         .then(face => {
+            console.log(face[0].faceId);
             if (face[1] != null) {
                 return { "error": "Too many faces" }
             } else {
@@ -108,7 +142,7 @@ class apiController extends Controller
         }).then(res => {
             if(res["error"]==null)
             {
-                return res.json()
+                return res.json();
             }else{
                 return res;
             }
@@ -130,16 +164,14 @@ class apiController extends Controller
                 "Ocp-Apim-Subscription-Key": "' . $key . '"
             }),
             body: JSON.stringify({
-                "url": "' . $prefixURL . $image_url . '",
-                "recognitionModel": "' . $prefixURL . $image_url . '",
-
+                "url": "' . $prefixURL . $image_url . '"
             })
         })';
         echo ('<script>' . $request . '.then(res => res.json())
         .then(face=>console.log(face[0].faceId));</script>');
     }
 
-    public function createPersistantFaceList()
+    public function createArtistList()
     {
         $key = Config::get('key');
         $endpoint = Config::get('endpoint');
@@ -149,33 +181,43 @@ class apiController extends Controller
             method: "PUT",
             headers: new Headers({
                 "Content-Type": "application/json",
-                "Host": "vuillermoz.cognitiveservices.azure.com",
+                "Host": "' . $endpoint . '",
                 "Ocp-Apim-Subscription-Key": "' . $key . '"
             }),
             body: JSON.stringify({
                 "name": "large-face-list-name",
                 "userData": "User-provided data attached to the large face list.",
-                "recognitionModel": "recognition_04"
+                "recognitionModel": "recognition_03"
             })
-        })';
+        });';
 
-        $request2 = '.then(fetch("' . $endpoint . 'face/v1.0/largefacelists/' . $faceListUUID . '/train", {
+        $request2 = 'setTimeout(() => { fetch("' . $endpoint . 'face/v1.0/largefacelists/' . $faceListUUID . '/train", {
             method: "POST",
             headers: new Headers({
                 "Content-Type": "application/json",
-                "Host": "vuillermoz.cognitiveservices.azure.com",
+                "Host": "' . $endpoint . '",
                 "Ocp-Apim-Subscription-Key": "' . $key . '"
             })
-        }))';
+        }) }, 500);';
         echo ('<script>' . $request . $request2  . '</script>');
-        // echo ('<script>' . $request2 . '</script>');
-
-
-        // echo ('<script>' . $request . '.then(function(response) {console.log(response.status);});</script>');
     }
 
-    public function addArtistFromImageUrl($image_url)
+    public function deleteArtistList()
     {
+        $key = Config::get('key');
+        $endpoint = Config::get('endpoint');
+        $faceListUUID = Config::get('faceListUUID');
+
+        $request = 'fetch("' . $endpoint . 'face/v1.0/largefacelists/' . $faceListUUID . '", {
+            method: "DELETE",
+            headers: new Headers({
+                "Content-Type": "application/json",
+                "Host": "' . $endpoint . '",
+                "Ocp-Apim-Subscription-Key": "' . $key . '"
+            })
+        }).then(console.log)';
+
+        echo ('<script>' . $request   . '</script>');
     }
 }
 
