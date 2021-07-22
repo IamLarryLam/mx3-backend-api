@@ -2,16 +2,62 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Client\Response;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Http;
 use phpDocumentor\Reflection\DocBlock\Tags\Var_;
+use Symfony\Component\HttpKernel\Exception\HttpException;
 
 class apiController extends Controller
 {
     public function addArtistsFromCSV()
     {
-        return view('importcsv');
+        // return view('importcsv');
+
+        $key = Config::get('key');
+        $endpoint = Config::get('endpoint');
+        $faceListUUID = Config::get('faceListUUID');
+
+        $file = public_path('data/images.csv');
+
+        $arrayArtist = $this->csvToArray($file);
+
+        foreach ($arrayArtist as $artist) {
+            $idBand = $artist['id'];
+            $imageUrl = $artist['url'];
+
+            $url = "$endpoint/face/v1.0/largefacelists/$faceListUUID/persistedfaces?userData=$idBand&detectionModel=detection_03";
+            Http::withoutVerifying()->withHeaders([
+                'Content-Type' => 'application/json',
+                'Ocp-Apim-Subscription-Key' => $key
+            ])->post("$url", [
+                'url' => $imageUrl,
+            ]);
+        }
+        Http::withoutVerifying()->withHeaders([
+            'Content-Type' => 'application/json',
+            'Ocp-Apim-Subscription-Key' => $key
+        ])->post("$endpoint/face/v1.0/largefacelists/$faceListUUID/train");
+        return response('Done importing the csv file', 200);
+    }
+
+    function csvToArray($filename = '', $delimiter = ',')
+    {
+        if (!file_exists($filename) || !is_readable($filename))
+            return false;
+        $header = null;
+        $data = array();
+        if (($handle = fopen($filename, 'r')) !== false) {
+            while (($row = fgetcsv($handle, 1000, $delimiter)) !== false) {
+                if (!$header)
+                    $header = $row;
+                else
+                    $data[] = array_combine($header, $row);
+            }
+            fclose($handle);
+        }
+        return $data;
     }
 
     public function callAPI()
@@ -43,6 +89,66 @@ class apiController extends Controller
     }
 
     public function addArtistFromImageUrl($image_url, $idBand)
+    {
+        // Larry's artist face UUID : e1fe8857-975e-471a-8dfd-9dbe891dae8c
+        // Ophelie's artist face UUID : 45b04866-6446-4733-b0ee-88f598e06806
+        // Larry's face TEMPORAIRE 24h : 70d962c7-1248-4a8e-840e-d02387ddb664
+        // FaceList UUID : mx3_persistant_faces
+        // cf421e82604340f59cb64eaec8cb1aa1
+        // vuillermoz
+
+        $key = Config::get('key');
+        $endpoint = Config::get('endpoint');
+        $prefixURL = Config::get('prefixURL');
+        $faceListUUID = Config::get('faceListUUID');
+        $url = "$endpoint/face/v1.0/largefacelists/$faceListUUID/persistedfaces?userData=$idBand&detectionModel=detection_03";
+
+        $request = Http::async()->withoutVerifying()->withHeaders([
+            'Content-Type' => 'application/json',
+            'Ocp-Apim-Subscription-Key' => $key
+        ])->post("$url", [
+            'url' => $prefixURL . $image_url,
+        ])->wait(Http::withoutVerifying()->withHeaders([
+            'Content-Type' => 'application/json',
+            'Ocp-Apim-Subscription-Key' => $key
+        ])->post("$endpoint/face/v1.0/largefacelists/$faceListUUID/train"));
+
+        try {
+            if ($request != null) {
+                return response('successs blabla', 200);
+            }
+            return $request->getBody();
+        } catch (HttpException $ex) {
+            return $ex;
+        }
+
+        // $request = 'fetch("' . $url . '", {
+        //     method: "POST",
+        //     headers: new Headers({
+        //         "Content-Type": "application/json",
+        //         "Host": "' . $endpoint . '",
+        //         "Ocp-Apim-Subscription-Key": "' . $key . '"
+        //     }),
+        //     body: JSON.stringify({
+        //         "url": "' . $prefixURL . $image_url . '"
+        //     })
+        // })';
+        // echo ('<script>' . $request . '
+        //     .then(res => res.json())
+        //     .then(console.log);</script>');
+
+        // echo ('<script>setTimeout(() => { fetch("' . $endpoint . 'face/v1.0/largefacelists/' . $faceListUUID . '/train", {
+        //     method: "POST",
+        //     headers: new Headers({
+        //         "Content-Type": "application/json",
+        //         "Host": "' . $endpoint . '",
+        //         "Ocp-Apim-Subscription-Key": "' . $key . '"
+        //     })
+        // }) }, 500);
+        // </script>');
+    }
+
+    public function addArtistFromImageUrlJS($image_url, $idBand)
     {
         // Larry's artist face UUID : e1fe8857-975e-471a-8dfd-9dbe891dae8c
         // Ophelie's artist face UUID : 45b04866-6446-4733-b0ee-88f598e06806
@@ -89,17 +195,69 @@ class apiController extends Controller
         $endpoint = Config::get('endpoint');
         $faceListUUID = Config::get('faceListUUID');
 
-        echo '<script>
-                fetch("' . $endpoint . 'face/v1.0/largefacelists/' . $faceListUUID . '/train", {
-                    method: "POST",
-                    headers: new Headers({
-                        "Content-Type": "application/json",
-                        "Host": "' . $endpoint . '",
-                        "Ocp-Apim-Subscription-Key": "' . $key . '"
-                    })
-                }).then(response => console.log(response.status))</script>';
+        Http::withoutVerifying()->withHeaders([
+            'Content-Type' => 'application/json',
+            'Ocp-Apim-Subscription-Key' => $key
+        ])->post("$endpoint/face/v1.0/largefacelists/$faceListUUID/train");
     }
+    // public function refreshArtistListJS()
+    // {
+    //     $key = Config::get('key');
+    //     $endpoint = Config::get('endpoint');
+    //     $faceListUUID = Config::get('faceListUUID');
+
+    //     echo '<script>
+    //             fetch("' . $endpoint . 'face/v1.0/largefacelists/' . $faceListUUID . '/train", {
+    //                 method: "POST",
+    //                 headers: new Headers({
+    //                     "Content-Type": "application/json",
+    //                     "Host": "' . $endpoint . '",
+    //                     "Ocp-Apim-Subscription-Key": "' . $key . '"
+    //                 })
+    //             }).then(response => console.log(response.status))</script>';
+
+    // }
+
     public function findSimilarFromImageUrl($image_url)
+    {
+        $key = Config::get('key');
+        $endpoint = Config::get('endpoint');
+        $prefixURL = Config::get('prefixURL');
+        $faceListUUID = Config::get('faceListUUID');
+        $maxNumberOfReturnedCandidates = Config::get('maxNumberOfReturnedCandidates');
+
+        $request = Http::withoutVerifying()->withHeaders([
+            'Content-Type' => 'application/json',
+            'Ocp-Apim-Subscription-Key' => $key
+        ])->post("$endpoint/face/v1.0/detect?detectionModel=detection_03&recognitionModel=recognition_03", [
+            'url' => $prefixURL . $image_url
+        ]);
+
+
+        if ($request != null) {
+            if (isset($request[1])) {
+                return response('Error, too many faces', 409);
+            } else {
+
+                $request2 = Http::withoutVerifying()->withHeaders([
+                    'Content-Type' => 'application/json',
+                    'Ocp-Apim-Subscription-Key' => $key
+                ])->post("$endpoint/face/v1.0/findsimilars", [
+                    "faceId" => $request[0]['faceId'],
+                    "largeFaceListId" => "$faceListUUID",
+                    "maxNumOfCandidatesReturned" => $maxNumberOfReturnedCandidates,
+                    "mode" => "matchFace"
+                ]);
+
+                try {
+                    return $request2->getBody();
+                } catch (HttpException $ex) {
+                    return $ex;
+                }
+            }
+        }
+    }
+    public function findSimilarFromImageUrlJS($image_url)
     {
         $key = Config::get('key');
         $endpoint = Config::get('endpoint');
@@ -177,6 +335,27 @@ class apiController extends Controller
         $endpoint = Config::get('endpoint');
         $faceListUUID = Config::get('faceListUUID');
 
+        $request = Http::withoutVerifying()->withHeaders([
+            'Content-Type' => 'application/json',
+            'Ocp-Apim-Subscription-Key' => $key
+        ])->put("$endpoint/face/v1.0/largefacelists/$faceListUUID", [
+            'name' => $faceListUUID,
+            'userData ' => $faceListUUID,
+            'recognitionModel  ' => 'recognition_03',
+        ]);
+
+        try {
+            return $request->getBody();
+        } catch (HttpException $ex) {
+            return $ex;
+        }
+    }
+    public function createArtistListJS()
+    {
+        $key = Config::get('key');
+        $endpoint = Config::get('endpoint');
+        $faceListUUID = Config::get('faceListUUID');
+
         $request = 'fetch("' . $endpoint . 'face/v1.0/largefacelists/' . $faceListUUID . '", {
             method: "PUT",
             headers: new Headers({
@@ -203,6 +382,24 @@ class apiController extends Controller
     }
 
     public function deleteArtistList()
+    {
+        $key = Config::get('key');
+        $endpoint = Config::get('endpoint');
+        $faceListUUID = Config::get('faceListUUID');
+
+        $request = Http::withoutVerifying()->withHeaders([
+            'Content-Type' => 'application/json',
+            'Ocp-Apim-Subscription-Key' => $key
+        ])->delete("$endpoint/face/v1.0/largefacelists/$faceListUUID");
+
+        try {
+            return $request->getBody();
+        } catch (HttpException $ex) {
+            return $ex;
+        }
+    }
+
+    public function deleteArtistListJS()
     {
         $key = Config::get('key');
         $endpoint = Config::get('endpoint');

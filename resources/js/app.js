@@ -52,7 +52,6 @@ Papa.parse('../data/images.csv', {
             console.log(url);
         });
 
-
         setTimeout(() => {
             fetch("" + endpoint + "face/v1.0/largefacelists/" + faceListUUID + "/train", {
                 method: "POST",

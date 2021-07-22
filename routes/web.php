@@ -49,7 +49,7 @@ Route::prefix('api')->group(function () {
     Route::get('deleteArtistList', [apiController::class, 'deleteArtistList']); //Attention this will delete the list and will need to be recreated
 
     // For testing
-    Route::get('callAPI', [apiController::class, 'callAPI']);
-    Route::get('detectFace/{image_url}', [apiController::class, 'detectFaceJs']);
-    Route::get('getArtistIdFromUUID/{faceId}', [apiController::class, 'getArtistIdFromUUID']);
+    // Route::get('callAPI', [apiController::class, 'callAPI']);
+    // Route::get('detectFace/{image_url}', [apiController::class, 'detectFaceJs']);
+    // Route::get('getArtistIdFromUUID/{faceId}', [apiController::class, 'getArtistIdFromUUID']);
 });
