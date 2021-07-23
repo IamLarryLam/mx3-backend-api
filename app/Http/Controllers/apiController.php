@@ -11,10 +11,11 @@ use Symfony\Component\HttpKernel\Exception\HttpException;
 
 class apiController extends Controller
 {
+    /**
+     * This method allows you to import, from the public_path (line 23), artists from a CSV file.
+     */
     public function addArtistsFromCSV()
     {
-        // return view('importcsv');
-
         $key = Config::get('key');
         $endpoint = Config::get('endpoint');
         $faceListUUID = Config::get('faceListUUID');
@@ -42,6 +43,9 @@ class apiController extends Controller
         return response('Done importing the csv file', 200);
     }
 
+    /**
+     * This method allows the transformation of CSV data into an array.
+     */
     function csvToArray($filename = '', $delimiter = ',')
     {
         if (!file_exists($filename) || !is_readable($filename))
@@ -60,6 +64,9 @@ class apiController extends Controller
         return $data;
     }
 
+    /**
+     * This method calls the microsoft API.
+     */
     public function callAPI()
     {
         echo '<script>
@@ -68,6 +75,9 @@ class apiController extends Controller
         }).then(result => console.log(result.status))</script>';
     }
 
+    /**
+     * This method converts the internal Microsoft IDs with the IDs provided by the CSV file.
+     */
     public function getArtistIdFromUUID($faceUuid)
     {
         $key = Config::get('key');
@@ -88,6 +98,9 @@ class apiController extends Controller
             .then(console.log);</script>');
     }
 
+    /**
+     * This method allows the addition in the API of an artist from a group ID and an image URL.
+     */
     public function addArtistFromImageUrl($image_url, $idBand)
     {
         $key = Config::get('key');
@@ -116,6 +129,34 @@ class apiController extends Controller
         }
     }
 
+    /**
+     * This method creates the list of artists.
+     */
+    public function createArtistList()
+    {
+        $key = Config::get('key');
+        $endpoint = Config::get('endpoint');
+        $faceListUUID = Config::get('faceListUUID');
+
+        $request = Http::withoutVerifying()->withHeaders([
+            'Content-Type' => 'application/json',
+            'Ocp-Apim-Subscription-Key' => $key
+        ])->put("$endpoint/face/v1.0/largefacelists/$faceListUUID", [
+            'name' => $faceListUUID,
+            'userData' => $faceListUUID,
+            'recognitionModel' => 'recognition_03',
+        ]);
+
+        try {
+            return $request->getBody();
+        } catch (HttpException $ex) {
+            return $ex;
+        }
+    }
+
+    /**
+     * This method refreshes the list of artists.
+     */
     public function refreshArtistList()
     {
         $key = Config::get('key');
@@ -127,7 +168,32 @@ class apiController extends Controller
             'Ocp-Apim-Subscription-Key' => $key
         ])->post("$endpoint/face/v1.0/largefacelists/$faceListUUID/train");
     }
-    
+
+    /**
+     * This method allows you to delete the list of artists.
+     */
+    public function deleteArtistList()
+    {
+        $key = Config::get('key');
+        $endpoint = Config::get('endpoint');
+        $faceListUUID = Config::get('faceListUUID');
+
+        $request = Http::withoutVerifying()->withHeaders([
+            'Content-Type' => 'application/json',
+            'Ocp-Apim-Subscription-Key' => $key
+        ])->delete("$endpoint/face/v1.0/largefacelists/$faceListUUID");
+
+        try {
+            return $request->getBody();
+        } catch (HttpException $ex) {
+            return $ex;
+        }
+    }
+
+    /**
+     * This method allows you to find the images similar to the selfie.
+     * If there is more than one head on the selfie, the method returns an error.
+     */
     public function findSimilarFromImageUrl($image_url)
     {
         $key = Config::get('key');
@@ -163,46 +229,6 @@ class apiController extends Controller
                     return $ex;
                 }
             }
-        }
-    }
-
-    public function createArtistList()
-    {
-        $key = Config::get('key');
-        $endpoint = Config::get('endpoint');
-        $faceListUUID = Config::get('faceListUUID');
-
-        $request = Http::withoutVerifying()->withHeaders([
-            'Content-Type' => 'application/json',
-            'Ocp-Apim-Subscription-Key' => $key
-        ])->put("$endpoint/face/v1.0/largefacelists/$faceListUUID", [
-            'name' => $faceListUUID,
-            'userData' => $faceListUUID,
-            'recognitionModel' => 'recognition_03',
-        ]);
-
-        try {
-            return $request->getBody();
-        } catch (HttpException $ex) {
-            return $ex;
-        }
-    }
-
-    public function deleteArtistList()
-    {
-        $key = Config::get('key');
-        $endpoint = Config::get('endpoint');
-        $faceListUUID = Config::get('faceListUUID');
-
-        $request = Http::withoutVerifying()->withHeaders([
-            'Content-Type' => 'application/json',
-            'Ocp-Apim-Subscription-Key' => $key
-        ])->delete("$endpoint/face/v1.0/largefacelists/$faceListUUID");
-
-        try {
-            return $request->getBody();
-        } catch (HttpException $ex) {
-            return $ex;
         }
     }
 }
