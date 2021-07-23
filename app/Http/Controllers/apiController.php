@@ -232,8 +232,6 @@ class apiController extends Controller
         ])->post("$endpoint/face/v1.0/detect?detectionModel=detection_03&recognitionModel=recognition_03", [
             'url' => $prefixURL . $image_url
         ]);
-
-
         if ($request != null) {
             if (isset($request[1])) {
                 return response('Error, too many faces', 409);
@@ -340,8 +338,8 @@ class apiController extends Controller
             'Ocp-Apim-Subscription-Key' => $key
         ])->put("$endpoint/face/v1.0/largefacelists/$faceListUUID", [
             'name' => $faceListUUID,
-            'userData ' => $faceListUUID,
-            'recognitionModel  ' => 'recognition_03',
+            'userData' => $faceListUUID,
+            'recognitionModel' => 'recognition_03',
         ]);
 
         try {
