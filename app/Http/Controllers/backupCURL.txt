@@ -1,0 +1,189 @@
+// public function detectFaceGuzzle($image_url)
+// {
+//     //VARIABLES
+//     $key = Config::get('key');
+//     $endpoint = Config::get('endpoint');
+//     $prefixURL = Config::get('prefixURL');
+//     $image_url = $prefixURL . $image_url;
+//     $url = $endpoint . 'face/v1.0/detect';
+//     //END VARIABLES
+
+//     $response = Http::withHeaders([
+//         'Content-Type' => 'application/json',
+//         'Host' => "$endpoint",
+//         'Ocp-Apim-Subscription-Key' => "$key"
+//     ])->post($url, [
+//         'url' => $image_url
+//     ]);
+
+//     var_dump($response);
+// }
+
+// public function detectFaceLaravel($image_url)
+// {
+//     $key = Config::get('key');
+//     $endpoint = Config::get('endpoint');
+//     $prefixURL = Config::get('prefixURL');
+//     $image_url = $prefixURL . $image_url;
+//     $url = $endpoint . 'face/v1.0/detect';
+
+//     $response = $this->postJson($url, ['url' => $image_url]);
+
+//     $response
+//         ->assertStatus(201)
+//         ->assertJson([
+//             'created' => true,
+//         ]);
+// }
+// public function detectFace3($image_url)
+// {
+//     $key = Config::get('key');
+//     $endpoint = Config::get('endpoint');
+//     $prefixURL = Config::get('prefixURL');
+
+//     $curl = curl_init($endpoint . 'face/v1.0/detect');
+
+//     $headers = [
+//         "Content-Type: application/json",
+//         "Host: $endpoint",
+//         "Ocp-Apim-Subscription-Key: ' . $key . '"
+//     ];
+
+//     // set post fields
+//     $post = [
+//         'url' => $prefixURL . $image_url,
+//     ];
+
+//     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+//     curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+//     curl_setopt($curl, CURLOPT_POSTFIELDS, $post);
+
+//     // execute!
+//     $response = curl_exec($curl);
+
+//     // close the connection, release resources used
+//     curl_close($curl);
+
+//     // do anything you want with your response
+//     var_dump($response);
+// }
+
+
+// public function detectFace($image_url)
+// {
+//     $prefixURL = Config::get('prefixURL');
+//     $url = $prefixURL . $image_url;
+
+//     $key = Config::get('key');
+//     $endpoint = Config::get('endpoint');
+//     $options = array(
+//         'http' => array(
+//             'header'  =>  "Content-Type: application/json\r\nHost: $endpoint\r\nOcp-Apim-Subscription-Key: ' . $key . '\r\n",
+//             'method'  => 'POST',
+//             'content' => "url=$url"
+//         )
+//     );
+//     $result = file_get_contents($endpoint . 'face/v1.0/detect', false, stream_context_create($options));
+// }
+// public function detectFace5($image_url)
+// {
+//     $method = 'POST';
+//     $key = Config::get('key');
+//     $endpoint = Config::get('endpoint');
+//     $prefixURL = Config::get('prefixURL');
+//     $url = $prefixURL . $image_url;
+//     $headers = [
+//         "Content-Type: application/json",
+//         "Host: $endpoint",
+//         "Ocp-Apim-Subscription-Key: ' . $key . '"
+//     ];
+//     $data = json_encode([
+//         'url' => $prefixURL . $image_url,
+//     ]);
+
+//     $curl = curl_init();
+//     switch ($method) {
+//         case "POST":
+//             curl_setopt($curl, CURLOPT_POST, 1);
+//             if ($data)
+//                 curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+//             break;
+//         case "PUT":
+//             curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "PUT");
+//             if ($data)
+//                 curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+//             break;
+//         default:
+//             // if ($data)
+//             // $url = sprintf("%s?%s", $url, http_build_query($data));
+//     }
+//     // OPTIONS:
+//     curl_setopt($curl, CURLOPT_URL, $url);
+//     curl_setopt($curl, CURLOPT_HTTPHEADER, array(
+//         "Content-Type: application/json",
+//         "Host: $endpoint",
+//         "Ocp-Apim-Subscription-Key: ' . $key . '"
+//     ));
+//     curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+//     curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+//     // EXECUTE:
+//     $result = curl_exec($curl);
+//     if (!$result) {
+//         die("Connection Failure");
+//     }
+//     curl_close($curl);
+//     return $result;
+// }
+
+// public function detectFace4($image_url)
+// {
+//     $key = Config::get('key');
+//     $endpoint = Config::get('endpoint');
+//     $prefixURL = Config::get('prefixURL');
+
+//     $headers = [
+//         "Content-Type: application/json",
+//         "Host: $endpoint",
+//         "Ocp-Apim-Subscription-Key: ' . $key . '"
+//     ];
+//     $post = [
+//         'url' => $prefixURL . $image_url,
+//     ];
+
+//     $processed = FALSE;
+//     $ERROR_MESSAGE = '';
+
+//     // ************* Call API:
+//     $ch = curl_init();
+//     curl_setopt($ch, CURLOPT_URL, $endpoint . 'face/v1.0/detect');
+
+//     curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+//     curl_setopt($ch, CURLOPT_POST, 1); // set post data to true
+//     curl_setopt($ch, CURLOPT_POSTFIELDS, $post);   // post data
+//     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+//     curl_setopt($ch, CURLOPT_VERBOSE, true);
+//     curl_setopt($ch, CURLINFO_HEADER_OUT, TRUE);
+
+
+//     $json = curl_exec($ch);
+//     curl_exec($ch);
+
+//     $info = curl_getinfo($ch);
+//     // print_r($info['request_header']);
+//     echo curl_getinfo($ch, CURLINFO_HEADER_OUT);
+//     curl_close($ch);
+//     // returned json string will look like this: {"code":1,"data":"OK"}
+//     // "code" may contain an error code and "data" may contain error string instead of "OK"
+//     // $obj = json_decode($json);
+
+//     // if ($obj->{'code'} == '1') {
+//     //     $processed = TRUE;
+//     // } else {
+//     //     $ERROR_MESSAGE = $obj->{'data'};
+//     // }
+
+
+//     // if (!$processed && $ERROR_MESSAGE != '') {
+//     //     echo $ERROR_MESSAGE;
+//     // }
+// }
