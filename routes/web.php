@@ -27,6 +27,9 @@ Config::set('prefixURL', 'https://i.imgur.com/'); //Server link where images of 
 //Do not change
 Config::set('faceListUUID', 'mx3_persistant_faces'); //Mx3 list ID
 
+/**
+ * TEST RELATIVE URL : /api/findSimilar/{image_url}
+ */
 
 //LARAVEL ROUTING 
 
